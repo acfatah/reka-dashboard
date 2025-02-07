@@ -76,4 +76,15 @@ export default defineConfigWithVueTs(
   ...antfuUnicorn,
   ...antfuVue,
   ...antfuYaml,
+
+  // Need the following lines in the correct order.
+  // See: https://github.com/eslint/eslint/discussions/17221#discussioncomment-6028301
+  {
+    files: ['*.vue', '**/*.vue'],
+    languageOptions: {
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+      },
+    },
+  },
 )
