@@ -11,7 +11,10 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:staged": "eslint --pass-on-no-patterns --no-warn-ignored $(git diff --cached --name-only --diff-filter=d)",
+    "lint:fix": "eslint . --fix",
+    "lint:inspect": "eslint --inspect-config",
+    "precommit": "bun lint:staged"
   },
   "dependencies": {
     "pinia": "^2.3.1",
@@ -33,10 +36,14 @@
     "jiti": "^2.4.2",
     "jsdom": "^26.0.0",
     "npm-run-all2": "^7.0.2",
+    "simple-git-hooks": "^2.11.1",
     "typescript": "~5.7.3",
     "vite": "^6.0.11",
     "vite-plugin-vue-devtools": "^7.7.0",
     "vitest": "^3.0.2",
     "vue-tsc": "^2.2.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "bun precommit"
   }
 }
