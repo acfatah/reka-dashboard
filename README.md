@@ -1,45 +1,47 @@
-# Vue-app
+# Bun Vue
 
-This template should help get you started developing with Vue 3 in TypeScript, Vite and Bun.
+<p>
+  <a href="https://github.com/acfatah/bun-vue-ts/commits/main">
+  <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/acfatah/bun-vue-ts?display_timestamp=committer&style=flat-square"></a>
+</p>
 
-## Recommended IDE Setup
+Opinionated Vue Application Boilerplate.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+This template should help you get started with developing a Vue 3 application in TypeScript and Vite using Bun.
 
-## Type Support for `.vue` Imports in TS
+> [!IMPORTANT]
+> WORK IN PROGRESS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Features
 
-## Customize configuration
+- Opinionated linting and styling, based on [@antfu/eslint-config](https://github.com/antfu/eslint-config).
+- Precommit hook to lint staged files using [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks).
+- Auto load modules using [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import).
+- Auto load Vue components using [unplugin-vue-component](https://github.com/unplugin/unplugin-vue-components).
+- Preinstalled with [@vueuse/core](https://vueuse.org/functions.html).
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Usage
 
-## Project Setup
+1. Copy the repository,
 
-```sh
-bun install
+```bash
+bunx tiged acfatah/bun-vue-ts newproject
 ```
 
-### Compile and Hot-Reload for Development
+2. Include the `.vscode` directory in your repository to ensure consistent settings for all developers. Use git add -f `.vscode` to force add it, bypassing any ignore rules.
 
-```sh
-bun dev
+```bash
+git add -f .vscode
 ```
 
-### Type-Check, Compile and Minify for Production
+3. Initialize `simple-git-hooks`,
 
-```sh
-bun run build
+```bash
+rm -rf .git/hooks && bunx simple-git-hooks
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+4. Update and install dependencies
 
-```sh
-bun test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-bun lint
+```bash
+bun outdated && bun install
 ```
