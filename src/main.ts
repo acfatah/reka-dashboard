@@ -1,4 +1,4 @@
-import './assets/main.css'
+import '@/styles/main.css'
 import '@/styles/nprogress.css'
 
 import { createApp } from 'vue'
