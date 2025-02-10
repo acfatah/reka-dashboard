@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { useNProgress } from '@vueuse/integrations/useNProgress'
+
+const { start: startLoading, done: doneLoading } = useNProgress()
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,6 +21,14 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
   ],
+})
+
+router.beforeEach((_to, _from, next) => {
+  startLoading()
+  next()
+})
+router.afterEach(() => {
+  doneLoading()
 })
 
 export default router
