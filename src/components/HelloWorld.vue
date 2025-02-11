@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import { useCounterStore } from '@/stores'
+
 defineProps<{
   msg: string
 }>()
+
+const counterStore = useCounterStore()
 </script>
 
 <template>
@@ -9,6 +13,11 @@ defineProps<{
     <h1 class="green">
       {{ msg }}
     </h1>
+
+    <button @click="counterStore.increment()">
+      count is {{ counterStore.count }}
+    </button>
+
     <h3>
       You’ve successfully created a project with
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
@@ -27,6 +36,11 @@ h1 {
 
 h3 {
   font-size: 1.2rem;
+}
+
+button {
+  padding: 0.6em 1.2em;
+  margin: 0.5em 0.5em 0.5em 0;
 }
 
 .greetings h1,
