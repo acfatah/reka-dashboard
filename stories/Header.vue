@@ -1,3 +1,16 @@
+<script lang="ts" setup>
+import './header.css'
+import MyButton from './Button.vue'
+
+defineProps<{ user: { name: string } | null }>()
+
+defineEmits<{
+  (event: 'createAccount'): void
+  (event: 'login'): void
+  (event: 'logout'): void
+}>()
+</script>
+
 <template>
   <header>
     <div class="storybook-header">
@@ -12,26 +25,11 @@
         <h1>Acme</h1>
       </div>
       <div>
-        <span class="welcome" v-if="user">Welcome, <b>{{ user.name }}</b>!</span>
-        <my-button size="small" @click="$emit('logout')" label="Log out" v-if="user" />
-        <my-button size="small" @click="$emit('login')" label="Log in" v-if="!user" />
-        <my-button primary size="small" @click="$emit('createAccount')" label="Sign up" v-if="!user" />
+        <span v-if="user" class="welcome">Welcome, <b>{{ user.name }}</b>!</span>
+        <MyButton v-if="user" size="small" label="Log out" @click="$emit('logout')" />
+        <MyButton v-if="!user" size="small" label="Log in" @click="$emit('login')" />
+        <MyButton v-if="!user" primary size="small" label="Sign up" @click="$emit('createAccount')" />
       </div>
     </div>
   </header>
 </template>
-
-<script lang="ts" setup>
-import './header.css';
-import MyButton from './Button.vue';
-
-defineProps<{ user: { name: string } | null }>();
-
-defineEmits<{
-  (event: 'createAccount'): void;
-  (event: 'login'): void;
-  (event: 'logout'): void;
-}>();
-
-</script>
-

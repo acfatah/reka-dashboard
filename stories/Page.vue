@@ -1,6 +1,25 @@
+<script lang="ts" setup>
+import './page.css'
+import MyHeader from './Header.vue'
+
+import { ref } from 'vue'
+
+const user = ref<{ name: string } | null>(null)
+
+function onLogin() {
+  user.value = { name: 'Jane Doe' }
+}
+function onLogout() {
+  user.value = null
+}
+function onCreateAccount() {
+  user.value = { name: 'Jane Doe' }
+}
+</script>
+
 <template>
   <article>
-    <my-header :user="user" @login="onLogin" @logout="onLogout" @create-account="onCreateAccount" />
+    <MyHeader :user="user" @login="onLogin" @logout="onLogout" @create-account="onCreateAccount" />
 
     <section class="storybook-page">
       <h2>Pages in Storybook</h2>
@@ -28,9 +47,7 @@
       </ul>
       <p>
         Get a guided tutorial on component-driven development at
-        <a href="https://storybook.js.org/tutorials/" target="_blank" rel="noopener noreferrer"
-          >Storybook tutorials</a
-        >
+        <a href="https://storybook.js.org/tutorials/" target="_blank" rel="noopener noreferrer">Storybook tutorials</a>
         . Read more in the
         <a href="https://storybook.js.org/docs" target="_blank" rel="noopener noreferrer">docs</a>
         .
@@ -41,8 +58,8 @@
         <svg width="10" height="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" fill-rule="evenodd">
             <path
-              d="M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z"
               id="a"
+              d="M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z"
               fill="#999"
             />
           </g>
@@ -52,22 +69,3 @@
     </section>
   </article>
 </template>
-
-<script lang="ts" setup>
-import './page.css';
-import MyHeader from './Header.vue';
-
-import { ref } from 'vue';
-
-const user = ref<{ name: string } | null>(null);
-
-const onLogin = () => {
-  user.value = { name: 'Jane Doe' };
-};
-const onLogout = () => {
-  user.value = null;
-};
-const onCreateAccount = () => {
-  user.value = { name: 'Jane Doe' };
-};
-</script>
