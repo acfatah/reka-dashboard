@@ -15,7 +15,9 @@
     "lint:staged": "eslint --pass-on-no-patterns --no-warn-ignored $(git diff --cached --name-only --diff-filter=d)",
     "lint:fix": "eslint . --fix",
     "lint:inspect": "eslint --inspect-config",
-    "precommit": "bun lint:staged"
+    "precommit": "bun lint:staged",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@vueuse/components": "^12.7.0",
@@ -30,6 +32,14 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.3.0",
+    "@chromatic-com/storybook": "^3.2.4",
+    "@storybook/addon-essentials": "^8.5.8",
+    "@storybook/addon-interactions": "^8.5.8",
+    "@storybook/addon-onboarding": "^8.5.8",
+    "@storybook/blocks": "^8.5.8",
+    "@storybook/test": "^8.5.8",
+    "@storybook/vue3": "^8.5.8",
+    "@storybook/vue3-vite": "^8.5.8",
     "@tsconfig/node22": "^22.0.0",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.13.4",
@@ -39,11 +49,13 @@
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.20.1",
+    "eslint-plugin-storybook": "^0.11.3",
     "eslint-plugin-vue": "^9.32.0",
     "jiti": "^2.4.2",
     "jsdom": "^26.0.0",
     "npm-run-all2": "^7.0.2",
     "simple-git-hooks": "^2.11.1",
+    "storybook": "^8.5.8",
     "typescript": "~5.7.3",
     "unplugin-auto-import": "^19.1.0",
     "unplugin-vue-components": "^28.4.0",
@@ -54,5 +66,10 @@
   },
   "simple-git-hooks": {
     "pre-commit": "bun precommit"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
