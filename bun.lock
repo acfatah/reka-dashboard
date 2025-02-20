@@ -39,6 +39,7 @@
         "npm-run-all2": "^7.0.2",
         "simple-git-hooks": "^2.11.1",
         "storybook": "^8.5.8",
+        "storybook-vue3-router": "^5.0.0",
         "typescript": "~5.7.3",
         "unplugin-auto-import": "^19.1.0",
         "unplugin-vue-components": "^28.4.0",
@@ -1301,6 +1302,8 @@
     "std-env": ["std-env@3.8.0", "", {}, "sha512-Bc3YwwCB+OzldMxOXJIIvC6cPRWr/LxOp48CdQTOkPyk/t4JWWJbrilwBd7RJzKV8QW7tJkcgAmeuLLJugl5/w=="],
 
     "storybook": ["storybook@8.5.8", "", { "dependencies": { "@storybook/core": "8.5.8" }, "peerDependencies": { "prettier": "^2 || ^3" }, "optionalPeers": ["prettier"], "bin": { "sb": "./bin/index.cjs", "storybook": "./bin/index.cjs", "getstorybook": "./bin/index.cjs" } }, "sha512-k3QDa7z4a656oO3Mx929KNm+xIdEI2nIDCKatVl1mA6vt+ge+uwoiG+ro182J9LOEppR5XXD2mQQi4u1xNsy6A=="],
+
+    "storybook-vue3-router": ["storybook-vue3-router@5.0.0", "", { "dependencies": { "vue-router": "^4.2.5" }, "peerDependencies": { "@storybook/preview-api": "7.x||>=7.0.0-rc.0", "@storybook/vue3": "7.x||>=7.0.0-rc.0", "vue": "3.x" }, "optionalPeers": ["vue"] }, "sha512-Q5ePPv8xyYT+9IzcEMSAQeCT8OlPDX0rfUfYCmiYDXsGPvvDej2Oyid3wyaxZmU/LXt1XzMDRO3v9qk/EN6pXg=="],
 
     "string-width": ["string-width@5.1.2", "", { "dependencies": { "eastasianwidth": "^0.2.0", "emoji-regex": "^9.2.2", "strip-ansi": "^7.0.1" } }, "sha512-HnLOCR3vjcY8beoNLtcjZ5/nxn2afmME6lhrDrebokqMap+XbeW8n9TXpPDOqdGK5qcI3oT0GKTW6wC7EMiVqA=="],
 
