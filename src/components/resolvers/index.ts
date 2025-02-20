@@ -6,6 +6,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import RekaResolver from 'reka-ui/resolver'
+import veeValidateResolver from './vee-validate-resolver'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 
 /** An array of directories to search for components including subdirectories */
@@ -31,4 +32,5 @@ function defaultResolver(componentName: string) {
 export const resolvers: ComponentResolver[] = [
   defaultResolver,
   RekaResolver(),
+  veeValidateResolver,
 ]
