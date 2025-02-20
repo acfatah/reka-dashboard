@@ -32,7 +32,6 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.3.0",
-    "@chromatic-com/storybook": "^3.2.4",
     "@storybook/addon-essentials": "^8.5.8",
     "@storybook/addon-interactions": "^8.5.8",
     "@storybook/addon-onboarding": "^8.5.8",
