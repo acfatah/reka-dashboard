@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -26,6 +27,7 @@ export default defineConfig({
       resolvers,
       dirs: componentDirs,
     }),
+    tailwindcss(),
     vueDevTools(),
   ],
   resolve: {

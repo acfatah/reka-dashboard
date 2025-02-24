@@ -18,12 +18,14 @@
     "precommit": "bun lint:staged"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.4",
     "@vueuse/components": "^12.8.2",
     "@vueuse/core": "^12.8.2",
     "@vueuse/integrations": "^12.8.2",
     "@vueuse/router": "^12.8.2",
     "nprogress": "^0.2.0",
     "pinia": "^3.0.2",
+    "tailwindcss": "^4.1.4",
     "vee-validate": "^4.15.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.1"
