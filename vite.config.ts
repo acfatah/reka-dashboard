@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import Components from 'unplugin-vue-components/vite'
 import { resolvers, dirs as componentDirs } from './src/components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -27,6 +28,7 @@ export default defineConfig({
       resolvers,
       dirs: componentDirs,
     }),
+    tailwindcss(),
     vueDevTools(),
   ],
   resolve: {
