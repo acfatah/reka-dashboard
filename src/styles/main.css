@@ -2,16 +2,11 @@
 @import './base.css';
 
 /**
- * Simple dark mode handler. To apply dark mode, add the `dark` class to the
- *`html` element
+ * Simple dark mode handler.
  */
-html.dark .bg-background {
-  background-color: #181818;
-}
-
-/* The default or light mode handler */
 .bg-background {
-  background-color: #fff;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 #app {

@@ -12,6 +12,7 @@
         <RouterLink to="/about">
           About
         </RouterLink>
+        <ToggleDark />
       </nav>
     </div>
   </header>
