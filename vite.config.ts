@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
@@ -29,7 +31,7 @@ export default defineConfig({
       dirs: componentDirs,
     }),
     tailwindcss(),
-    vueDevTools(),
+    import.meta.env?.VITE_VUE_DEV_TOOLS === 'true' && vueDevTools(),
   ],
   resolve: {
     alias: {
