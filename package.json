@@ -20,6 +20,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@iconify/vue": "^4.3.0",
     "@tailwindcss/vite": "^4.0.9",
     "@vueuse/components": "^12.7.0",
     "@vueuse/core": "^12.7.0",
