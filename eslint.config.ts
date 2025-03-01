@@ -77,6 +77,26 @@ export default defineConfigWithVueTs(
   ...antfuVue,
   ...antfuYaml,
 
+  {
+    rules: {
+      // Enforce no-unused-vars rule, allowing exceptions for variables and parameters prefixed with '_'
+      // This configuration helps in ignoring unused variables that are intentionally left for future use
+      // or when following a convention (e.g., unused error objects, rest properties).
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
+    },
+  },
+
   // Need the following lines in the correct order.
   // See: https://github.com/eslint/eslint/discussions/17221#discussioncomment-6028301
   {
