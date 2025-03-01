@@ -43,5 +43,5 @@ rm -rf .git/hooks && bunx simple-git-hooks
 4. Update and install dependencies
 
 ```bash
-bun outdated && bun install
+bun update && bun install
 ```
