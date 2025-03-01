@@ -10,7 +10,7 @@ import type { ComponentResolver } from 'unplugin-vue-components/types'
 
 /** An array of directories to search for components including subdirectories */
 export const dirs = [
-  'src/components/base',
+  'src/components/ui',
   'src/components/layouts',
 ]
 
