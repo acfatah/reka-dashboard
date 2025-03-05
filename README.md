@@ -1,8 +1,8 @@
 # Bun Vue
 
 <p>
-  <a href="https://github.com/acfatah/bun-vue-ts/commits/main">
-  <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/acfatah/bun-vue-ts?display_timestamp=committer&style=flat-square"></a>
+  <a href="https://github.com/acfatah/bun-vue-ts/commits/basic">
+  <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/acfatah/bun-vue-ts/basic?display_timestamp=committer&style=flat-square"></a>
 </p>
 
 Opinionated Vue Application Boilerplate.
@@ -25,7 +25,7 @@ This template should help you get started with developing a Vue 3 application in
 1. Copy the repository,
 
 ```bash
-bunx tiged acfatah/bun-vue-ts newproject
+bunx tiged acfatah/bun-vue#basic
 ```
 
 2. Include the `.vscode` directory in your repository to ensure consistent settings for all developers. Use git add -f `.vscode` to force add it, bypassing any ignore rules.
@@ -43,5 +43,5 @@ rm -rf .git/hooks && bunx simple-git-hooks
 4. Update and install dependencies
 
 ```bash
-bun outdated && bun install
+bun update
 ```
