@@ -1,5 +1,5 @@
-import { create } from '@storybook/theming/create'
 import type { ThemeVarsPartial } from '@storybook/theming'
+import { create } from '@storybook/theming/create'
 import { name } from '../package.json'
 
 /**

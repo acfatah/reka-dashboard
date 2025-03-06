@@ -5,8 +5,9 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
-import veeValidateResolver from './vee-validate-resolver'
+
 import type { ComponentResolver } from 'unplugin-vue-components/types'
+import veeValidateResolver from './vee-validate-resolver'
 
 /** An array of directories to search for components including subdirectories */
 export const dirs = [

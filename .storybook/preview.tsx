@@ -1,10 +1,10 @@
+import type { Preview } from '@storybook/vue3'
 import { withThemeByClassName } from '@storybook/addon-themes'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { setup } from '@storybook/vue3'
-import type { Preview } from '@storybook/vue3'
 
-import theme from './theme'
 import { createPinia } from 'pinia'
+import theme from './theme'
 
 import { Controls, Description, Primary, Stories, Subtitle, Title } from '@storybook/blocks'
 import React from 'react'

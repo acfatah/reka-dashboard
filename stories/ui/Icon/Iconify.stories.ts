@@ -1,6 +1,6 @@
 import type { StoryObj } from '@storybook/vue3'
-import { Icon as IconifyComponent } from '@iconify/vue'
 import { Iconify } from '@/components/ui/icon'
+import { Icon as IconifyComponent } from '@iconify/vue'
 
 /**
  * Icon component using Iconify library.

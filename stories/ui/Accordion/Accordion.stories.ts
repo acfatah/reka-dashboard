@@ -2,8 +2,8 @@ import type { StoryObj } from '@storybook/vue3'
 import {
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
   AccordionRoot,
+  AccordionTrigger,
 } from '@/components/ui/accordion'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
