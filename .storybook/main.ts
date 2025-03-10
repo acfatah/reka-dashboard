@@ -9,7 +9,6 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-onboarding',
     '@storybook/addon-themes',
   ],
   framework: {

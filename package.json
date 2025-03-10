@@ -42,7 +42,6 @@
     "@antfu/eslint-config": "^4.5.1",
     "@storybook/addon-essentials": "^8.6.4",
     "@storybook/addon-interactions": "^8.6.4",
-    "@storybook/addon-onboarding": "^8.6.4",
     "@storybook/addon-themes": "^8.6.4",
     "@storybook/blocks": "^8.6.4",
     "@storybook/test": "^8.6.4",
