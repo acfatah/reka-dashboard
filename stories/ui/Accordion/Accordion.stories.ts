@@ -11,7 +11,7 @@ import DefaultSource from './DefaultStory.vue?raw'
 /**
  * A vertically stacked set of interactive headings that each reveal a section of content.
  *
- * Primitive API Reference: https://www.radix-vue.com/components/accordion.html
+ * Primitive API Reference: https://www.reka-ui.com/docs/components/accordion.html
  */
 export default {
   title: 'Panels/Accordion',
