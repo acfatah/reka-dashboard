@@ -5,9 +5,11 @@ export { default as Button } from './Button.vue'
 
 export const buttonVariants = cva(
   [
-    'inline-flex items-center justify-center gap-2 rounded-md whitespace-nowrap',
+    'inline-flex w-fit items-center justify-center gap-2 rounded-md whitespace-nowrap',
     'text-sm font-medium',
-    'transition-colors focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50',
+    'hover:cursor-pointer',
+    'transition-colors focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none',
+    'disabled:pointer-events-none disabled:opacity-50',
     '[&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   ],
 

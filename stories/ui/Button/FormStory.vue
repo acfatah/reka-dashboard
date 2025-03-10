@@ -33,7 +33,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
 <template>
   <Form
     v-slot="{ meta }"
-    class="w-full space-y-6 sm:w-2/3"
+    class="flex w-full flex-col space-y-6 sm:w-2/3"
     :validation-schema="formSchema"
     @submit="onSubmit"
   >

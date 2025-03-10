@@ -1,6 +1,7 @@
 import type { StoryObj } from '@storybook/vue3'
 import { Button } from '@/components/ui/button'
 import Iconify from '@/components/ui/icon/Iconify.vue'
+import { Toaster } from '@/components/ui/toast'
 import { html } from 'common-tags'
 
 import FormStory from './FormStory.vue'
@@ -50,7 +51,7 @@ export default {
         type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
-      description: '[Radix\'s Composition](https://www.reka-ui.com/docs/guides/composition.html)',
+      description: '[Reka\'s Composition](https://www.reka-ui.com/docs/guides/composition.html)',
 
     },
 
@@ -101,7 +102,7 @@ export const Form: StoryObj = {
   },
 
   render: () => ({
-    components: { FormStory },
+    components: { FormStory, Toaster },
 
     template: html`
       <Teleport to="body">
