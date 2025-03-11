@@ -38,54 +38,73 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     :initial-values="initialValues"
     @submit="onSubmit"
   >
-    <div>
+    <div class="space-y-4">
       <h3 class="mb-4 text-lg font-medium">
         Email Notifications
       </h3>
 
-      <div class="space-y-4">
-        <FormField v-slot="{ value, handleChange }" name="marketing_emails">
-          <FormItem class="flex flex-row items-center justify-between rounded-lg border p-4">
-            <div class="space-y-0.5">
-              <FormLabel class="text-base">
-                Marketing emails
-              </FormLabel>
-              <FormDescription>
-                Receive emails about new products, features, and more.
-              </FormDescription>
-            </div>
+      <FormField v-slot="{ value, handleChange }" name="marketing_emails">
+        <FormItem class="flex flex-row items-start space-x-3 space-y-0">
+          <FormControl>
             <FormControl>
               <Switch
                 :checked="value"
                 @update:checked="handleChange"
               />
             </FormControl>
-          </FormItem>
-        </FormField>
+          </FormControl>
 
-        <FormField v-slot="{ value, handleChange }" name="security_emails">
-          <FormItem class="flex flex-row items-center justify-between rounded-lg border p-4">
-            <div class="space-y-0.5">
-              <FormLabel class="text-base">
-                Security emails
-              </FormLabel>
-              <FormDescription>
-                Receive emails about your account security.
-              </FormDescription>
-            </div>
-            <FormControl>
-              <Switch
-                :checked="value"
-                disabled
-                aria-readonly
-                @update:checked="handleChange"
-              />
-            </FormControl>
-          </FormItem>
-        </FormField>
+          <div class="flex w-full flex-col space-y-0.5">
+            <FormLabel>Marketing emails</FormLabel>
+            <FormDescription>
+              Receive emails about new products, features, and more.
+            </FormDescription>
+            <FormMessage />
+          </div>
+        </FormItem>
+      </FormField>
 
-        <!-- Other fields -->
-      </div>
+      <FormField v-slot="{ value, handleChange }" name="marketing_emails">
+        <FormItem class="flex flex-row items-center justify-between rounded-lg border p-4">
+          <div class="space-y-0.5">
+            <FormLabel class="text-base">
+              Marketing emails
+            </FormLabel>
+            <FormDescription>
+              Receive emails about new products, features, and more.
+            </FormDescription>
+          </div>
+          <FormControl>
+            <Switch
+              :checked="value"
+              @update:checked="handleChange"
+            />
+          </FormControl>
+        </FormItem>
+      </FormField>
+
+      <FormField v-slot="{ value, handleChange }" name="security_emails">
+        <FormItem class="flex flex-row items-center justify-between rounded-lg border p-4">
+          <div class="space-y-0.5">
+            <FormLabel class="text-base">
+              Security emails
+            </FormLabel>
+            <FormDescription>
+              Receive emails about your account security.
+            </FormDescription>
+          </div>
+          <FormControl>
+            <Switch
+              :checked="value"
+              disabled
+              aria-readonly
+              @update:checked="handleChange"
+            />
+          </FormControl>
+        </FormItem>
+      </FormField>
+
+      <!-- Other fields -->
     </div>
 
     <Button type="submit">
