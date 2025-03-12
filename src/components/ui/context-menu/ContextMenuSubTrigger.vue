@@ -1,0 +1,34 @@
+<script setup lang="ts">
+import type { ContextMenuSubTriggerProps } from 'reka-ui'
+import type { HTMLAttributes } from 'vue'
+import { cn } from '@/lib/utils'
+import { ContextMenuSubTrigger, useForwardProps } from 'reka-ui'
+import { computed } from 'vue'
+
+const props = defineProps<ContextMenuSubTriggerProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
+
+const delegatedProps = computed(() => {
+  const { class: _, ...delegated } = props
+
+  return delegated
+})
+
+const forwardedProps = useForwardProps(delegatedProps)
+</script>
+
+<template>
+  <ContextMenuSubTrigger
+    v-bind="forwardedProps"
+    :class="cn(
+      'flex cursor-default select-none items-center rounded-sm px-2 py-1.5 outline-none',
+      'text-sm',
+      'focus:bg-accent focus:text-accent-foreground',
+      'data-[state=open]:bg-accent data-[state=open]:text-accent-foreground',
+      inset && 'pl-8',
+      props.class,
+    )"
+  >
+    <slot />
+    <Iconify icon="radix-icons:chevron-right" class="ml-auto size-4" />
+  </ContextMenuSubTrigger>
+</template>
