@@ -28,6 +28,7 @@
     "@vueuse/integrations": "^12.8.2",
     "@vueuse/router": "^12.8.2",
     "clsx": "^2.1.1",
+    "embla-carousel-vue": "^8.5.2",
     "nprogress": "^0.2.0",
     "pinia": "^3.0.1",
     "reka-ui": "^2.0.2",
