@@ -1,4 +1,5 @@
 import type { ComponentResolver } from 'unplugin-vue-components/types'
+import rekaResolver from './reka-resolver'
 import { useShallowResolver } from './shallow-resolver'
 import vaulVueResolver from './vaul-vue-resolver'
 import veeValidateResolver from './vee-validate-resolver'
@@ -21,6 +22,7 @@ const shallowImportDirs = [
  */
 export const resolvers: ComponentResolver[] = [
   useShallowResolver(shallowImportDirs),
+  rekaResolver,
   vaulVueResolver,
   veeValidateResolver,
 ]
