@@ -48,6 +48,7 @@ export default {
 export const Default: StoryObj = {
   args: {
     defaultValue: ['italic'],
+    disabled: false,
   },
 
   parameters: {
