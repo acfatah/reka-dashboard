@@ -7,6 +7,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 import type { ComponentResolver } from 'unplugin-vue-components/types'
+import vaulVueResolver from './vaul-vue-resolver'
 import veeValidateResolver from './vee-validate-resolver'
 
 /** An array of directories to search for components including subdirectories */
@@ -31,5 +32,6 @@ function defaultResolver(componentName: string) {
 
 export const resolvers: ComponentResolver[] = [
   defaultResolver,
+  vaulVueResolver,
   veeValidateResolver,
 ]
