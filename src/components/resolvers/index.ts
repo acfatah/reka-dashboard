@@ -1,12 +1,5 @@
-/**
- * unplugin-vue-components
- * https://github.com/unplugin/unplugin-vue-components
- */
-
-import fs from 'node:fs'
-import path from 'node:path'
-
 import type { ComponentResolver } from 'unplugin-vue-components/types'
+import { useShallowResolver } from './shallow-resolver'
 import vaulVueResolver from './vaul-vue-resolver'
 import veeValidateResolver from './vee-validate-resolver'
 
@@ -16,22 +9,18 @@ export const dirs = [
   'src/components/layouts',
 ]
 
-/** An array of directories to search for components */
-const searchDirs = [
+/** An array of directories to shallow import components */
+const shallowImportDirs = [
   'src/components',
 ]
 
-function defaultResolver(componentName: string) {
-  for (const dir of searchDirs) {
-    const filePath = path.resolve(`${dir.replace(/\/$/, '')}/${componentName}.vue`)
-
-    if (fs.existsSync(filePath))
-      return { name: 'default', from: filePath }
-  }
-}
-
+/**
+ * Automatic component resolver using unplugin-vue-components.
+ *
+ * See: https://github.com/unplugin/unplugin-vue-components#importing-from-ui-libraries
+ */
 export const resolvers: ComponentResolver[] = [
-  defaultResolver,
+  useShallowResolver(shallowImportDirs),
   vaulVueResolver,
   veeValidateResolver,
 ]

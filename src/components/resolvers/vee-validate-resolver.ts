@@ -1,7 +1,9 @@
 import type { ImportInfo } from 'unplugin-vue-components'
 
 /**
- * unplugin-vue-components/vite resolver for vee-validate
+ * unplugin-vue-components/vite resolver for vee-validate Higher-order components (HOC)
+ *
+ * Read more: https://vee-validate.logaretm.com/v4/guide/overview/
  */
 export default function (componentName: string) {
   const components: ImportInfo[] = [
