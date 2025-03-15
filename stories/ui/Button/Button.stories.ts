@@ -17,6 +17,10 @@ export default {
   component: Button,
   tags: ['autodocs'],
 
+  args: {
+    disabled: false,
+  },
+
   argTypes: {
     variant: {
       control: { type: 'select' },
@@ -62,6 +66,14 @@ export default {
         defaultValue: { summary: 'null' },
       },
       description: 'HTMLAttributes[\'class\']',
+    },
+
+    disabled: {
+      type: 'boolean',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
     },
   },
 }
