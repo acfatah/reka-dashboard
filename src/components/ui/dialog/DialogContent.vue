@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
+import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
 import {
   DialogClose,
@@ -51,7 +52,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           'disabled:pointer-events-none',
         )"
       >
-        <Iconify icon="radix-icons:cross-2" class="hover:cursor-pointer size-4" />
+        <Iconify icon="lucide:x" class="hover:cursor-pointer size-4" />
         <span class="sr-only">Close</span>
       </DialogClose>
     </DialogContent>

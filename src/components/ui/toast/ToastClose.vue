@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ToastCloseProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import Iconify from '@/components/ui/icon/Iconify.vue'
+import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
 import { ToastClose } from 'reka-ui'
 import { computed } from 'vue'
@@ -28,6 +28,6 @@ const delegatedProps = computed(() => {
       'group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600',
       props.class)"
   >
-    <Iconify icon="radix-icons:cross-2" class="size-4" />
+    <Iconify icon="lucide:x" class="size-4" />
   </ToastClose>
 </template>
