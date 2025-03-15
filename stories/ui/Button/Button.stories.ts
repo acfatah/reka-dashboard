@@ -2,6 +2,7 @@ import type { StoryObj } from '@storybook/vue3'
 import { Button } from '@/components/ui/button'
 import Iconify from '@/components/ui/icon/Iconify.vue'
 import { Toaster } from '@/components/ui/toast'
+import { cn } from '@/lib/utils'
 import { html } from 'common-tags'
 
 import FormStory from './FormStory.vue'
@@ -259,7 +260,7 @@ export const Icon: StoryObj = {
       source: {
         code: html`
           <Button variant="outline" size="icon">
-            <Iconify icon="lucide:chevron-right" />
+            <Iconify icon="lucide:chevron-right" class="size-4" />
           </Button>
         `,
       },
@@ -276,7 +277,7 @@ export const Icon: StoryObj = {
 
       template: html`
         <Button variant="outline" size="icon" v-bind="args">
-          <Iconify icon="lucide:chevron-right" />
+          <Iconify icon="lucide:chevron-right" class="size-4" />
         </Button>
       `,
     }
@@ -293,7 +294,7 @@ export const WithIcon: StoryObj = {
       source: {
         code: html`
           <Button>
-            <Iconify icon="lucide:mail" />
+            <Iconify icon="lucide:mail" class="size-4" />
             Login with Email
           </Button>
         `,
@@ -311,7 +312,7 @@ export const WithIcon: StoryObj = {
 
       template: html`
         <Button v-bind="args">
-          <Iconify icon="lucide:mail" />
+          <Iconify icon="lucide:mail" class="size-4" />
           Login with Email
         </Button>
       `,
@@ -320,6 +321,11 @@ export const WithIcon: StoryObj = {
 }
 
 export const Loading: StoryObj = {
+  args: {
+    disabled: true,
+    loading: true,
+  },
+
   parameters: {
     controls: {
       exclude: PrimitiveProps,
@@ -329,7 +335,13 @@ export const Loading: StoryObj = {
       source: {
         code: html`
           <Button disabled">
-            <Iconify icon="lucide:rotate-cw" />
+            <Iconify
+              icon="lucide:rotate-cw"
+              :class="cn(
+                'size-4',
+                props.loading && 'animate-spin',
+              )"
+            />
             Please wait
           </Button>
         `,
@@ -342,12 +354,18 @@ export const Loading: StoryObj = {
       components: { Button, Iconify },
 
       setup() {
-        return { args }
+        return { args, cn }
       },
 
       template: html`
         <Button disabled v-bind="args">
-          <Iconify icon="lucide:rotate-cw" class="animate-spin" />
+          <Iconify
+            icon="lucide:rotate-cw"
+            :class="cn(
+              'size-4',
+              args.loading && 'animate-spin',
+            )"
+          />
           Please wait
         </Button>
       `,

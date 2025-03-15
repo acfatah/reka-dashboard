@@ -10,7 +10,7 @@ export const buttonVariants = cva(
     'hover:cursor-pointer',
     'transition-colors focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none',
     'disabled:pointer-events-none disabled:opacity-50',
-    '[&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+    '[&_svg]:pointer-events-none [&_svg]:shrink-0',
   ],
 
   {
