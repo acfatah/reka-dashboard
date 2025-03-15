@@ -7,6 +7,13 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "stories"],
+  "include": [
+    "env.d.ts",
+    "auto-imports.d.ts",
+    "components.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "stories"
+  ],
   "exclude": ["src/**/__tests__/*"]
 }
