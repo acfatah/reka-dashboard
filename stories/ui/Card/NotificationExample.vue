@@ -67,8 +67,7 @@ const notifications = [
     </CardContent>
     <CardFooter>
       <Button class="w-full">
-        <!-- <CheckIcon class="mr-2 size-4" /> Mark all as read -->
-        <Iconify icon="radix-icons:check" /> Mark all as read
+        <Iconify icon="lucide:check" /> Mark all as read
       </Button>
     </CardFooter>
   </Card>

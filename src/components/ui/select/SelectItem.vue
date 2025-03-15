@@ -36,7 +36,7 @@ const forwardedProps = useForwardProps(delegatedProps)
   >
     <span class="absolute right-2 flex size-3.5 items-center justify-center">
       <SelectItemIndicator>
-        <Iconify icon="radix-icons:check" class="size-4" />
+        <Iconify icon="lucide:check" class="size-4" />
       </SelectItemIndicator>
     </span>
 

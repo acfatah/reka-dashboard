@@ -36,7 +36,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   >
     <span class="absolute left-2 flex size-3.5 items-center justify-center">
       <DropdownMenuItemIndicator>
-        <Iconify icon="radix-icons:check" class="size-4" />
+        <Iconify icon="lucide:check" class="size-4" />
       </DropdownMenuItemIndicator>
     </span>
     <slot />
