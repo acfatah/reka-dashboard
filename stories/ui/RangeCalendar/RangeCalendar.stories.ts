@@ -17,6 +17,8 @@ import DefaultSource from './DefaultStory.vue?raw'
  *
  * See also:
  * - [Data Display/Calendar](?path=/docs/data-display-calendar--docs) component
+ * - [Data Entry/Date Picker](?path=/docs/data-entry-date-picker--docs) component
+ * - [Data Entry/Date Range Picker](?path=/docs/data-entry-date-range-picker--docs) component
  * - [@internationalized/date](https://react-spectrum.adobe.com/internationalized/date/index.html)
  */
 export default {

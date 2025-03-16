@@ -28,7 +28,9 @@ import WithMonthYearSelectionSource from './WithMonthYearSelection.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/calendar.html
  *
  * See also:
- * - [Data Entry/Datepicker](?path=/docs/data-entry-date-picker--docs) component
+ * - [Data Display/Range Calendar](?path=/docs/data-display-range-calendar--docs) component
+ * - [Data Entry/Date Picker](?path=/docs/data-entry-date-picker--docs) component
+ * - [Data Entry/Date Range Picker](?path=/docs/data-entry-date-range-picker--docs) component
  * - [@internationalized/date](https://react-spectrum.adobe.com/internationalized/date/index.html)
  */
 export default {
