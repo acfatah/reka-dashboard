@@ -30,8 +30,7 @@ const forwardedProps = useForwardProps(delegatedProps)
   >
     <slot />
     <SelectIcon as-child>
-      <CaretSortIcon class="size-4 shrink-0 opacity-50" />
-      <Iconify icon="radix-icons:caret-sort" />
+      <Iconify icon="lucide:chevrons-up-down" class="size-4 shrink-0 opacity-50" />
     </SelectIcon>
   </SelectTrigger>
 </template>
