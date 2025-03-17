@@ -5,6 +5,8 @@ import { TabsIndicator } from 'reka-ui'
 
 import DefaultStory from './DefaultStory.vue'
 import DefaultStorySource from './DefaultStory.vue?raw'
+import UnderlinedTabsStory from './UnderlinedTabs.vue'
+import UnderlinedTabsSource from './UnderlinedTabs.vue?raw'
 
 /**
  * A set of layered sections of content—known as tab panels—that are displayed one at a time.
@@ -42,6 +44,28 @@ export const Default: StoryObj = {
 
     template: html`
       <DefaultStory v-bind="args" />
+    `,
+  }),
+}
+
+export const UnderlineTabs: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: UnderlinedTabsSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { UnderlinedTabsStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: html`
+      <UnderlineTabsStory v-bind="args" />
     `,
   }),
 }
