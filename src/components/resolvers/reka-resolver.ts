@@ -17,6 +17,7 @@ export default function (componentName: string) {
     { name: 'SplitterGroup', from: 'reka-ui' },
     { name: 'SplitterPanel', from: 'reka-ui' },
     { name: 'SplitterResizeHandle', from: 'reka-ui' },
+    { name: 'TabsIndicator', from: 'reka-ui' },
   ]
 
   return components.find(
