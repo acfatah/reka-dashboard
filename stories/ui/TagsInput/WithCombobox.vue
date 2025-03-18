@@ -83,6 +83,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                 <ComboboxInput placeholder="Framework..." as-child>
                   <TagsInputInput
                     :class="cn('w-full px-3', { 'mt-2': value.length > 0 })"
+                    @focus="open = true"
                     @keydown.enter.prevent
                   />
                 </ComboboxInput>
