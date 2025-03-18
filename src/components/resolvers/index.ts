@@ -3,6 +3,7 @@ import rekaResolver from './reka-resolver'
 import { useShallowResolver } from './shallow-resolver'
 import vaulVueResolver from './vaul-vue-resolver'
 import veeValidateResolver from './vee-validate-resolver'
+import vueUseResolver from './vue-use-resolver'
 
 /** An array of directories to search for components including subdirectories */
 export const dirs = [
@@ -22,6 +23,7 @@ const shallowImportDirs = [
  */
 export const resolvers: ComponentResolver[] = [
   useShallowResolver(shallowImportDirs),
+  vueUseResolver,
   rekaResolver,
   vaulVueResolver,
   veeValidateResolver,
