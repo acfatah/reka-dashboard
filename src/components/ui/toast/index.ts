@@ -20,8 +20,8 @@ export const toastVariants = cva(
     'data-[state=closed]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full',
     'data-[state=open]:animate-in data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full',
     'data-[swipe=cancel]:translate-x-0',
-    'data-[swipe=end]:translate-x-[var(--reka-toast-swipe-end-x)] data-[swipe=end]:animate-out',
-    'data-[swipe=move]:translate-x-[var(--reka-toast-swipe-move-x)] data-[swipe=move]:transition-none',
+    'data-[swipe=end]:translate-x-(--reka-toast-swipe-end-x) data-[swipe=end]:animate-out',
+    'data-[swipe=move]:translate-x-(--reka-toast-swipe-move-x) data-[swipe=move]:transition-none',
   ],
 
   {
