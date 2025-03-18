@@ -1,6 +1,8 @@
 import type { StoryObj } from '@storybook/vue3'
 import { DataTable } from '@/components/ui/data-table'
 
+import CustomFilterAndPaginationComponent from './CustomFilterAndPagination.vue'
+import CustomFilterAndPaginationSource from './CustomFilterAndPagination.vue?raw'
 import DefaultStory from './DefaultDataTable/DefaultDataTable.vue'
 import DefaultSource from './DefaultDataTable/DefaultDataTable.vue?raw'
 import TanStackTableComponent from './TanStackTable/TanStackTable.vue'
@@ -72,3 +74,26 @@ export const TanStackTable: StoryObj = {
 }
 
 TanStackTable.name = 'TanStack Table'
+
+export const CustomFilterAndPagination: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: CustomFilterAndPaginationSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { CustomFilterAndPaginationComponent },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <CustomFilterAndPaginationComponent v-bind="args" />
+    `,
+  }),
+
+}
