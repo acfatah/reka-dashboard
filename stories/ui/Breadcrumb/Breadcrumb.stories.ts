@@ -24,7 +24,7 @@ import ResponsiveSource from './ResponsiveStory.vue?raw'
 /**
  * Displays the path to the current resource using a hierarchy of links.
  *
- * Documentation: https://www.shadcn-vue.com/docs/components/breadcrumb.html
+ * Documentation: https://www.shadcn-vue.com/docs/components/breadcrumb
  */
 export default {
   title: 'Navigation/Breadcrumb',

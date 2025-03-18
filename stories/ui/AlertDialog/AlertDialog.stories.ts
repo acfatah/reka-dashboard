@@ -18,7 +18,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * It is modal that blocks the user from interacting with the parent page until it's closed.
  * In other words, it's a persistent dialog.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/alert-dialog.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/alert-dialog
  *
  * See also:
  * - [Feedback/Dialog](?path=/docs/feedback-dialog--docs) component

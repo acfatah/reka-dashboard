@@ -26,7 +26,7 @@ import WithTitleSource from './WithTitle.vue?raw'
  * Toasts are used to display short messages to the user.
  *
  * We are using Radix Toast components.
- * Read more at https://www.reka-ui.com/docs/components/toast.
+ * Read more at https://reka-ui.com/docs/components/toast.
  */
 export default {
   title: 'Feedback/Toast',

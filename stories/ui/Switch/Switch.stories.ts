@@ -11,7 +11,7 @@ import FormSource from './FormStory.vue?raw'
 /**
  * A control that allows the user to toggle between checked and not checked.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/switch.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/switch
  */
 export default {
   title: 'Data Entry/Switch',

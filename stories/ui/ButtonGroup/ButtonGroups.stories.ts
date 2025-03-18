@@ -13,7 +13,7 @@ import SingleFormSource from './SingleFormStory.vue?raw'
 /**
  * Customized ToggleGroup component to group buttons together.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/toggle-group.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/toggle-group
  */
 export default {
   title: 'Data Entry/Button Group',

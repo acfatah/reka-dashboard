@@ -7,7 +7,7 @@ import DefaultSource from './DefaultStory.vue?raw'
 /**
  * Displays content within a desired ratio.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/aspect-ratio.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/aspect-ratio
  */
 export default {
   title: 'Graphic Elements/Aspect Ratio',

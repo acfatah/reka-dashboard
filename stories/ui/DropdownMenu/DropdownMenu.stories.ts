@@ -28,7 +28,7 @@ import WithRadioGroupSource from './WithRadioGroup.vue?raw'
 /**
  * Displays a menu to the user — such as a set of actions or functions — triggered by a button.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/dropdown-menu.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/dropdown-menu
  */
 export default {
   title: 'Overlays/Dropdown Menu',

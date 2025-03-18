@@ -11,7 +11,7 @@ import DefaultSource from './DefaultStory.vue?raw'
 /**
  * Displays rich content in a portal, triggered by a button.
  *
- * Primitive API Reference: https://reka-ui.com/docs/components/popover.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/popover
  */
 export default {
   title: 'Overlays/Popover',

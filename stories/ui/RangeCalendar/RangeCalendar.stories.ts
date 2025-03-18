@@ -11,8 +11,8 @@ import DefaultSource from './DefaultStory.vue?raw'
  * The `<RangeCalendar />` component is built on top of the `reka-ui` `Range Calendar`
  * component, which uses the `@internationalized/date` package to handle dates.
  *
- * Documentation: https://www.shadcn-vue.com/docs/components/range-calendar.html<br>
- * Guide: https://reka-ui.com/docs/guides/dates.html<br>
+ * Documentation: https://www.shadcn-vue.com/docs/components/range-calendar<br>
+ * Guide: https://reka-ui.com/docs/guides/dates<br>
  * Primitive API Reference: https://reka-ui.com/docs/components/date-range-picker
  *
  * See also:

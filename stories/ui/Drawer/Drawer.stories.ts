@@ -21,7 +21,7 @@ import DefaultSource from './DefaultStory.vue?raw'
 /**
  * Drawer is built on top of [Vaul Vue](https://github.com/unovue/vaul-vue).
  *
- * Documentation: https://www.shadcn-vue.com/docs/components/drawer.html<br>
+ * Documentation: https://www.shadcn-vue.com/docs/components/drawer<br>
  * Primitive API Reference: https://github.com/unovue/vaul-vue
  */
 export default {

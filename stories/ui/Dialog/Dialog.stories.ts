@@ -28,7 +28,7 @@ import ScrollOverlaySource from './ScrollOverlay.vue?raw'
 /**
  * A modal dialog that interrupts the user with important content and expects a response.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/dialog
+ * Primitive API Reference: https://reka-ui.com/docs/components/dialog
  *
  * See also:
  * - [Feedback/Alert Dialog](?path=/docs/feedback-alert-dialog--docs) component

@@ -11,7 +11,7 @@ import UnderlinedTabsSource from './UnderlinedTabs.vue?raw'
 /**
  * A set of layered sections of content—known as tab panels—that are displayed one at a time.
  *
- * Primitive API Reference: https://reka-ui.com/docs/components/tabs.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/tabs
  */
 export default {
   title: 'Panels/Tabs',

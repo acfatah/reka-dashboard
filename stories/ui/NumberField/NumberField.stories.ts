@@ -24,7 +24,7 @@ import PercentageSource from './PercentageStory.vue?raw'
  * A number field allows a user to enter a number and increment or decrement the
  * value using stepper buttons.
  *
- * Primitive API Reference: https://reka-ui.com/docs/components/number-field.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/number-field
  */
 export default {
   title: 'Data Entry/Number Field',

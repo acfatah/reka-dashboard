@@ -15,7 +15,7 @@ import FormSource from './FormStory.vue?raw'
  * A set of checkable buttons—known as radio buttons—where no more than one of the
  * buttons can be checked at a time.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/radio-group.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/radio-group
  */
 export default {
   title: 'Data Entry/Radio Group',

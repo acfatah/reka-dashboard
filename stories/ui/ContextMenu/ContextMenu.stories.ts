@@ -23,7 +23,7 @@ import DefaultSource from './DefaultStory.vue?raw'
 /**
  * Displays a menu to the user — such as a set of actions or functions — triggered by a button.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/context-menu.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/context-menu
  */
 export default {
   title: 'Overlays/ContextMenu',

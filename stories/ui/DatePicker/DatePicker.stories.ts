@@ -16,9 +16,9 @@ import WithPresetSource from './WithPresetStory.vue?raw'
  * The Date Picker is built using a composition of the `<Popover />` and
  * either the `<Calendar />` or `<RangeCalendar />` components.
  *
- * Documentation: https://www.shadcn-vue.com/docs/components/date-picker.html<br>
- * Guide: https://reka-ui.com/docs/guides/dates.html<br>
- * Primitive API Reference: https://reka-ui.com/docs/components/calendar.html
+ * Documentation: https://www.shadcn-vue.com/docs/components/date-picker<br>
+ * Guide: https://reka-ui.com/docs/guides/dates<br>
+ * Primitive API Reference: https://reka-ui.com/docs/components/calendar
  *
  * See also:
  * - [Overlays/Popover](?path=/docs/overlays-popover--docs) component

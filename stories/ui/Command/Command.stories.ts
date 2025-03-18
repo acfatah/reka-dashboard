@@ -20,7 +20,7 @@ import CommandDialogSource from './Dialog.vue?raw'
 /**
  * Fast, composable, unstyled command menu.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/combobox.html#command-menu
+ * Primitive API Reference: https://reka-ui.com/docs/components/combobox#command-menu
  */
 export default {
   title: 'Overlays/Command',

@@ -24,8 +24,8 @@ import WithMonthYearSelectionSource from './WithMonthYearSelection.vue?raw'
 /**
  * A date field component that allows users to enter and edit date.
  *
- * Guide: https://reka-ui.com/docs/guides/dates.html<br>
- * Primitive API Reference: https://reka-ui.com/docs/components/calendar.html
+ * Guide: https://reka-ui.com/docs/guides/dates<br>
+ * Primitive API Reference: https://reka-ui.com/docs/components/calendar
  *
  * See also:
  * - [Data Display/Range Calendar](?path=/docs/data-display-range-calendar--docs) component

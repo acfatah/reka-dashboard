@@ -26,8 +26,8 @@ import WithIndependentMonthsSource from './WithIndependentMonths.vue?raw'
 /**
  * A calendar component that allows users to select a range of dates.
  *
- * Documentation: https://www.shadcn-vue.com/docs/components/date-picker.html<br>
- * Guide: https://reka-ui.com/docs/guides/dates.html<br>
+ * Documentation: https://www.shadcn-vue.com/docs/components/date-picker<br>
+ * Guide: https://reka-ui.com/docs/guides/dates<br>
  * Primitive API Reference: https://reka-ui.com/docs/components/date-range-picker
  *
  * See also:

@@ -56,7 +56,7 @@ export default {
         type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
-      description: '[Reka\'s Composition](https://www.reka-ui.com/docs/guides/composition.html)',
+      description: '[Reka\'s Composition](https://reka-ui.com/docs/guides/composition)',
 
     },
 

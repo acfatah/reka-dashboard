@@ -13,7 +13,7 @@ import WithTextSource from './WithText.vue?raw'
 /**
  * A two-state button that can be either on or off.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/toggle.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/toggle
  */
 export default {
   title: 'Data Entry/Toggle',

@@ -21,7 +21,7 @@ import ScrollableSource from './ScrollableStory.vue?raw'
 /**
  * Displays a list of options for the user to pick from—triggered by a button.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/select.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/select
  */
 export default {
   title: 'Data Entry/Select',

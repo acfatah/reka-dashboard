@@ -13,7 +13,7 @@ import DefaultSource from './DefaultStory.vue?raw'
 /**
  * An image element with a fallback for representing the user.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/avatar.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/avatar
  */
 export default {
   title: 'Graphic Elements/Avatar',

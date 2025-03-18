@@ -11,7 +11,7 @@ import FormSource from './FormStory.vue?raw'
 /**
  * An input where the user selects a value from within a given range.
  *
- * Primitive API Reference: https://reka-ui.com/docs/components/slider.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/slider
  */
 export default {
   title: 'Data Entry/Slider',

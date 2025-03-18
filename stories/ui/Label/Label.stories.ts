@@ -8,7 +8,7 @@ import DefaultSource from './DefaultStory.vue?raw'
 /**
  * Renders an accessible label associated with controls.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/label.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/label
  *
  * See also:
  * - [Data Entry/Text Input With Label](?path=/story/data-entry-text-input--with-label) component

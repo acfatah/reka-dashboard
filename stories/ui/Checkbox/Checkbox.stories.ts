@@ -15,7 +15,7 @@ import WithTextSource from './WithTextStory.vue?raw'
 /**
  * A control that allows the user to toggle between checked and not checked.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/checkbox.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/checkbox
  */
 export default {
   title: 'Data Entry/Checkbox',

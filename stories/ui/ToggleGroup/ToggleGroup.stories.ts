@@ -12,7 +12,7 @@ import FormSource from './FormStory.vue?raw'
 /**
  * A set of two-state buttons that can be toggled on or off.
  *
- * Primitive API Reference: https://www.reka-ui.com/docs/components/toggle-group.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/toggle-group
  */
 export default {
   title: 'Data Entry/Toggle Group',

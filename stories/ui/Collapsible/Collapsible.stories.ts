@@ -11,7 +11,7 @@ import DefaultSource from './DefaultStory.vue?raw'
 /**
  * An interactive component which expands/collapses a panel.
  *
- * Primitive API Reference: https://reka-ui.com/docs/components/collapsible.html
+ * Primitive API Reference: https://reka-ui.com/docs/components/collapsible
  */
 export default {
   title: 'Panels/Collapsible',
