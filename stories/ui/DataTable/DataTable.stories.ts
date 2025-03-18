@@ -3,12 +3,11 @@ import { DataTable } from '@/components/ui/data-table'
 
 import DefaultStory from './DefaultDataTable/DefaultDataTable.vue'
 import DefaultSource from './DefaultDataTable/DefaultDataTable.vue?raw'
+import TanStackTableComponent from './TanStackTable/TanStackTable.vue'
+import TanStackTableSource from './TanStackTable/TanStackTable.vue?raw'
 
 /**
- * Table and datagrids built using TanStack Table.
- *
- * Documentation: https://www.shadcn-vue.com/docs/components/data-table<br>
- * TanStack Table API: https://tanstack.com/table/v8/docs/introduction
+ * Minimal reusable DataTable component.
  */
 export default {
   title: 'Data Display/Data Table',
@@ -43,3 +42,33 @@ export const Default: StoryObj = {
     `,
   }),
 }
+
+/**
+ * TanStack Table provides more advanced options to build more complex data tables.
+ *
+ * Documentation: https://www.shadcn-vue.com/docs/components/data-table<br>
+ * TanStack Table API: https://tanstack.com/table/v8/docs/introduction
+ */
+export const TanStackTable: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: TanStackTableSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { TanStackTableComponent },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <TanStackTableComponent v-bind="args" />
+    `,
+  }),
+}
+
+TanStackTable.name = 'TanStack Table'
