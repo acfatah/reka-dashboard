@@ -23,6 +23,7 @@
     "@iconify/vue": "^4.3.0",
     "@internationalized/date": "^3.7.0",
     "@tailwindcss/vite": "^4.0.14",
+    "@tanstack/vue-table": "^8.21.2",
     "@vee-validate/zod": "^4.15.0",
     "@vueuse/components": "^12.8.2",
     "@vueuse/core": "^12.8.2",
