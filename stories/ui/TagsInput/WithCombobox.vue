@@ -58,14 +58,14 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
           <TagsInput
             class="w-80 gap-0 px-0"
             :model-value="value"
-            :display-value="value => frameworks.find(i => i.value === value)?.label as string"
+            :display-value="(value => frameworks.find(i => i.value === value)?.label as string)"
             @update:model-value="handleChange"
           >
             <div class="flex flex-wrap items-center gap-2 px-3">
               <TagsInputItem
                 v-for="item in value"
                 :key="item"
-                :value="frameworks.find(i => i.value === item)?.value as string"
+                :value="(frameworks.find(i => i.value === item)?.value as string)"
               >
                 <TagsInputItemText />
                 <TagsInputItemDelete />

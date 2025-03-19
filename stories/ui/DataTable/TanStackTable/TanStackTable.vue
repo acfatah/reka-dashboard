@@ -120,7 +120,7 @@ const table = useVueTable({
       <Input
         class="max-w-sm"
         placeholder="Filter emails..."
-        :model-value="table.getColumn('email')?.getFilterValue() as string"
+        :model-value="(table.getColumn('email')?.getFilterValue() as string)"
         @update:model-value=" table.getColumn('email')?.setFilterValue($event)"
       />
       <DropdownMenu>
