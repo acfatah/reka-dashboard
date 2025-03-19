@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import type { VariantProps } from 'class-variance-authority'
 import type { ToggleGroupRootEmits, ToggleGroupRootProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { ToggleGroupRoot, useForwardPropsEmits } from 'reka-ui'
-import { computed, provide, reactive } from 'vue'
-import type { buttonGroupVariants } from '.'
-
-type ButtonGroupVariants = VariantProps<typeof buttonGroupVariants>
+import { computed } from 'vue'
+import type { ButtonGroupVariants } from '.'
+import { provideButtonGroupContext } from '.'
 
 const props = defineProps<ToggleGroupRootProps & {
   class?: HTMLAttributes['class']
@@ -18,10 +16,11 @@ const props = defineProps<ToggleGroupRootProps & {
 
 const emits = defineEmits<ToggleGroupRootEmits>()
 
-provide('buttonGroup', reactive({
+provideButtonGroupContext({
   variant: computed(() => props.variant),
   size: computed(() => props.size),
-}))
+  orientation: computed(() => props.orientation),
+})
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

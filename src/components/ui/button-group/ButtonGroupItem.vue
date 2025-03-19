@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { VariantProps } from 'class-variance-authority'
 import type { ToggleGroupItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { ToggleGroupItem, useForwardProps } from 'reka-ui'
-import { computed, inject } from 'vue'
-import { buttonGroupVariants } from '.'
+import { computed } from 'vue'
+import type { ButtonGroupVariants } from '.'
+import { buttonGroupVariants, injectButtonGroupContext } from '.'
 
 const props = defineProps<ToggleGroupItemProps & {
   class?: HTMLAttributes['class']
@@ -13,9 +13,7 @@ const props = defineProps<ToggleGroupItemProps & {
   size?: ButtonGroupVariants['size']
 }>()
 
-type ButtonGroupVariants = VariantProps<typeof buttonGroupVariants>
-
-const context = inject<ButtonGroupVariants>('buttonGroup')
+const { variant, size } = injectButtonGroupContext()
 
 const delegatedProps = computed(() => {
   const { class: _, variant, size, ...delegated } = props
@@ -31,8 +29,8 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
     :class="cn(
       buttonGroupVariants({
-        variant: context?.variant || props.variant,
-        size: context?.size || props.size,
+        variant: props.variant || variant,
+        size: props.size || size,
       }),
       props.class,
     )"

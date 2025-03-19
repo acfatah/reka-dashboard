@@ -1,4 +1,6 @@
+import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
+import { createContext } from 'reka-ui'
 
 export { default as ButtonGroup } from './ButtonGroup.vue'
 export { default as ButtonGroupItem } from './ButtonGroupItem.vue'
@@ -47,3 +49,12 @@ export const buttonGroupVariants = cva(
     },
   },
 )
+
+export type ButtonGroupVariants = VariantProps<typeof buttonGroupVariants>
+
+export const [injectButtonGroupContext, provideButtonGroupContext]
+  = createContext<{
+    variant: Ref<ButtonGroupVariants['variant']>
+    size: Ref<ButtonGroupVariants['size']>
+    orientation: Ref<ButtonGroupVariants['orientation']>
+  }>('ButtonGroup')
