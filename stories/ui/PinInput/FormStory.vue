@@ -26,6 +26,9 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     )),
   })
 }
+
+// TODO: Remove the story args
+const storyArgs = useAttrs()
 </script>
 
 <template>
@@ -39,9 +42,8 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
       <FormItem>
         <FormLabel>OTP</FormLabel>
         <FormControl>
-          <!-- IMPORTANT!: Remove the v-bind="$attrs" -->
           <PinInput
-            v-bind="$attrs"
+            v-bind="storyArgs"
             id="pin-input"
             :model-value="value"
             placeholder="○"

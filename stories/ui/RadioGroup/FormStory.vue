@@ -25,6 +25,9 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     ),
   })
 }
+
+// TODO: Remove the story args
+const storyArgs = useAttrs()
 </script>
 
 <template>
@@ -38,7 +41,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
         <FormLabel>Notify me about...</FormLabel>
 
         <FormControl>
-          <RadioGroup v-bind="componentField">
+          <RadioGroup v-bind="{ ...componentField, ...storyArgs }">
             <FormItem class="flex flex-row space-y-1 space-x-2">
               <FormControl>
                 <RadioGroupItem value="all" />

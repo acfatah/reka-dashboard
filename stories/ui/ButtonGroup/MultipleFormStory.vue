@@ -28,8 +28,8 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
   })
 }
 
-// The story args
-const storyAttrs = useAttrs()
+// TODO: Remove the story args
+const storyArgs = useAttrs()
 </script>
 
 <template>
@@ -45,7 +45,7 @@ const storyAttrs = useAttrs()
           <ButtonGroup
             :model-value="value"
             type="multiple"
-            v-bind="storyAttrs"
+            v-bind="storyArgs"
             @update:model-value="handleChange"
           >
             <ButtonGroupItem value="button-1" aria-label="Button 1">
