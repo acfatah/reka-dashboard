@@ -15,6 +15,8 @@ import FormStory from './FormStory.vue'
 import FormSource from './FormStory.vue?raw'
 import WithComboboxStory from './WithCombobox.vue'
 import WithComboboxSource from './WithCombobox.vue?raw'
+import WithoutTextInputStory from './WithoutTextInput.vue'
+import WithoutTextInputSource from './WithoutTextInput.vue?raw'
 
 /**
  * Tag inputs render tags inside an input, followed by an actual text input.
@@ -106,6 +108,34 @@ export const WithCombobox: StoryObj = {
         <Toaster />
       </Teleport>
       <WithComboboxStory v-bind="args" />
+    `,
+  }),
+}
+
+/**
+ * TagsInput without search input text.
+ */
+export const WithoutTextInput: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: WithoutTextInputSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { WithoutTextInputStory, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: html`
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+      <WithoutTextInputStory v-bind="args" />
     `,
   }),
 }
