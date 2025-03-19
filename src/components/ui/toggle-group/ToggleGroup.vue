@@ -5,7 +5,8 @@ import type { ToggleGroupRootEmits, ToggleGroupRootProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { ToggleGroupRoot, useForwardPropsEmits } from 'reka-ui'
-import { computed, provide } from 'vue'
+import { computed } from 'vue'
+import { provideToggleGroupContext } from '.'
 
 type ToggleGroupVariants = VariantProps<typeof toggleVariants>
 
@@ -16,9 +17,9 @@ const props = defineProps<ToggleGroupRootProps & {
 }>()
 const emits = defineEmits<ToggleGroupRootEmits>()
 
-provide('toggleGroup', {
-  variant: props.variant,
-  size: props.size,
+provideToggleGroupContext({
+  variant: computed(() => props.variant),
+  size: computed(() => props.size),
 })
 
 const delegatedProps = computed(() => {
