@@ -1,7 +1,8 @@
 import { useNProgress } from '@vueuse/integrations/useNProgress'
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomeView from '../views/Welcome/HomeView.vue'
+import WelcomeLayout from '@/components/layouts/WelcomeLayout.vue'
+import HomeView from '@/views/Welcome/HomeView.vue'
 
 const { start: startLoading, done: doneLoading } = useNProgress()
 
@@ -12,6 +13,9 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: {
+        layout: WelcomeLayout,
+      },
     },
     {
       path: '/about',
@@ -20,6 +24,9 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Welcome/AboutView.vue'),
+      meta: {
+        layout: WelcomeLayout,
+      },
     },
   ],
 })
