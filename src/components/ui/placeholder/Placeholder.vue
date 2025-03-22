@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import type { CxOptions } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
-const props = defineProps<{ class?: CxOptions }>()
+const props = defineProps<{ class?: string }>()
 </script>
 
 <template>
