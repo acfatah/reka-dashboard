@@ -3,6 +3,8 @@ import { RadialProgress } from '@/components/ui/progress'
 
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
+import VisDonutStory from './VisDonutStory.vue'
+import VisDonutSource from './VisDonutStory.vue?raw'
 
 /**
  * Radial progress implementation using CSS
@@ -49,6 +51,40 @@ export const Default: StoryObj = {
 
     template: `
       <DefaultStory v-bind="args" />
+    `,
+  }),
+}
+
+/**
+ * Radial progress implementation using VisDonut.
+ *
+ * VisDonut API Reference: https://unovis.dev/docs/misc/Donut
+ */
+export const VisDonut: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: VisDonutSource,
+      },
+    },
+  },
+
+  args: {
+    hideLabel: false,
+    hideSubLabel: false,
+    progressText: '',
+    completeText: 'Complete',
+  },
+
+  render: args => ({
+    components: { VisDonutStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <VisDonutStory v-bind="args" />
     `,
   }),
 }
