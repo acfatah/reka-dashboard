@@ -1,0 +1,16 @@
+/**
+ * https://unovis.dev/docs/guides/theming
+ */
+
+@layer base {
+  :root {
+    --vis-tooltip-background-color: none !important;
+    --vis-tooltip-border-color: none !important;
+    --vis-tooltip-text-color: none !important;
+    --vis-tooltip-shadow-color: none !important;
+    --vis-tooltip-backdrop-filter: none !important;
+    --vis-tooltip-padding: none !important;
+
+    --vis-text-color: var(--muted-foreground);
+  }
+}
