@@ -3,6 +3,9 @@ import { monthlyData, monthlyPredictions } from './data.ts'
 import BarChartSource from './DefaultSnippet.vue?raw'
 import WithCategoriesSource from './WithCategorySnippet.vue?raw'
 
+/**
+ * https://unovis.dev/docs/xy-charts/GroupedBar
+ */
 export default {
   title: 'Charts/Bar Chart',
   component: BarChart,

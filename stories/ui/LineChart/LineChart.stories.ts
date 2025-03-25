@@ -4,6 +4,9 @@ import data from './data/growth.ts'
 import DefaultSource from './DefaultSnippet.vue?raw'
 import SparklineSource from './SparklineSnippet.vue?raw'
 
+/**
+ * https://unovis.dev/docs/xy-charts/Line
+ */
 export default {
   title: 'Charts/Line Chart',
   component: LineChart,

@@ -4,6 +4,9 @@ import ColorSource from './ColorSnippet.vue?raw'
 import DefaultSource from './DefaultSnippet.vue?raw'
 import PieChartSource from './PieChartSnippet.vue?raw'
 
+/**
+ * https://unovis.dev/docs/misc/Donut
+ */
 export default {
   title: 'Charts/Donut Chart',
   component: DonutChart,

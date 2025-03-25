@@ -4,6 +4,9 @@ import data from '../LineChart/data/montly.js'
 import AreaChartSource from './DefaultSnippet.vue?raw'
 import SparklineSource from './SparklineSnippet.vue?raw'
 
+/**
+ * https://unovis.dev/docs/xy-charts/Area
+ */
 export default {
   title: 'Charts/Area Chart',
   component: AreaChart,
