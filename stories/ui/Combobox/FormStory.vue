@@ -6,12 +6,12 @@ import { z } from 'zod'
 
 const languageDropdownOpen = ref(false)
 
-interface Language {
+interface LanguageRecord {
   label: string
   value: string
 }
 
-const languages: Language[] = [
+const languages: LanguageRecord[] = [
   { label: 'English', value: 'en' },
   { label: 'French', value: 'fr' },
   { label: 'German', value: 'de' },
@@ -36,7 +36,7 @@ const initialValues = {
 }
 
 const onSubmit: SubmissionHandler<GenericObject> = function (values) {
-  const formValues = values as z.infer<typeof schema>
+  const formValues = values as LanguageRecord
 
   toast({
     title: 'You submitted the following values:',

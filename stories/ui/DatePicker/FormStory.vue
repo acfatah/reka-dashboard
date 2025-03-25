@@ -25,6 +25,7 @@ const df = new DateFormatter('en-US', {
   dateStyle: 'long',
 })
 
+type SubmissionRecord = z.infer<typeof schema>
 const schema = z.object({
   dob: z
     .string()
@@ -39,13 +40,8 @@ const initialValues = {
 
 const placeholder = ref()
 
-// const dobValue = computed({
-//   get: () => values.dob ? parseDate(values.dob) : undefined,
-//   set: val => val,
-// })
-
 const onSubmit: SubmissionHandler<GenericObject> = function (values) {
-  const formvalues = values as z.infer<typeof schema>
+  const formvalues = values as SubmissionRecord
 
   toast({
     title: 'You submitted the following values:',

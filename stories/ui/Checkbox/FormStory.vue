@@ -5,6 +5,7 @@ import { toTypedSchema } from '@vee-validate/zod'
 import { h } from 'vue'
 import { z } from 'zod'
 
+type SubmissionRecord = z.infer<typeof schema>
 const schema = z.object({
   mobile: z.boolean().default(false).optional(),
 })
@@ -12,7 +13,7 @@ const schema = z.object({
 const formSchema = toTypedSchema(schema)
 
 const onSubmit: SubmissionHandler<GenericObject> = function (values) {
-  const formValues = values as z.infer<typeof schema>
+  const formValues = values as SubmissionRecord
 
   toast({
     title: 'You submitted the following values:',

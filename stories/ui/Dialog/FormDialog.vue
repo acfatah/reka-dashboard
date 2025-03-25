@@ -26,6 +26,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { toast } from '@/components/ui/toast'
 
+type SubmissionRecord = z.infer<typeof schema>
 const schema = z.object({
   username: z.string().min(2).max(50),
 })
@@ -33,7 +34,7 @@ const schema = z.object({
 const formSchema = toTypedSchema(schema)
 
 const onSubmit: SubmissionHandler<GenericObject> = function (values) {
-  const formValues = values as z.infer<typeof schema>
+  const formValues = values as SubmissionRecord
 
   toast({
     title: 'You submitted the following values:',

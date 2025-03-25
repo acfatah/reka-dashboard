@@ -4,6 +4,7 @@ import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { z } from 'zod'
 
+type SubmissionRecord = z.infer<typeof schema>
 const schema = z.object({
   pin: z
     .array(z.coerce.string())
@@ -11,11 +12,10 @@ const schema = z.object({
     .transform(value => value.join('')),
 })
 
-type FormValues = z.infer<typeof schema>
 const formSchema = toTypedSchema(schema)
 
 const onSubmit: SubmissionHandler<GenericObject> = function (values) {
-  const formValues = values as FormValues
+  const formValues = values as SubmissionRecord
 
   toast({
     title: 'You submitted the following values:',

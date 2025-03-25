@@ -5,21 +5,18 @@ import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { z } from 'zod'
 
-interface Framework {
+interface FrameworkRecord {
   label: string
   value: string
 }
 
-const frameworks: Framework[] = [
+const frameworks: FrameworkRecord[] = [
   { label: 'Next.js', value: 'next.js' },
   { label: 'SvelteKit', value: 'sveltekit' },
   { label: 'Nuxt', value: 'nuxt' },
   { label: 'Remix', value: 'remix' },
   { label: 'Astro', value: 'astro' },
 ]
-
-const open = ref(false)
-const searchTerm = ref('')
 
 const schema = z.object({
   frameworks: z.array(z.string()).min(1).max(3),
@@ -31,8 +28,11 @@ const initialValues = {
   frameworks: [],
 }
 
+const open = ref(false)
+const searchTerm = ref('')
+
 const onSubmit: SubmissionHandler<GenericObject> = function (values) {
-  const formValues = values as z.infer<typeof schema>
+  const formValues = values as FrameworkRecord
 
   toast({
     title: 'You submitted the following values:',
