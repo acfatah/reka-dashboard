@@ -96,12 +96,10 @@ watch(secondMonthPlaceholder, (_secondMonthPlaceholder) => {
     <PopoverTrigger as-child>
       <Button
         variant="outline"
-        :class="
-          cn(
-            'w-[280px] justify-start text-left font-normal',
-            !value && 'text-muted-foreground',
-          )
-        "
+        :class="cn(
+          'w-[280px] justify-start text-left font-normal',
+          !value && 'text-muted-foreground',
+        )"
       >
         <Iconify icon="lucide:calendar" class="mr-2 size-4" />
         <template v-if="value.start">
@@ -140,12 +138,10 @@ watch(secondMonthPlaceholder, (_secondMonthPlaceholder) => {
           <div class="flex flex-col gap-4">
             <div class="flex items-center justify-between">
               <button
-                :class="
-                  cn(
-                    buttonVariants({ variant: 'outline' }),
-                    'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
-                  )
-                "
+                :class="cn(
+                  buttonVariants({ variant: 'outline' }),
+                  'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+                )"
                 @click="updateMonth('first', -1)"
               >
                 <Iconify icon="lucide:chevron-left" class="size-4" />
@@ -160,12 +156,10 @@ watch(secondMonthPlaceholder, (_secondMonthPlaceholder) => {
                 }}
               </div>
               <button
-                :class="
-                  cn(
-                    buttonVariants({ variant: 'outline' }),
-                    'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
-                  )
-                "
+                :class="cn(
+                  buttonVariants({ variant: 'outline' }),
+                  'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+                )"
                 @click="updateMonth('first', 1)"
               >
                 <Iconify icon="lucide:chevron-right" class="size-4" />
@@ -208,12 +202,10 @@ watch(secondMonthPlaceholder, (_secondMonthPlaceholder) => {
           <div class="flex flex-col gap-4">
             <div class="flex items-center justify-between">
               <button
-                :class="
-                  cn(
-                    buttonVariants({ variant: 'outline' }),
-                    'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
-                  )
-                "
+                :class="cn(
+                  buttonVariants({ variant: 'outline' }),
+                  'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+                )"
                 @click="updateMonth('second', -1)"
               >
                 <Iconify icon="lucide:chevron-left" class="size-4" />
@@ -229,12 +221,10 @@ watch(secondMonthPlaceholder, (_secondMonthPlaceholder) => {
               </div>
 
               <button
-                :class="
-                  cn(
-                    buttonVariants({ variant: 'outline' }),
-                    'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
-                  )
-                "
+                :class="cn(
+                  buttonVariants({ variant: 'outline' }),
+                  'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+                )"
                 @click="updateMonth('second', 1)"
               >
                 <Iconify icon="lucide:chevron-right" class="size-4" />

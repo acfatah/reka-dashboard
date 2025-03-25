@@ -6,7 +6,6 @@ import { cn } from '@/lib/utils'
 import { useFormField } from './useFormField'
 
 const props = defineProps<LabelProps & { class?: HTMLAttributes['class'] }>()
-
 const { error, formItemId } = useFormField()
 </script>
 

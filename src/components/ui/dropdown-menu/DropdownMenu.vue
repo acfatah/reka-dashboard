@@ -4,7 +4,6 @@ import { DropdownMenuRoot, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<DropdownMenuRootProps>()
 const emits = defineEmits<DropdownMenuRootEmits>()
-
 const forwarded = useForwardPropsEmits(props, emits)
 </script>
 

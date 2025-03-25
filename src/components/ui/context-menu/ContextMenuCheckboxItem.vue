@@ -16,6 +16,7 @@ const props = defineProps<ContextMenuCheckboxItemProps & {
 }>()
 
 const emits = defineEmits<ContextMenuCheckboxItemEmits>()
+
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
 

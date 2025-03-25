@@ -73,7 +73,7 @@ const selectorsBar = computed(() => props.type === 'grouped' ? GroupedBar.select
 
       <VisBarComponent
         :x="(d: Data, i: number) => i"
-        :y="categories.map(category => (d: Data) => d[category]) "
+        :y="categories.map(category => (d: Data) => d[category])"
         :color="colors"
         :rounded-corners="roundedCorners"
         :bar-padding="0.05"

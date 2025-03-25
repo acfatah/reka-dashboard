@@ -26,7 +26,8 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
   <ToggleGroupItem
-    v-bind="forwardedProps" :class="cn(toggleVariants({
+    v-bind="forwardedProps"
+    :class="cn(toggleVariants({
       variant: props.variant || variant,
       size: props.size || size,
     }), props.class)"

@@ -11,7 +11,6 @@ import {
 import { computed } from 'vue'
 
 const props = defineProps<DropdownMenuRadioItemProps & { class?: HTMLAttributes['class'] }>()
-
 const emits = defineEmits<DropdownMenuRadioItemEmits>()
 
 const delegatedProps = computed(() => {

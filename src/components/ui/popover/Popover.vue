@@ -4,7 +4,6 @@ import { PopoverRoot, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<PopoverRootProps>()
 const emits = defineEmits<PopoverRootEmits>()
-
 const forwarded = useForwardPropsEmits(props, emits)
 </script>
 

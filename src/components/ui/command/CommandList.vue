@@ -11,6 +11,7 @@ const props = withDefaults(defineProps<ComboboxContentProps & {
 }>(), {
   dismissable: false,
 })
+
 const emits = defineEmits<ComboboxContentEmits>()
 
 const delegatedProps = computed(() => {

@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { computed } from 'vue'
-
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 import {
   AccordionHeader,
   AccordionTrigger,
 } from 'reka-ui'
+import { computed } from 'vue'
 
 const props = defineProps<{ class?: HTMLAttributes['class'] }>()
 
@@ -22,15 +21,13 @@ const delegatedProps = computed(() => {
   <AccordionHeader class="flex">
     <AccordionTrigger
       v-bind="delegatedProps"
-      :class="
-        cn(
-          'flex flex-1 items-center justify-between py-4',
-          'text-sm font-medium hover:underline',
-          'transition-all',
-          '[&[data-state=open]>svg]:rotate-180',
-          props.class,
-        )
-      "
+      :class="cn(
+        'flex flex-1 items-center justify-between py-4',
+        'text-sm font-medium hover:underline',
+        'transition-all',
+        '[&[data-state=open]>svg]:rotate-180',
+        props.class,
+      )"
     >
       <slot />
       <slot name="icon">

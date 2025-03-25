@@ -4,7 +4,6 @@ import type { WithClassAsProps } from './interface'
 import { useCarousel } from './useCarousel'
 
 const props = defineProps<WithClassAsProps>()
-
 const { orientation } = useCarousel()
 </script>
 

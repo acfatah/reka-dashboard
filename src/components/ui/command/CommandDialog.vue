@@ -6,7 +6,6 @@ import Command from './Command.vue'
 
 const props = defineProps<DialogRootProps>()
 const emits = defineEmits<DialogRootEmits>()
-
 const forwarded = useForwardPropsEmits(props, emits)
 </script>
 

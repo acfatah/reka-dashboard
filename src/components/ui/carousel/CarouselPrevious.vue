@@ -6,7 +6,6 @@ import type { WithClassAsProps } from './interface'
 import { useCarousel } from './useCarousel'
 
 const props = defineProps<WithClassAsProps>()
-
 const { orientation, canScrollPrev, scrollPrev } = useCarousel()
 </script>
 
@@ -24,7 +23,6 @@ const { orientation, canScrollPrev, scrollPrev } = useCarousel()
     @click="scrollPrev"
   >
     <slot>
-      <!-- <ArrowLeftIcon class="size-4 text-current" /> -->
       <Iconify icon="radix-icons:arrow-left" class="size-4 text-current" />
       <span class="sr-only">Previous Slide</span>
     </slot>

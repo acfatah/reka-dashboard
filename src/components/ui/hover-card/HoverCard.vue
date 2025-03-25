@@ -4,7 +4,6 @@ import { HoverCardRoot, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<HoverCardRootProps>()
 const emits = defineEmits<HoverCardRootEmits>()
-
 const forwarded = useForwardPropsEmits(props, emits)
 </script>
 

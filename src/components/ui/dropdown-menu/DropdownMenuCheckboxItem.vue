@@ -25,7 +25,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <DropdownMenuCheckboxItem
     v-bind="forwarded"
-    :class=" cn(
+    :class="cn(
       'relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 outline-none select-none',
       'text-sm',
       'transition-colors',
