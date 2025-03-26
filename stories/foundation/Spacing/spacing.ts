@@ -1,3 +1,9 @@
+export interface SpacingRecord {
+  name: string
+  size: string
+  pixels: string
+}
+
 export default [
   {
     name: '0',
@@ -169,4 +175,4 @@ export default [
     size: '24rem',
     pixels: '384px',
   },
-]
+] as SpacingRecord[]
