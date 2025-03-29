@@ -48,7 +48,7 @@ export const Default: StoryObj = {
   }),
 }
 
-export const UnderlineTabs: StoryObj = {
+export const UnderlinedTabs: StoryObj = {
   parameters: {
     docs: {
       source: {
@@ -65,7 +65,7 @@ export const UnderlineTabs: StoryObj = {
     },
 
     template: html`
-      <UnderlineTabsStory v-bind="args" />
+      <UnderlinedTabsStory v-bind="args" />
     `,
   }),
 }
