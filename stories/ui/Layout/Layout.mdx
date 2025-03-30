@@ -1,0 +1,37 @@
+import { Meta, Canvas, Controls, Source, Story } from "@storybook/blocks"
+import * as LayoutStories from './Layout.stories.ts'
+import App from '@/App.vue?raw'
+
+<Meta title="Navigation/Sidebar/Docs" of={LayoutStories} />
+
+# Application Layout
+
+Application layout is dynamically determined by the `route.meta.layout` value set in the
+router. If not set, the `BlankLayout` is used.
+
+Layout files resides in `@/src/components/layouts` with `^[A-Z][a-zA-Z]{2,}Layout\.vue$` naming
+convention.
+
+Please take note that using `slot` with `VueRouter` is not possible. 
+
+<Source code={App} />
+
+<br />
+
+## Example Layout Config
+
+<Source code={`
+import SidebarLayout from './layouts/SidebarLayout.vue'
+import MainView from './views/MainView.vue'
+
+export default [
+  {
+    path: '/',
+    name: 'dashboard',
+    component: MainView,
+    meta: {
+      // Add \`layout\` to configure the layout component 
+      layout: SidebarLayout,
+    },
+  },
+]`} />
