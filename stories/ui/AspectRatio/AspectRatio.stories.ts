@@ -10,7 +10,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/aspect-ratio
  */
 export default {
-  title: 'Graphic Elements/Aspect Ratio',
+  title: 'Layout/Aspect Ratio',
   component: DefaultStory,
   subcomponents: {
     AspectRatio,

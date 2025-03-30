@@ -18,7 +18,7 @@ import DefaultSource from './DefaultStory.vue?raw'
 /**
  * Form handling using Vee Validate.
  *
- * Primitive API Reference: https://vee-validate.logaretm.com/v4/guide/components/handling-forms
+ * Documentation: https://vee-validate.logaretm.com/v4/guide/components/handling-forms
  */
 export default {
   title: 'Forms/Form',

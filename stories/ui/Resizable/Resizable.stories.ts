@@ -13,7 +13,7 @@ import WithHandleSource from './WithHandleStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/splitter
  */
 export default {
-  title: 'Panels/Resizable',
+  title: 'Layout/Resizable',
   component: DefaultStory,
   tags: ['autodocs'],
 }

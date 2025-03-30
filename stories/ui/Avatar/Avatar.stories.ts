@@ -16,7 +16,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/avatar
  */
 export default {
-  title: 'Graphic Elements/Avatar',
+  title: 'Data Display/Avatar',
   component: DefaultStory,
   subcomponents: {
     Avatar,

@@ -13,7 +13,7 @@ import HorizontalScrollingSource from './HorizontalScrolling.vue?raw'
  * Primitive API Reference: https://www.reka-ui.com/docs/components/scroll-area
  */
 export default {
-  title: 'Panels/ScrollArea',
+  title: 'Layout/ScrollArea',
   component: DefaultStory,
   subcomponents: {
     ScrollArea,

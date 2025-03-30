@@ -21,9 +21,10 @@ import DefaultSource from './DefaultStory.vue?raw'
 /**
  * Automatically generate a form from Zod schema.
  *
- * Documentation: https://www.shadcn-vue.com/docs/components/auto-form.html<br />
- * Primitive API Reference: https://vee-validate.logaretm.com/v4/guide/overview<br />
- * Zod API Reference: https://zod.dev/?id=basic-usage
+ * Documentation:
+ * - https://www.shadcn-vue.com/docs/components/auto-form.html
+ * - https://vee-validate.logaretm.com/v4/api/form
+ * - https://zod.dev/?id=basic-usage
  */
 export default {
   title: 'Forms/AutoForm',

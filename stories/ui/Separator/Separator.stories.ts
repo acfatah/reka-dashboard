@@ -10,7 +10,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/separator
  */
 export default {
-  title: 'Panels/Separator',
+  title: 'Data Display/Separator',
   component: Separator,
   tags: ['autodocs'],
 }

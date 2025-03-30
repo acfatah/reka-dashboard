@@ -36,6 +36,18 @@ const preview: Preview = {
       storySort: {
         order: [
           'Readme',
+          'Foundation',
+          'Layout',
+          'Navigation',
+          'Panels',
+          'Overlays',
+          'Feedback',
+          'Media & Icons',
+          'Forms',
+          'Data Entry',
+          'Data Display',
+          'Charts',
+          ['Unovis'],
         ],
         locales: 'en-US',
       },

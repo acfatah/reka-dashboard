@@ -16,9 +16,11 @@ import DefaultSource from '../LineChart/DefaultSnippet.vue?raw'
 /**
  * Charts components were built on top of [Unovis](https://unovis.dev) (a modular
  * data visualization framework), and inspired by [tremor](https://www.tremor.so).
+ *
+ * Documentation: https://unovis.dev
  */
 export default {
-  title: 'Charts/Unovis Chart',
+  title: 'Charts/Unovis',
   component: LineChart,
   subcomponents: {
     ChartCrosshair,
