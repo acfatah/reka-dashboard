@@ -27,7 +27,7 @@
   - supports rapid prototyping with pre-built, ready-made components
   - includes extensive documentation, examples and visual testing using Storybook
   - improve collaboration between design and development teams
-  - leverage ~~cutting edge~~ bleeding edge technology to improve DX and speed
+  - leverage ~~cutting edge~~ bleeding edge technology to improve DX and development speed
 
 This repository host a [micro-frontend][1] boilerplate architecture, forming the
 foundational front-end layer, crafted with reusable Vue components, styled with
@@ -49,14 +49,14 @@ a full web application.
 
 ## Requirements
 
-- [Bun v1.2](https://bun.sh)
+- [Bun v1.2.8](https://bun.sh)
 
 ## Usage
 
 1. Copy the repository,
 
 ```bash
-bunx tiged acfatah/reka-dashboard
+bunx tiged acfatah/reka-dashboard newproject
 ```
 
 2. Include the `.vscode` directory in your repository to ensure consistent settings between developers. Use git add -f `.vscode` to force add it, bypassing any ignore rules.
