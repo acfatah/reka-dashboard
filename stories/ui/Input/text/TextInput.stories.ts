@@ -13,7 +13,7 @@ import WithLabelStory from './WithLabel.vue'
 import WithLabelSource from './WithLabel.vue?raw'
 
 export default {
-  title: 'Data Entry/Text Input',
+  title: 'Components/Data Entry/Text Input',
   component: Input,
   tags: ['autodocs'],
 }

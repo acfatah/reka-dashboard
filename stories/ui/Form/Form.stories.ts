@@ -21,7 +21,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Documentation: https://vee-validate.logaretm.com/v4/guide/components/handling-forms
  */
 export default {
-  title: 'Forms/Form',
+  title: 'Components/Forms/Form',
   component: DefaultStory,
   subcomponents: {
     Form,

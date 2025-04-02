@@ -34,7 +34,7 @@ import WithMonthYearSelectionSource from './WithMonthYearSelection.vue?raw'
  * - [@internationalized/date](https://react-spectrum.adobe.com/internationalized/date/index.html)
  */
 export default {
-  title: 'Data Display/Calendar',
+  title: 'Components/Data Display/Calendar',
   component: DefaultStory,
   subcomponents: {
     Calendar,

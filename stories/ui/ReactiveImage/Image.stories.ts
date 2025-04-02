@@ -17,7 +17,7 @@ import WithInvalidLinkSource from './WithInvalidLink.vue?raw'
  * - [Vueuse renderless components](https://vueuse.org/guide/components)
  */
 export default {
-  title: 'Media & Icons/Reactive Image',
+  title: 'Components/Media & Icons/Reactive Image',
   component: DefaultStory,
   subcomponents: { UseImage },
   tags: ['autodocs'],

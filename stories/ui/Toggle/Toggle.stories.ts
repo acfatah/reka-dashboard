@@ -16,7 +16,7 @@ import WithTextSource from './WithText.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/toggle
  */
 export default {
-  title: 'Data Entry/Toggle',
+  title: 'Components/Data Entry/Toggle',
   component: Toggle,
   tags: ['autodocs'],
 }

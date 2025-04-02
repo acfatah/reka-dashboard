@@ -7,7 +7,7 @@ import WithCategoriesSource from './WithCategorySnippet.vue?raw'
  * https://unovis.dev/docs/xy-charts/GroupedBar
  */
 export default {
-  title: 'Charts/Bar Chart',
+  title: 'Components/Charts/Bar Chart',
   component: BarChart,
   tags: ['autodocs'],
   parameters: {

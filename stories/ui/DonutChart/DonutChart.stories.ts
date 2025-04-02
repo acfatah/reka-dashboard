@@ -8,7 +8,7 @@ import PieChartSource from './PieChartSnippet.vue?raw'
  * https://unovis.dev/docs/misc/Donut
  */
 export default {
-  title: 'Charts/Donut Chart',
+  title: 'Components/Charts/Donut Chart',
   component: DonutChart,
   tags: ['autodocs'],
 }

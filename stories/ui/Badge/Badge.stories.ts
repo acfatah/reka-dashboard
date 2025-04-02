@@ -11,7 +11,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Documentation: https://www.shadcn-vue.com/docs/components/badge
  */
 export default {
-  title: 'Data Display/Badge',
+  title: 'Components/Data Display/Badge',
   component: Badge,
   tags: ['autodocs'],
 }

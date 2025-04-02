@@ -24,7 +24,7 @@ import ScrollableSource from './ScrollableStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/select
  */
 export default {
-  title: 'Data Entry/Select',
+  title: 'Components/Data Entry/Select',
   component: DefaultStory,
   subcomponents: {
     Select,

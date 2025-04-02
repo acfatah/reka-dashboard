@@ -28,7 +28,7 @@ import WithPresetSource from './WithPresetStory.vue?raw'
  * - [@internationalized/date](https://react-spectrum.adobe.com/internationalized/date/index.html)
  */
 export default {
-  title: 'Data Entry/Date Picker',
+  title: 'Components/Data Entry/Date Picker',
   component: Calendar,
   tags: ['autodocs'],
 }

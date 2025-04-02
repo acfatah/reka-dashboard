@@ -27,7 +27,7 @@ import WithSlotSource from './WithSlotStory.vue?raw'
  * - [Overlays/Popover](?path=/docs/overlays-popover--docs) component
  */
 export default {
-  title: 'Overlays/Tooltip',
+  title: 'Components/Overlays/Tooltip',
   component: Tooltip,
   subcomponents: {
     TooltipArrow,

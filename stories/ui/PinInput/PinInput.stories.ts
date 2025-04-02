@@ -21,7 +21,7 @@ import SeparatorSource from './SeparatorStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/pin-input
  */
 export default {
-  title: 'Data Entry/PIN Input',
+  title: 'Components/Data Entry/PIN Input',
   component: DefaultStory,
   subcomponents: {
     PinInput,

@@ -19,7 +19,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/pagination
  */
 export default {
-  title: 'Navigation/Pagination',
+  title: 'Components/Navigation/Pagination',
   component: DefaultStory,
   subcomponents: {
     Pagination,

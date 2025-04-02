@@ -15,7 +15,7 @@ import FormSource from './FormStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/toggle-group
  */
 export default {
-  title: 'Data Entry/Toggle Group',
+  title: 'Components/Data Entry/Toggle Group',
   component: ToggleGroup,
   subcomponents: {
     ToggleGroupItem,

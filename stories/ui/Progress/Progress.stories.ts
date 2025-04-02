@@ -11,7 +11,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/progress
  */
 export default {
-  title: 'Feedback/Progress',
+  title: 'Components/Feedback/Progress',
   component: Progress,
   tags: ['autodocs'],
 }

@@ -26,7 +26,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/menubar
  */
 export default {
-  title: 'Navigation/Menubar',
+  title: 'Components/Navigation/Menubar',
   component: Menubar,
   subcomponents: {
     Menubar,

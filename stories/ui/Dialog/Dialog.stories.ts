@@ -34,7 +34,7 @@ import ScrollOverlaySource from './ScrollOverlay.vue?raw'
  * - [Feedback/Alert Dialog](?path=/docs/feedback-alert-dialog--docs) component
  */
 export default {
-  title: 'Feedback/Dialog',
+  title: 'Components/Feedback/Dialog',
   component: DefaultStory,
   subcomponents: {
     Dialog,

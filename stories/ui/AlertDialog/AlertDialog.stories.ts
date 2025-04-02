@@ -24,7 +24,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * - [Feedback/Dialog](?path=/docs/feedback-dialog--docs) component
  */
 export default {
-  title: 'Feedback/Alert Dialog',
+  title: 'Components/Feedback/Alert Dialog',
   component: DefaultStory,
   subcomponents: {
     AlertDialog,

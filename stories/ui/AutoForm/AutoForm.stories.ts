@@ -27,7 +27,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * - https://zod.dev/?id=basic-usage
  */
 export default {
-  title: 'Forms/AutoForm',
+  title: 'Components/Forms/AutoForm',
   tags: ['autodocs'],
   component: DefaultStory,
   subcomponents: {

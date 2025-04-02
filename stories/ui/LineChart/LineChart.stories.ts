@@ -8,7 +8,7 @@ import SparklineSource from './SparklineSnippet.vue?raw'
  * https://unovis.dev/docs/xy-charts/Line
  */
 export default {
-  title: 'Charts/Line Chart',
+  title: 'Components/Charts/Line Chart',
   component: LineChart,
   tags: ['autodocs'],
 }

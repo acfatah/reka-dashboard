@@ -7,7 +7,7 @@ import FormStory from './FormStory.vue'
 import FormSource from './FormStory.vue?raw'
 
 export default {
-  title: 'Data Entry/Password Input',
+  title: 'Components/Data Entry/Password Input',
   component: PasswordInput,
   tags: ['autodocs'],
 }

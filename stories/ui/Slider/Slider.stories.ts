@@ -14,7 +14,7 @@ import FormSource from './FormStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/slider
  */
 export default {
-  title: 'Data Entry/Slider',
+  title: 'Components/Data Entry/Slider',
   component: Slider,
   tags: ['autodocs'],
 }

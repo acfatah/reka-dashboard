@@ -14,7 +14,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * - [Data Entry/Text Input With Label](?path=/story/data-entry-text-input--with-label) component
  */
 export default {
-  title: 'Data Entry/Label',
+  title: 'Components/Data Entry/Label',
   component: Label,
   tags: ['autodocs'],
 }

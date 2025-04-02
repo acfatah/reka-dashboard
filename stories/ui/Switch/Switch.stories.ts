@@ -14,7 +14,7 @@ import FormSource from './FormStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/switch
  */
 export default {
-  title: 'Data Entry/Switch',
+  title: 'Components/Data Entry/Switch',
   component: DefaultStory,
   subcomponents: {
     Switch,

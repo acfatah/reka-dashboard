@@ -37,7 +37,7 @@ import WithIndependentMonthsSource from './WithIndependentMonths.vue?raw'
  * - [@internationalized/date](https://react-spectrum.adobe.com/internationalized/date/index.html)
  */
 export default {
-  title: 'Data Entry/Date Range Picker',
+  title: 'Components/Data Entry/Date Range Picker',
   component: DefaultStory,
   subcomponents: {
     RangeCalendar,

@@ -25,7 +25,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://github.com/unovue/vaul-vue
  */
 export default {
-  title: 'Overlays/Drawer',
+  title: 'Components/Overlays/Drawer',
   component: DefaultStory,
   subcomponents: {
     Drawer,

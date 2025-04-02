@@ -12,7 +12,7 @@ import TanStackTableSource from './TanStackTable/TanStackTable.vue?raw'
  * Minimal reusable DataTable component.
  */
 export default {
-  title: 'Data Display/Data Table',
+  title: 'Components/Data Display/Data Table',
   component: DataTable,
   tags: ['autodocs'],
 

@@ -18,7 +18,7 @@ import WithTextSource from './WithTextStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/checkbox
  */
 export default {
-  title: 'Data Entry/Checkbox',
+  title: 'Components/Data Entry/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
 }

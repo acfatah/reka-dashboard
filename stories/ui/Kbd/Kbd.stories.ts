@@ -9,7 +9,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * code snippets to indicate keyboard shortcuts.
  */
 export default {
-  title: 'Data Display/Kbd',
+  title: 'Components/Data Display/Kbd',
   component: Kbd,
   tags: ['autodocs'],
 }

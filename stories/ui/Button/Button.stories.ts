@@ -14,7 +14,7 @@ const PrimitiveProps = ['as', 'asChild']
  * Displays a button or a component that looks like a button.
  */
 export default {
-  title: 'Data Entry/Button',
+  title: 'Components/Data Entry/Button',
   component: Button,
   tags: ['autodocs'],
 

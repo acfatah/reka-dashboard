@@ -14,7 +14,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Read more about `<Suspense>` at https://vuejs.org/guide/built-ins/suspense.html
  */
 export default {
-  title: 'Feedback/Skeleton',
+  title: 'Components/Feedback/Skeleton',
   component: Skeleton,
   tags: ['autodocs'],
 }

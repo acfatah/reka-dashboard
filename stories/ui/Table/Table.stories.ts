@@ -9,7 +9,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * For more complex data tables, see [Data Table](?path=/docs/data-display-data-table--docs) component.
  */
 export default {
-  title: 'Data Display/Table',
+  title: 'Components/Data Display/Table',
   component: DefaultStory,
   tags: ['autodocs'],
 }

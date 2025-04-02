@@ -26,7 +26,7 @@ import VerticalSource from './VerticalStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/stepper
  */
 export default {
-  title: 'Navigation/Stepper',
+  title: 'Components/Navigation/Stepper',
   component: DefaultStory,
   subcomponents: {
     Stepper,

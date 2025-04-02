@@ -28,7 +28,7 @@ import SideSource from './SideStory.vue?raw'
  * Primitive API Reference: https://www.reka-ui.com/docs/components/dialog
  */
 export default {
-  title: 'Overlays/Sheet',
+  title: 'Components/Overlays/Sheet',
   component: DefaultStory,
   subComponents: {
     Sheet,

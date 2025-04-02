@@ -14,7 +14,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/collapsible
  */
 export default {
-  title: 'Panels/Collapsible',
+  title: 'Components/Panels/Collapsible',
   component: DefaultStory,
   subcomponents: {
     Collapsible,

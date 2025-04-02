@@ -29,7 +29,7 @@ import WithTitleSource from './WithTitle.vue?raw'
  * Read more at https://reka-ui.com/docs/components/toast.
  */
 export default {
-  title: 'Feedback/Toast',
+  title: 'Components/Feedback/Toast',
   component: DefaultStory,
   subcomponents: {
     Toast,

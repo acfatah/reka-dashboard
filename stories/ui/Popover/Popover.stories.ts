@@ -14,7 +14,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/popover
  */
 export default {
-  title: 'Overlays/Popover',
+  title: 'Components/Overlays/Popover',
   component: DefaultStory,
   subcomponents: {
     Popover,

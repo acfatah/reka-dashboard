@@ -27,7 +27,7 @@ import PercentageSource from './PercentageStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/number-field
  */
 export default {
-  title: 'Data Entry/Number Field',
+  title: 'Components/Data Entry/Number Field',
   component: DefaultStory,
   subcomponents: {
     NumberField,

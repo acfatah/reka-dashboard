@@ -26,7 +26,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/context-menu
  */
 export default {
-  title: 'Overlays/ContextMenu',
+  title: 'Components/Overlays/ContextMenu',
   component: DefaultStory,
   subcomponents: {
     ContextMenu,

@@ -14,7 +14,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/hover-card
  */
 export default {
-  title: 'Overlays/Hover Card',
+  title: 'Components/Overlays/Hover Card',
   component: HoverCard,
   subcomponents: {
     HoverCard,

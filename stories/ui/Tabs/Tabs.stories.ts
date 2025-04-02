@@ -14,7 +14,7 @@ import UnderlinedTabsSource from './UnderlinedTabs.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/tabs
  */
 export default {
-  title: 'Panels/Tabs',
+  title: 'Components/Panels/Tabs',
   component: Tabs,
   subcomponents: {
     Tabs,

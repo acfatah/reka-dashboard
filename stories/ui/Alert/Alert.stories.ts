@@ -15,7 +15,7 @@ import DestructiveAlertSource from './DestructiveAlert.vue?raw'
  * Displays a callout for user attention.
  */
 export default {
-  title: 'Feedback/Alert',
+  title: 'Components/Feedback/Alert',
   component: DefaultStory,
   subcomponents: {
     Alert,

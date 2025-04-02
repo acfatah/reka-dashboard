@@ -13,7 +13,7 @@ import WithTextStory from './WithText.vue'
 import WithTextSource from './WithText.vue?raw'
 
 export default {
-  title: 'Data Entry/Textarea Input',
+  title: 'Components/Data Entry/Textarea Input',
   component: Textarea,
   tags: ['autodocs'],
 }

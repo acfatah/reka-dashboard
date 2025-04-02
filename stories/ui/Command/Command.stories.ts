@@ -23,7 +23,7 @@ import CommandDialogSource from './Dialog.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/combobox#command-menu
  */
 export default {
-  title: 'Overlays/Command',
+  title: 'Components/Overlays/Command',
   component: DefaultStory,
   subcomponents: {
     Command,

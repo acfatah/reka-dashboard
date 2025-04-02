@@ -8,7 +8,7 @@ import SparklineSource from './SparklineSnippet.vue?raw'
  * https://unovis.dev/docs/xy-charts/Area
  */
 export default {
-  title: 'Charts/Area Chart',
+  title: 'Components/Charts/Area Chart',
   component: AreaChart,
   tags: ['autodocs'],
 }

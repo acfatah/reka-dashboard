@@ -9,7 +9,7 @@ import { Icon as IconifyComponent } from '@iconify/vue'
  * Read more about Iconify at https://iconify.design/docs/icon-components/vue.
  */
 export default {
-  title: 'Media & Icons/Iconify Icon',
+  title: 'Components/Media & Icons/Iconify Icon',
   component: IconifyComponent,
   tags: ['autodocs'],
 

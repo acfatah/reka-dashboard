@@ -8,7 +8,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Temporary element as a placeholder for content.
  */
 export default {
-  title: 'Others/Placeholder',
+  title: 'Components/Others/Placeholder',
   component: Placeholder,
   tags: ['autodocs'],
 }

@@ -34,7 +34,7 @@ import VerticalSource from './VerticalStory.vue?raw'
  * Primitive API Reference: https://www.embla-carousel.com/api
  */
 export default {
-  title: 'Data Display/Carousel',
+  title: 'Components/Data Display/Carousel',
   component: DefaultStory,
   tags: ['autodocs'],
 }

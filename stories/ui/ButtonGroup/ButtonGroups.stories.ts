@@ -16,7 +16,7 @@ import SingleFormSource from './SingleFormStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/toggle-group
  */
 export default {
-  title: 'Data Entry/Button Group',
+  title: 'Components/Data Entry/Button Group',
   component: ButtonGroup,
   subcomponents: {
     ButtonGroupItem,

@@ -23,7 +23,7 @@ import ResponsiveSource from './ResponsiveStory.vue?raw'
  * - [Overlays/Popover](?path=/docs/overlays-popover--docs) component
  */
 export default {
-  title: 'Data Entry/Combobox',
+  title: 'Components/Data Entry/Combobox',
   component: DefaultStory,
   tags: ['autodocs'],
 }

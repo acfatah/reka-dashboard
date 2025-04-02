@@ -33,7 +33,7 @@ import routes from './routes.ts'
  * Application sidebar example.
  */
 export default {
-  title: 'Layout/Sidebar',
+  title: 'Components/Layout/Sidebar',
   component: App,
   subcomponents: {
     Sidebar,

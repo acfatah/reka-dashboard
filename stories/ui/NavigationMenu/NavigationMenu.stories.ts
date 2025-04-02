@@ -17,7 +17,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * A collection of links for navigating websites.
  */
 export default {
-  title: 'Navigation/Navigation Menu',
+  title: 'Components/Navigation/Navigation Menu',
   component: NavigationMenu,
   subcomponents: {
     NavigationMenu,

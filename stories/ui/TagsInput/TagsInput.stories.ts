@@ -24,7 +24,7 @@ import WithoutTextInputSource from './WithoutTextInput.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/tags-input
  */
 export default {
-  title: 'Data Entry/Tags Input',
+  title: 'Components/Data Entry/Tags Input',
   component: DefaultStory,
   subcomponents: {
     TagsInput,

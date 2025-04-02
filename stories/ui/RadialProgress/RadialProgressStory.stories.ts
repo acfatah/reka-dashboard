@@ -13,7 +13,7 @@ import VisDonutSource from './VisDonutStory.vue?raw'
  * Codepen: https://codepen.io/josephwong2004/pen/eYpOKNL?editors=1100
  */
 export default {
-  title: 'Feedback/Radial Progress',
+  title: 'Components/Feedback/Radial Progress',
   component: RadialProgress,
   tags: ['autodocs'],
 

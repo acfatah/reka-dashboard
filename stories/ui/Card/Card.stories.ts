@@ -17,7 +17,7 @@ import NotificationExampleSource from './NotificationExample.vue?raw'
  * Displays a card with header, content, and footer.
  */
 export default {
-  title: 'Panels/Card',
+  title: 'Components/Panels/Card',
   component: Card,
   subcomponents: {
     Card,

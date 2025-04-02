@@ -10,7 +10,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * File Input
  */
 export default {
-  title: 'Data Entry/File Input',
+  title: 'Components/Data Entry/File Input',
   component: Input,
   tags: ['autodocs'],
 }

@@ -27,7 +27,7 @@ import ResponsiveSource from './ResponsiveStory.vue?raw'
  * Documentation: https://www.shadcn-vue.com/docs/components/breadcrumb
  */
 export default {
-  title: 'Navigation/Breadcrumb',
+  title: 'Components/Navigation/Breadcrumb',
   component: DefaultStory,
   subcomponents: {
     Breadcrumb,

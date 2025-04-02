@@ -31,7 +31,7 @@ import WithRadioGroupSource from './WithRadioGroup.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/dropdown-menu
  */
 export default {
-  title: 'Overlays/Dropdown Menu',
+  title: 'Components/Overlays/Dropdown Menu',
   component: DefaultStory,
   subcomponents: {
     DropdownMenu,

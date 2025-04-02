@@ -18,7 +18,7 @@ import FormSource from './FormStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/radio-group
  */
 export default {
-  title: 'Data Entry/Radio Group',
+  title: 'Components/Data Entry/Radio Group',
   component: DefaultStory,
   subcomponents: {
     RadioGroup,

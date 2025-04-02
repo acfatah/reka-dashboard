@@ -22,7 +22,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * - [@internationalized/date](https://react-spectrum.adobe.com/internationalized/date/index.html)
  */
 export default {
-  title: 'Data Display/Range Calendar',
+  title: 'Components/Data Display/Range Calendar',
   component: Label,
   tags: ['autodocs'],
 }

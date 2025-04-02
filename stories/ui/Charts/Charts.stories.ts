@@ -20,7 +20,7 @@ import DefaultSource from '../LineChart/DefaultSnippet.vue?raw'
  * Documentation: https://unovis.dev
  */
 export default {
-  title: 'Charts/Unovis',
+  title: 'Components/Charts/Unovis',
   component: LineChart,
   subcomponents: {
     ChartCrosshair,

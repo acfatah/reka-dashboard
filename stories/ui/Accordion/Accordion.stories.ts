@@ -14,7 +14,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/accordion
  */
 export default {
-  title: 'Panels/Accordion',
+  title: 'Components/Panels/Accordion',
   component: DefaultStory,
   subcomponents: {
     AccordionRoot,
