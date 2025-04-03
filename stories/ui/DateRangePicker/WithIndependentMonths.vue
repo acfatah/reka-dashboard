@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import type { DateRange } from '@/components/ui/range-calendar'
 import type { DateValue } from '@internationalized/date'
-import type { DateRange } from 'reka-ui'
 import type { Grid } from 'reka-ui/date'
 import type { Ref } from 'vue'
 import { Button, buttonVariants } from '@/components/ui/button'
