@@ -9,7 +9,7 @@ import theme from './theme'
 import { Controls, Description, Primary, Stories, Subtitle, Title } from '@storybook/blocks'
 import React from 'react'
 
-import '../src/styles/main.css'
+import '../src/styles/global.css'
 
 const pinia = createPinia()
 
