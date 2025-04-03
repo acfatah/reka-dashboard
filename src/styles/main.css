@@ -11,7 +11,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /**
- * https://ui.shadcn.com/docs/theming#list-of-variables
+ * Theme generator: https://ui.shadcn.com/themes
+ * Reference: https://ui.shadcn.com/docs/theming#list-of-variables
  */
 
 :root {
