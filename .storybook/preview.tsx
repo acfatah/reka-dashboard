@@ -35,10 +35,10 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
+          'Readme',
           'Foundation',
           'Components',
           [
-            'Readme',
             'Foundation',
             'Layout',
             'Navigation',
