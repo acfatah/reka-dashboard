@@ -7,7 +7,7 @@ import routes from './routes.ts'
  * A sidebar that collapses to icons.
  */
 export default {
-  title: 'shadcn/Blocks/DefaultStory',
+  title: 'shadcn/Blocks/sidebar-07',
   component: App,
   tags: ['autodocs'],
   decorators: [vueRouter(routes)],
