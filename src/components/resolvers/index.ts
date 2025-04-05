@@ -8,12 +8,12 @@ import vueUseResolver from './vue-use-resolver'
 /** An array of directories to search for components including subdirectories */
 export const dirs = [
   'src/components/ui',
-  'src/components/layouts',
 ]
 
 /** An array of directories to shallow import components */
 const shallowImportDirs = [
   'src/components',
+  'src/layouts',
 ]
 
 /**

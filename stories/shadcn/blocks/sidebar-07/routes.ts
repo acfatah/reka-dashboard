@@ -1,4 +1,4 @@
-import BlankLayout from '@/components/layouts/BlankLayout.vue'
+import BlankLayout from '@/layouts/BlankLayout.vue'
 import Dashboard from './DefaultStory.vue'
 
 export default [

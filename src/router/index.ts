@@ -1,7 +1,7 @@
 import { useNProgress } from '@vueuse/integrations/useNProgress'
 import { createRouter, createWebHistory } from 'vue-router'
 
-import WelcomeLayout from '@/components/layouts/WelcomeLayout.vue'
+import WelcomeLayout from '@/layouts/WelcomeLayout.vue'
 import HomeView from '@/views/Welcome/HomeView.vue'
 
 const { start: startLoading, done: doneLoading } = useNProgress()

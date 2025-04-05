@@ -1,5 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
-import BlankLayout from '@/components/layouts/BlankLayout.vue'
+import BlankLayout from '@/layouts/BlankLayout.vue'
 import { html } from 'common-tags'
 
 import App from '@/App.vue'

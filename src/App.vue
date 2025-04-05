@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BlankLayout from '@/components/layouts/BlankLayout.vue'
+import BlankLayout from '@/layouts/BlankLayout.vue'
 
 const route = useRoute()
 </script>

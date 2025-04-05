@@ -9,7 +9,7 @@ import App from '@/App.vue?raw'
 Application layout is dynamically determined by the `route.meta.layout` value set in the
 router. If not set, the `BlankLayout` is used.
 
-Layout files resides in `@/src/components/layouts` with `^[A-Z][a-zA-Z]{2,}Layout\.vue$` naming
+Layout files resides in `@/layouts` with `^[A-Z][a-zA-Z]{2,}Layout\.vue$` naming
 convention.
 
 Please take note that using `slot` with `VueRouter` is not possible. 
@@ -21,8 +21,8 @@ Please take note that using `slot` with `VueRouter` is not possible.
 ## Example Layout Config
 
 <Source code={`
-import SidebarLayout from './layouts/SidebarLayout.vue'
-import MainView from './views/MainView.vue'
+import SidebarLayout from '@/layouts/SidebarLayout.vue'
+import MainView from '@/views/MainView.vue'
 
 export default [
   {
