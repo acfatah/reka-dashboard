@@ -1,8 +1,13 @@
 # Reka Dashboard
 
+Get s*** done with `TypeScript`, `Vue` and `Bun`. Build front-end application in minutes.
+
 <p>
   <a href="https://github.com/acfatah/reka-dashboard/commits/main">
-  <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/acfatah/reka-dashboard?display_timestamp=committer&style=flat-square"></a>
+    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/acfatah/reka-dashboard?style=flat-square">
+  </a>
+  <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/acfatah/reka-dashboard?display_timestamp=committer&style=flat-square">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/acfatah/reka-dashboard?style=flat">
 </p>
 
 > [!IMPORTANT]
@@ -36,6 +41,10 @@ Tailwind CSS that encompasses a design system using modern development tools.
 Adding a REST API would complete the back-end integration, transforming it into
 a full web application.
 
+## Requirements
+
+- [Bun ^v1.2.8](https://bun.sh)
+
 ## Features
 
 - Opinionated linting and styling, based on [@antfu/eslint-config](https://github.com/antfu/eslint-config).
@@ -46,10 +55,6 @@ a full web application.
 - Leverage [reka-ui][2] headless component library.
 - Uses [Tailwindcss v4][4].
 - Uses [Storybook.js](https://storybook.js.org) to document and test UI components.
-
-## Requirements
-
-- [Bun v1.2.8](https://bun.sh)
 
 ## Usage
 
@@ -80,8 +85,17 @@ bun update
 ## Recommendation
 
 I suggest forking this repository to create your own version, which you can then
-customize according to your requirements. To incorporate the latest fixes or updates,
-you can easily pull the most recent changes from the original repository into your fork.
+customize according to your requirements.
+
+To use your fork, simply replace the github user with your github username and repository
+with the forked repository name, followed by
+
+```bash
+bunx tiged your-github-user/reka-dashboard newproject
+```
+
+To incorporate the latest fixes or updates, you can easily pull the most recent
+changes from the original repository into your fork.
 
 [1]: https://micro-frontends.org
 [2]: https://reka-ui.com
