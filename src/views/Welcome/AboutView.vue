@@ -1,15 +1,5 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="flex h-svh items-center justify-center">
+    <h1>This is an about page with muted background.</h1>
   </div>
 </template>
-
-<style>
-@media (min-width: 1024px) {
-  .about {
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>

@@ -1,6 +1,7 @@
 import { useNProgress } from '@vueuse/integrations/useNProgress'
 import { createRouter, createWebHistory } from 'vue-router'
 
+import MutedLayout from '@/layouts/MutedLayout.vue'
 import WelcomeLayout from '@/layouts/WelcomeLayout.vue'
 import HomeView from '@/views/Welcome/HomeView.vue'
 
@@ -25,7 +26,7 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Welcome/AboutView.vue'),
       meta: {
-        layout: WelcomeLayout,
+        layout: MutedLayout,
       },
     },
   ],
