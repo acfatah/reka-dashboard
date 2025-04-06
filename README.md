@@ -77,6 +77,12 @@ rm -rf .git/hooks && bunx simple-git-hooks
 bun update
 ```
 
+## Recommendation
+
+I suggest forking this repository to create your own version, which you can then
+customize according to your requirements. To incorporate the latest fixes or updates,
+you can easily pull the most recent changes from the original repository into your fork.
+
 [1]: https://micro-frontends.org
 [2]: https://reka-ui.com
 [3]: https://shadcn-vue.com
