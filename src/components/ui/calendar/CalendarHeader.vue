@@ -5,7 +5,9 @@ import { cn } from '@/lib/utils'
 import { CalendarHeader, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<CalendarHeaderProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<CalendarHeaderProps & {
+  class?: HTMLAttributes['class']
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

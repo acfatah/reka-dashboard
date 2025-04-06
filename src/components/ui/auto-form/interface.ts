@@ -35,12 +35,16 @@ export interface InputComponents {
 export interface ConfigItem {
   /** Value for the `FormLabel` */
   label?: string
+
   /** Value for the `FormDescription` */
   description?: string
+
   /** Pick which component to be rendered. */
   component?: keyof typeof INPUT_COMPONENTS | Component
+
   /** Hide `FormLabel`. */
   hideLabel?: boolean
+
   inputProps?: InputHTMLAttributes
 }
 

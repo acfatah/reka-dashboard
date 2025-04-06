@@ -6,7 +6,9 @@ import { PinInputRoot, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
 import { providePinInputContext } from '.'
 
-const props = withDefaults(defineProps<PinInputRootProps & { class?: HTMLAttributes['class'] }>(), {
+const props = withDefaults(defineProps<PinInputRootProps & {
+  class?: HTMLAttributes['class']
+}>(), {
   modelValue: () => [],
 })
 

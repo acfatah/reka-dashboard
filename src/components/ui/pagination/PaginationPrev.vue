@@ -7,7 +7,9 @@ import { cn } from '@/lib/utils'
 import { PaginationPrev } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = withDefaults(defineProps<PaginationPrevProps & { class?: HTMLAttributes['class'] }>(), {
+const props = withDefaults(defineProps<PaginationPrevProps & {
+  class?: HTMLAttributes['class']
+}>(), {
   asChild: true,
 })
 

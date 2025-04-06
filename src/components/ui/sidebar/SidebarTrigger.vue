@@ -5,10 +5,7 @@ import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
 import { useSidebar } from './utils'
 
-const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
-
+const props = defineProps<{ class?: HTMLAttributes['class'] }>()
 const { toggleSidebar } = useSidebar()
 </script>
 

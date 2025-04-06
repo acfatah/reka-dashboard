@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/components/ui/form'
+import {
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormMessage,
+} from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { ref } from 'vue'
 import type { FieldProps } from './interface'
@@ -8,8 +14,8 @@ import AutoFormLabel from './AutoFormLabel.vue'
 import { beautifyObjectName } from './utils'
 
 defineProps<FieldProps>()
-
 const inputFile = ref<File>()
+
 async function parseFileAsString(file: File | undefined): Promise<string> {
   return new Promise((resolve, reject) => {
     if (file) {
@@ -46,7 +52,7 @@ async function parseFileAsString(file: File | undefined): Promise<string> {
               slotProps.componentField.onInput(parsed)
             }"
           />
-          <div v-else class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-transparent py-1 pl-3 pr-1 text-sm shadow-sm transition-colors">
+          <div v-else class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-transparent py-1 pr-1 pl-3 text-sm shadow-sm transition-colors">
             <p>{{ inputFile?.name }}</p>
             <Button
               size="icon"

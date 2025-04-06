@@ -55,6 +55,14 @@ function onKeyDown(event: KeyboardEvent) {
     tabindex="0"
     @keydown="onKeyDown"
   >
-    <slot :can-scroll-next :can-scroll-prev :carousel-api :carousel-ref :orientation :scroll-next :scroll-prev />
+    <slot
+      :can-scroll-next
+      :can-scroll-prev
+      :carousel-api
+      :carousel-ref
+      :orientation
+      :scroll-next
+      :scroll-prev
+    />
   </div>
 </template>

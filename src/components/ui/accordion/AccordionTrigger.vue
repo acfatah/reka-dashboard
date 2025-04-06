@@ -2,10 +2,7 @@
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
-import {
-  AccordionHeader,
-  AccordionTrigger,
-} from 'reka-ui'
+import { AccordionHeader, AccordionTrigger } from 'reka-ui'
 import { computed } from 'vue'
 
 const props = defineProps<{ class?: HTMLAttributes['class'] }>()

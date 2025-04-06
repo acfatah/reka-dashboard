@@ -5,7 +5,9 @@ import { cn } from '@/lib/utils'
 import { NavigationMenuViewport, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<NavigationMenuViewportProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<NavigationMenuViewportProps & {
+  class?: HTMLAttributes['class']
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

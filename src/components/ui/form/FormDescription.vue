@@ -3,10 +3,7 @@ import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { useFormField } from './useFormField'
 
-const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
-
+const props = defineProps<{ class?: HTMLAttributes['class'] }>()
 const { formDescriptionId } = useFormField()
 </script>
 

@@ -15,10 +15,12 @@ const props = withDefaults(defineProps<BaseChartProps<T> & {
    * Render custom tooltip component.
    */
   customTooltip?: Component
+
   /**
    * Type of curve
    */
   curveType?: CurveType
+
   /**
    * Controls the visibility of gradient.
    * @default true
@@ -44,7 +46,6 @@ type KeyOfT = Extract<keyof T, string>
 type Data = typeof props.data[number]
 
 const chartRef = useId()
-
 const index = computed(() => props.index as KeyOfT)
 const colors = computed(() => props.colors?.length ? props.colors : defaultColors(props.categories.length))
 

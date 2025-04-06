@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import type { ContextMenuCheckboxItemEmits, ContextMenuCheckboxItemProps } from 'reka-ui'
+import type {
+  ContextMenuCheckboxItemEmits,
+  ContextMenuCheckboxItemProps,
+} from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'

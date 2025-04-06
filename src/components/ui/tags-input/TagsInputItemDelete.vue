@@ -6,7 +6,9 @@ import { cn } from '@/lib/utils'
 import { TagsInputItemDelete, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<TagsInputItemDeleteProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<TagsInputItemDeleteProps & {
+  class?: HTMLAttributes['class']
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

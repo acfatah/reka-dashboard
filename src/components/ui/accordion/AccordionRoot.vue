@@ -4,7 +4,6 @@ import { AccordionRoot, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<AccordionRootProps>()
 const emits = defineEmits<AccordionRootEmits>()
-
 const forwarded = useForwardPropsEmits(props, emits)
 </script>
 

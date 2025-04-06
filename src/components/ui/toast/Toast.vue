@@ -7,7 +7,6 @@ import type { ToastProps } from '.'
 import { toastVariants } from '.'
 
 const props = defineProps<ToastProps>()
-
 const emits = defineEmits<ToastRootEmits>()
 
 const delegatedProps = computed(() => {

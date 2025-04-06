@@ -5,7 +5,9 @@ import { cn } from '@/lib/utils'
 import { TagsInputItemText, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<TagsInputItemTextProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<TagsInputItemTextProps & {
+  class?: HTMLAttributes['class']
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

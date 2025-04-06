@@ -9,7 +9,9 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const props = withDefaults(defineProps<TooltipContentProps & { class?: HTMLAttributes['class'] }>(), {
+const props = withDefaults(defineProps<TooltipContentProps & {
+  class?: HTMLAttributes['class']
+}>(), {
   sideOffset: 4,
 })
 

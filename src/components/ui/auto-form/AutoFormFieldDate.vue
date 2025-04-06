@@ -36,7 +36,10 @@ const df = new DateFormatter('en-US', {
                   )"
                 >
                   <Iconify icon="lucide:calendar" class="mr-2 size-4" />
-                  {{ slotProps.componentField.modelValue ? df.format(slotProps.componentField.modelValue.toDate(getLocalTimeZone())) : "Pick a date" }}
+                  {{ slotProps.componentField.modelValue
+                    ? df.format(slotProps.componentField.modelValue.toDate(getLocalTimeZone()))
+                    : "Pick a date"
+                  }}
                 </Button>
               </PopoverTrigger>
               <PopoverContent class="w-auto p-0">

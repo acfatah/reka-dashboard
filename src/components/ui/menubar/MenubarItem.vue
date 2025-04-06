@@ -5,7 +5,11 @@ import { cn } from '@/lib/utils'
 import { MenubarItem, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<MenubarItemProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
+const props = defineProps<MenubarItemProps & {
+  class?: HTMLAttributes['class']
+  inset?: boolean
+}>()
+
 const emits = defineEmits<MenubarItemEmits>()
 
 const delegatedProps = computed(() => {

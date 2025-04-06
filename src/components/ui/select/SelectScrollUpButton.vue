@@ -6,7 +6,9 @@ import { cn } from '@/lib/utils'
 import { SelectScrollUpButton, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<SelectScrollUpButtonProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<SelectScrollUpButtonProps & {
+  class?: HTMLAttributes['class']
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

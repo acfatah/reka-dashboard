@@ -5,7 +5,10 @@ import { cn } from '@/lib/utils'
 import { ContextMenuSubTrigger, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<ContextMenuSubTriggerProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
+const props = defineProps<ContextMenuSubTriggerProps & {
+  class?: HTMLAttributes['class']
+  inset?: boolean
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

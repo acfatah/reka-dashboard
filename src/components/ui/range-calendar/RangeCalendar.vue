@@ -4,7 +4,19 @@ import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { RangeCalendarRoot, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
-import { RangeCalendarCell, RangeCalendarCellTrigger, RangeCalendarGrid, RangeCalendarGridBody, RangeCalendarGridHead, RangeCalendarGridRow, RangeCalendarHeadCell, RangeCalendarHeader, RangeCalendarHeading, RangeCalendarNextButton, RangeCalendarPrevButton } from '.'
+import {
+  RangeCalendarCell,
+  RangeCalendarCellTrigger,
+  RangeCalendarGrid,
+  RangeCalendarGridBody,
+  RangeCalendarGridHead,
+  RangeCalendarGridRow,
+  RangeCalendarHeadCell,
+  RangeCalendarHeader,
+  RangeCalendarHeading,
+  RangeCalendarNextButton,
+  RangeCalendarPrevButton,
+} from '.'
 
 const props = defineProps<RangeCalendarRootProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<RangeCalendarRootEmits>()
@@ -42,7 +54,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           </RangeCalendarGridRow>
         </RangeCalendarGridHead>
         <RangeCalendarGridBody>
-          <RangeCalendarGridRow v-for="(weekDates, index) in month.rows" :key="`weekDate-${index}`" class="mt-2 w-full">
+          <RangeCalendarGridRow
+            v-for="(weekDates, index) in month.rows"
+            :key="`weekDate-${index}`"
+            class="mt-2 w-full"
+          >
             <RangeCalendarCell
               v-for="weekDate in weekDates"
               :key="weekDate.toString()"

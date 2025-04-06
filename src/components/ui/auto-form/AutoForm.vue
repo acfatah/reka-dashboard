@@ -8,7 +8,12 @@ import type { Config, ConfigItem, Dependency, Shape } from './interface'
 import type { ZodObjectOrWrapped } from './utils'
 import AutoFormField from './AutoFormField.vue'
 import { provideDependencies } from './dependencies'
-import { getBaseSchema, getBaseType, getDefaultValueInZodStack, getObjectFormSchema } from './utils'
+import {
+  getBaseSchema,
+  getBaseType,
+  getDefaultValueInZodStack,
+  getObjectFormSchema,
+} from './utils'
 
 const props = defineProps<{
   schema: T
@@ -17,10 +22,7 @@ const props = defineProps<{
   dependencies?: Dependency<z.infer<T>>[]
 }>()
 
-const emits = defineEmits<{
-  submit: [event: z.infer<T>]
-}>()
-
+const emits = defineEmits<{ submit: [event: z.infer<T>] }>()
 const { dependencies } = toRefs(props)
 provideDependencies(dependencies)
 

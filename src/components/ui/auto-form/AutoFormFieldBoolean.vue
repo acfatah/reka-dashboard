@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { Checkbox } from '@/components/ui/checkbox'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/components/ui/form'
+import {
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormMessage,
+} from '@/components/ui/form'
 import { Switch } from '@/components/ui/switch'
 import { computed } from 'vue'
 import type { FieldProps } from './interface'

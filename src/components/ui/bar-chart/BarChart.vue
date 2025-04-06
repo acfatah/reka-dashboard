@@ -14,11 +14,13 @@ const props = withDefaults(defineProps<BaseChartProps<T> & {
    * Render custom tooltip component.
    */
   customTooltip?: Component
+
   /**
    * Change the type of the chart
    * @default "grouped"
    */
   type?: 'stacked' | 'grouped'
+
   /**
    * Rounded bar corners
    * @default 0
@@ -44,6 +46,7 @@ type Data = typeof props.data[number]
 
 const index = computed(() => props.index as KeyOfT)
 const colors = computed(() => props.colors?.length ? props.colors : defaultColors(props.categories.length))
+
 const legendItems = ref<BulletLegendItemInterface[]>(props.categories.map((category, i) => ({
   name: category,
   color: colors.value[i],
@@ -62,14 +65,24 @@ const selectorsBar = computed(() => props.type === 'grouped' ? GroupedBar.select
 
 <template>
   <div :class="cn('w-full h-[400px] flex flex-col items-end', $attrs.class ?? '')">
-    <ChartLegend v-if="showLegend" v-model:items="legendItems" @legend-item-click="handleLegendItemClick" />
+    <ChartLegend
+      v-if="showLegend"
+      v-model:items="legendItems"
+      @legend-item-click="handleLegendItemClick"
+    />
 
     <VisXYContainer
       :data="data"
       :style="{ height: isMounted ? '100%' : 'auto' }"
       :margin="margin"
     >
-      <ChartCrosshair v-if="showTooltip" :colors="colors" :items="legendItems" :custom-tooltip="customTooltip" :index="index" />
+      <ChartCrosshair
+        v-if="showTooltip"
+        :colors="colors"
+        :items="legendItems"
+        :custom-tooltip="customTooltip"
+        :index="index"
+      />
 
       <VisBarComponent
         :x="(d: Data, i: number) => i"

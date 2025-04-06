@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import type { ContextMenuContentEmits, ContextMenuContentProps } from 'reka-ui'
+import type {
+  ContextMenuContentEmits,
+  ContextMenuContentProps,
+} from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import {

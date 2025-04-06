@@ -6,7 +6,9 @@ import { cn } from '@/lib/utils'
 import { DropdownMenuSubTrigger, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<DropdownMenuSubTriggerProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<DropdownMenuSubTriggerProps & {
+  class?: HTMLAttributes['class']
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

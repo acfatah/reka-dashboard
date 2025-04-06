@@ -6,7 +6,10 @@ import { cn } from '@/lib/utils'
 import { MenubarSubTrigger, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<MenubarSubTriggerProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
+const props = defineProps<MenubarSubTriggerProps & {
+  class?: HTMLAttributes['class']
+  inset?: boolean
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

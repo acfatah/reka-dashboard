@@ -14,6 +14,7 @@ const props = withDefaults(defineProps<BaseChartProps<T> & {
    * Render custom tooltip component.
    */
   customTooltip?: Component
+
   /**
    * Type of curve
    */
@@ -54,14 +55,24 @@ function handleLegendItemClick(d: BulletLegendItemInterface, i: number) {
 
 <template>
   <div :class="cn('w-full h-[400px] flex flex-col items-end', $attrs.class ?? '')">
-    <ChartLegend v-if="showLegend" v-model:items="legendItems" @legend-item-click="handleLegendItemClick" />
+    <ChartLegend
+      v-if="showLegend"
+      v-model:items="legendItems"
+      @legend-item-click="handleLegendItemClick"
+    />
 
     <VisXYContainer
       :margin="{ left: 20, right: 20 }"
       :data="data"
       :style="{ height: isMounted ? '100%' : 'auto' }"
     >
-      <ChartCrosshair v-if="showTooltip" :colors="colors" :items="legendItems" :index="index" :custom-tooltip="customTooltip" />
+      <ChartCrosshair
+        v-if="showTooltip"
+        :colors="colors"
+        :items="legendItems"
+        :index="index"
+        :custom-tooltip="customTooltip"
+      />
 
       <template v-for="(category, i) in categories" :key="category">
         <VisLine

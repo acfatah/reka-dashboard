@@ -8,7 +8,10 @@ import {
 } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<ContextMenuItemProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
+const props = defineProps<ContextMenuItemProps & {
+  class?: HTMLAttributes['class']
+  inset?: boolean
+}>()
 const emits = defineEmits<ContextMenuItemEmits>()
 
 const delegatedProps = computed(() => {

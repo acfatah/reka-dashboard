@@ -5,7 +5,9 @@ import { cn } from '@/lib/utils'
 import { CalendarGrid, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<CalendarGridProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<CalendarGridProps & {
+  class?: HTMLAttributes['class']
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

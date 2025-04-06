@@ -5,7 +5,9 @@ import { cn } from '@/lib/utils'
 import { DrawerOverlay } from 'vaul-vue'
 import { computed } from 'vue'
 
-const props = defineProps<DialogOverlayProps & { class?: HtmlHTMLAttributes['class'] }>()
+const props = defineProps<DialogOverlayProps & {
+  class?: HtmlHTMLAttributes['class']
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

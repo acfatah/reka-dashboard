@@ -9,12 +9,11 @@ import {
 } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = withDefaults(
-  defineProps<DropdownMenuContentProps & { class?: HTMLAttributes['class'] }>(),
-  {
-    sideOffset: 4,
-  },
-)
+const props = withDefaults(defineProps<DropdownMenuContentProps & {
+  class?: HTMLAttributes['class']
+}>(), {
+  sideOffset: 4,
+})
 const emits = defineEmits<DropdownMenuContentEmits>()
 
 const delegatedProps = computed(() => {

@@ -13,19 +13,23 @@ const props = withDefaults(defineProps<Pick<BaseChartProps<T>, 'data' | 'colors'
    * Sets the name of the key containing the quantitative chart values.
    */
   category: KeyOfT
+
   /**
    * Change the type of the chart
    * @default "donut"
    */
   type?: 'donut' | 'pie'
+
   /**
    * Function to sort the segment
    */
   sortFunction?: (a: any, b: any) => number | undefined
+
   /**
    * Controls the formatting for the label.
    */
   valueFormatter?: (tick: number, i?: number, ticks?: number[]) => string
+
   /**
    * Render custom tooltip component.
    */
@@ -62,7 +66,11 @@ const totalValue = computed(() => props.data.reduce((prev, curr) => {
 
 <template>
   <div :class="cn('w-full h-48 flex flex-col items-end', $attrs.class ?? '')">
-    <VisSingleContainer :style="{ height: isMounted ? '100%' : 'auto' }" :margin="{ left: 20, right: 20 }" :data="data">
+    <VisSingleContainer
+      :style="{ height: isMounted ? '100%' : 'auto' }"
+      :margin="{ left: 20, right: 20 }"
+      :data="data"
+    >
       <ChartSingleTooltip
         :selector="Donut.selectors.segment"
         :index="category"

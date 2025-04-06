@@ -5,7 +5,9 @@ import { cn } from '@/lib/utils'
 import { ComboboxRoot, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = withDefaults(defineProps<ComboboxRootProps & { class?: HTMLAttributes['class'] }>(), {
+const props = withDefaults(defineProps<ComboboxRootProps & {
+  class?: HTMLAttributes['class']
+}>(), {
   open: true,
   modelValue: '',
 })
