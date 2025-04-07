@@ -23,8 +23,12 @@ import DefaultSource from './DefaultStory.vue?raw'
  *
  * Documentation:
  * - https://www.shadcn-vue.com/docs/components/auto-form.html
+ * - https://github.com/logaretm/vee-validate/tree/main/packages/zod
+ *
+ * See also:
+ * - https://github.com/vantezzen/autoform
+ * - https://zod.dev
  * - https://vee-validate.logaretm.com/v4/api/form
- * - https://zod.dev/?id=basic-usage
  */
 export default {
   title: 'Components/Forms/AutoForm',
