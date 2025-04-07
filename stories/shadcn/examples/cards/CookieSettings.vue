@@ -13,7 +13,7 @@
             its features.
           </span>
         </Label>
-        <Switch id="necessary" default-checked />
+        <Switch id="necessary" :default-value="true" />
       </div>
       <div class="flex items-center justify-between space-x-2">
         <Label for="functional" class="flex flex-col space-y-1">

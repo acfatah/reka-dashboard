@@ -118,7 +118,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
         <FormField v-slot="{ value, handleChange }" type="checkbox" name="mobile">
           <FormItem class="flex flex-row items-start space-x-3 space-y-0">
             <FormControl>
-              <Checkbox :checked="value" @update:checked="handleChange" />
+              <Checkbox :model-value="value" @update:model-value="handleChange" />
             </FormControl>
             <div class="flex w-full flex-col space-y-1 leading-none">
               <FormLabel>Use different settings for my mobile devices</FormLabel>
@@ -140,8 +140,8 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
             <FormControl>
               <FormControl>
                 <Switch
-                  :checked="value"
-                  @update:checked="handleChange"
+                  :model-value="value"
+                  @update:model-value="handleChange"
                 />
               </FormControl>
             </FormControl>
@@ -177,8 +177,8 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
               <FormItem class="flex flex-row items-start space-x-2 space-y-0">
                 <FormControl>
                   <Checkbox
-                    :checked="value.includes(item.id)"
-                    @update:checked="handleChange"
+                    :model-value="value.includes(item.id)"
+                    @update:model-value="handleChange"
                   />
                 </FormControl>
                 <FormLabel class="font-normal">
