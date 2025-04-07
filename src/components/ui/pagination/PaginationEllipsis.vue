@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { PaginationEllipsisProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { PaginationEllipsis } from 'reka-ui'
 import { computed } from 'vue'
 
@@ -20,7 +20,7 @@ const delegatedProps = computed(() => {
 <template>
   <PaginationEllipsis v-bind="delegatedProps" :class="cn('w-9 h-9 flex items-center justify-center', props.class)">
     <slot>
-      <Iconify icon="lucide:ellipsis" class="size-4" />
+      <Icon icon="lucide:ellipsis" width="16" height="16" />
     </slot>
   </PaginationEllipsis>
 </template>

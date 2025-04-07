@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import type { WithClassAsProps } from './interface'
 import { useCarousel } from './useCarousel'
 
@@ -23,7 +23,12 @@ const { orientation, canScrollPrev, scrollPrev } = useCarousel()
     @click="scrollPrev"
   >
     <slot>
-      <Iconify icon="radix-icons:arrow-left" class="size-4 text-current" />
+      <Icon
+        icon="radix-icons:arrow-left"
+        class="text-current"
+        width="16"
+        height="16"
+      />
       <span class="sr-only">Previous Slide</span>
     </slot>
   </Button>

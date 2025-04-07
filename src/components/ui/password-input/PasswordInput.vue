@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { useForwardProps } from 'reka-ui'
 import { computed, ref, useAttrs } from 'vue'
 
@@ -58,8 +58,20 @@ const forwardedProps = useForwardProps(delegatedAttrs)
         aria-controls="password"
         @click="toggleReveal"
       >
-        <Iconify v-show="isVisible" icon="lucide:eye-off" aria-hidden="true" width="20" height="20" />
-        <Iconify v-show="!isVisible" icon="lucide:eye" aria-hidden="true" width="20" height="20" />
+        <Icon
+          v-show="isVisible"
+          icon="lucide:eye-off"
+          aria-hidden="true"
+          width="16"
+          height="16"
+        />
+        <Icon
+          v-show="!isVisible"
+          icon="lucide:eye"
+          aria-hidden="true"
+          width="16"
+          height="16"
+        />
       </button>
     </div>
   </div>

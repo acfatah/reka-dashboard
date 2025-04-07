@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { CheckboxRootEmits, CheckboxRootProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { CheckboxIndicator, CheckboxRoot, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
 
@@ -32,7 +32,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   >
     <CheckboxIndicator class="flex size-full items-center justify-center text-current">
       <slot>
-        <Iconify icon="lucide:check" />
+        <Icon icon="lucide:check" width="24" height="24" />
       </slot>
     </CheckboxIndicator>
   </CheckboxRoot>

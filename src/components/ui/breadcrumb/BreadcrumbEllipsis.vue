@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 
 const props = defineProps<{ class?: HTMLAttributes['class'] }>()
 </script>
@@ -16,7 +16,7 @@ const props = defineProps<{ class?: HTMLAttributes['class'] }>()
     )"
   >
     <slot>
-      <Iconify icon="radix-icons:dots-horizontal" class="size-4" />
+      <Icon icon="radix-icons:dots-horizontal" width="16" height="16" />
     </slot>
     <span class="sr-only">More</span>
   </span>

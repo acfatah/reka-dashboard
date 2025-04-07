@@ -2,6 +2,7 @@
 import type { SelectTriggerProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { SelectIcon, SelectTrigger, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
@@ -30,7 +31,12 @@ const forwardedProps = useForwardProps(delegatedProps)
   >
     <slot />
     <SelectIcon as-child>
-      <Iconify icon="lucide:chevrons-up-down" class="size-4 shrink-0 opacity-50" />
+      <Icon
+        icon="lucide:chevrons-up-down"
+        class="shrink-0 opacity-50"
+        width="16"
+        height="16"
+      />
     </SelectIcon>
   </SelectTrigger>
 </template>

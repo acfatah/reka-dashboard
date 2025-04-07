@@ -6,8 +6,8 @@ import type {
   RowSelectionState,
   VisibilityState,
 } from '@tanstack/vue-table'
-import { Iconify } from '@/components/ui/icon'
 import { valueUpdater } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import {
   FlexRender,
   getCoreRowModel,
@@ -71,7 +71,8 @@ const table = useVueTable({
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
             <Button variant="outline" class="ml-auto">
-              Columns <Iconify icon="lucide:chevrons-up-down" class="ml-2 size-4" />
+              Columns
+              <Icon icon="lucide:chevrons-up-down" width="16" height="16" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -105,7 +106,12 @@ const table = useVueTable({
         <TableBody>
           <template v-if="props.loading">
             <TableCell :colspan="columns.length" class="h-24 text-center">
-              <Iconify icon="lucide:loader-circle" class="m-auto size-4 animate-spin" />
+              <Icon
+                icon="lucide:loader-circle"
+                class="m-auto animate-spin"
+                width="20"
+                height="20"
+              />
             </TableCell>
           </template>
           <template v-else-if="table.getRowModel().rows?.length">

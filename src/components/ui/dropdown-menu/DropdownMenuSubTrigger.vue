@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { DropdownMenuSubTriggerProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { DropdownMenuSubTrigger, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
@@ -31,6 +31,11 @@ const forwardedProps = useForwardProps(delegatedProps)
     )"
   >
     <slot />
-    <Iconify icon="radix-icons:chevron-right" class="ml-auto size-4" />
+    <Icon
+      icon="radix-icons:chevron-right"
+      class="ml-auto"
+      width="16"
+      height="16"
+    />
   </DropdownMenuSubTrigger>
 </template>

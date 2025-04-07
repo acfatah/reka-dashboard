@@ -2,8 +2,8 @@
 import type { CalendarNextProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { buttonVariants } from '@/components/ui/button'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { CalendarNext, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
@@ -30,7 +30,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
   >
     <slot>
-      <Iconify icon="lucide:chevron-right" class="size-4" />
+      <Icon icon="lucide:chevron-right" width="16" height="16" />
     </slot>
   </CalendarNext>
 </template>

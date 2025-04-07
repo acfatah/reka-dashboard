@@ -2,6 +2,7 @@
 import type { ContextMenuRadioItemEmits, ContextMenuRadioItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import {
   ContextMenuItemIndicator,
   ContextMenuRadioItem,
@@ -34,7 +35,12 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   >
     <span class="absolute left-2 flex size-3.5 items-center justify-center">
       <ContextMenuItemIndicator>
-        <Iconify icon="radix-icons:dot-filled" class="fill-current" />
+        <Icon
+          icon="radix-icons:dot-filled"
+          class="fill-current text-primary"
+          width="24"
+          height="24"
+        />
       </ContextMenuItemIndicator>
     </span>
     <slot />

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { SelectItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import {
   SelectItem,
   SelectItemIndicator,
@@ -34,7 +34,7 @@ const forwardedProps = useForwardProps(delegatedProps)
   >
     <span class="absolute right-2 flex size-3.5 items-center justify-center">
       <SelectItemIndicator>
-        <Iconify icon="lucide:check" class="size-4" />
+        <Icon icon="lucide:check" width="16" height="16" />
       </SelectItemIndicator>
     </span>
 

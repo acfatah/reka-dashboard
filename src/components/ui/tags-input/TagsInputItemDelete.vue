@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { TagsInputItemDeleteProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { TagsInputItemDelete, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
 
@@ -28,7 +28,7 @@ const forwardedProps = useForwardPropsEmits(delegatedProps)
     )"
   >
     <slot>
-      <Iconify icon="lucide:x" class="size-4" />
+      <Icon icon="lucide:x" width="14" height="14" />
     </slot>
   </TagsInputItemDelete>
 </template>

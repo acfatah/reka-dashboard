@@ -2,6 +2,7 @@
 import type { ContextMenuSubTriggerProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { ContextMenuSubTrigger, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
@@ -32,6 +33,11 @@ const forwardedProps = useForwardProps(delegatedProps)
     )"
   >
     <slot />
-    <Iconify icon="radix-icons:chevron-right" class="ml-auto size-4" />
+    <Icon
+      icon="radix-icons:chevron-right"
+      class="ml-auto"
+      width="16"
+      height="16"
+    />
   </ContextMenuSubTrigger>
 </template>

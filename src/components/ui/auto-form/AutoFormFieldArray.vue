@@ -7,8 +7,8 @@ import {
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 import { FormItem, FormMessage } from '@/components/ui/form'
-import { Iconify } from '@/components/ui/icon'
 import { Separator } from '@/components/ui/separator'
+import { Icon } from '@iconify/vue'
 import { FieldArray, FieldContextKey, useField } from 'vee-validate'
 import { computed, provide } from 'vue'
 import * as z from 'zod'
@@ -88,7 +88,7 @@ provide(FieldContextKey, fieldContext)
                       variant="secondary"
                       @click="remove(index)"
                     >
-                      <Iconify icon="lucide:trash-2" class="size-4" />
+                      <Icon icon="lucide:trash-2" width="16" height="16" />
                     </Button>
                   </div>
                   <Separator v-if="!field.isLast" />
@@ -101,7 +101,7 @@ provide(FieldContextKey, fieldContext)
                 class="mt-4 flex items-center"
                 @click="push(null)"
               >
-                <Iconify icon="lucide:plus" class="mr-2 size-4" />
+                <Icon icon="lucide:plus" class="mr-2" width="16" height="16" />
                 Add
               </Button>
             </AccordionContent>

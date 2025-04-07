@@ -2,9 +2,9 @@
 import { Button } from '@/components/ui/button'
 import { Calendar } from '@/components/ui/calendar'
 import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/components/ui/form'
-import { Iconify } from '@/components/ui/icon'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { DateFormatter, getLocalTimeZone } from '@internationalized/date'
 import type { FieldProps } from './interface'
 import AutoFormLabel from './AutoFormLabel.vue'
@@ -35,7 +35,7 @@ const df = new DateFormatter('en-US', {
                     !slotProps.componentField.modelValue && 'text-muted-foreground',
                   )"
                 >
-                  <Iconify icon="lucide:calendar" class="mr-2 size-4" />
+                  <Icon icon="lucide:calendar" width="16" height="16" />
                   {{ slotProps.componentField.modelValue
                     ? df.format(slotProps.componentField.modelValue.toDate(getLocalTimeZone()))
                     : "Pick a date"

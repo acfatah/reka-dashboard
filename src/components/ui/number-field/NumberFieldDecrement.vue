@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { NumberFieldDecrementProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { NumberFieldDecrement, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
@@ -30,7 +30,7 @@ const forwarded = useForwardProps(delegatedProps)
     )"
   >
     <slot>
-      <Iconify icon="lucide:minus" class="size-4" />
+      <Icon icon="lucide:minus" width="16" height="16" />
     </slot>
   </NumberFieldDecrement>
 </template>

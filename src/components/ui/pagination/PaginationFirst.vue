@@ -2,8 +2,8 @@
 import type { PaginationFirstProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { Button } from '@/components/ui/button'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { PaginationFirst } from 'reka-ui'
 import { computed } from 'vue'
 
@@ -24,7 +24,7 @@ const delegatedProps = computed(() => {
   <PaginationFirst v-bind="delegatedProps">
     <Button :class="cn('w-9 h-9 p-0', props.class)" variant="outline">
       <slot>
-        <Iconify icon="lucide:chevrons-left" class="size-4" />
+        <Icon icon="lucide:chevrons-left" width="16" height="16" />
       </slot>
     </Button>
   </PaginationFirst>

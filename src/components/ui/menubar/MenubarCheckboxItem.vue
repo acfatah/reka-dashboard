@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { MenubarCheckboxItemEmits, MenubarCheckboxItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import {
   MenubarCheckboxItem,
   MenubarItemIndicator,
@@ -35,7 +35,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   >
     <span class="absolute left-2 flex size-3.5 items-center justify-center">
       <MenubarItemIndicator>
-        <Iconify icon="lucide:check" class="size-4" />
+        <Icon icon="lucide:check" width="16" height="16" />
       </MenubarItemIndicator>
     </span>
     <slot />

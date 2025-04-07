@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { MenubarRadioItemEmits, MenubarRadioItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import {
   MenubarItemIndicator,
   MenubarRadioItem,
@@ -35,7 +35,12 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   >
     <span class="absolute left-2 flex size-3.5 items-center justify-center">
       <MenubarItemIndicator>
-        <Iconify icon="radix-icons:dot-filled" class="size-4 fill-current" />
+        <Icon
+          icon="radix-icons:dot-filled"
+          class="fill-current"
+          width="24"
+          height="24"
+        />
       </MenubarItemIndicator>
     </span>
     <slot />

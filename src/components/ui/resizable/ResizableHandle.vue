@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { SplitterResizeHandleEmits, SplitterResizeHandleProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { SplitterResizeHandle, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
 
@@ -33,7 +33,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   >
     <template v-if="props.withHandle">
       <div class="z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border">
-        <Iconify icon="radix-icons:drag-handle-dots-2" class="size-2.5" />
+        <Icon icon="radix-icons:drag-handle-dots-2" />
       </div>
     </template>
   </SplitterResizeHandle>

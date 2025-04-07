@@ -8,6 +8,7 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { Icon } from '@iconify/vue'
 import { ref } from 'vue'
 import type { FieldProps } from './interface'
 import AutoFormLabel from './AutoFormLabel.vue'
@@ -65,7 +66,7 @@ async function parseFileAsString(file: File | undefined): Promise<string> {
                 slotProps.componentField.onInput(undefined)
               }"
             >
-              <Iconify icon="lucide:trash-2" class="size-4" />
+              <Icon icon="lucide:trash-2" width="16" height="16" />
             </Button>
           </div>
         </slot>

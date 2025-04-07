@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { ComboboxInputProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { ComboboxInput, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
@@ -25,7 +25,12 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
   <div class="flex items-center border-b px-3" cmdk-input-wrapper>
-    <Iconify icon="radix-icons:magnifying-glass" class="mr-2 size-4 shrink-0 opacity-50" />
+    <Icon
+      icon="radix-icons:magnifying-glass"
+      class="mr-2 shrink-0 opacity-50"
+      width="16"
+      height="16"
+    />
     <ComboboxInput
       v-bind="{ ...forwardedProps, ...$attrs }"
       auto-focus

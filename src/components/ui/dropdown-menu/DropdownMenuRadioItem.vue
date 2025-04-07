@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { DropdownMenuRadioItemEmits, DropdownMenuRadioItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import {
   DropdownMenuItemIndicator,
   DropdownMenuRadioItem,
@@ -35,7 +35,12 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   >
     <span class="absolute left-2 flex size-3.5 items-center justify-center">
       <DropdownMenuItemIndicator>
-        <Iconify icon="radix-icons:dot-filled" class="fill-current" />
+        <Icon
+          icon="radix-icons:dot-filled"
+          class="fill-current"
+          width="24"
+          height="24"
+        />
       </DropdownMenuItemIndicator>
     </span>
     <slot />

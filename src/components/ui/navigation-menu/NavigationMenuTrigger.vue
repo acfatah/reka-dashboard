@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { NavigationMenuTriggerProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Iconify } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { NavigationMenuTrigger, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 import { navigationMenuTriggerStyle } from '.'
@@ -26,6 +26,11 @@ const forwardedProps = useForwardProps(delegatedProps)
     :class="cn(navigationMenuTriggerStyle(), 'group', props.class)"
   >
     <slot />
-    <Iconify icon="lucide:chevron-down" class="relative top-px ml-1 size-3 transition duration-300 group-data-[state=open]:rotate-180" />
+    <Icon
+      icon="lucide:chevron-down"
+      class="relative top-px ml-1 transition duration-300 group-data-[state=open]:rotate-180"
+      width="12"
+      height="12"
+    />
   </NavigationMenuTrigger>
 </template>
