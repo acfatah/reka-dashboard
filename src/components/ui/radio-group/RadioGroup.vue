@@ -21,7 +21,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 <template>
   <RadioGroupRoot
-    :class="cn('flex flex-col space-y-1', props.class)"
+    :class="cn('flex flex-col space-y-2', props.class)"
     v-bind="forwarded"
   >
     <slot />

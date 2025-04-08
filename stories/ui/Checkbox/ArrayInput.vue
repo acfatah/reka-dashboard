@@ -68,12 +68,13 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
         <FormField
           v-for="item in items"
           v-slot="{ value, handleChange }"
-          :key="item.id" type="checkbox"
+          :key="item.id"
           :value="item.id"
           :unchecked-value="false"
+          type="checkbox"
           name="items"
         >
-          <FormItem class="flex flex-row items-start space-x-3 space-y-0">
+          <FormItem class="flex flex-row items-start gap-x-3">
             <FormControl>
               <Checkbox
                 :model-value="value.includes(item.id)"

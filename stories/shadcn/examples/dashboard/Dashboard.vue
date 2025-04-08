@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import DashboardTabs from './components/DashboardTabs.vue'
 import DateRangePicker from './components/DateRangePicker.vue'
 import MainNav from './components/MainNav.vue'
