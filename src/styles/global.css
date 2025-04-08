@@ -3,10 +3,9 @@
 @plugin '@tailwindcss/typography';
 
 /**
- * Tailwindcss animate plugin
- * See: https://github.com/jamiebuilds/tailwindcss-animate
+ * https://github.com/Wombosvideo/tw-animate-css
  */
-@plugin "tailwindcss-animate";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
