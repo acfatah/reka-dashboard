@@ -70,6 +70,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
 
 <template>
   <Form
+    v-slot="{ meta }"
     class="flex w-full flex-col space-y-6 md:w-3/4 lg:3/4"
     :validation-schema="formSchema"
     :initial-values="initialValues"
@@ -236,7 +237,10 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
       </div>
     </div>
 
-    <Button type="submit">
+    <Button
+      type="submit"
+      :disabled="!(meta.dirty && meta.valid)"
+    >
       Submit
     </Button>
   </Form>

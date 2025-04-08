@@ -62,6 +62,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
         </DialogDescription>
       </DialogHeader>
       <Form
+        v-slot="{ meta }"
         :validation-schema="formSchema"
         @submit="onSubmit"
       >
@@ -79,7 +80,10 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
         </FormField>
 
         <DialogFooter>
-          <Button type="submit">
+          <Button
+            type="submit"
+            :disabled="!(meta.dirty && meta.valid)"
+          >
             Save changes
           </Button>
         </DialogFooter>

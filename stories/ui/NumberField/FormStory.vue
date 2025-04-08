@@ -31,7 +31,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
 
 <template>
   <Form
-    v-slot="{ setFieldValue }"
+    v-slot="{ meta, setFieldValue }"
     class="w-full space-y-6"
     :validation-schema="formSchema"
     :initial-values="{ payment: 10 }"
@@ -74,7 +74,10 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
       </FormItem>
     </FormField>
 
-    <Button type="submit">
+    <Button
+      type="submit"
+      :disabled="!(meta.dirty && meta.valid)"
+    >
       Submit
     </Button>
   </Form>

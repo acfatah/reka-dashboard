@@ -33,7 +33,7 @@ const storyArgs = useAttrs()
 
 <template>
   <Form
-    v-slot="{ setFieldValue }"
+    v-slot="{ meta, setFieldValue }"
     class="mx-auto w-2/3 space-y-6"
     :validation-schema="formSchema"
     @submit="onSubmit"
@@ -71,6 +71,11 @@ const storyArgs = useAttrs()
       </FormItem>
     </FormField>
 
-    <Button>Submit</Button>
+    <Button
+      type="submit"
+      :disabled="!(meta.dirty && meta.valid)"
+    >
+      Submit
+    </Button>
   </Form>
 </template>
