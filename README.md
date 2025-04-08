@@ -1,6 +1,6 @@
 # Reka Dashboard
 
-Get s*** done with `TypeScript`, `Vue` and `Bun`. Build front-end application in minutes.
+Build front-end single page application (SPA) in minutes with `TypeScript`, `Vue` and `Bun`.
 
 <p>
   <a href="https://github.com/acfatah/reka-dashboard/commits/main">
@@ -14,29 +14,32 @@ Get s*** done with `TypeScript`, `Vue` and `Bun`. Build front-end application in
 > WORK IN PROGRESS
 
 - This repository,
-  - is NOT a components library
-  - is NOT a design library
-  - is NOT a front-end framework
-  - does NOT tied to ShadCN/ui design
-  - does NOT tied to any spedific UX design framework
-- But instead,
-  - a collection of reusable Vue components
-  - uses [Tailwindcss][4]
-  - leverage [reka-ui][2] headless component libraries
-  - uses [ShadCN/ui][3] as the base design but can be modified
-    to suit any design
-  - provides a design system adaptable to any UX design framework
-- It,
-  - promotes accessibility and adherence to web standards
-  - focuses on component-driven development for consistency and maintainability
-  - supports rapid prototyping with pre-built, ready-made components
-  - includes extensive documentation, examples and visual testing using Storybook
-  - improve collaboration between design and development teams
-  - leverage ~~cutting edge~~ bleeding edge technology to improve DX and development speed
+  - is NOT a components library.
+  - is NOT a design library.
+  - is NOT a front-end framework.
+  - does NOT tied to a specific design.
+  - does NOT tied to any spedific UX design framework or library.
 
-This repository host a [micro-frontend][1] boilerplate architecture, forming the
-foundational front-end layer, crafted with reusable Vue components, styled with
-Tailwind CSS that encompasses a design system using modern development tools.
+- But instead,
+  - a collection of reusable Vue components, implemented using [shadcn-vue][3].
+  - uses [Tailwindcss v4][4].
+  - leverage [reka-ui][2] headless components library.
+  - uses [shadcn-ui][5] as the base design but can be modified to adapt new design.
+  - provides a design system adaptable to any UX design framework.
+
+- It,
+  - promotes accessibility and adherence to web standards.
+  - focuses on component-driven development for consistency and maintainability.
+  - supports rapid prototyping with pre-built, ready-made components.
+  - includes extensive documentation, examples and visual testing using [Storybook][6].
+  - improve collaboration between design and development teams.
+  - leverage latest ~~cutting edge~~ **bleeding edge** technology that improve DX
+    and development speed.
+
+This repository hosts a [micro-frontend][1] boilerplate architecture, perfect for
+creating high-performing Single Page Applications. It offers a foundational front-end
+layer, crafted with reusable Vue components and styled with Tailwind CSS, leveraging
+a design system and modern development tools.
 
 Adding a REST API would complete the back-end integration, transforming it into
 a full web application.
@@ -52,9 +55,17 @@ a full web application.
 - Auto load modules using [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import).
 - Auto load Vue components using [unplugin-vue-component](https://github.com/unplugin/unplugin-vue-components).
 - Preinstalled with [@vueuse/core](https://vueuse.org/functions.html).
+- Preinstalled with [Pinia][13] store for state management.
 - Leverage [reka-ui][2] headless component library.
+- Implement reusable Vue components from [shadcn-vue][3].
 - Uses [Tailwindcss v4][4].
-- Uses [Storybook.js](https://storybook.js.org) to document and test UI components.
+- Uses [Vee Validate][7] for form handling.
+- Uses [Zod][8] for schema validation.
+- Uses [TanStack Table][9] for tables & datagrids.
+- Uses [Unovis][10] to handle charts, graphs or data visualization.
+- Uses [Iconify][11] to manage over 200,000 open source vector icons.
+- Uses [@internationalized/date][12] to handle date and time manipulation.
+- Uses [Storybook.js][6] to document and visually test UI components.
 
 ## Usage
 
@@ -101,3 +112,12 @@ changes from the original repository into your fork.
 [2]: https://reka-ui.com
 [3]: https://shadcn-vue.com
 [4]: https://tailwindcss.com
+[5]: https://ui.shadcn.com
+[6]: https://storybook.js.org
+[7]: https://vee-validate.logaretm.com/v4/api/form
+[8]: https://zod.dev/?id=introduction
+[9]: https://tanstack.com/table/latest
+[10]: https://unovis.dev
+[11]: https://iconify.design/getting-started
+[12]: https://react-spectrum.adobe.com/internationalized/date/index.html
+[13]: https://pinia.vuejs.org
