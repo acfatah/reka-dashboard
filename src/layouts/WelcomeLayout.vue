@@ -1,7 +1,7 @@
 <template>
   <div class="flex px-32 min-h-screen">
     <header class="mr-12">
-      <img alt="Vue logo" class="logo" src="@/assets/icons/vue.svg" width="125" height="125">
+      <img alt="Vue logo" class="logo" src="@/assets/icons/vue.svg?url" width="125" height="125">
 
       <div class="wrapper">
         <HelloWorld msg="You did it!" />
