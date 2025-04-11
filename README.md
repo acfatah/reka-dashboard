@@ -11,7 +11,7 @@ Build front-end single page application (SPA) in minutes with `TypeScript`, `Vue
 </p>
 
 > [!IMPORTANT]
-> WORK IN PROGRESS
+> This branch is specifically created for Windows platform.
 
 - This repository,
   - is NOT a components library.
@@ -71,26 +71,32 @@ a full web application.
 
 1. Copy the repository,
 
-```bash
-bunx tiged acfatah/reka-dashboard newproject
+```cmd
+bunx tiged acfatah/reka-dashboard#windows newproject
 ```
 
 2. Include the `.vscode` directory in your repository to ensure consistent settings between developers. Use git add -f `.vscode` to force add it, bypassing any ignore rules.
 
-```bash
+```cmd
 git add -f .vscode
 ```
 
 3. Initialize `simple-git-hooks`,
 
-```bash
-rm -rf .git/hooks && bunx simple-git-hooks
+```cmd
+rmdir /S /Q .git\hooks && bunx simple-git-hooks
 ```
 
 4. Update and install dependencies
 
-```bash
+```cmd
 bun update
+```
+
+5. Initialize git repository
+
+```cmd
+git init && git add -A && git commit -m "Initial commit"
 ```
 
 ## Recommendation
@@ -102,7 +108,7 @@ To use your fork, simply replace the github user with your github username and r
 with the forked repository name, followed by
 
 ```bash
-bunx tiged your-github-user/reka-dashboard newproject
+bunx tiged your-github-user/reka-dashboard#windows newproject
 ```
 
 To incorporate the latest fixes or updates, you can easily pull the most recent
@@ -121,3 +127,5 @@ changes from the original repository into your fork.
 [11]: https://iconify.design/getting-started
 [12]: https://react-spectrum.adobe.com/internationalized/date/index.html
 [13]: https://pinia.vuejs.org
+
+I would also recommend to use `wsl` on windows platform to experience the speed improvement.
