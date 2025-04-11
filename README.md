@@ -3,7 +3,7 @@
 Build front-end single page application (SPA) in minutes with `TypeScript`, `Vue` and `Bun`.
 
 <p>
-  <a href="https://github.com/acfatah/reka-dashboard/commits/main">
+  <a href="https://github.com/acfatah/reka-dashboard/commits/windows">
     <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/acfatah/reka-dashboard?style=flat-square">
   </a>
   <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/acfatah/reka-dashboard?display_timestamp=committer&style=flat-square">
@@ -97,6 +97,18 @@ bun update
 
 ```cmd
 git init && git add -A && git commit -m "Initial commit"
+```
+
+6. To start development, run
+
+```cmd
+bun run dev
+```
+
+To read storybook documentation, run
+
+```cmd
+bun run storybook
 ```
 
 ## Recommendation
