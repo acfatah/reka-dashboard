@@ -13,6 +13,9 @@ Build front-end single page application (SPA) in minutes with `TypeScript`, `Vue
 > [!IMPORTANT]
 > WORK IN PROGRESS
 
+> [!IMPORTANT]
+> For windows platform (without wsl), please use `windows` branch instead.
+
 - This repository,
   - is NOT a components library.
   - is NOT a design library.
@@ -91,6 +94,12 @@ rm -rf .git/hooks && bunx simple-git-hooks
 
 ```bash
 bun update
+```
+
+5. Initialize git repository
+
+```bash
+git init && git add -A && git commit -m "Initial commit"
 ```
 
 ## Recommendation
