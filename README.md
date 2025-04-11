@@ -102,6 +102,18 @@ bun update
 git init && git add -A && git commit -m "Initial commit"
 ```
 
+6. To start development, run
+
+```bash
+bun run dev
+```
+
+To read storybook documentation, run
+
+```bash
+bun run storybook
+```
+
 ## Recommendation
 
 I suggest forking this repository to create your own version, which you can then
