@@ -11,12 +11,12 @@ import veeValidateResolver from './vee-validate-resolver'
 /** An array of directories to search for components including subdirectories */
 export const dirs = [
   'src/components/base',
-  'src/components/layouts',
 ]
 
 /** An array of directories to search for components */
 const searchDirs = [
   'src/components',
+  'src/layouts',
 ]
 
 function defaultResolver(componentName: string) {
