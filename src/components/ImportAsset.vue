@@ -5,6 +5,21 @@
 
 import { computed } from 'vue'
 
+/**
+ * - HTMLImageElement for images.
+ * - HTMLAudioElement for audio files.
+ * - HTMLVideoElement for video files.
+ * - HTMLEmbedElement could potentially be used for embedding PDFs or other types of assets.
+ * - HTMLObjectElement can also be used to embed various types of multimedia and data,
+ *   including Flash content (though largely obsolete), images, audio, and video files.
+ * - HTMLLinkElement for linking stylesheets (though not an asset used directly in
+ *   the document body).
+ * - HTMLScriptElement for linking to JavaScript files or embedding scripts directly,
+ *   which might be considered as assets in some contexts.
+ */
+export type AssetElement = HTMLImageElement | HTMLAudioElement | HTMLVideoElement
+  | HTMLEmbedElement | HTMLObjectElement | HTMLLinkElement | HTMLScriptElement
+
 interface Module {
   default: string
   render: () => string
@@ -13,7 +28,7 @@ interface Module {
 const props = defineProps<{
   /** E.g. `/icons/vue.svg` resolves to `/src/assets/icons/vue.svg`. */
   src: string
-}>()
+} & AssetElement>()
 
 const delegatedAttrs = computed(() => {
   const { src, ...delegated } = useAttrs()
