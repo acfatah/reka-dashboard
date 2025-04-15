@@ -1,13 +1,13 @@
-# Vue Micro-frontend Boilerplate
+# Vue Single Page Application Boilerplate
 
 <p>
   <a href="https://github.com/acfatah/reka-dashboard/commits/plain">
   <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/acfatah/reka-dashboard/plain?display_timestamp=committer&style=flat-square"></a>
 </p>
 
-Opinionated Vue [Micro Frontends](https://micro-frontends.org) Boilerplate.
+Opinionated Vue Single Page Application boilerplate.
 
-This template is designed to assist you in getting started with the development of a Vue 3 micro-frontend application, utilizing `TypeScript` and `Vite`, and leveraging `Bun`.
+This template is designed as starting point for developing a Vue 3 single page application, utilizing `Bun`, `TypeScript` and `Vite`.
 
 ## Features
 
@@ -42,4 +42,68 @@ rm -rf .git/hooks && bunx simple-git-hooks
 
 ```bash
 bun update
+```
+
+5. Initialize git repository
+
+```bash
+git init && git add -A && git commit -m "Initial commit"
+```
+
+6. To start development, run
+
+```bash
+bun run dev
+```
+
+## Additional steps for Windows user.
+
+> [!WARNING]
+> This project includes specific configurations for Windows users to ensure correct path resolution!
+
+Please ensure you apply the changes outlined in the `vite.config.ts` snippet below
+if you're developing on a Windows platform.
+
+```diff
++ import os from 'node:os'
+import process from 'node:process'
+// other imports...
+
++ const isWindows = os.platform() === 'win32'
+
++ function importPathTransform(path: string) {
++  return /^[a-z]:\\/i.test(path) ? path.replaceAll('\\', '\\\\') : path
++ }
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    vue(),
+    svgLoader(),
+    AutoImport({
+      dts: true,
+      vueTemplate: true,
+      dirs: [
+        'src/components/helpers',
+      ],
+      imports: [
+        'vue',
+        'vue-router',
+      ],
++      ...(isWindows && { importPathTransform }),
+    }),
+    Components({
+      dts: true,
+      resolvers,
+      dirs: componentDirs,
++      ...(isWindows && { importPathTransform }),
+    }),
+    process.env?.VITE_VUE_DEV_TOOLS === 'true' && vueDevTools(),
+  ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+})
 ```
