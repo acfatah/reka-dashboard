@@ -11,10 +11,7 @@ Build front-end single page application (SPA) in minutes with `TypeScript`, `Vue
 </p>
 
 > [!IMPORTANT]
-> This branch is specifically created for Windows platform.
-
-> [!IMPORTANT]
-> For windows platform (without wsl), please use `windows` branch instead.
+> This branch is specifically created for Windows platform (without wsl).
 
 - This repository,
   - is NOT a components library.
