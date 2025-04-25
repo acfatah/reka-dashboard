@@ -1,8 +1,15 @@
 # Vue Single Page Application Boilerplate
 
 <p>
-  <a href="https://github.com/acfatah/reka-dashboard/commits/plain">
-  <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/acfatah/reka-dashboard/plain?display_timestamp=committer&style=flat-square"></a>
+  <a href="https://bun.sh">
+    <img alt="bun.sh" src="https://img.shields.io/badge/Bun-%23000000.svg?style=flat-square&logo=bun&logoColor=white">
+  </a>
+  <a href="https://github.com/antfu/eslint-config">
+    <img alt="Code Style" src="https://antfu.me/badge-code-style.svg">
+  </a>
+  <a href="https://github.com/acfatah/bun-vue/commits/main">
+    <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/acfatah/bun-vue?display_timestamp=committer&style=flat-square">
+  </a>
 </p>
 
 Opinionated Vue Single Page Application boilerplate.
