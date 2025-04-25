@@ -59,11 +59,15 @@ const selectedTeam = ref(groups[0].teams[0])
         </Button>
       </PopoverTrigger>
       <PopoverContent class="w-[200px] p-0" align="start">
-        <Command :filter-function="(list: any[], term: string) => list.filter(i => i.label?.toLowerCase()?.includes(term)) ">
+        <Command>
           <CommandList>
             <CommandInput placeholder="Search team..." />
             <CommandEmpty>No team found.</CommandEmpty>
-            <CommandGroup v-for="group in groups" :key="group.label" :heading="group.label">
+            <CommandGroup
+              v-for="group in groups"
+              :key="group.label"
+              :heading="group.label"
+            >
               <CommandItem
                 v-for="team in group.teams"
                 :key="team.value"
