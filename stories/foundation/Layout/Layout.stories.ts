@@ -6,7 +6,7 @@ import App from '@/App.vue'
 import AppSource from '@/App.vue?raw'
 
 export default {
-  title: 'Components/Layout/Application Layout',
+  title: 'Foundation/Layout',
   component: App,
   subcomponents: {
     BlankLayout,

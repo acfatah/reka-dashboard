@@ -1,14 +1,17 @@
-import type { StoryObj } from '@storybook/vue3'
+import type { Meta, StoryObj } from '@storybook/vue3'
+import type { ComponentProps } from 'vue-component-type-helpers'
 import { html } from 'common-tags'
 
 import ImportAsset from '@/components/ImportAsset.vue'
+
+type ImportAssetArgs = ComponentProps<typeof ImportAsset>
 
 /**
  * Skip import statement and dynamically load asset files from `src/assets/`.
  *
  * E.g. the path `/icons/vue.svg` resolves to `/src/assets/icons/vue.svg`.
  */
-export default {
+const meta: Meta<ImportAssetArgs> = {
   title: 'Components/Media & Icons/Import Asset',
   component: ImportAsset,
   tags: ['autodocs'],
@@ -31,6 +34,8 @@ export default {
   },
 }
 
+export default meta
+
 export const Default: StoryObj = {
   parameters: {
     docs: {
@@ -42,7 +47,7 @@ export const Default: StoryObj = {
     },
   },
 
-  render: args => ({
+  render: (args: Partial<ImportAssetArgs>) => ({
     components: { ImportAsset },
 
     setup() {
