@@ -5,6 +5,8 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover'
 
+import ComboboxUsingPopoverStory from './ComboboxUsingPopoverStory.vue'
+import ComboboxUsingPopoverSource from './ComboboxUsingPopoverStory.vue?raw'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 
@@ -42,6 +44,31 @@ export const Default: StoryObj = {
 
     template: `
       <DefaultStory v-bind="args" />
+    `,
+  }),
+}
+
+/**
+ * Combobox using Popover and Command components.
+ */
+export const ComboboxUsingPopover: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: ComboboxUsingPopoverSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { ComboboxUsingPopoverStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <ComboboxUsingPopoverStory v-bind="args" />
     `,
   }),
 }
