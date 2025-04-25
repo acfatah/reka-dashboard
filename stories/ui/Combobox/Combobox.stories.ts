@@ -16,11 +16,11 @@ import ResponsiveSource from './ResponsiveStory.vue?raw'
 /**
  * Autocomplete input and command palette with a list of suggestions.
  *
- * The Combobox is built using a composition of the `Popover` and the `Command` components.
+ * Primitive API Reference: https://reka-ui.com/docs/components/combobox
  *
  * See also:
- * - [Overlays/Command](?path=/docs/overlays-command--docs) component
- * - [Overlays/Popover](?path=/docs/overlays-popover--docs) component
+ * - [Overlays/Command](?path=/docs/components-overlays-command--docs) component
+ * - [Overlays/Popover](?path=/docs/components-overlays-popover--docs) component
  */
 export default {
   title: 'Components/Data Entry/Combobox',

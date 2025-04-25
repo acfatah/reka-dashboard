@@ -1,9 +1,9 @@
 <script setup lang="ts">
-interface Status {
+interface StatusRecord {
   label: string
   value: string
 }
-const statuses: Status[] = [
+const statuses: StatusRecord[] = [
   { label: 'Backlog', value: 'backlog' },
   { label: 'Todo', value: 'todo' },
   { label: 'In Progress', value: 'in progress' },
@@ -11,8 +11,7 @@ const statuses: Status[] = [
   { label: 'Canceled', value: 'canceled' },
 ]
 
-const open: Ref<boolean> = ref(false)
-const selectedStatus: Ref<Status | null> = ref(null)
+const selectedStatus: Ref<StatusRecord | null> = ref(null)
 </script>
 
 <template>
@@ -20,42 +19,54 @@ const selectedStatus: Ref<Status | null> = ref(null)
     <p class="text-sm text-muted-foreground">
       Status
     </p>
-    <Popover v-model:open="open">
-      <PopoverTrigger as-child>
-        <Button
-          variant="outline"
-          size="sm"
-          class="w-[150px] justify-start"
-        >
-          <template v-if="selectedStatus">
-            {{ selectedStatus?.label }}
-          </template>
-          <template v-else>
-            + Set status
-          </template>
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent class="p-0" side="right" align="start">
-        <Command>
-          <CommandInput placeholder="Change status..." />
-          <CommandList>
-            <CommandEmpty>No results found.</CommandEmpty>
-            <CommandGroup>
-              <CommandItem
-                v-for="status in statuses"
-                :key="status.value"
-                :value="status.value"
-                @select="() => {
-                  selectedStatus = status
-                  open = false
-                }"
-              >
-                {{ status.label }}
-              </CommandItem>
-            </CommandGroup>
-          </CommandList>
-        </Command>
-      </PopoverContent>
-    </Popover>
+
+    <Combobox v-model="selectedStatus" by="label">
+      <ComboboxAnchor as-child>
+        <ComboboxTrigger as-child>
+          <Button
+            variant="outline"
+            size="sm"
+            class="w-[150px] justify-start"
+          >
+            <template v-if="selectedStatus">
+              {{ selectedStatus?.label }}
+            </template>
+            <template v-else>
+              + Set status
+            </template>
+          </Button>
+        </ComboboxTrigger>
+      </ComboboxAnchor>
+
+      <ComboboxList align="start">
+        <div class="relative w-full max-w-sm items-center">
+          <ComboboxInput
+            class="pl-9 focus-visible:ring-0 border-0 border-b rounded-none h-10"
+            placeholder="Change status..."
+          />
+          <span class="absolute start-0 inset-y-0 flex items-center justify-center px-3">
+            <Iconify icon="lucide:search" class="text-muted-foreground" width="16" height="16" />
+          </span>
+        </div>
+
+        <ComboboxEmpty>
+          No status found.
+        </ComboboxEmpty>
+
+        <ComboboxGroup>
+          <ComboboxItem
+            v-for="status in statuses"
+            :key="status.value"
+            :value="status"
+          >
+            {{ status.label }}
+
+            <ComboboxItemIndicator>
+              <Iconify icon="lucide:check" />
+            </ComboboxItemIndicator>
+          </ComboboxItem>
+        </ComboboxGroup>
+      </ComboboxList>
+    </Combobox>
   </div>
 </template>

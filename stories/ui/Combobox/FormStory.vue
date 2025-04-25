@@ -4,8 +4,6 @@ import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { z } from 'zod'
 
-const languageDropdownOpen = ref(false)
-
 interface LanguageRecord {
   label: string
   value: string
@@ -51,7 +49,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
 
 <template>
   <Form
-    v-slot="{ meta, values, setFieldValue }"
+    v-slot="{ meta, setFieldValue }"
     class="space-y-6"
     :validation-schema="formSchema"
     :initial-values="initialValues"
@@ -60,51 +58,43 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     <FormField name="language">
       <FormItem class="flex flex-col">
         <FormLabel>Language</FormLabel>
-        <Popover :open="languageDropdownOpen">
-          <PopoverTrigger as-child>
-            <FormControl>
-              <Button
-                variant="outline"
-                role="combobox"
-                :class="cn('w-[200px] justify-between', !values.language && 'text-muted-foreground')"
-                @click="languageDropdownOpen = !languageDropdownOpen"
+
+        <Combobox by="label">
+          <FormControl>
+            <ComboboxAnchor>
+              <div class="relative w-full max-w-sm items-center">
+                <ComboboxInput :display-value="(val) => val?.label ?? ''" placeholder="Select framework..." />
+                <ComboboxTrigger class="absolute end-0 inset-y-0 flex items-center justify-center px-3">
+                  <ChevronsUpDown class="size-4 text-muted-foreground" />
+                </ComboboxTrigger>
+              </div>
+            </ComboboxAnchor>
+          </FormControl>
+
+          <ComboboxList>
+            <ComboboxEmpty>
+              Nothing found.
+            </ComboboxEmpty>
+
+            <ComboboxGroup>
+              <ComboboxItem
+                v-for="language in languages"
+                :key="language.value"
+                :value="language"
+                @select="() => {
+                  setFieldValue('language', language.value)
+                }"
               >
-                {{ values.language ? languages.find(
-                  (language) => language.value === values.language,
-                )?.label : 'Select language...' }}
-                <Iconify icon="lucide:chevrons-up-down" class="ml-2 size-4 shrink-0 opacity-50" />
-              </Button>
-            </FormControl>
-          </PopoverTrigger>
-          <PopoverContent class="w-[200px] p-0">
-            <Command>
-              <CommandInput placeholder="Search language..." />
-              <CommandEmpty>Nothing found.</CommandEmpty>
-              <CommandList>
-                <CommandGroup>
-                  <CommandItem
-                    v-for="language in languages"
-                    :key="language.value"
-                    :value="language.label"
-                    @select="() => {
-                      setFieldValue('language', language.value)
-                      languageDropdownOpen = false
-                    }"
-                  >
-                    {{ language.label }}
-                    <Iconify
-                      icon="lucide:check"
-                      :class="cn(
-                        'ml-auto h-4 w-4',
-                        language.value === values.language ? 'opacity-100' : 'opacity-0',
-                      )"
-                    />
-                  </CommandItem>
-                </CommandGroup>
-              </CommandList>
-            </Command>
-          </PopoverContent>
-        </Popover>
+                {{ language.label }}
+
+                <ComboboxItemIndicator>
+                  <Check :class="cn('ml-auto h-4 w-4')" />
+                </ComboboxItemIndicator>
+              </ComboboxItem>
+            </ComboboxGroup>
+          </ComboboxList>
+        </Combobox>
+
         <FormDescription>
           This is the language that will be used in the dashboard.
         </FormDescription>
