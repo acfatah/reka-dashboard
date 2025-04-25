@@ -1,4 +1,4 @@
-import '@/styles/main.css'
+import '@/styles/global.css'
 import '@/styles/nprogress.css'
 
 import { createPinia } from 'pinia'
