@@ -47,7 +47,7 @@ export const Default: StoryObj = {
     },
   },
 
-  render: (args: ImportAssetArgs) => ({
+  render: (args: Partial<ImportAssetArgs>) => ({
     components: { ImportAsset },
 
     setup() {
