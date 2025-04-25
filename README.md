@@ -9,6 +9,9 @@ Opinionated Vue Single Page Application boilerplate.
 
 This template is designed as starting point for developing a Vue 3 single page application, utilizing `Bun`, `TypeScript` and `Vite`.
 
+> [!IMPORTANT]
+> This repository is maintained through [acfatah/reka-dashboard#plain](https://github.com/acfatah/reka-dashboard/tree/plain) branch.
+
 ## Features
 
 - Preinstalled with [@vueuse/core](https://vueuse.org/functions.html).
@@ -23,7 +26,7 @@ This template is designed as starting point for developing a Vue 3 single page a
 1. Copy the repository,
 
 ```bash
-bunx tiged acfatah/reka-dashboard#plain
+bunx tiged acfatah/bun-vue newproject
 ```
 
 2. Include the `.vscode` directory in your repository to ensure consistent settings for all developers. Use git add -f `.vscode` to force add it, bypassing any ignore rules.
@@ -56,10 +59,10 @@ git init && git add -A && git commit -m "Initial commit"
 bun run dev
 ```
 
-## Additional steps for Windows user.
+## Additional steps for Windows user (without WSL).
 
 > [!WARNING]
-> This project includes specific configurations for Windows users to ensure correct path resolution!
+> This project requires specific configurations for Windows users to ensure correct path resolution!
 
 Please ensure you apply the changes outlined in the `vite.config.ts` snippet below
 if you're developing on a Windows platform.
