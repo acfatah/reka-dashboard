@@ -58,13 +58,13 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
         <FormLabel>Frameworks</FormLabel>
         <FormControl>
           <TagsInput
-            class="relative flex-nowrap w-80 gap-0 px-0 min-h-8"
+            class="relative min-h-8 w-80 flex-nowrap gap-0 border-none bg-transparent px-0 caret-transparent"
             :model-value="value"
             :display-value="(value => frameworks.find(i => i.value === value)?.label as string)"
             @update:model-value="handleChange"
             @click.prevent="($refs.frameworkTagsInputRef as InstanceType<typeof TagsInputInput>).$el.focus()"
           >
-            <div class="flex flex-wrap items-center gap-2 px-3">
+            <div class="flex flex-wrap items-center gap-2 px-3 py-1">
               <TagsInputItem
                 v-for="item in value"
                 :key="item"
@@ -75,19 +75,21 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
               </TagsInputItem>
               <span
                 v-if="value.length === 0"
-                class="text-sm text-muted-foreground select-none"
+                class="text-sm text-muted-foreground select-none leading-none"
               >Framework...</span>
             </div>
 
             <ComboboxRoot
               v-model:open="open"
-              v-model:search-term="searchTerm"
-              class="absolute left-0 bottom-0 w-full -z-10"
+              class="absolute top-0 bottom-0 left-0 -z-10 w-full"
               :value="value"
               @update:value="handleChange"
             >
               <ComboboxAnchor as-child>
-                <ComboboxInput as-child>
+                <ComboboxInput
+                  v-model="searchTerm"
+                  as-child
+                >
                   <TagsInputInput
                     ref="frameworkTagsInputRef"
                     class="w-full px-3"
