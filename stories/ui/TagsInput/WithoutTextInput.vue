@@ -2,7 +2,10 @@
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
 import { TagsInputInput } from '@/components/ui/tags-input'
 import { toast } from '@/components/ui/toast'
+import { cn } from '@/lib/utils'
 import { toTypedSchema } from '@vee-validate/zod'
+import { useFilter } from 'reka-ui'
+import { computed, h, ref } from 'vue'
 import { z } from 'zod'
 
 interface FrameworkRecord {
@@ -25,11 +28,18 @@ const schema = z.object({
 const formSchema = toTypedSchema(schema)
 
 const initialValues = {
-  frameworks: [],
+  frameworks: ['nuxt'],
 }
 
 const open = ref(false)
 const searchTerm = ref('')
+const { contains } = useFilter({ sensitivity: 'base' })
+
+const filteredFrameworks = computed(() => {
+  return searchTerm.value
+    ? frameworks.filter(option => contains(option.label, searchTerm.value))
+    : frameworks
+})
 
 const onSubmit: SubmissionHandler<GenericObject> = function (values) {
   const formValues = values as FrameworkRecord
@@ -57,79 +67,82 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
       <FormItem>
         <FormLabel>Frameworks</FormLabel>
         <FormControl>
-          <TagsInput
-            class="relative min-h-8 w-80 flex-nowrap gap-0 border-none bg-transparent px-0 caret-transparent"
+          <Combobox
+            v-model:open="open"
+            class="w-full"
+            ignore-filter
             :model-value="value"
-            :display-value="(value => frameworks.find(i => i.value === value)?.label as string)"
             @update:model-value="handleChange"
-            @click.prevent="($refs.frameworkTagsInputRef as InstanceType<typeof TagsInputInput>).$el.focus()"
           >
-            <div class="flex flex-wrap items-center gap-2 px-3 py-1">
-              <TagsInputItem
-                v-for="item in value"
-                :key="item"
-                :value="(frameworks.find(i => i.value === item)?.value as string)"
+            <ComboboxAnchor as-child>
+              <TagsInput
+                :class="cn(
+                  'w-80 gap-0 px-1.5 py-0 flex-nowrap',
+                  open && 'ring-1 ring-ring outline-none',
+                )"
+                :display-value="(value) => frameworks.find(
+                  (record: FrameworkRecord) => record.value === value)?.label ?? ''
+                "
+                :model-value="value"
+                @update:model-value="handleChange"
+                @click.prevent="($refs.frameworkTagsInputRef as InstanceType<typeof TagsInputInput>).$el.focus()"
               >
-                <TagsInputItemText />
-                <TagsInputItemDelete />
-              </TagsInputItem>
-              <span
-                v-if="value.length === 0"
-                class="text-sm text-muted-foreground select-none leading-none"
-              >Framework...</span>
-            </div>
+                <div
+                  :class="cn(
+                    'flex flex-wrap items-center gap-2 w-full',
+                    value.length > 0 && 'py-1.5',
+                  )"
+                >
+                  <TagsInputItem
+                    v-for="item in value"
+                    :key="item"
+                    :value="frameworks.find((record: FrameworkRecord) => record.value === item)?.value ?? ''"
+                  >
+                    <TagsInputItemText />
+                    <TagsInputItemDelete />
+                  </TagsInputItem>
+                </div>
 
-            <ComboboxRoot
-              v-model:open="open"
-              class="absolute top-0 bottom-0 left-0 -z-10 w-full"
-              :value="value"
-              @update:value="handleChange"
-            >
-              <ComboboxAnchor as-child>
                 <ComboboxInput
                   v-model="searchTerm"
                   as-child
+                  class="my-0 border-none shadow-none focus:outline-none focus-visible:ring-0"
                 >
                   <TagsInputInput
                     ref="frameworkTagsInputRef"
-                    class="w-full px-3"
+                    class="px-0 caret-transparent bg-transparent"
+                    placeholder="Framework..."
                     @focus="open = true"
-                    @keydown.prevent
+                    @keydown.enter.prevent
                   />
                 </ComboboxInput>
-              </ComboboxAnchor>
+              </TagsInput>
 
-              <ComboboxPortal>
-                <ComboboxContent>
-                  <CommandList
-                    position="popper"
-                    class="mt-2 w-(--reka-popper-anchor-width) rounded-md border bg-popover text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+              <ComboboxList class="w-(--reka-popper-anchor-width)">
+                <ComboboxEmpty />
+                <ComboboxGroup>
+                  <ComboboxItem
+                    v-for="framework in filteredFrameworks.filter((i: FrameworkRecord) => !value.includes(i.value))"
+                    :key="framework.value"
+                    :value="framework.label"
+                    @select.prevent="(ev) => {
+                      if (typeof ev.detail.value === 'string') {
+                        searchTerm = ''
+                        handleChange([...value, framework.value])
+                        open = false
+                      }
+
+                      if (filteredFrameworks.length === 0) {
+                        open = false
+                      }
+                    }"
                   >
-                    <CommandEmpty />
-                    <CommandGroup>
-                      <CommandItem
-                        v-for="framework in frameworks.filter(i => !value.includes(i.value))"
-                        :key="framework.value"
-                        :value="framework.label"
-                        @select.prevent="(ev) => {
-                          if (typeof ev.detail.value === 'string') {
-                            searchTerm = ''
-                            value.push(framework.value)
-                          }
-
-                          if (frameworks.filter(i => !value.includes(i.value)).length === 0) {
-                            open = false
-                          }
-                        }"
-                      >
-                        {{ framework.label }}
-                      </CommandItem>
-                    </CommandGroup>
-                  </CommandList>
-                </ComboboxContent>
-              </ComboboxPortal>
-            </ComboboxRoot>
-          </TagsInput>
+                    {{ framework.label }}
+                  </ComboboxItem>
+                </ComboboxGroup>
+              </ComboboxList>
+            </ComboboxAnchor>
+          </Combobox>
         </FormControl>
         <FormDescription>
           Select your frameworks.
