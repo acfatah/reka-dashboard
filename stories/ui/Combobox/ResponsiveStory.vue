@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { createReusableTemplate, useMediaQuery } from '@vueuse/core'
 
-interface Status {
+interface StatusRecord {
   label: string
   value: string
 }
 
-const statuses: Status[] = [
+const statuses: StatusRecord[] = [
   { label: 'Backlog', value: 'backlog' },
   { label: 'Todo', value: 'todo' },
   { label: 'In Progress', value: 'in progress' },
@@ -18,9 +18,9 @@ const [UseTemplate, StatusList] = createReusableTemplate()
 const isDesktop = useMediaQuery('(min-width: 768px)')
 
 const isOpen: Ref<boolean> = ref(false)
-const selectedStatus: Ref<Status | null> = ref(null)
+const selectedStatus: Ref<StatusRecord | null> = ref(null)
 
-function onStatusSelect(status: Status) {
+function onStatusSelect(status: StatusRecord) {
   selectedStatus.value = status
   isOpen.value = false
 }
