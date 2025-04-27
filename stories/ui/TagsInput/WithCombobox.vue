@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
+import { TagsInputInput } from '@/components/ui/tags-input'
 import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { useFilter } from 'reka-ui'
@@ -29,13 +30,14 @@ const initialValues = {
   frameworks: ['nuxt'],
 }
 
-const open = ref(false)
-const searchTerm = ref('')
 const { contains } = useFilter({ sensitivity: 'base' })
+const frameworksComboboxOpen = ref(false)
+const frameworksTagsInputInputRef = ref<typeof TagsInputInput>()
+const frameworkSearch = ref('')
 
 const filteredFrameworks = computed(() => {
-  return searchTerm.value
-    ? frameworks.filter(option => contains(option.label, searchTerm.value))
+  return frameworkSearch.value
+    ? frameworks.filter(option => contains(option.label, frameworkSearch.value))
     : frameworks
 })
 
@@ -66,7 +68,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
         <FormLabel>Frameworks</FormLabel>
         <FormControl>
           <Combobox
-            v-model:open="open"
+            v-model:open="frameworksComboboxOpen"
             class="w-full"
             ignore-filter
             :model-value="value"
@@ -93,19 +95,20 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                     :value="frameworks.find((record: FrameworkRecord) => record.value === item)?.value ?? ''"
                   >
                     <TagsInputItemText />
-                    <TagsInputItemDelete />
+                    <TagsInputItemDelete @click="frameworksTagsInputInputRef?.$el.focus()" />
                   </TagsInputItem>
                 </div>
 
                 <ComboboxInput
-                  v-model="searchTerm"
+                  v-model="frameworkSearch"
                   as-child
                   class="my-0 border-none shadow-none focus:outline-none focus-visible:ring-0"
                 >
                   <TagsInputInput
+                    ref="frameworksTagsInputInputRef"
                     class="w-full px-1"
                     placeholder="Framework..."
-                    @focus="open = true"
+                    @focus="frameworksComboboxOpen = true"
                     @keydown.enter.prevent
                   />
                 </ComboboxInput>
@@ -120,13 +123,14 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                     :value="framework.label"
                     @select.prevent="(ev) => {
                       if (typeof ev.detail.value === 'string') {
-                        searchTerm = ''
+                        frameworkSearch = ''
                         handleChange([...value, framework.value])
-                        open = false
+                        frameworksComboboxOpen = false
+                        frameworksTagsInputInputRef?.$el.focus()
                       }
 
                       if (filteredFrameworks.length === 0) {
-                        open = false
+                        frameworksComboboxOpen = false
                       }
                     }"
                   >

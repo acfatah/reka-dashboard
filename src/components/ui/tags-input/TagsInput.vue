@@ -3,10 +3,12 @@ import type { TagsInputRootEmits, TagsInputRootProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { TagsInputRoot, useForwardPropsEmits } from 'reka-ui'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
+import { provideTagsInputContext } from '.'
 
 const props = defineProps<TagsInputRootProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<TagsInputRootEmits>()
+const focus = ref(false)
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -15,6 +17,10 @@ const delegatedProps = computed(() => {
 })
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
+
+provideTagsInputContext({
+  focus,
+})
 </script>
 
 <template>
@@ -23,6 +29,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     :class="cn(
       'flex flex-wrap items-center gap-2 rounded-md border px-3 py-1.5 text-sm',
       'border-input bg-background',
+      focus && 'ring-1 ring-ring outline-none',
       props.class,
     )"
   >

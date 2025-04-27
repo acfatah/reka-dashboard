@@ -4,8 +4,10 @@ import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { TagsInputInput, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
+import { injectTagsInputContext } from '.'
 
 const props = defineProps<TagsInputInputProps & { class?: HTMLAttributes['class'] }>()
+const { focus } = injectTagsInputContext()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -22,5 +24,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     :class="cn(
       'text-sm min-h-5 focus:outline-none flex-1 bg-transparent px-1',
       props.class)"
+    @focus="focus = true"
+    @blur="focus = false"
   />
 </template>
