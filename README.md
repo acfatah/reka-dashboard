@@ -17,10 +17,11 @@ Opinionated Vue Single Page Application boilerplate.
 This template is designed as starting point for developing a Vue 3 single page application, utilizing `Bun`, `TypeScript` and `Vite`.
 
 > [!IMPORTANT]
-> This repository is maintained through [acfatah/reka-dashboard#plain](https://github.com/acfatah/reka-dashboard/tree/plain) branch.
+> This repository is maintained through [acfatah/reka-dashboard#tailwind](https://github.com/acfatah/reka-dashboard/tree/tailwind) branch.
 
 ## Features
 
+- A utility-first, [Tailwindcss](https://tailwindcss.com) framework.
 - Preinstalled with [@vueuse/core](https://vueuse.org/functions.html).
 - Preinstalled with [Pinia store](https://pinia.vuejs.org).
 - Auto load modules using [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import).
@@ -33,7 +34,7 @@ This template is designed as starting point for developing a Vue 3 single page a
 1. Copy the repository,
 
 ```bash
-bunx tiged acfatah/bun-vue newproject
+bunx tiged acfatah/bun-vue#tailwind
 ```
 
 2. Include the `.vscode` directory in your repository to ensure consistent settings for all developers. Use git add -f `.vscode` to force add it, bypassing any ignore rules.
