@@ -5,19 +5,26 @@ import MutedLayout from '@/layouts/MutedLayout.vue'
 import WelcomeLayout from '@/layouts/WelcomeLayout.vue'
 import HomeView from '@/views/Welcome/HomeView.vue'
 
+// playground routes
+import { dashboardRoutes } from '../playground/router/dashboard'
+
 const { start: startLoading, done: doneLoading } = useNProgress()
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // dashboard playground
+    ...dashboardRoutes,
+
     {
-      path: '/',
-      name: 'home',
+      path: '/welcome',
+      name: 'welcome',
       component: HomeView,
       meta: {
         layout: WelcomeLayout,
       },
     },
+
     {
       path: '/about',
       name: 'about',
