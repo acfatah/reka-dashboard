@@ -5,8 +5,9 @@ import {
   AccordionRoot,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+
+import AccordionDefault from '@/playground/components/accordion/AccordionDefault.vue'
+import AccordionDefaultSource from '@/playground/components/accordion/AccordionDefault.vue?raw'
 
 /**
  * A vertically stacked set of interactive headings that each reveal a section of content.
@@ -15,7 +16,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  */
 export default {
   title: 'Components/Panels/Accordion',
-  component: DefaultStory,
+  component: AccordionDefault,
   subcomponents: {
     AccordionRoot,
     AccordionItem,
@@ -29,20 +30,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: AccordionDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { AccordionDefault },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultStory v-bind="args" />
+      <AccordionDefault v-bind="args" />
     `,
   }),
 }
