@@ -6,17 +6,17 @@ import {
 } from '@/components/ui/alert'
 import { html } from 'common-tags'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
-import DestructiveAlertStory from './DestructiveAlert.vue'
-import DestructiveAlertSource from './DestructiveAlert.vue?raw'
+import AlertDefault from '@/playground/components/alert/AlertDefault.vue'
+import AlertDefaultSource from '@/playground/components/alert/AlertDefault.vue?raw'
+import DestructiveAlert from '@/playground/components/alert/DestructiveAlert.vue'
+import DestructiveAlertSource from '@/playground/components/alert/DestructiveAlert.vue?raw'
 
 /**
  * Displays a callout for user attention.
  */
 export default {
   title: 'Components/Feedback/Alert',
-  component: DefaultStory,
+  component: AlertDefault,
   subcomponents: {
     Alert,
     AlertDescription,
@@ -29,20 +29,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: AlertDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { AlertDefault },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <AlertDefault v-bind="args" />
     `,
   }),
 }
@@ -57,14 +57,14 @@ export const Destructive: StoryObj = {
   },
 
   render: args => ({
-    components: { DestructiveAlertStory },
+    components: { DestructiveAlert },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DestructiveAlertStory v-bind="args" />
+      <DestructiveAlert v-bind="args" />
     `,
   }),
 }
