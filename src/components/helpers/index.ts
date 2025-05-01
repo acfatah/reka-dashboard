@@ -12,6 +12,9 @@ export { cn } from '@/lib/utils'
 // https://react-spectrum.adobe.com/internationalized/date/index.html
 export { CalendarDate, type DateValue } from '@internationalized/date'
 
+// https://vueuse.org/integrations/useNProgress
+export { useNProgress } from '@vueuse/integrations/useNProgress'
+
 // https://reka-ui.com/docs/guides/dates
 export {
   createDateRange,
