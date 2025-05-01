@@ -7,8 +7,8 @@ import {
   AvatarSize,
 } from '@/components/ui/avatar'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import AvatarDefault from '@/playground/components/avatar/AvatarDefault.vue'
+import AvatarDefaultSource from '@/playground/components/avatar/AvatarDefault.vue?raw'
 
 /**
  * An image element with a fallback for representing the user.
@@ -17,7 +17,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  */
 export default {
   title: 'Components/Data Display/Avatar',
-  component: DefaultStory,
+  component: AvatarDefault,
   subcomponents: {
     Avatar,
     AvatarFallback,
@@ -30,7 +30,7 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: AvatarDefaultSource,
       },
     },
   },
@@ -61,14 +61,14 @@ export const Default: StoryObj = {
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { AvatarDefault },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultStory v-bind="args" />
+      <AvatarDefault v-bind="args" />
     `,
   }),
 }
