@@ -17,6 +17,7 @@ const delegatedProps = computed(() => {
 <template>
   <AccordionHeader class="flex">
     <AccordionTrigger
+      data-slot="accordion-trigger"
       v-bind="delegatedProps"
       :class="cn(
         'flex flex-1 items-start justify-between gap-4 rounded-md py-4',
