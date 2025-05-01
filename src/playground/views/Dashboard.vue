@@ -2,6 +2,7 @@
 import ComponentWrapper from '@/playground/components/ComponentWrapper.vue'
 
 import AccordionDefault from '@/playground/components/accordion/AccordionDefault.vue'
+
 import AlertDefault from '@/playground/components/alert/AlertDefault.vue'
 import CustomStyleAlert from '@/playground/components/alert/CustomStyleAlert.vue'
 import DescriptionOnlyAlert from '@/playground/components/alert/DescriptionOnlyAlert.vue'
@@ -14,6 +15,8 @@ import VeryLongTitleAlert from '@/playground/components/alert/VeryLongTitleAlert
 import VeryLongTitleAndDescriptionAlert from '@/playground/components/alert/VeryLongTitleAndDescriptionAlert.vue'
 import WithCTAButton from '@/playground/components/alert/WithCTAButton.vue'
 import WithoutDescriptionAlert from '@/playground/components/alert/WithoutDescriptionAlert.vue'
+
+import AlertDialogDefault from '@/playground/components/alert-dialog/AlertDialogDefault.vue'
 </script>
 
 <template>
@@ -37,6 +40,10 @@ import WithoutDescriptionAlert from '@/playground/components/alert/WithoutDescri
         <WithCTAButton />
         <CustomStyleAlert />
       </div>
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Alert Dialog">
+      <AlertDialogDefault />
     </ComponentWrapper>
   </div>
 

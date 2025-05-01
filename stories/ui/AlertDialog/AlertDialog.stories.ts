@@ -9,8 +9,9 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog'
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+
+import AlertDialogDefault from '@/playground/components/alert-dialog/AlertDialogDefault.vue'
+import AlertDialogDefaultSource from '@/playground/components/alert-dialog/AlertDialogDefault.vue?raw'
 
 /**
  * A modal dialog that interrupts the user with important content and expects a response.
@@ -25,7 +26,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  */
 export default {
   title: 'Components/Feedback/Alert Dialog',
-  component: DefaultStory,
+  component: AlertDialogDefault,
   subcomponents: {
     AlertDialog,
     AlertDialogAction,
@@ -43,20 +44,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: AlertDialogDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { AlertDialogDefault },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultStory v-bind="args" />
+      <AlertDialogDefault v-bind="args" />
     `,
   }),
 }
