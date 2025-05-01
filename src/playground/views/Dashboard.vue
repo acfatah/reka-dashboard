@@ -17,6 +17,9 @@ import WithCTAButton from '@/playground/components/alert/WithCTAButton.vue'
 import WithoutDescriptionAlert from '@/playground/components/alert/WithoutDescriptionAlert.vue'
 
 import AlertDialogDefault from '@/playground/components/alert-dialog/AlertDialogDefault.vue'
+
+import AspectRatioDefault from '@/playground/components/aspect-ratio/AspectRatioDefault.vue'
+import AspectRatioVariant from '@/playground/components/aspect-ratio/AspectRatioVariant.vue'
 </script>
 
 <template>
@@ -44,6 +47,13 @@ import AlertDialogDefault from '@/playground/components/alert-dialog/AlertDialog
 
     <ComponentWrapper name="Alert Dialog">
       <AlertDialogDefault />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Aspect Ratio">
+      <div class="grid w-full max-w-sm items-start gap-4">
+        <AspectRatioDefault />
+        <AspectRatioVariant />
+      </div>
     </ComponentWrapper>
   </div>
 
