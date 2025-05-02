@@ -8,15 +8,17 @@ const props = withDefaults(defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
 }>(), {
   as: 'a',
+  asChild: false,
 })
 </script>
 
 <template>
   <Primitive
+    data-slot="breadcrumb-link"
     :as="as"
     :as-child="asChild"
     :class="cn(
-      'cursor-pointer transition-colors hover:text-foreground',
+      'transition-colors hover:text-foreground',
       props.class,
     )"
   >

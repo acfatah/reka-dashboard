@@ -8,15 +8,16 @@ const props = defineProps<{ class?: HTMLAttributes['class'] }>()
 
 <template>
   <span
+    data-slot="breadcrumb-ellipsis"
     role="presentation"
     aria-hidden="true"
     :class="cn(
-      'flex h-9 w-9 items-center justify-center cursor-pointer',
+      'flex size-9 items-center justify-center',
       props.class,
     )"
   >
     <slot>
-      <Icon icon="radix-icons:dots-horizontal" width="16" height="16" />
+      <Icon icon="lucide:more-horizontal" width="16" height="16" />
     </slot>
     <span class="sr-only">More</span>
   </span>

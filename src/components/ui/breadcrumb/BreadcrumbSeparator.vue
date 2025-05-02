@@ -8,12 +8,13 @@ const props = defineProps<{ class?: HTMLAttributes['class'] }>()
 
 <template>
   <li
+    data-slot="breadcrumb-separator"
     role="presentation"
     aria-hidden="true"
     :class="cn('[&>svg]:size-3.5', props.class)"
   >
     <slot>
-      <Icon icon="radix-icons:chevron-right" width="16" height="16" />
+      <Icon icon="lucide:chevron-right" width="16" height="16" />
     </slot>
   </li>
 </template>
