@@ -21,7 +21,7 @@
       </Badge>
 
       <Badge variant="destructive">
-        <AlertCircleIcon />
+        <Iconify icon="lucide:alert-circle" />
         Alert
       </Badge>
 
