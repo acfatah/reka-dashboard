@@ -28,6 +28,8 @@ import AvatarGroup1 from '@/playground/components/avatar/AvatarGroup1.vue'
 import AvatarGroup2 from '@/playground/components/avatar/AvatarGroup2.vue'
 import AvatarGroup3 from '@/playground/components/avatar/AvatarGroup3.vue'
 import AvatarSquare from '@/playground/components/avatar/AvatarSquare.vue'
+
+import BadgesDemo from '@/playground/components/badge/BadgesDemo.vue'
 </script>
 
 <template>
@@ -74,6 +76,10 @@ import AvatarSquare from '@/playground/components/avatar/AvatarSquare.vue'
         <AvatarGroup2 />
         <AvatarGroup3 />
       </div>
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Badge">
+      <BadgesDemo />
     </ComponentWrapper>
   </div>
 
