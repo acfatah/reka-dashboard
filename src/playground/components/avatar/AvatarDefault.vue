@@ -1,6 +1,9 @@
 <template>
   <Avatar>
-    <AvatarImage src="/example/avatar/01.png" alt="@radix-vue" />
+    <AvatarImage
+      src="https://mighty.tools/mockmind-api/content/human/104.jpg"
+      alt="@mighty.tools"
+    />
     <AvatarFallback>CN</AvatarFallback>
   </Avatar>
 </template>

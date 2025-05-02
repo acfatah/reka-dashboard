@@ -20,6 +20,14 @@ import AlertDialogDefault from '@/playground/components/alert-dialog/AlertDialog
 
 import AspectRatioDefault from '@/playground/components/aspect-ratio/AspectRatioDefault.vue'
 import AspectRatioVariant from '@/playground/components/aspect-ratio/AspectRatioVariant.vue'
+
+import AvatarCustomSize from '@/playground/components/avatar/AvatarCustomSize.vue'
+import AvatarDefault from '@/playground/components/avatar/AvatarDefault.vue'
+import AvatarDefaultFallback from '@/playground/components/avatar/AvatarDefaultFallback.vue'
+import AvatarGroup1 from '@/playground/components/avatar/AvatarGroup1.vue'
+import AvatarGroup2 from '@/playground/components/avatar/AvatarGroup2.vue'
+import AvatarGroup3 from '@/playground/components/avatar/AvatarGroup3.vue'
+import AvatarSquare from '@/playground/components/avatar/AvatarSquare.vue'
 </script>
 
 <template>
@@ -53,6 +61,18 @@ import AspectRatioVariant from '@/playground/components/aspect-ratio/AspectRatio
       <div class="grid w-full max-w-sm items-start gap-4">
         <AspectRatioDefault />
         <AspectRatioVariant />
+      </div>
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Avatar">
+      <div class="flex flex-row flex-wrap items-center gap-4">
+        <AvatarDefault />
+        <AvatarDefaultFallback />
+        <AvatarCustomSize />
+        <AvatarSquare />
+        <AvatarGroup1 />
+        <AvatarGroup2 />
+        <AvatarGroup3 />
       </div>
     </ComponentWrapper>
   </div>
