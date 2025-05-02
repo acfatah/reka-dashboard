@@ -6,7 +6,13 @@ const props = defineProps<AvatarFallbackProps>()
 </script>
 
 <template>
-  <AvatarFallback v-bind="props">
+  <AvatarFallback
+    data-slot="avatar-fallback"
+    v-bind="props"
+    :class="cn(
+      'flex size-full items-center justify-center rounded-full bg-muted',
+    )"
+  >
     <slot />
   </AvatarFallback>
 </template>
