@@ -2,8 +2,8 @@ import type { StoryObj } from '@storybook/vue3'
 import { Badge } from '@/components/ui/badge'
 import { html } from 'common-tags'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import BadgeDefault from '@/playground/components/badge/BadgeDefault.vue'
+import BadgeDefaultSource from '@/playground/components/badge/BadgeDefault.vue?raw'
 
 /**
  * Displays a badge or a component that looks like a badge
@@ -20,20 +20,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: BadgeDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { BadgeDefault },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <BadgeDefault v-bind="args" />
     `,
   }),
 }
@@ -44,14 +44,14 @@ export const Secondary: StoryObj = {
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { BadgeDefault },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <BadgeDefault v-bind="args" />
     `,
   }),
 }
@@ -62,14 +62,14 @@ export const Destructive: StoryObj = {
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { BadgeDefault },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <BadgeDefault v-bind="args" />
     `,
   }),
 }
@@ -80,14 +80,14 @@ export const Outline: StoryObj = {
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { BadgeDefault },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <BadgeDefault v-bind="args" />
     `,
   }),
 }
