@@ -26,7 +26,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-  <AlertDialogPortal data-slot="alert-dialog-portal">
+  <AlertDialogPortal>
     <AlertDialogOverlay
       data-slot="alert-dialog-overlay"
       :class="cn(
