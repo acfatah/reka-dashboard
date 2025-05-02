@@ -9,9 +9,9 @@
       <BreadcrumbSeparator />
       <BreadcrumbItem>
         <DropdownMenu>
-          <DropdownMenuTrigger class="flex items-center gap-1">
+          <DropdownMenuTrigger class="flex items-center gap-1 transition-colors hover:text-foreground">
             <BreadcrumbEllipsis class="size-4" />
-            <span class="sr-only">Toggle menu</span>
+            <span className="sr-only">Toggle menu</span>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start">
             <DropdownMenuItem>Documentation</DropdownMenuItem>
@@ -22,7 +22,7 @@
       </BreadcrumbItem>
       <BreadcrumbSeparator />
       <BreadcrumbItem>
-        <BreadcrumbLink href="/docs/components/accordion.html">
+        <BreadcrumbLink href="/docs/components">
           Components
         </BreadcrumbLink>
       </BreadcrumbItem>

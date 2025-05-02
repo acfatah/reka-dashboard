@@ -11,9 +11,9 @@
       </BreadcrumbSeparator>
       <BreadcrumbItem>
         <DropdownMenu>
-          <DropdownMenuTrigger class="flex items-center gap-1">
+          <DropdownMenuTrigger class="flex items-center gap-1 transition-colors hover:text-foreground">
             Components
-            <ChevronDownIcon class="size-4" />
+            <Iconify icon="lucide:chevron-down" class="size-4" />
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start">
             <DropdownMenuItem>Documentation</DropdownMenuItem>

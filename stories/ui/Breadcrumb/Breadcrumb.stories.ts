@@ -8,18 +8,19 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
-import CollapsedStory from './CollapsedStory.vue'
-import CollapsedSource from './CollapsedStory.vue?raw'
-import CustomSeparatorStory from './CustomSeparatorStory.vue'
-import CustomSeparatorSource from './CustomSeparatorStory.vue?raw'
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
-import DropdownStory from './DropdownStory.vue'
-import DropdownSource from './DropdownStory.vue?raw'
-import LinkStory from './LinkStory.vue'
-import LinkSource from './LinkStory.vue?raw'
-import ResponsiveStory from './ResponsiveStory.vue'
-import ResponsiveSource from './ResponsiveStory.vue?raw'
+
+import BreadcrumbCollapsed from '@/playground/components/breadcrumb/BreadcrumbCollapsed.vue'
+import BreadcrumbCollapsedSource from '@/playground/components/breadcrumb/BreadcrumbCollapsed.vue?raw'
+import BreadcrumbDefault from '@/playground/components/breadcrumb/BreadcrumbDefault.vue'
+import BreadcrumbDefaultSource from '@/playground/components/breadcrumb/BreadcrumbDefault.vue?raw'
+import BreadcrumbResponsive from '@/playground/components/breadcrumb/BreadcrumbResponsive.vue'
+import BreadcrumbResponsiveSource from '@/playground/components/breadcrumb/BreadcrumbResponsive.vue?raw'
+import BreadcrumbWithCustomSeparator from '@/playground/components/breadcrumb/BreadcrumbWithCustomSeparator.vue'
+import BreadcrumbWithCustomSeparatorSource from '@/playground/components/breadcrumb/BreadcrumbWithCustomSeparator.vue?raw'
+import BreadcrumbWithDropdown from '@/playground/components/breadcrumb/BreadcrumbWithDropdown.vue'
+import BreakcrumbWithDropdownSource from '@/playground/components/breadcrumb/BreadcrumbWithDropdown.vue?raw'
+import BreadcrumbWithRouterLink from '@/playground/components/breadcrumb/BreadcrumbWithRouterLink.vue'
+import BreadcrumbWithRouterLinkSource from '@/playground/components/breadcrumb/BreadcrumbWithRouterLink.vue?raw'
 
 /**
  * Displays the path to the current resource using a hierarchy of links.
@@ -28,7 +29,7 @@ import ResponsiveSource from './ResponsiveStory.vue?raw'
  */
 export default {
   title: 'Components/Navigation/Breadcrumb',
-  component: DefaultStory,
+  component: BreadcrumbDefault,
   subcomponents: {
     Breadcrumb,
     BreadcrumbEllipsis,
@@ -45,20 +46,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: BreadcrumbDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { BreadcrumbDefault },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultStory v-bind="args" />
+      <BreadcrumbDefault v-bind="args" />
     `,
   }),
 }
@@ -67,20 +68,20 @@ export const CustomSeparator: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: CustomSeparatorSource,
+        code: BreadcrumbWithCustomSeparatorSource,
       },
     },
   },
 
   render: args => ({
-    components: { CustomSeparatorStory },
+    components: { BreadcrumbWithCustomSeparator },
 
     setup() {
       return { args }
     },
 
     template: `
-      <CustomSeparatorStory v-bind="args" />
+      <BreadcrumbWithCustomSeparator v-bind="args" />
     `,
   }),
 }
@@ -89,20 +90,20 @@ export const Dropdown: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DropdownSource,
+        code: BreakcrumbWithDropdownSource,
       },
     },
   },
 
   render: args => ({
-    components: { DropdownStory },
+    components: { BreadcrumbWithDropdown },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DropdownStory v-bind="args" />
+      <BreadcrumbWithDropdown v-bind="args" />
     `,
   }),
 }
@@ -111,42 +112,42 @@ export const Collapsed: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: CollapsedSource,
+        code: BreadcrumbCollapsedSource,
       },
     },
   },
 
   render: args => ({
-    components: { CollapsedStory },
+    components: { BreadcrumbCollapsed },
 
     setup() {
       return { args }
     },
 
     template: `
-      <CollapsedStory v-bind="args" />
+      <BreadcrumbCollapsed v-bind="args" />
     `,
   }),
 }
 
-export const LinkComponent: StoryObj = {
+export const RouterLink: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: LinkSource,
+        code: BreadcrumbWithRouterLinkSource,
       },
     },
   },
 
   render: args => ({
-    components: { LinkStory },
+    components: { BreadcrumbWithRouterLink },
 
     setup() {
       return { args }
     },
 
     template: `
-      <LinkStory v-bind="args" />
+      <BreadcrumbWithRouterLink v-bind="args" />
     `,
   }),
 }
@@ -155,20 +156,20 @@ export const Responsive: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: ResponsiveSource,
+        code: BreadcrumbResponsiveSource,
       },
     },
   },
 
   render: args => ({
-    components: { ResponsiveStory },
+    components: { BreadcrumbResponsive },
 
     setup() {
       return { args }
     },
 
     template: `
-      <ResponsiveStory v-bind="args" />
+      <BreadcrumbResponsive v-bind="args" />
     `,
   }),
 }

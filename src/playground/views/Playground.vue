@@ -30,6 +30,11 @@ import AvatarGroup3 from '@/playground/components/avatar/AvatarGroup3.vue'
 import AvatarSquare from '@/playground/components/avatar/AvatarSquare.vue'
 
 import BadgesDemo from '@/playground/components/badge/BadgesDemo.vue'
+
+import BreadcrumbCollapsed from '@/playground/components/breadcrumb/BreadcrumbCollapsed.vue'
+import BreadcrumbDefault from '@/playground/components/breadcrumb/BreadcrumbDefault.vue'
+import BreadcrumbWithCustomSeparator from '@/playground/components/breadcrumb/BreadcrumbWithCustomSeparator.vue'
+import BreadcrumbWithDropdown from '@/playground/components/breadcrumb/BreadcrumbWithDropdown.vue'
 </script>
 
 <template>
@@ -80,6 +85,15 @@ import BadgesDemo from '@/playground/components/badge/BadgesDemo.vue'
 
     <ComponentWrapper name="Badge">
       <BadgesDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Breadcrumb">
+      <div class="flex flex-col gap-4">
+        <BreadcrumbDefault />
+        <BreadcrumbWithCustomSeparator />
+        <BreadcrumbWithDropdown />
+        <BreadcrumbCollapsed />
+      </div>
     </ComponentWrapper>
   </div>
 

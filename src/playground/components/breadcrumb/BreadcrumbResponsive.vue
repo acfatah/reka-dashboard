@@ -20,7 +20,7 @@ const remainingItems = computed(() => items.value.slice(-itemsToDisplay + 1))
   <Breadcrumb>
     <BreadcrumbList>
       <BreadcrumbItem>
-        <BreadcrumbLink href="{items[0].href}">
+        <BreadcrumbLink :href="items[0].href">
           {{ firstLabel }}
         </BreadcrumbLink>
       </BreadcrumbItem>
@@ -29,13 +29,16 @@ const remainingItems = computed(() => items.value.slice(-itemsToDisplay + 1))
         <BreadcrumbItem>
           <DropdownMenu v-if="isDesktop" v-model:open="isOpen">
             <DropdownMenuTrigger
-              class="flex items-center gap-1"
+              class="flex items-center gap-1 transition-colors hover:text-foreground"
               aria-label="Toggle menu"
             >
               <BreadcrumbEllipsis class="size-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
-              <DropdownMenuItem v-for="item of allButLastTwoItems" :key="item.label">
+              <DropdownMenuItem
+                v-for="item of allButLastTwoItems"
+                :key="item.label"
+              >
                 <a :href="item.href || '#'">
                   {{ item.label }}
                 </a>
@@ -43,7 +46,10 @@ const remainingItems = computed(() => items.value.slice(-itemsToDisplay + 1))
             </DropdownMenuContent>
           </DropdownMenu>
           <Drawer v-else v-model:open="isOpen">
-            <DrawerTrigger aria-label="Toggle Menu">
+            <DrawerTrigger
+              aria-label="Toggle Menu"
+              class="transition-colors hover:text-foreground"
+            >
               <BreadcrumbEllipsis class="size-4" />
             </DrawerTrigger>
             <DrawerContent>
