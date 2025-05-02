@@ -6,18 +6,18 @@ import WelcomeLayout from '@/layouts/WelcomeLayout.vue'
 import HomeView from '@/views/Welcome/HomeView.vue'
 
 // playground routes
-import { dashboardRoutes } from '../playground/router/dashboard'
+import { playgroundRoutes } from '../playground/router/playground'
 
 const { start: startLoading, done: doneLoading } = useNProgress()
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    // dashboard playground
-    ...dashboardRoutes,
+    // playground routes
+    ...playgroundRoutes,
 
     {
-      path: '/welcome',
+      path: '/',
       name: 'welcome',
       component: HomeView,
       meta: {
