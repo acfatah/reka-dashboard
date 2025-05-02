@@ -26,6 +26,7 @@ export default function (componentName: string) {
     { name: 'ComboboxRoot', from: 'reka-ui' },
     { name: 'ComboboxTrigger', from: 'reka-ui' },
     { name: 'ComboboxViewport', from: 'reka-ui' },
+    { name: 'DropdownMenuPortal', from: 'reka-ui' },
     { name: 'TagsInputRoot', from: 'reka-ui' },
     { name: 'SplitterGroup', from: 'reka-ui' },
     { name: 'SplitterPanel', from: 'reka-ui' },
