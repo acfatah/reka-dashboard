@@ -35,6 +35,10 @@ import BreadcrumbCollapsed from '@/playground/components/breadcrumb/BreadcrumbCo
 import BreadcrumbDefault from '@/playground/components/breadcrumb/BreadcrumbDefault.vue'
 import BreadcrumbWithCustomSeparator from '@/playground/components/breadcrumb/BreadcrumbWithCustomSeparator.vue'
 import BreadcrumbWithDropdown from '@/playground/components/breadcrumb/BreadcrumbWithDropdown.vue'
+
+import DropdownDefault from '@/playground/components/dropdown/DropdownDefault.vue'
+import DropdownWithCheckboxes from '@/playground/components/dropdown/DropdownWithCheckboxes.vue'
+import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWithRadioGroup.vue'
 </script>
 
 <template>
@@ -93,6 +97,14 @@ import BreadcrumbWithDropdown from '@/playground/components/breadcrumb/Breadcrum
         <BreadcrumbWithCustomSeparator />
         <BreadcrumbWithDropdown />
         <BreadcrumbCollapsed />
+      </div>
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Dropdown Menu" class="mb-96">
+      <div className="flex flex-wrap items-start gap-4">
+        <DropdownDefault />
+        <DropdownWithCheckboxes />
+        <DropdownWithRadioGroup />
       </div>
     </ComponentWrapper>
   </div>

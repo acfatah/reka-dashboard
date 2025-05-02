@@ -7,67 +7,52 @@
     </DropdownMenuTrigger>
     <DropdownMenuContent align="start" class="w-56">
       <DropdownMenuLabel>My Account</DropdownMenuLabel>
-      <DropdownMenuSeparator />
       <DropdownMenuGroup>
         <DropdownMenuItem>
-          <span>Profile</span>
+          Profile
           <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <span>Billing</span>
+          Billing
           <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <span>Settings</span>
+          Settings
           <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <span>Keyboard shortcuts</span>
+          Keyboard shortcuts
           <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
       <DropdownMenuGroup>
-        <DropdownMenuItem>
-          <span>Team</span>
-        </DropdownMenuItem>
+        <DropdownMenuItem>Team</DropdownMenuItem>
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger>
-            <span>Invite users</span>
-          </DropdownMenuSubTrigger>
+          <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
-              <DropdownMenuItem>
-                <span>Email</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <span>Message</span>
-              </DropdownMenuItem>
+              <DropdownMenuItem>Email</DropdownMenuItem>
+              <DropdownMenuItem>Message</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <span>More...</span>
-              </DropdownMenuItem>
+              <DropdownMenuItem>More...</DropdownMenuItem>
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
         </DropdownMenuSub>
         <DropdownMenuItem>
-          <span>New Team</span>
+          New Team
           <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
-      <DropdownMenuItem>
-        <span>GitHub</span>
-      </DropdownMenuItem>
-      <DropdownMenuItem>
-        <span>Support</span>
-      </DropdownMenuItem>
+      <DropdownMenuItem>GitHub</DropdownMenuItem>
+      <DropdownMenuItem>Support</DropdownMenuItem>
       <DropdownMenuItem disabled>
-        <span>API</span>
+        API
       </DropdownMenuItem>
       <DropdownMenuSeparator />
       <DropdownMenuItem>
-        <span>Log out</span>
+        Log out
         <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
       </DropdownMenuItem>
     </DropdownMenuContent>

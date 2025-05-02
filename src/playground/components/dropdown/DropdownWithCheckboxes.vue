@@ -22,7 +22,7 @@ const showPanel = ref<Checked>(false)
   <DropdownMenu>
     <DropdownMenuTrigger as-child>
       <Button variant="outline">
-        Open
+        Checkboxes
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent class="w-56">

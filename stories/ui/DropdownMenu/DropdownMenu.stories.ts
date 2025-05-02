@@ -17,13 +17,14 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { html } from 'common-tags'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
-import WithCheckboxesStory from './WithCheckboxes.vue'
-import WithCheckboxesSource from './WithCheckboxes.vue?raw'
-import WithRadioGroupStory from './WithRadioGroup.vue'
+import DropdownDefault from '@/playground/components/dropdown/DropdownDefault.vue'
+import DropdownDefaultSource from '@/playground/components/dropdown/DropdownDefault.vue?raw'
 
-import WithRadioGroupSource from './WithRadioGroup.vue?raw'
+import DropdownWithCheckboxes from '@/playground/components/dropdown/DropdownWithCheckboxes.vue'
+import DropdownWithCheckboxesSource from '@/playground/components/dropdown/DropdownWithCheckboxes.vue?raw'
+
+import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWithRadioGroup.vue'
+import DropdownWithRadioGroupSource from '@/playground/components/dropdown/DropdownWithRadioGroup.vue?raw'
 
 /**
  * Displays a menu to the user — such as a set of actions or functions — triggered by a button.
@@ -32,7 +33,7 @@ import WithRadioGroupSource from './WithRadioGroup.vue?raw'
  */
 export default {
   title: 'Components/Overlays/Dropdown Menu',
-  component: DefaultStory,
+  component: DropdownDefault,
   subcomponents: {
     DropdownMenu,
     DropdownMenuCheckboxItem,
@@ -56,20 +57,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: DropdownDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { DropdownDefault },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <DropdownDefault v-bind="args" />
     `,
   }),
 }
@@ -78,20 +79,20 @@ export const WithCheckboxes: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: WithCheckboxesSource,
+        code: DropdownWithCheckboxesSource,
       },
     },
   },
 
   render: args => ({
-    components: { WithCheckboxesStory },
+    components: { DropdownWithCheckboxes },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <WithCheckboxesStory v-bind="args" />
+      <DropdownWithCheckboxes v-bind="args" />
     `,
   }
   ),
@@ -101,20 +102,20 @@ export const WithRadioGroup: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: WithRadioGroupSource,
+        code: DropdownWithRadioGroupSource,
       },
     },
   },
 
   render: args => ({
-    components: { WithRadioGroupStory },
+    components: { DropdownWithRadioGroup },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <WithRadioGroupStory v-bind="args" />
+      <DropdownWithRadioGroup v-bind="args" />
     `,
   }
   ),

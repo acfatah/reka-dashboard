@@ -18,7 +18,7 @@ const position = ref('bottom')
   <DropdownMenu>
     <DropdownMenuTrigger as-child>
       <Button variant="outline">
-        Open
+        Radio Group
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent class="w-56">
