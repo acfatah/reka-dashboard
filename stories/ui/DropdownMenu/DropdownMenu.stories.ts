@@ -26,6 +26,15 @@ import DropdownWithCheckboxesSource from '@/playground/components/dropdown/Dropd
 import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWithRadioGroup.vue'
 import DropdownWithRadioGroupSource from '@/playground/components/dropdown/DropdownWithRadioGroup.vue?raw'
 
+import DropdownMenuWithAvatar from '@/playground/components/dropdown/DropdownMenuWithAvatar.vue'
+import DropdownMenuWithAvatarSource from '@/playground/components/dropdown/DropdownMenuWithAvatar.vue?raw'
+
+import DropdownMenuWithAvatarOnly from '@/playground/components/dropdown/DropdownMenuAvatarOnly.vue'
+import DropdownMenuWithAvatarOnlySource from '@/playground/components/dropdown/DropdownMenuAvatarOnly.vue?raw'
+
+import DropdownMenuIconButton from '@/playground/components/dropdown/DropdownMenuIconButton.vue'
+import DropdownMenuIconButtonSource from '@/playground/components/dropdown/DropdownMenuIconButton.vue?raw'
+
 /**
  * Displays a menu to the user — such as a set of actions or functions — triggered by a button.
  *
@@ -94,8 +103,7 @@ export const WithCheckboxes: StoryObj = {
     template: html`
       <DropdownWithCheckboxes v-bind="args" />
     `,
-  }
-  ),
+  }),
 }
 
 export const WithRadioGroup: StoryObj = {
@@ -117,6 +125,71 @@ export const WithRadioGroup: StoryObj = {
     template: html`
       <DropdownWithRadioGroup v-bind="args" />
     `,
-  }
-  ),
+  }),
+}
+
+export const WithAvatar: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: DropdownMenuWithAvatarSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { DropdownMenuWithAvatar },
+
+    setup() {
+      return { args }
+    },
+
+    template: html`
+      <DropdownMenuWithAvatar v-bind="args" />
+    `,
+  }),
+}
+
+export const AvatarOnly: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: DropdownMenuWithAvatarOnlySource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { DropdownMenuWithAvatarOnly },
+
+    setup() {
+      return { args }
+    },
+
+    template: html`
+      <DropdownMenuWithAvatarOnly v-bind="args" />
+    `,
+  }),
+}
+
+export const IconButton: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: DropdownMenuIconButtonSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { DropdownMenuIconButton },
+
+    setup() {
+      return { args }
+    },
+
+    template: html`
+      <DropdownMenuIconButton v-bind="args" />
+    `,
+  }),
 }

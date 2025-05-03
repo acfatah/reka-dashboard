@@ -5,7 +5,7 @@ export interface User {
 }
 
 export const user = {
-  name: 'shadcn',
-  email: 'm@example.com',
-  avatar: '/avatars/shadcn.jpg',
+  name: 'uifaces.co',
+  email: 'mt@example.com',
+  avatar: 'https://mighty.tools/mockmind-api/content/human/104.jpg',
 }

@@ -37,6 +37,9 @@ import BreadcrumbWithCustomSeparator from '@/playground/components/breadcrumb/Br
 import BreadcrumbWithDropdown from '@/playground/components/breadcrumb/BreadcrumbWithDropdown.vue'
 
 import DropdownDefault from '@/playground/components/dropdown/DropdownDefault.vue'
+import DropdownMenuAvatarOnly from '@/playground/components/dropdown/DropdownMenuAvatarOnly.vue'
+import DropdownMenuIconButton from '@/playground/components/dropdown/DropdownMenuIconButton.vue'
+import DropdownMenuWithAvatar from '@/playground/components/dropdown/DropdownMenuWithAvatar.vue'
 import DropdownWithCheckboxes from '@/playground/components/dropdown/DropdownWithCheckboxes.vue'
 import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWithRadioGroup.vue'
 </script>
@@ -105,6 +108,9 @@ import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWit
         <DropdownDefault />
         <DropdownWithCheckboxes />
         <DropdownWithRadioGroup />
+        <DropdownMenuWithAvatar />
+        <DropdownMenuAvatarOnly />
+        <DropdownMenuIconButton />
       </div>
     </ComponentWrapper>
   </div>
