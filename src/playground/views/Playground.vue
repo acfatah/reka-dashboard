@@ -47,6 +47,8 @@ import ButtonsDemo from '@/playground/components/button/ButtonsDemo.vue'
 import FormButtons from '@/playground/components/button/FormButtons.vue'
 
 import CalendarDefault from '@/playground/components/calendar/CalendarDefault.vue'
+import RangeCalendarDefault from '@/playground/components/range-calendar/RangeCalendarDefault.vue'
+import RangeCalendarTwoMonths from '@/playground/components/range-calendar/RangeCalendarTwoMonths.vue'
 </script>
 
 <template>
@@ -129,6 +131,8 @@ import CalendarDefault from '@/playground/components/calendar/CalendarDefault.vu
 
     <ComponentWrapper name="Calendar">
       <CalendarDefault />
+      <RangeCalendarDefault />
+      <RangeCalendarTwoMonths />
     </ComponentWrapper>
   </div>
 

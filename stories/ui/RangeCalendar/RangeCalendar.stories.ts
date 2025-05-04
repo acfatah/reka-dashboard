@@ -2,8 +2,8 @@ import type { StoryObj } from '@storybook/vue3'
 import { Label } from '@/components/ui/label'
 import { html } from 'common-tags'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import RangeCalendarDefaultStory from '@/playground/components/range-calendar/RangeCalendarDefault.vue'
+import RangeCalendarDefaultSource from '@/playground/components/range-calendar/RangeCalendarDefault.vue?raw'
 
 /**
  * A calendar component that allows users to select a range of dates.
@@ -31,20 +31,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: RangeCalendarDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { RangeCalendarDefaultStory },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <RangeCalendarDefaultStory v-bind="args" />
     `,
   }),
 }
