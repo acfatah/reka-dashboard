@@ -8,10 +8,10 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
-import NotificationExampleComponent from './NotificationExample.vue'
-import NotificationExampleSource from './NotificationExample.vue?raw'
+import CardDefaultStory from '@/playground/components/card/CardDefault.vue'
+import CardDefaultStorySource from '@/playground/components/card/CardDefault.vue?raw'
+import NotificationCardComponent from '@/playground/components/card/NotificationCard.vue'
+import NotificationCardSource from '@/playground/components/card/NotificationCard.vue?raw'
 
 /**
  * Displays a card with header, content, and footer.
@@ -34,42 +34,42 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: CardDefaultStorySource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { CardDefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultStory v-bind="args" />
+      <CardDefaultStory v-bind="args" />
     `,
   }),
 }
 
-export const NotificationExample: StoryObj = {
+export const NotificationCard: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: NotificationExampleSource,
+        code: NotificationCardSource,
       },
     },
   },
 
   render: args => ({
-    components: { NotificationExampleComponent },
+    components: { NotificationCardComponent },
 
     setup() {
       return { args }
     },
 
     template: `
-      <NotificationExampleComponent v-bind="args" />
+      <NotificationCardComponent v-bind="args" />
     `,
   }),
 }
