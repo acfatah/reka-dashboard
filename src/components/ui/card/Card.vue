@@ -7,8 +7,9 @@ const props = defineProps<{ class?: HTMLAttributes['class'] }>()
 
 <template>
   <div
+    data-slot="card"
     :class="cn(
-      'rounded-xl border bg-card text-card-foreground shadow',
+      'flex flex-col gap-6 rounded-xl border bg-card py-6 text-card-foreground shadow-sm',
       props.class,
     )"
   >
