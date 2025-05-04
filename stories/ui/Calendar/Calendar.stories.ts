@@ -16,8 +16,8 @@ import {
 import { Toaster } from '@/components/ui/toast'
 import { html } from 'common-tags'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import CalendarDefaultStory from '@/playground/components/calendar/CalendarDefault.vue'
+import CalendarDefaultSource from '@/playground/components/calendar/CalendarDefault.vue?raw'
 import WithMonthYearSelectionStory from './WithMonthYearSelection.vue'
 import WithMonthYearSelectionSource from './WithMonthYearSelection.vue?raw'
 
@@ -35,7 +35,7 @@ import WithMonthYearSelectionSource from './WithMonthYearSelection.vue?raw'
  */
 export default {
   title: 'Components/Data Display/Calendar',
-  component: DefaultStory,
+  component: CalendarDefaultStory,
   subcomponents: {
     Calendar,
     CalendarCell,
@@ -57,20 +57,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: CalendarDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { CalendarDefaultStory },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <CalendarDefaultStory v-bind="args" />
     `,
   }),
 }

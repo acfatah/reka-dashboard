@@ -45,6 +45,8 @@ import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWit
 
 import ButtonsDemo from '@/playground/components/button/ButtonsDemo.vue'
 import FormButtons from '@/playground/components/button/FormButtons.vue'
+
+import CalendarDefault from '@/playground/components/calendar/CalendarDefault.vue'
 </script>
 
 <template>
@@ -123,6 +125,10 @@ import FormButtons from '@/playground/components/button/FormButtons.vue'
 
     <ComponentWrapper name="Form Button">
       <FormButtons />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Calendar">
+      <CalendarDefault />
     </ComponentWrapper>
   </div>
 
