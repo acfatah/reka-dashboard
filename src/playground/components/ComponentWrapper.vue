@@ -16,7 +16,7 @@ defineProps({
         {{ name }}
       </div>
     </div>
-    <div className="flex flex-1 items-center gap-2 p-4">
+    <div className="flex flex-1 items-start gap-2 p-4">
       <slot />
     </div>
   </div>

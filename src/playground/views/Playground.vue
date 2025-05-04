@@ -50,6 +50,11 @@ import CalendarDefault from '@/playground/components/calendar/CalendarDefault.vu
 import RangeCalendarDefault from '@/playground/components/range-calendar/RangeCalendarDefault.vue'
 import RangeCalendarTwoMonths from '@/playground/components/range-calendar/RangeCalendarTwoMonths.vue'
 
+import CardLogin from '@/playground/components/card/CardLogin.vue'
+import CardsDemo from '@/playground/components/card/CardsDemo.vue'
+import MeetingNotesCard from '@/playground/components/card/MeetingNotesCard.vue'
+import WithImageCard from '@/playground/components/card/WithImageCard.vue'
+
 import CardDefault from '@/playground/components/card/CardDefault.vue'
 import NotificationCard from '@/playground/components/card/NotificationCard.vue'
 </script>
@@ -139,6 +144,16 @@ import NotificationCard from '@/playground/components/card/NotificationCard.vue'
     </ComponentWrapper>
 
     <ComponentWrapper name="Card">
+      <div className="flex flex-col items-start gap-4">
+        <CardLogin />
+        <MeetingNotesCard />
+        <WithImageCard />
+
+        <CardsDemo />
+      </div>
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Card With Form">
       <CardDefault />
       <NotificationCard />
     </ComponentWrapper>
