@@ -5,8 +5,8 @@ import { Toaster } from '@/components/ui/toast'
 import { cn } from '@/lib/utils'
 import { html } from 'common-tags'
 
-import FormStory from './FormStory.vue'
-import FormSource from './FormStory.vue?raw'
+import FormButtonsStory from '@/playground/components/button/FormButtons.vue'
+import FormButtonsSource from '@/playground/components/button/FormButtons.vue?raw'
 
 const PrimitiveProps = ['as', 'asChild']
 
@@ -109,19 +109,19 @@ export const Form: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: FormSource,
+        code: FormButtonsSource,
       },
     },
   },
 
   render: () => ({
-    components: { FormStory, Toaster },
+    components: { FormButtonsStory, Toaster },
 
     template: html`
       <Teleport to="body">
         <Toaster />
       </Teleport>
-      <FormStory />
+      <FormButtonsStory />
     `,
   }),
 }

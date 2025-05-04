@@ -42,6 +42,8 @@ import DropdownMenuIconButton from '@/playground/components/dropdown/DropdownMen
 import DropdownMenuWithAvatar from '@/playground/components/dropdown/DropdownMenuWithAvatar.vue'
 import DropdownWithCheckboxes from '@/playground/components/dropdown/DropdownWithCheckboxes.vue'
 import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWithRadioGroup.vue'
+
+import FormButtons from '@/playground/components/button/FormButtons.vue'
 </script>
 
 <template>
@@ -103,7 +105,7 @@ import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWit
       </div>
     </ComponentWrapper>
 
-    <ComponentWrapper name="Dropdown Menu" class="mb-96">
+    <ComponentWrapper name="Dropdown Menu">
       <div className="flex flex-wrap items-start gap-4">
         <DropdownDefault />
         <DropdownWithCheckboxes />
@@ -112,6 +114,10 @@ import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWit
         <DropdownMenuAvatarOnly />
         <DropdownMenuIconButton />
       </div>
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Form Buttons">
+      <FormButtons />
     </ComponentWrapper>
   </div>
 
