@@ -43,6 +43,7 @@ import DropdownMenuWithAvatar from '@/playground/components/dropdown/DropdownMen
 import DropdownWithCheckboxes from '@/playground/components/dropdown/DropdownWithCheckboxes.vue'
 import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWithRadioGroup.vue'
 
+import ButtonsDemo from '@/playground/components/button/ButtonsDemo.vue'
 import FormButtons from '@/playground/components/button/FormButtons.vue'
 </script>
 
@@ -116,7 +117,11 @@ import FormButtons from '@/playground/components/button/FormButtons.vue'
       </div>
     </ComponentWrapper>
 
-    <ComponentWrapper name="Form Buttons">
+    <ComponentWrapper name="Button">
+      <ButtonsDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Form Button">
       <FormButtons />
     </ComponentWrapper>
   </div>
