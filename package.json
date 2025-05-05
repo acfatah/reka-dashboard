@@ -29,6 +29,7 @@
     "@vueuse/core": "^12.8.2",
     "@vueuse/integrations": "^12.8.2",
     "@vueuse/router": "^12.8.2",
+    "change-case": "^5",
     "clsx": "^2.1.1",
     "embla-carousel-vue": "^8.6.0",
     "nprogress": "^0.2.0",
