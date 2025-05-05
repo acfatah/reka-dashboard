@@ -3,14 +3,14 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Toaster } from '@/components/ui/toast'
 import { html } from 'common-tags'
 
-import ArrayInputStory from './ArrayInput.vue'
-import ArrayInputSource from './ArrayInput.vue?raw'
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
-import FormStory from './FormStory.vue'
-import FormSource from './FormStory.vue?raw'
-import WithTextStory from './WithTextStory.vue'
-import WithTextSource from './WithTextStory.vue?raw'
+import CheckboxArrayInputStory from '@/playground/components/checkbox/CheckboxArrayInput.vue'
+import CheckboxArrayInputSource from '@/playground/components/checkbox/CheckboxArrayInput.vue?raw'
+import CheckboxDefaultStory from '@/playground/components/checkbox/CheckboxDefault.vue'
+import CheckboxDefaultSource from '@/playground/components/checkbox/CheckboxDefault.vue?raw'
+import CheckboxWithCustomLabelStory from '@/playground/components/checkbox/CheckboxWithCustomLabel.vue'
+import CheckboxWithCustomLabelSource from '@/playground/components/checkbox/CheckboxWithCustomLabel.vue?raw'
+import CheckboxWithFormStory from '@/playground/components/checkbox/CheckboxWithForm.vue'
+import CheckboxWithFormSource from '@/playground/components/checkbox/CheckboxWithForm.vue?raw'
 
 /**
  * A control that allows the user to toggle between checked and not checked.
@@ -27,7 +27,7 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: CheckboxDefaultSource,
       },
     },
   },
@@ -37,14 +37,14 @@ export const Default: StoryObj = {
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { CheckboxDefaultStory },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <CheckboxDefaultStory v-bind="args" />
     `,
   }),
 }
@@ -53,13 +53,13 @@ export const Form: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: FormSource,
+        code: CheckboxWithFormSource,
       },
     },
   },
 
   render: args => ({
-    components: { FormStory, Toaster },
+    components: { CheckboxWithFormStory, Toaster },
 
     setup() {
       return { args }
@@ -69,7 +69,7 @@ export const Form: StoryObj = {
       <Teleport to="body">
         <Toaster />
       </Teleport>
-      <FormStory v-bind="args" />
+      <CheckboxWithFormStory v-bind="args" />
     `,
   }),
 }
@@ -78,13 +78,13 @@ export const ArrayInput: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: ArrayInputSource,
+        code: CheckboxArrayInputSource,
       },
     },
   },
 
   render: args => ({
-    components: { ArrayInputStory, Toaster },
+    components: { CheckboxArrayInputStory, Toaster },
 
     setup() {
       return { args }
@@ -94,29 +94,29 @@ export const ArrayInput: StoryObj = {
       <Teleport to="body">
         <Toaster />
       </Teleport>
-      <ArrayInputStory v-bind="args" />
+      <CheckboxArrayInputStory v-bind="args" />
     `,
   }),
 }
 
-export const WithText: StoryObj = {
+export const WithCustomLabel: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: WithTextSource,
+        code: CheckboxWithCustomLabelSource,
       },
     },
   },
 
   render: args => ({
-    components: { WithTextStory },
+    components: { CheckboxWithCustomLabelStory },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <WithTextStory v-bind="args" />
+      <CheckboxWithCustomLabelStory v-bind="args" />
     `,
   }),
 }

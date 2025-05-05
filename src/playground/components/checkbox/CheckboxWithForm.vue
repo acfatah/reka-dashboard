@@ -38,11 +38,11 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
         <FormControl>
           <Checkbox :model-value="value" @update:model-value="handleChange" />
         </FormControl>
-        <div class="space-y-1 leading-none">
+        <div class="grid gap-1.5 font-normal">
           <FormLabel>Use different settings for my mobile devices</FormLabel>
           <FormDescription>
             You can manage your mobile notifications in the
-            <a href="/examples/forms">mobile settings</a> page.
+            <a href="#" class="underline-offset-4 text-primary hover:underline">mobile settings</a> page.
           </FormDescription>
           <FormMessage />
         </div>

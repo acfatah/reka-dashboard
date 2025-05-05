@@ -59,6 +59,10 @@ import CardDefault from '@/playground/components/card/CardDefault.vue'
 import NotificationCard from '@/playground/components/card/NotificationCard.vue'
 
 import CheckboxesDemo from '@/playground/components/checkbox/CheckboxesDemo.vue'
+
+import CheckboxArrayInput from '@/playground/components/checkbox/CheckboxArrayInput.vue'
+import CheckboxDefault from '@/playground/components/checkbox/CheckboxDefault.vue'
+import CheckboxWithForm from '@/playground/components/checkbox/CheckboxWithForm.vue'
 </script>
 
 <template>
@@ -164,6 +168,14 @@ import CheckboxesDemo from '@/playground/components/checkbox/CheckboxesDemo.vue'
 
     <ComponentWrapper name="Checkbox">
       <CheckboxesDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Checkbox With Form">
+      <div className="flex flex-col gap-6">
+        <CheckboxDefault />
+        <CheckboxWithForm />
+        <CheckboxArrayInput />
+      </div>
     </ComponentWrapper>
   </div>
 
