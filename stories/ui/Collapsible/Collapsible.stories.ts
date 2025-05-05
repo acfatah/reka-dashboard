@@ -5,8 +5,8 @@ import {
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import CollapsibleDefaultStory from '@/playground/components/collapsible/CollapsibleDefault.vue'
+import CollapsibleDefaultSource from '@/playground/components/collapsible/CollapsibleDefault.vue?raw'
 
 /**
  * An interactive component which expands/collapses a panel.
@@ -15,7 +15,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  */
 export default {
   title: 'Components/Panels/Collapsible',
-  component: DefaultStory,
+  component: CollapsibleDefaultStory,
   subcomponents: {
     Collapsible,
     CollapsibleContent,
@@ -28,20 +28,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: CollapsibleDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { CollapsibleDefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultStory v-bind="args" />
+      <CollapsibleDefaultStory v-bind="args" />
     `,
   }),
 }

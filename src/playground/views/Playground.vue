@@ -63,6 +63,8 @@ import CheckboxesDemo from '@/playground/components/checkbox/CheckboxesDemo.vue'
 import CheckboxArrayInput from '@/playground/components/checkbox/CheckboxArrayInput.vue'
 import CheckboxDefault from '@/playground/components/checkbox/CheckboxDefault.vue'
 import CheckboxWithForm from '@/playground/components/checkbox/CheckboxWithForm.vue'
+
+import CollapsibleDefault from '@/playground/components/collapsible/CollapsibleDefault.vue'
 </script>
 
 <template>
@@ -176,6 +178,10 @@ import CheckboxWithForm from '@/playground/components/checkbox/CheckboxWithForm.
         <CheckboxWithForm />
         <CheckboxArrayInput />
       </div>
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Collapsible">
+      <CollapsibleDefault />
     </ComponentWrapper>
   </div>
 
