@@ -57,6 +57,8 @@ import WithImageCard from '@/playground/components/card/WithImageCard.vue'
 
 import CardDefault from '@/playground/components/card/CardDefault.vue'
 import NotificationCard from '@/playground/components/card/NotificationCard.vue'
+
+import CheckboxesDemo from '@/playground/components/checkbox/CheckboxesDemo.vue'
 </script>
 
 <template>
@@ -156,6 +158,12 @@ import NotificationCard from '@/playground/components/card/NotificationCard.vue'
     <ComponentWrapper name="Card With Form">
       <CardDefault />
       <NotificationCard />
+    </ComponentWrapper>
+
+    <!-- TODO: Carousel -->
+
+    <ComponentWrapper name="Checkbox">
+      <CheckboxesDemo />
     </ComponentWrapper>
   </div>
 
