@@ -8,6 +8,7 @@ const props = defineProps<CollapsibleContentProps>()
 
 <template>
   <CollapsibleContent
+    data-slot="collapsible-content"
     v-bind="props"
     :class="cn(
       'overflow-hidden transition-all',
