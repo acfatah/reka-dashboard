@@ -1,14 +1,19 @@
 <script setup lang="ts">
-defineProps({
+import { useChangeCase } from '@vueuse/integrations/useChangeCase'
+
+const props = defineProps({
   name: {
     type: String,
     required: true,
   },
 })
+
+const slug = useChangeCase(props.name, 'kebabCase')
 </script>
 
 <template>
   <div
+    :id="slug"
     class="flex w-full scroll-mt-16 flex-col rounded-lg border"
   >
     <div class="border-b px-4 py-3">
