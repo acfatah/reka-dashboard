@@ -12,6 +12,21 @@ const { start: startLoading, done: doneLoading } = useNProgress()
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    if (to && to.hash) {
+      return {
+        el: to.hash,
+        top: 64,
+        behavior: 'smooth',
+      }
+    }
+    else if (savedPosition) {
+      return savedPosition
+    }
+    else {
+      return { x: 0, y: 0 }
+    }
+  },
   routes: [
     // playground routes
     ...playgroundRoutes,
