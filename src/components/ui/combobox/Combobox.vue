@@ -4,12 +4,14 @@ import { ComboboxRoot, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<ComboboxRootProps>()
 const emits = defineEmits<ComboboxRootEmits>()
-
 const forwarded = useForwardPropsEmits(props, emits)
 </script>
 
 <template>
-  <ComboboxRoot v-bind="forwarded">
+  <ComboboxRoot
+    data-slot="combobox"
+    v-bind="forwarded"
+  >
     <slot />
   </ComboboxRoot>
 </template>

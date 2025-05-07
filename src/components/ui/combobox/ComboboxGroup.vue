@@ -19,6 +19,7 @@ const delegatedProps = computed(() => {
 
 <template>
   <ComboboxGroup
+    data-slot="combobox-group"
     v-bind="delegatedProps"
     :class="cn([
       'overflow-hidden p-1 text-foreground',

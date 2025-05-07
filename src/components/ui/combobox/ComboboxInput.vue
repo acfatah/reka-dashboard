@@ -22,10 +22,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 <template>
   <ComboboxInput
+    data-slot="combobox-input"
     v-bind="forwarded"
     :class="cn([
       'flex h-8 w-full px-3 py-1',
-      'rounded-md border border-input bg-transparent text-sm shadow-sm',
+      'rounded-md border border-input bg-transparent text-sm',
       'transition-colors',
       'file:border-0 file:bg-transparent file:text-sm file:font-medium',
       'placeholder:text-muted-foreground',

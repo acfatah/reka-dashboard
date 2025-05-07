@@ -19,6 +19,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 <template>
   <ComboboxItem
+    data-slot="combobox-item"
     v-bind="forwarded"
     :class="cn([
       'relative flex items-center justify-between gap-2 rounded-sm px-2 py-1.5',
