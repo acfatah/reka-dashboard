@@ -1,5 +1,5 @@
 import type { VNode } from 'vue'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import { h } from 'vue'
 
 export interface NavItem {
@@ -19,7 +19,7 @@ export const navMain: NavGroup[] = [
   {
     title: 'Playground',
     url: '#',
-    icon: h(Iconify, { icon: 'lucide:square-terminal' }),
+    icon: h(Icon, { icon: 'lucide:square-terminal' }),
     isActive: true,
     items: [
       {
@@ -39,7 +39,7 @@ export const navMain: NavGroup[] = [
   {
     title: 'Models',
     url: '#',
-    icon: h(Iconify, { icon: 'lucide:bot' }),
+    icon: h(Icon, { icon: 'lucide:bot' }),
     items: [
       {
         title: 'Genesis',
@@ -58,7 +58,7 @@ export const navMain: NavGroup[] = [
   {
     title: 'Documentation',
     url: '#',
-    icon: h(Iconify, { icon: 'lucide:book-open' }),
+    icon: h(Icon, { icon: 'lucide:book-open' }),
     items: [
       {
         title: 'Introduction',
@@ -81,7 +81,7 @@ export const navMain: NavGroup[] = [
   {
     title: 'Settings',
     url: '#',
-    icon: h(Iconify, { icon: 'lucide:settings-2' }),
+    icon: h(Icon, { icon: 'lucide:settings-2' }),
     items: [
       {
         title: 'General',

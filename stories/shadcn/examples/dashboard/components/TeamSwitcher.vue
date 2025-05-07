@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 
 const groups = [
   {
@@ -54,7 +54,7 @@ const selectedTeam = ref(groups[0].teams[0])
           </Avatar>
           <div class="hidden ml-2 md:flex items-center gap-10">
             {{ selectedTeam.label }}
-            <Iconify icon="lucide:chevrons-up-down" class="ml-auto size-4 shrink-0 opacity-50" />
+            <Icon icon="lucide:chevrons-up-down" class="ml-auto size-4 shrink-0 opacity-50" />
           </div>
         </Button>
       </PopoverTrigger>
@@ -87,7 +87,7 @@ const selectedTeam = ref(groups[0].teams[0])
                   <AvatarFallback>SC</AvatarFallback>
                 </Avatar>
                 {{ team.label }}
-                <Iconify
+                <Icon
                   icon="lucide:check"
                   :class="cn(
                     'ml-auto h-4 w-4',
@@ -110,7 +110,7 @@ const selectedTeam = ref(groups[0].teams[0])
                     showNewTeamDialog = true
                   }"
                 >
-                  <Iconify icon="lucide:circle-plus" class="mr-2 size-5" />
+                  <Icon icon="lucide:circle-plus" class="mr-2 size-5" />
                   Create Team
                 </CommandItem>
               </DialogTrigger>

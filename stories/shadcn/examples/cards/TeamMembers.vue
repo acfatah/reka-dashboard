@@ -32,7 +32,7 @@ const jacksonRole = ref('Member')
             <Button variant="outline" class="ml-auto">
               {{ sofiaRole }}
               <!-- <ChevronDownIcon class="ml-2 size-4 text-muted-foreground" /> -->
-              <Iconify icon="lucide:chevron-down" class="ml-2 size-4 text-muted-foreground" />
+              <Icon icon="lucide:chevron-down" class="ml-2 size-4 text-muted-foreground" />
             </Button>
           </PopoverTrigger>
           <PopoverContent class="p-0" align="end">

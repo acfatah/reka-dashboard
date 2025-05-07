@@ -27,7 +27,7 @@ function setActiveTeam(team: Team) {
                   <span class="truncate font-semibold">{{ activeTeam.name }}</span>
                   <span class="truncate text-xs">{{ activeTeam.plan }}</span>
                 </div>
-                <Iconify icon="lucide:chevrons-up-down" class="ml-auto" />
+                <Icon icon="lucide:chevrons-up-down" class="ml-auto" />
               </SidebarMenuButton>
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -54,7 +54,7 @@ function setActiveTeam(team: Team) {
               <DropdownMenuSeparator />
               <DropdownMenuItem class="gap-2 p-2">
                 <div class="flex size-6 items-center justify-center rounded-md border bg-background">
-                  <Iconify icon="lucide:plus" class="size-4" />
+                  <Icon icon="lucide:plus" class="size-4" />
                 </div>
                 <div class="font-medium text-muted-foreground">
                   Add team
@@ -81,7 +81,7 @@ function setActiveTeam(team: Team) {
                 <SidebarMenuButton :tooltip="item.title">
                   <component :is="item.icon" />
                   <span>{{ item.title }}</span>
-                  <Iconify icon="lucide:chevron-right" class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                  <Icon icon="lucide:chevron-right" class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                 </SidebarMenuButton>
               </CollapsibleTrigger>
               <CollapsibleContent>
@@ -118,22 +118,22 @@ function setActiveTeam(team: Team) {
             <DropdownMenu>
               <DropdownMenuTrigger as-child>
                 <SidebarMenuAction show-on-hover>
-                  <Iconify icon="lucide:more-horizontal" />
+                  <Icon icon="lucide:more-horizontal" />
                   <span class="sr-only">More</span>
                 </SidebarMenuAction>
               </DropdownMenuTrigger>
               <DropdownMenuContent class="w-48 rounded-lg" side="bottom" align="end">
                 <DropdownMenuItem>
-                  <Iconify icon="lucide:folder" class="text-muted-foreground" />
+                  <Icon icon="lucide:folder" class="text-muted-foreground" />
                   <span>View Project</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Iconify icon="lucide:share" class="text-muted-foreground" />
+                  <Icon icon="lucide:share" class="text-muted-foreground" />
                   <span>Share Project</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
-                  <Iconify icon="lucide:trash-2" class="text-muted-foreground" />
+                  <Icon icon="lucide:trash-2" class="text-muted-foreground" />
                   <span>Delete Project</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -141,7 +141,7 @@ function setActiveTeam(team: Team) {
           </SidebarMenuItem>
           <SidebarMenuItem>
             <SidebarMenuButton class="text-sidebar-foreground/70">
-              <Iconify icon="lucide:more-horizontal" class="text-sidebar-foreground/70" />
+              <Icon icon="lucide:more-horizontal" class="text-sidebar-foreground/70" />
               <span>More</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -167,7 +167,7 @@ function setActiveTeam(team: Team) {
                   <span class="truncate font-semibold">{{ user.name }}</span>
                   <span class="truncate text-xs">{{ user.email }}</span>
                 </div>
-                <Iconify icon="lucide:chevrons-up-down" class="ml-auto size-4" />
+                <Icon icon="lucide:chevrons-up-down" class="ml-auto size-4" />
               </SidebarMenuButton>
             </DropdownMenuTrigger>
             <DropdownMenuContent class="w-(--reka-dropdown-menu-trigger-width) min-w-56 rounded-lg" side="bottom" align="end" :side-offset="4">
@@ -188,28 +188,28 @@ function setActiveTeam(team: Team) {
               <DropdownMenuSeparator />
               <DropdownMenuGroup>
                 <DropdownMenuItem>
-                  <Iconify icon="lucide:sparkles" class="mr-2 size-4" />
+                  <Icon icon="lucide:sparkles" class="mr-2 size-4" />
                   Upgrade to Pro
                 </DropdownMenuItem>
               </DropdownMenuGroup>
               <DropdownMenuSeparator />
               <DropdownMenuGroup>
                 <DropdownMenuItem>
-                  <Iconify icon="lucide:badge-check" class="mr-2 size-4" />
+                  <Icon icon="lucide:badge-check" class="mr-2 size-4" />
                   Account
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Iconify icon="lucide:credit-card" class="mr-2 size-4" />
+                  <Icon icon="lucide:credit-card" class="mr-2 size-4" />
                   Billing
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Iconify icon="lucide:bell" class="mr-2 size-4" />
+                  <Icon icon="lucide:bell" class="mr-2 size-4" />
                   Notifications
                 </DropdownMenuItem>
               </DropdownMenuGroup>
               <DropdownMenuSeparator />
               <DropdownMenuItem>
-                <Iconify icon="lucide:log-out" class="mr-2 size-4" />
+                <Icon icon="lucide:log-out" class="mr-2 size-4" />
                 Log out
               </DropdownMenuItem>
             </DropdownMenuContent>

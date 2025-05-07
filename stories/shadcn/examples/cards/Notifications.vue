@@ -8,7 +8,7 @@
     </CardHeader>
     <CardContent class="grid gap-1">
       <div class="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
-        <Iconify icon="lucide:bell" class="mt-px size-5" />
+        <Icon icon="lucide:bell" class="mt-px size-5" />
         <div class="space-y-1">
           <p class="text-sm font-medium leading-none">
             Everything
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="-mx-2 flex items-start space-x-4 rounded-md bg-accent p-2 text-accent-foreground transition-all">
-        <Iconify icon="lucide:user" class="mt-px size-5" />
+        <Icon icon="lucide:user" class="mt-px size-5" />
         <div class="space-y-1">
           <p class="text-sm font-medium leading-none">
             Available
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
-        <Iconify icon="lucide:eye-off" class="mt-px size-5" />
+        <Icon icon="lucide:eye-off" class="mt-px size-5" />
         <div class="space-y-1">
           <p class="text-sm font-medium leading-none">
             Ignoring

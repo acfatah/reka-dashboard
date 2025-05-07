@@ -59,7 +59,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                 !value && 'text-muted-foreground',
               )"
             >
-              <Iconify icon="lucide:calendar" class="mr-2 size-4" />
+              <Icon icon="lucide:calendar" class="mr-2 size-4" />
               <template v-if="value.start">
                 <template v-if="value.end">
                   {{ df.format(parseDate(value.start).toDate(getLocalTimeZone())) }} - {{ df.format(parseDate(value.end).toDate(getLocalTimeZone())) }}

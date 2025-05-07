@@ -15,7 +15,7 @@ function copy(text: string) {
     <DropdownMenuTrigger as-child>
       <Button variant="ghost" class="size-8 self-end p-0">
         <span class="sr-only">Open menu</span>
-        <Iconify icon="lucide:ellipsis" class="size-4" />
+        <Icon icon="lucide:ellipsis" class="size-4" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent align="end">

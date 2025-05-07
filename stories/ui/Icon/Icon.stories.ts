@@ -1,16 +1,18 @@
 import type { StoryObj } from '@storybook/vue3'
-import { Iconify } from '@/components/ui/icon'
-import { Icon as IconifyComponent } from '@iconify/vue'
+import { Icon } from '@/components/ui/icon'
 
 /**
  * Icon component using Iconify library.
+ *
+ * You can use `width` and `height` props OR css `size-*` utility class to set the icon size.<br>
+ * The default size is set to `24px`.
  *
  * Browse icons sets at https://icon-sets.iconify.design.<br>
  * Read more about Iconify at https://iconify.design/docs/icon-components/vue.
  */
 export default {
   title: 'Components/Media & Icons/Iconify Icon',
-  component: IconifyComponent,
+  component: Icon,
   tags: ['autodocs'],
 
   args: {
@@ -93,18 +95,18 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: `<Iconify icon="mdi-light:menu" />`,
+        code: `<Icon icon="mdi-light:menu" />`,
       },
     },
   },
 
   render: args => ({
-    components: { Iconify },
+    components: { Icon },
 
     setup() {
       return { args }
     },
 
-    template: '<Iconify v-bind="args" />',
+    template: '<Icon v-bind="args" />',
   }),
 }

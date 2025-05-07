@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/card'
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import { Input } from '@/components/ui/input'
 import {
   Tooltip,
@@ -88,7 +88,7 @@ const selectedUsers = ref<User[]>([])
               class="rounded-full p-2.5 flex items-center justify-center"
               @click="open = true"
             >
-              <Iconify icon="lucide:plus" class="size-4" />
+              <Icon icon="lucide:plus" class="size-4" />
             </Button>
           </TooltipTrigger>
           <TooltipContent :side-offset="10">
@@ -125,7 +125,7 @@ const selectedUsers = ref<User[]>([])
       >
         <Input v-model="input" placeholder="Type a message..." class="flex-1" />
         <Button class="p-2.5 flex items-center justify-center" :disabled="inputLength === 0">
-          <Iconify icon="lucide:send" class="size-4" />
+          <Icon icon="lucide:send" class="size-4" />
           <span class="sr-only">Send</span>
         </Button>
       </form>
@@ -173,7 +173,7 @@ const selectedUsers = ref<User[]>([])
                   {{ user.email }}
                 </p>
               </div>
-              <Iconify v-if="selectedUsers.includes(user)" icon="lucide:check" class="ml-auto flex h-5 w-5 text-primary" />
+              <Icon v-if="selectedUsers.includes(user)" icon="lucide:check" class="ml-auto flex h-5 w-5 text-primary" />
             </CommandItem>
           </CommandGroup>
         </CommandList>

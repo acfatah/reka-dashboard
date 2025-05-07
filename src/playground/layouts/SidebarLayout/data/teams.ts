@@ -1,5 +1,5 @@
 import type { VNode } from 'vue'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import { h } from 'vue'
 
 export interface Team {
@@ -11,17 +11,17 @@ export interface Team {
 export const teams: Team[] = [
   {
     name: 'Acme Inc',
-    logo: h(Iconify, { icon: 'lucide:gallery-vertical-end' }),
+    logo: h(Icon, { icon: 'lucide:gallery-vertical-end' }),
     plan: 'Enterprise',
   },
   {
     name: 'Acme Corp.',
-    logo: h(Iconify, { icon: 'lucide:audio-waveform' }),
+    logo: h(Icon, { icon: 'lucide:audio-waveform' }),
     plan: 'Startup',
   },
   {
     name: 'Evil Corp.',
-    logo: h(Iconify, { icon: 'lucide:command' }),
+    logo: h(Icon, { icon: 'lucide:command' }),
     plan: 'Free',
   },
 ]

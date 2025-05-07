@@ -35,7 +35,7 @@ onMounted(async () => {
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
             <Button variant="outline" class="ml-1">
-              <Iconify icon="lucide:sliders-horizontal" class="size-4" />
+              <Icon icon="lucide:sliders-horizontal" class="size-4" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -103,7 +103,7 @@ onMounted(async () => {
               @click="table.setPageIndex(0)"
             >
               <span class="sr-only">Go to first page</span>
-              <Iconify icon="lucide:chevron-first" class="size-4" />
+              <Icon icon="lucide:chevron-first" class="size-4" />
             </Button>
             <Button
               variant="outline"
@@ -112,7 +112,7 @@ onMounted(async () => {
               @click="table.previousPage()"
             >
               <span class="sr-only">Go to previous page</span>
-              <Iconify icon="lucide:chevron-left" class="size-4" />
+              <Icon icon="lucide:chevron-left" class="size-4" />
             </Button>
             <Button
               variant="outline"
@@ -121,7 +121,7 @@ onMounted(async () => {
               @click="table.nextPage()"
             >
               <span class="sr-only">Go to next page</span>
-              <Iconify icon="lucide:chevron-right" class="size-4" />
+              <Icon icon="lucide:chevron-right" class="size-4" />
             </Button>
             <Button
               variant="outline"
@@ -130,7 +130,7 @@ onMounted(async () => {
               @click="table.setPageIndex(table.getPageCount() - 1)"
             >
               <span class="sr-only">Go to last page</span>
-              <Iconify icon="lucide:chevron-last" class="size-4" />
+              <Icon icon="lucide:chevron-last" class="size-4" />
             </Button>
           </div>
         </div>

@@ -4,7 +4,7 @@ import type { DateValue } from '@internationalized/date'
 import type { Grid } from 'reka-ui/date'
 import type { Ref } from 'vue'
 import { Button, buttonVariants } from '@/components/ui/button'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import {
   Popover,
   PopoverContent,
@@ -101,7 +101,7 @@ watch(secondMonthPlaceholder, (_secondMonthPlaceholder) => {
           !value && 'text-muted-foreground',
         )"
       >
-        <Iconify icon="lucide:calendar" class="mr-2 size-4" />
+        <Icon icon="lucide:calendar" class="mr-2 size-4" />
         <template v-if="value.start">
           <template v-if="value.end">
             {{
@@ -144,7 +144,7 @@ watch(secondMonthPlaceholder, (_secondMonthPlaceholder) => {
                 )"
                 @click="updateMonth('first', -1)"
               >
-                <Iconify icon="lucide:chevron-left" class="size-4" />
+                <Icon icon="lucide:chevron-left" class="size-4" />
               </button>
               <div
                 :class="cn('text-sm font-medium')"
@@ -162,7 +162,7 @@ watch(secondMonthPlaceholder, (_secondMonthPlaceholder) => {
                 )"
                 @click="updateMonth('first', 1)"
               >
-                <Iconify icon="lucide:chevron-right" class="size-4" />
+                <Icon icon="lucide:chevron-right" class="size-4" />
               </button>
             </div>
             <RangeCalendarGrid>
@@ -208,7 +208,7 @@ watch(secondMonthPlaceholder, (_secondMonthPlaceholder) => {
                 )"
                 @click="updateMonth('second', -1)"
               >
-                <Iconify icon="lucide:chevron-left" class="size-4" />
+                <Icon icon="lucide:chevron-left" class="size-4" />
               </button>
               <div
                 :class="cn('text-sm font-medium')"
@@ -227,7 +227,7 @@ watch(secondMonthPlaceholder, (_secondMonthPlaceholder) => {
                 )"
                 @click="updateMonth('second', 1)"
               >
-                <Iconify icon="lucide:chevron-right" class="size-4" />
+                <Icon icon="lucide:chevron-right" class="size-4" />
               </button>
             </div>
             <RangeCalendarGrid>

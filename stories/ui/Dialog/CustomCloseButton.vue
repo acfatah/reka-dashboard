@@ -25,7 +25,7 @@
         </div>
         <Button type="submit" size="sm" class="px-3">
           <span class="sr-only">Copy</span>
-          <Iconify icon="radix-icons:copy" class="size-4" />
+          <Icon icon="radix-icons:copy" class="size-4" />
         </Button>
       </div>
       <DialogFooter class="sm:justify-start">

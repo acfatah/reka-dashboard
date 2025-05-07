@@ -77,13 +77,13 @@ function setSelectedVersion(version) {
                   class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                 >
                   <div class="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                    <Iconify icon="lucide:gallery-vertical-end" class="size-4" />
+                    <Icon icon="lucide:gallery-vertical-end" class="size-4" />
                   </div>
                   <div class="flex flex-col gap-0.5 leading-none">
                     <span class="font-semibold">Documentation</span>
                     <span>v{{ selectedVersion }}</span>
                   </div>
-                  <Iconify icon="lucide:chevrons-up-down" class="ml-auto" />
+                  <Icon icon="lucide:chevrons-up-down" class="ml-auto" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
               <DropdownMenuContent
@@ -96,7 +96,7 @@ function setSelectedVersion(version) {
                   @click="setSelectedVersion(version)"
                 >
                   v{{ version }}
-                  <Iconify v-if="version === selectedVersion" icon="lucide:check" class="ml-auto" />
+                  <Icon v-if="version === selectedVersion" icon="lucide:check" class="ml-auto" />
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -113,7 +113,7 @@ function setSelectedVersion(version) {
                 placeholder="Search the docs..."
                 class="pl-8"
               />
-              <Iconify
+              <Icon
                 icon="lucide:search"
                 class="pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50"
               />

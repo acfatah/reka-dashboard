@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import { createColumnHelper } from '@tanstack/vue-table'
 import { h } from 'vue'
 import type { Payment } from '../data/payments'
@@ -40,7 +40,7 @@ export const columns = [
       return h(Button, {
         variant: 'ghost',
         onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
-      }, () => ['Email', h(Iconify, { icon: 'lucide:chevrons-up-down', class: 'ml-2 h-4 w-4' })])
+      }, () => ['Email', h(Icon, { icon: 'lucide:chevrons-up-down', class: 'ml-2 h-4 w-4' })])
     },
     cell: ({ row }) => h('div', { class: 'lowercase' }, row.getValue('email')),
   }),

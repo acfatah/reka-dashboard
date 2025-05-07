@@ -8,8 +8,8 @@ const mode = useColorMode()
   <DropdownMenu>
     <DropdownMenuTrigger as-child>
       <Button variant="outline" size="icon">
-        <Iconify icon="lucide:moon" class="size-4 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-        <Iconify icon="lucide:sun" class="absolute size-4 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+        <Icon icon="lucide:moon" class="size-4 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+        <Icon icon="lucide:sun" class="absolute size-4 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
         <span class="sr-only">Toggle theme</span>
       </Button>
     </DropdownMenuTrigger>

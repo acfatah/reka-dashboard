@@ -1,6 +1,6 @@
 import type { StoryObj } from '@storybook/vue3'
 import { Button } from '@/components/ui/button'
-import Iconify from '@/components/ui/icon/Iconify.vue'
+import { Icon } from '@/components/ui/icon'
 import { Toaster } from '@/components/ui/toast'
 import { cn } from '@/lib/utils'
 import { html } from 'common-tags'
@@ -126,7 +126,7 @@ export const Form: StoryObj = {
   }),
 }
 
-export const Secondary: StoryObj = {
+export const SecondaryVariant: StoryObj = {
   parameters: {
     controls: {
       exclude: [...PrimitiveProps, 'variant'],
@@ -157,7 +157,7 @@ export const Secondary: StoryObj = {
   }),
 }
 
-export const Destructive: StoryObj = {
+export const DestructiveVariant: StoryObj = {
   parameters: {
     controls: {
       exclude: [...PrimitiveProps, 'variant'],
@@ -188,7 +188,7 @@ export const Destructive: StoryObj = {
   }),
 }
 
-export const Outline: StoryObj = {
+export const OutlineVariant: StoryObj = {
   parameters: {
     controls: {
       exclude: [...PrimitiveProps, 'variant'],
@@ -219,7 +219,7 @@ export const Outline: StoryObj = {
   }),
 }
 
-export const Ghost: StoryObj = {
+export const GhostVariant: StoryObj = {
   parameters: {
     controls: {
       exclude: [...PrimitiveProps, 'variant'],
@@ -250,7 +250,7 @@ export const Ghost: StoryObj = {
   }),
 }
 
-export const Icon: StoryObj = {
+export const IconVariant: StoryObj = {
   parameters: {
     controls: {
       exclude: [...PrimitiveProps, 'size'],
@@ -260,7 +260,7 @@ export const Icon: StoryObj = {
       source: {
         code: html`
           <Button variant="outline" size="icon">
-            <Iconify icon="lucide:chevron-right" class="size-4" />
+            <Icon icon="lucide:chevron-right" class="size-4" />
           </Button>
         `,
       },
@@ -269,7 +269,7 @@ export const Icon: StoryObj = {
 
   render: (args) => {
     return {
-      components: { Button, Iconify },
+      components: { Button, Icon },
 
       setup() {
         return { args }
@@ -277,7 +277,7 @@ export const Icon: StoryObj = {
 
       template: html`
         <Button variant="outline" size="icon" v-bind="args">
-          <Iconify icon="lucide:chevron-right" class="size-4" />
+          <Icon icon="lucide:chevron-right" class="size-4" />
         </Button>
       `,
     }
@@ -294,7 +294,7 @@ export const WithIcon: StoryObj = {
       source: {
         code: html`
           <Button>
-            <Iconify icon="lucide:mail" class="size-4" />
+            <Icon icon="lucide:mail" class="size-4" />
             Login with Email
           </Button>
         `,
@@ -304,7 +304,7 @@ export const WithIcon: StoryObj = {
 
   render: (args) => {
     return {
-      components: { Button, Iconify },
+      components: { Button, Icon },
 
       setup() {
         return { args }
@@ -312,7 +312,7 @@ export const WithIcon: StoryObj = {
 
       template: html`
         <Button v-bind="args">
-          <Iconify icon="lucide:mail" class="size-4" />
+          <Icon icon="lucide:mail" class="size-4" />
           Login with Email
         </Button>
       `,
@@ -335,7 +335,7 @@ export const Loading: StoryObj = {
       source: {
         code: html`
           <Button disabled">
-            <Iconify
+            <Icon
               icon="lucide:rotate-cw"
               :class="cn(
                 'size-4',
@@ -351,7 +351,7 @@ export const Loading: StoryObj = {
 
   render: (args) => {
     return {
-      components: { Button, Iconify },
+      components: { Button, Icon },
 
       setup() {
         return { args, cn }
@@ -359,7 +359,7 @@ export const Loading: StoryObj = {
 
       template: html`
         <Button disabled v-bind="args">
-          <Iconify
+          <Icon
             icon="lucide:rotate-cw"
             :class="cn(
               'size-4',

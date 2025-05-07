@@ -16,12 +16,12 @@
       </Badge>
 
       <Badge variant="outline">
-        <Iconify icon="lucide:check" />
+        <Icon icon="lucide:check" />
         Badge
       </Badge>
 
       <Badge variant="destructive">
-        <Iconify icon="lucide:alert-circle" />
+        <Icon icon="lucide:alert-circle" />
         Alert
       </Badge>
 
@@ -47,25 +47,25 @@
     <div class="flex w-full flex-wrap gap-2">
       <Badge as-child>
         <a href="#">
-          Link <Iconify icon="lucide:arrow-right" />
+          Link <Icon icon="lucide:arrow-right" />
         </a>
       </Badge>
 
       <Badge as-child variant="secondary">
         <a href="#">
-          Link <Iconify icon="lucide:arrow-right" />
+          Link <Icon icon="lucide:arrow-right" />
         </a>
       </Badge>
 
       <Badge as-child variant="destructive">
         <a href="#">
-          Link <Iconify icon="lucide:arrow-right" />
+          Link <Icon icon="lucide:arrow-right" />
         </a>
       </Badge>
 
       <Badge as-child variant="outline">
         <a href="#">
-          Link <Iconify icon="lucide:arrow-right" />
+          Link <Icon icon="lucide:arrow-right" />
         </a>
       </Badge>
     </div>

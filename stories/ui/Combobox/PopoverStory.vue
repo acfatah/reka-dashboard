@@ -45,7 +45,7 @@ const selectedStatus: Ref<StatusRecord | null> = ref(null)
             placeholder="Change status..."
           />
           <span class="absolute start-0 inset-y-0 flex items-center justify-center px-3">
-            <Iconify icon="lucide:search" class="text-muted-foreground" width="16" height="16" />
+            <Icon icon="lucide:search" class="text-muted-foreground" width="16" height="16" />
           </span>
         </div>
 
@@ -62,7 +62,7 @@ const selectedStatus: Ref<StatusRecord | null> = ref(null)
             {{ status.label }}
 
             <ComboboxItemIndicator>
-              <Iconify icon="lucide:check" />
+              <Icon icon="lucide:check" />
             </ComboboxItemIndicator>
           </ComboboxItem>
         </ComboboxGroup>

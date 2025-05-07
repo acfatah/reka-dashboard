@@ -10,14 +10,14 @@
       </div>
       <div class="flex items-center space-x-1 rounded-md bg-secondary text-secondary-foreground">
         <Button variant="secondary" class="px-3 shadow-none">
-          <Iconify icon="lucide:star" class="mr-2 size-4" />
+          <Icon icon="lucide:star" class="mr-2 size-4" />
           Star
         </Button>
         <Separator orientation="vertical" class="h-5" />
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
             <Button variant="secondary" class="px-2 shadow-none">
-              <Iconify icon="lucide:chevron-down" class="size-4 text-secondary-foreground" />
+              <Icon icon="lucide:chevron-down" class="size-4 text-secondary-foreground" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -34,7 +34,7 @@
             <DropdownMenuCheckboxItem>Inspiration</DropdownMenuCheckboxItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Iconify icon="lucide:plus" class="mr-2 size-4" /> Create List
+              <Icon icon="lucide:plus" class="mr-2 size-4" /> Create List
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -43,11 +43,11 @@
     <CardContent>
       <div class="flex space-x-4 text-sm text-muted-foreground">
         <div class="flex items-center">
-          <Iconify icon="lucide:circle" class="mr-1 size-3 fill-sky-400 text-sky-400" />
+          <Icon icon="lucide:circle" class="mr-1 size-3 fill-sky-400 text-sky-400" />
           TypeScript
         </div>
         <div class="flex items-center">
-          <Iconify icon="lucide:star" class="mr-1 size-3" />
+          <Icon icon="lucide:star" class="mr-1 size-3" />
           20k
         </div>
         <div>Updated April 2025</div>

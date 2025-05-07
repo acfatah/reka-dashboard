@@ -18,13 +18,13 @@
         Link
       </Button>
       <Button variant="outline">
-        <Iconify icon="lucide:send" /> Send
+        <Icon icon="lucide:send" /> Send
       </Button>
       <Button variant="outline">
-        <Iconify icon="lucide:arrow-right" /> Learn More
+        <Icon icon="lucide:arrow-right" /> Learn More
       </Button>
       <Button disabled variant="outline">
-        <Iconify icon="lucide:loader-2" class="animate-spin" />
+        <Icon icon="lucide:loader-2" class="animate-spin" />
         Please wait
       </Button>
     </div>
@@ -48,13 +48,13 @@
         Link
       </Button>
       <Button variant="outline" size="sm">
-        <Iconify icon="lucide:send" /> Send
+        <Icon icon="lucide:send" /> Send
       </Button>
       <Button variant="outline" size="sm">
-        <Iconify icon="lucide:arrow-right" /> Learn More
+        <Icon icon="lucide:arrow-right" /> Learn More
       </Button>
       <Button disabled size="sm" variant="outline">
-        <Iconify icon="lucide:loader-2" class="animate-spin" />
+        <Icon icon="lucide:loader-2" class="animate-spin" />
         Please wait
       </Button>
     </div>
@@ -78,13 +78,13 @@
         Link
       </Button>
       <Button variant="outline" size="lg">
-        <Iconify icon="lucide:send" /> Send
+        <Icon icon="lucide:send" /> Send
       </Button>
       <Button variant="outline" size="lg">
-        <Iconify icon="lucide:arrow-right" /> Learn More
+        <Icon icon="lucide:arrow-right" /> Learn More
       </Button>
       <Button disabled size="lg" variant="outline">
-        <Iconify icon="lucide:loader-2" class="animate-spin" />
+        <Icon icon="lucide:loader-2" class="animate-spin" />
         Please wait
       </Button>
     </div>

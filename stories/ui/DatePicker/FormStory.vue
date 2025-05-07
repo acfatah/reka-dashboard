@@ -11,7 +11,7 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { toast } from '@/components/ui/toast'
 import { cn } from '@/lib/utils'
@@ -75,7 +75,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                 )"
               >
                 <span>{{ value ? df.format(toDate(parseDate(value))) : "Pick a date" }}</span>
-                <Iconify icon="lucide:calendar" class="ms-auto size-4 opacity-50" />
+                <Icon icon="lucide:calendar" class="ms-auto size-4 opacity-50" />
               </Button>
               <input hidden>
             </FormControl>

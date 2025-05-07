@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { h } from 'vue'
@@ -42,7 +42,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
       <FormItem>
         <FormControl>
           <Toggle aria-label="Toggle italic" :model-value="value" @update:model-value="handleChange">
-            <Iconify icon="lucide:italic" class="size-4" />
+            <Icon icon="lucide:italic" class="size-4" />
           </Toggle>
         </FormControl>
       </FormItem>

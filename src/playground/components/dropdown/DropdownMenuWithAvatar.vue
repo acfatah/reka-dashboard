@@ -20,7 +20,7 @@
             mt@example.com
           </span>
         </div>
-        <Iconify
+        <Icon
           icon="lucide:chevrons-up-down"
           class="text-muted-foreground ml-auto size-4"
         />
@@ -52,28 +52,28 @@
       <DropdownMenuSeparator />
       <DropdownMenuGroup>
         <DropdownMenuItem>
-          <Iconify icon="lucide:sparkles" />
+          <Icon icon="lucide:sparkles" />
           Upgrade to Pro
         </DropdownMenuItem>
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
       <DropdownMenuGroup>
         <DropdownMenuItem>
-          <Iconify icon="lucide:badge-check" />
+          <Icon icon="lucide:badge-check" />
           Account
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <Iconify icon="lucide:credit-card" />
+          <Icon icon="lucide:credit-card" />
           Billing
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <Iconify icon="lucide:bell" />
+          <Icon icon="lucide:bell" />
           Notifications
         </DropdownMenuItem>
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
       <DropdownMenuItem>
-        <Iconify icon="lucide:log-out" />
+        <Icon icon="lucide:log-out" />
         Sign Out
       </DropdownMenuItem>
     </DropdownMenuContent>

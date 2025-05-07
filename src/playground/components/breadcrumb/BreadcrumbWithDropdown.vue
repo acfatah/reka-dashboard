@@ -13,7 +13,7 @@
         <DropdownMenu>
           <DropdownMenuTrigger class="flex items-center gap-1 transition-colors hover:text-foreground">
             Components
-            <Iconify icon="lucide:chevron-down" class="size-4" />
+            <Icon icon="lucide:chevron-down" class="size-4" />
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start">
             <DropdownMenuItem>Documentation</DropdownMenuItem>

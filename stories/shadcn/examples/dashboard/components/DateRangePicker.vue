@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { DateRange } from '@/components/ui/range-calendar'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import { CalendarDate, DateFormatter, getLocalTimeZone } from '@internationalized/date'
 
 const df = new DateFormatter('en-US', {
@@ -27,7 +27,7 @@ const value = ref({
             !value && 'text-muted-foreground',
           )"
         >
-          <Iconify icon="lucide:calendar" class="mr-2 size-4" />
+          <Icon icon="lucide:calendar" class="mr-2 size-4" />
 
           <template v-if="value.start">
             <template v-if="value.end">

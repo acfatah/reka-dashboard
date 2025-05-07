@@ -110,9 +110,9 @@ function onSubmit(values: FormValues) {
                 :class="[state === 'active' && 'ring-2 ring-ring ring-offset-2 ring-offset-background']"
                 :disabled="state !== 'completed' && !meta.valid"
               >
-                <Iconify v-if="state === 'completed'" icon="lucide:check" class="size-5" />
-                <Iconify v-if="state === 'active'" icon="lucide:circle" class="size-5" />
-                <Iconify v-if="state === 'inactive'" icon="lucide:dot" class="size-5" />
+                <Icon v-if="state === 'completed'" icon="lucide:check" class="size-5" />
+                <Icon v-if="state === 'active'" icon="lucide:circle" class="size-5" />
+                <Icon v-if="state === 'inactive'" icon="lucide:dot" class="size-5" />
               </Button>
             </StepperTrigger>
 

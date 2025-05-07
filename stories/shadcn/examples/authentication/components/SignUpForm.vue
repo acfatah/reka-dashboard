@@ -41,7 +41,7 @@ async function onSubmit(event: Event) {
             />
           </div>
           <Button :disabled="isLoading" class="w-full">
-            <Iconify v-if="isLoading" icon="lucide:loader-2" class="mr-2 size-4 animate-spin" />
+            <Icon v-if="isLoading" icon="lucide:loader-2" class="mr-2 size-4 animate-spin" />
             Sign In with Email
           </Button>
         </div>
@@ -57,8 +57,8 @@ async function onSubmit(event: Event) {
         </div>
       </div>
       <Button variant="outline" type="button" :disabled="isLoading" class="w-full">
-        <Iconify v-if="isLoading" icon="lucide:loader-2" class="mr-2 size-4 animate-spin" />
-        <Iconify v-else icon="radix-icons:github-logo" class="mr-2 size-4" />
+        <Icon v-if="isLoading" icon="lucide:loader-2" class="mr-2 size-4 animate-spin" />
+        <Icon v-else icon="radix-icons:github-logo" class="mr-2 size-4" />
         GitHub
       </Button>
     </div>

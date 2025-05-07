@@ -1,1 +1,1 @@
-export { default as Iconify } from './Iconify.vue'
+export { default as Icon } from './Icon.vue'

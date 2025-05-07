@@ -14,7 +14,7 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import { Input } from '@/components/ui/input'
 import {
   Table,
@@ -103,7 +103,7 @@ const columns: ColumnDef<Payment>[] = [
       return h(Button, {
         variant: 'ghost',
         onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
-      }, () => ['Email', h(Iconify, { icon: 'lucide:arrow-up-down', class: 'ml-2 h-4 w-4' })])
+      }, () => ['Email', h(Icon, { icon: 'lucide:arrow-up-down', class: 'ml-2 h-4 w-4' })])
     },
     cell: ({ row }) => h('div', { class: 'lowercase' }, row.getValue('email')),
   },
@@ -179,7 +179,7 @@ const table = useVueTable({
             <DropdownMenuTrigger as-child>
               <Button variant="outline" class="ml-auto">
                 Columns
-                <Iconify icon="lucide:chevron-down" class="ml-2 size-4" />
+                <Icon icon="lucide:chevron-down" class="ml-2 size-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

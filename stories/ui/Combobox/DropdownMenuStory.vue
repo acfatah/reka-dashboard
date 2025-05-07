@@ -24,7 +24,7 @@ const open: Ref<boolean> = ref(false)
     <DropdownMenu v-model:open="open">
       <DropdownMenuTrigger as-child>
         <Button variant="ghost" size="sm">
-          <Iconify icon="lucide:ellipsis" class="size-4" />
+          <Icon icon="lucide:ellipsis" class="size-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" class="w-[200px]">

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { VNode } from 'vue'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import { h } from 'vue'
 
 interface Step {
@@ -15,25 +15,25 @@ const steps: Step[] = [
     step: 1,
     title: 'Address',
     description: 'Add your address here',
-    icon: h(Iconify, { icon: 'lucide:book-user', class: 'size-4' }),
+    icon: h(Icon, { icon: 'lucide:book-user', class: 'size-4' }),
   },
   {
     step: 2,
     title: 'Shipping',
     description: 'Set your preferred shipping method',
-    icon: h(Iconify, { icon: 'lucide:truck', class: 'size-4' }),
+    icon: h(Icon, { icon: 'lucide:truck', class: 'size-4' }),
   },
   {
     step: 3,
     title: 'Payment',
     description: 'Add any payment information you have',
-    icon: h(Iconify, { icon: 'lucide:credit-card', class: 'size-4' }),
+    icon: h(Icon, { icon: 'lucide:credit-card', class: 'size-4' }),
   },
   {
     step: 4,
     title: 'Checkout',
     description: 'Confirm your order',
-    icon: h(Iconify, { icon: 'lucide:check', class: 'size-4' }),
+    icon: h(Icon, { icon: 'lucide:check', class: 'size-4' }),
   },
 ]
 </script>

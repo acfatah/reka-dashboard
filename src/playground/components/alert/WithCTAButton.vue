@@ -1,6 +1,6 @@
 <template>
   <Alert>
-    <Iconify icon="lucide:alert-circle" class="size-4" />
+    <Icon icon="lucide:alert-circle" class="size-4" />
     <AlertTitle class="max-w-(100%-4rem) overflow-ellipsis">
       The selected emails have been marked as spam.
     </AlertTitle>

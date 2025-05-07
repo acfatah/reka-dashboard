@@ -50,9 +50,9 @@ const steps: Step[] = [
           <!-- <CheckIcon v-if="state === 'completed'" class="size-5" />
           <CircleIcon v-if="state === 'active'" />
           <DotIcon v-if="state === 'inactive'" /> -->
-          <Iconify v-if="state === 'completed'" icon="lucide:check" class="size-5" />
-          <Iconify v-if="state === 'active'" icon="lucide:circle" class="size-5" />
-          <Iconify v-if="state === 'inactive'" icon="lucide:dot" class="size-5" />
+          <Icon v-if="state === 'completed'" icon="lucide:check" class="size-5" />
+          <Icon v-if="state === 'active'" icon="lucide:circle" class="size-5" />
+          <Icon v-if="state === 'inactive'" icon="lucide:dot" class="size-5" />
         </Button>
       </StepperTrigger>
 

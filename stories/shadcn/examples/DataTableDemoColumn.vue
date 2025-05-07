@@ -8,7 +8,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 
 defineProps<{
   payment: {
@@ -30,7 +30,7 @@ function copy(id: string) {
     <DropdownMenuTrigger as-child>
       <Button variant="ghost" class="h-8 w-8 p-0">
         <span class="sr-only">Open menu</span>
-        <Iconify icon="lucide:ellipsis" class="size-4" />
+        <Icon icon="lucide:ellipsis" class="size-4" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent align="end">

@@ -1,6 +1,6 @@
 <template>
   <Alert>
-    <Iconify icon="lucide:alert-circle" class="size-4" />
+    <Icon icon="lucide:alert-circle" class="size-4" />
     <AlertTitle>
       This is an extremely long alert title that spans multiple lines to
       demonstrate how the component handles very lengthy headings while

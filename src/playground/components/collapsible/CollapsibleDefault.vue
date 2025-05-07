@@ -13,7 +13,7 @@ const isOpen = ref(false)
       </h4>
       <CollapsibleTrigger as-child>
         <Button variant="ghost" size="sm" class="w-9 p-0">
-          <Iconify icon="lucide:chevrons-up-down" class="size-4" />
+          <Icon icon="lucide:chevrons-up-down" class="size-4" />
           <span class="sr-only">Toggle</span>
         </Button>
       </CollapsibleTrigger>

@@ -11,7 +11,7 @@
     <CardContent class="grid gap-4">
       <div class="grid grid-cols-2 gap-6">
         <Button variant="outline" class="w-full">
-          <Iconify icon="radix-icons:github-logo" class="mr-2 size-4" />
+          <Icon icon="radix-icons:github-logo" class="mr-2 size-4" />
           GitHub
         </Button>
         <Button variant="outline" class="w-full">

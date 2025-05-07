@@ -1,6 +1,6 @@
 <template>
   <Alert variant="destructive">
-    <Iconify icon="lucide:alert-circle" class="size-4" />
+    <Icon icon="lucide:alert-circle" class="size-4" />
     <AlertTitle>Unable to process your payment.</AlertTitle>
     <AlertDescription>
       <p>Please verify your billing information and try again.</p>

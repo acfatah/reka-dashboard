@@ -2,7 +2,7 @@
 import type { DateValue } from '@internationalized/date'
 import { Button } from '@/components/ui/button'
 import { Calendar } from '@/components/ui/calendar'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { cn } from '@/lib/utils'
 import {
@@ -28,7 +28,7 @@ const value = ref<DateValue>()
           !value && 'text-muted-foreground',
         )"
       >
-        <Iconify icon="lucide:calendar" class="mr-2 size-4" />
+        <Icon icon="lucide:calendar" class="mr-2 size-4" />
         {{ value ? df.format(value.toDate(getLocalTimeZone())) : "Pick a date" }}
       </Button>
     </PopoverTrigger>

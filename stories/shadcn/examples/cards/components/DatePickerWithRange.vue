@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { DateRange } from '@/components/ui/range-calendar'
 import { Button } from '@/components/ui/button'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import {
   Popover,
   PopoverContent,
@@ -36,7 +36,7 @@ const value = ref<DateRange>({
           !value && 'text-muted-foreground',
         )"
       >
-        <Iconify icon="lucide:calendar" class="mr-2 size-4" />
+        <Icon icon="lucide:calendar" class="mr-2 size-4" />
         <template v-if="value.start">
           <template v-if="value.end">
             {{ df.format(value.start.toDate(getLocalTimeZone())) }} - {{ df.format(value.end.toDate(getLocalTimeZone())) }}

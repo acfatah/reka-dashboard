@@ -15,13 +15,13 @@
     </CardContent>
     <CardFooter class="flex items-center gap-2">
       <Badge variant="outline">
-        <Iconify icon="lucide:bed" /> 4
+        <Icon icon="lucide:bed" /> 4
       </Badge>
       <Badge variant="outline">
-        <Iconify icon="lucide:bath" /> 2
+        <Icon icon="lucide:bath" /> 2
       </Badge>
       <Badge variant="outline">
-        <Iconify icon="lucide:land-plot" /> 350m2
+        <Icon icon="lucide:land-plot" /> 350m2
       </Badge>
       <div class="ml-auto font-medium tabular-nums">
         $135,000

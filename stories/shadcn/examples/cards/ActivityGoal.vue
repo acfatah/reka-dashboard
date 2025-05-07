@@ -48,7 +48,7 @@ const data = [
           :disabled="goal <= 200"
           @click="goal -= 10"
         >
-          <Iconify icon="lucide:minus" class="size-4" />
+          <Icon icon="lucide:minus" class="size-4" />
           <span class="sr-only">Decrease</span>
         </Button>
         <div class="flex-1 text-center">
@@ -66,7 +66,7 @@ const data = [
           :disabled="goal >= 400"
           @click="goal += 10 "
         >
-          <Iconify icon="lucide:plus" class="size-4" />
+          <Icon icon="lucide:plus" class="size-4" />
           <span class="sr-only">Increase</span>
         </Button>
       </div>

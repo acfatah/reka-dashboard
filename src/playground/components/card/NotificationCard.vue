@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { Iconify } from '@/components/ui/icon'
+import { Icon } from '@/components/ui/icon'
 import { Switch } from '@/components/ui/switch'
 import { cn } from '@/lib/utils'
 
@@ -37,7 +37,7 @@ const notifications = [
     <CardContent class="grid gap-4">
       <div class=" flex items-center space-x-4 rounded-md border p-4">
         <!-- <BellRingIcon /> -->
-        <Iconify icon="radix-icons:bell" />
+        <Icon icon="radix-icons:bell" />
         <div class="flex-1 space-y-1">
           <p class="text-sm font-medium leading-none">
             Push Notifications
@@ -67,7 +67,7 @@ const notifications = [
     </CardContent>
     <CardFooter>
       <Button class="w-full">
-        <Iconify icon="lucide:check" /> Mark all as read
+        <Icon icon="lucide:check" /> Mark all as read
       </Button>
     </CardFooter>
   </Card>
