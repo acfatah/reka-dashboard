@@ -2,7 +2,7 @@
 import { useMagicKeys } from '@vueuse/core'
 import { ref, watch } from 'vue'
 
-const open = ref(false)
+const showCommand = ref(false)
 
 const { Meta_J, Ctrl_J } = useMagicKeys({
   passive: false,
@@ -18,21 +18,16 @@ watch([Meta_J, Ctrl_J], (v) => {
 })
 
 function handleOpenChange() {
-  open.value = !open.value
+  showCommand.value = !showCommand.value
 }
 </script>
 
 <template>
   <div>
     <p class="text-sm text-muted-foreground">
-      Press
-      <kbd
-        class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100"
-      >
-        <span class="text-xs">⌘</span>J
-      </kbd>
+      Press <Kbd size="xs">⌘ J</Kbd>
     </p>
-    <CommandDialog v-model:open="open">
+    <CommandDialog v-model:open="showCommand">
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
