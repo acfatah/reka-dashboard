@@ -2,8 +2,8 @@ import type { StoryObj } from '@storybook/vue3'
 import { Toaster } from '@/components/ui/toast'
 import { html } from 'common-tags'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import ComboboxDefaultStory from '@/playground/components/combobox/ComboboxDemo1.vue'
+import ComboboxDefaultSource from '@/playground/components/combobox/ComboboxDemo1.vue?raw'
 import DropdownMenuStory from './DropdownMenuStory.vue'
 import DropdownMenuSource from './DropdownMenuStory.vue?raw'
 import FormStory from './FormStory.vue'
@@ -24,7 +24,7 @@ import ResponsiveSource from './ResponsiveStory.vue?raw'
  */
 export default {
   title: 'Components/Data Entry/Combobox',
-  component: DefaultStory,
+  component: ComboboxDefaultStory,
   tags: ['autodocs'],
 }
 
@@ -32,7 +32,7 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: ComboboxDefaultSource,
       },
     },
   },
@@ -42,14 +42,14 @@ export const Default: StoryObj = {
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { ComboboxDefaultStory },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <ComboboxDefaultStory v-bind="args" />
     `,
   }),
 }

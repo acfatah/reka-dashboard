@@ -65,6 +65,9 @@ import CheckboxDefault from '@/playground/components/checkbox/CheckboxDefault.vu
 import CheckboxWithForm from '@/playground/components/checkbox/CheckboxWithForm.vue'
 
 import CollapsibleDefault from '@/playground/components/collapsible/CollapsibleDefault.vue'
+
+import ComboboxDemo1 from '@/playground/components/combobox/ComboboxDemo1.vue'
+import ComboboxDemo2 from '@/playground/components/combobox/ComboboxDemo2.vue'
 </script>
 
 <template>
@@ -182,6 +185,11 @@ import CollapsibleDefault from '@/playground/components/collapsible/CollapsibleD
 
     <ComponentWrapper name="Collapsible">
       <CollapsibleDefault />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Combobox">
+      <ComboboxDemo1 />
+      <ComboboxDemo2 />
     </ComponentWrapper>
   </div>
 
