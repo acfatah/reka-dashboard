@@ -25,6 +25,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 <template>
   <ComboboxRoot
+    data-slot="command"
     v-bind="forwarded"
     :class="cn(
       'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover',

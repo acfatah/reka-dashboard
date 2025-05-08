@@ -24,7 +24,10 @@ const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <div class="flex items-center border-b px-3" cmdk-input-wrapper>
+  <div
+    data-slot="command-input-wrapper"
+    class="flex items-center border-b px-3" cmdk-input-wrapper
+  >
     <Icon
       icon="radix-icons:magnifying-glass"
       class="mr-2 shrink-0 opacity-50"
@@ -32,11 +35,12 @@ const forwardedProps = useForwardProps(delegatedProps)
       height="16"
     />
     <ComboboxInput
+      data-slot="command-input"
       v-bind="{ ...forwardedProps, ...$attrs }"
       auto-focus
       :class="cn(
         'flex h-10 w-full rounded-md bg-transparent py-3',
-        'text-sm outline-none placeholder:text-muted-foreground',
+        'text-sm outline-hidden placeholder:text-muted-foreground',
         'disabled:cursor-not-allowed disabled:opacity-50',
         props.class,
       )"

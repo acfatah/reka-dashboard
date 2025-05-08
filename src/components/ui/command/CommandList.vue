@@ -24,7 +24,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-  <ComboboxContent v-bind="forwarded" :class="cn('max-h-[300px] overflow-y-auto overflow-x-hidden', props.class)">
+  <ComboboxContent
+    data-slot="command-list"
+    v-bind="forwarded"
+    :class="cn(
+      'max-h-[300px] scroll-py-1 overflow-x-hidden overflow-y-auto',
+      props.class,
+    )"
+  >
     <div role="presentation">
       <slot />
     </div>

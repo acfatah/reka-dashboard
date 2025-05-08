@@ -17,7 +17,14 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <ComboboxEmpty v-bind="delegatedProps" :class="cn('py-6 text-center text-sm', props.class)">
+  <ComboboxEmpty
+    data-slot="command-empty"
+    v-bind="delegatedProps"
+    :class="cn(
+      'py-6 text-center text-sm',
+      props.class,
+    )"
+  >
     <slot />
   </ComboboxEmpty>
 </template>
