@@ -30,7 +30,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     <RadioGroupIndicator
       :class="cn(
         'relative flex h-full w-full items-center justify-center text-primary',
-        'after:block after:h-2 after:w-2 after:rounded-[50%] after:bg-foreground after:content-[\'\'] dark:after:bg-foreground',
+        'after:block after:h-2 after:w-2 after:rounded-[50%] after:bg-foreground after:content-[\\\'\\\'] dark:after:bg-foreground',
       )"
     />
   </RadioGroupItem>
