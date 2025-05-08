@@ -1,17 +1,3 @@
-<script setup lang="ts">
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-  CommandShortcut,
-} from '@/components/ui/command'
-import { Icon } from '@/components/ui/icon'
-</script>
-
 <template>
   <Command class="max-w-[450px] rounded-lg border shadow-md">
     <CommandInput placeholder="Type a command or search..." />

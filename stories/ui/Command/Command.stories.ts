@@ -12,10 +12,10 @@ import {
 } from '@/components/ui/command'
 import { html } from 'common-tags'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
-import CommandDialogStory from './Dialog.vue'
-import CommandDialogSource from './Dialog.vue?raw'
+import CommandDefaultStory from './CommandDefault.vue'
+import CommandDefaultSource from './CommandDefault.vue?raw'
+import CommandWithDialogStory from './WithDialog.vue'
+import CommandWithDialogSource from './WithDialog.vue?raw'
 
 /**
  * Fast, composable, unstyled command menu.
@@ -24,7 +24,7 @@ import CommandDialogSource from './Dialog.vue?raw'
  */
 export default {
   title: 'Components/Overlays/Command',
-  component: DefaultStory,
+  component: CommandDefaultStory,
   subcomponents: {
     Command,
     CommandDialog,
@@ -43,42 +43,42 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: CommandDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { CommandDefaultStory },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <CommandDefaultStory v-bind="args" />
     `,
   }),
 }
 
-export const Dialog: StoryObj = {
+export const WithDialog: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: CommandDialogSource,
+        code: CommandWithDialogSource,
       },
     },
   },
 
   render: args => ({
-    components: { CommandDialogStory },
+    components: { CommandWithDialogStory },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <CommandDialogStory v-bind="args" />
+      <CommandWithDialogStory v-bind="args" />
     `,
   }),
 }
