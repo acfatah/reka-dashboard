@@ -39,14 +39,27 @@ import {
           More Tools
         </ContextMenuSubTrigger>
         <ContextMenuSubContent class="w-48">
-          <ContextMenuItem>
+          <ContextMenuItem inset>
             Save Page As...
             <ContextMenuShortcut>⇧⌘S</ContextMenuShortcut>
           </ContextMenuItem>
-          <ContextMenuItem>Create Shortcut...</ContextMenuItem>
-          <ContextMenuItem>Name Window...</ContextMenuItem>
+          <ContextMenuItem>
+            <Icon icon="lucide:plus" />
+            Create Shortcut...
+          </ContextMenuItem>
+          <ContextMenuItem inset>
+            Name Window...
+          </ContextMenuItem>
           <ContextMenuSeparator />
-          <ContextMenuItem>Developer Tools</ContextMenuItem>
+          <ContextMenuItem>
+            <Icon icon="lucide:code-2" />
+            Developer Tools
+          </ContextMenuItem>
+          <ContextMenuSeparator />
+          <ContextMenuItem variant="destructive">
+            <Icon icon="lucide:trash-2" />
+            Delete
+          </ContextMenuItem>
         </ContextMenuSubContent>
       </ContextMenuSub>
       <ContextMenuSeparator />
@@ -60,7 +73,6 @@ import {
         <ContextMenuLabel inset>
           People
         </ContextMenuLabel>
-        <ContextMenuSeparator />
         <ContextMenuRadioItem value="pedro">
           Pedro Duarte
         </ContextMenuRadioItem>
