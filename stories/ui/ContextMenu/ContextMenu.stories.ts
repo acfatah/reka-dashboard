@@ -17,8 +17,8 @@ import {
   ContextMenuTrigger,
 } from '@/components/ui/context-menu'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import ContextMenuDefaultStory from './ContextMenuDefault.vue'
+import ContextMenuDefaultSource from './ContextMenuDefault.vue?raw'
 
 /**
  * Displays a menu to the user — such as a set of actions or functions — triggered by a button.
@@ -27,7 +27,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  */
 export default {
   title: 'Components/Overlays/ContextMenu',
-  component: DefaultStory,
+  component: ContextMenuDefaultStory,
   subcomponents: {
     ContextMenu,
     ContextMenuCheckboxItem,
@@ -52,20 +52,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: ContextMenuDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { ContextMenuDefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultStory v-bind="args" />
+      <ContextMenuDefaultStory v-bind="args" />
     `,
   }),
 }
