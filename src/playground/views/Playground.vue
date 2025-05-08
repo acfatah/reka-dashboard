@@ -71,6 +71,8 @@ import ComboboxDemo2 from '@/playground/components/combobox/ComboboxDemo2.vue'
 import ComboboxDemo3 from '@/playground/components/combobox/ComboboxDemo3.vue'
 
 import CommandWithDialog from '@/playground/components/command/CommandWithDialog.vue'
+
+import ContextMenuDefault from '@/playground/components/context-menu/ContextMenuDefault.vue'
 </script>
 
 <template>
@@ -198,6 +200,10 @@ import CommandWithDialog from '@/playground/components/command/CommandWithDialog
 
     <ComponentWrapper name="Command">
       <CommandWithDialog />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Context Menu">
+      <ContextMenuDefault />
     </ComponentWrapper>
   </div>
 
