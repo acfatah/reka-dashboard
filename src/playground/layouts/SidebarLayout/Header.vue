@@ -4,9 +4,11 @@
       <SidebarTrigger class="-ml-1" />
       <Separator orientation="vertical" class="mr-2 h-4" />
       <Placeholder class="h-8 w-64" />
-      <Placeholder class="ml-auto h-8 w-8" />
-      <DarkModeToggle />
-      <DarkModeDropdown />
+      <div class="ml-auto flex gap-x-2">
+        <ThemeSelector />
+        <DarkModeToggle />
+        <DarkModeDropdown />
+      </div>
     </div>
   </header>
 </template>

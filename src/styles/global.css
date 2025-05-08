@@ -1,4 +1,4 @@
-@import url("@/styles/chart.css");
+@import "./chart.css";
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
@@ -8,6 +8,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@import "./themes.css";
 
 /**
  * Theme generator: https://ui.shadcn.com/themes
