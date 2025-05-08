@@ -68,6 +68,9 @@ import CollapsibleDefault from '@/playground/components/collapsible/CollapsibleD
 
 import ComboboxDemo1 from '@/playground/components/combobox/ComboboxDemo1.vue'
 import ComboboxDemo2 from '@/playground/components/combobox/ComboboxDemo2.vue'
+import ComboboxDemo3 from '@/playground/components/combobox/ComboboxDemo3.vue'
+
+import CommandWithDialog from '@/playground/components/command/CommandWithDialog.vue'
 </script>
 
 <template>
@@ -190,6 +193,11 @@ import ComboboxDemo2 from '@/playground/components/combobox/ComboboxDemo2.vue'
     <ComponentWrapper name="Combobox">
       <ComboboxDemo1 />
       <ComboboxDemo2 />
+      <ComboboxDemo3 />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Command">
+      <CommandWithDialog />
     </ComponentWrapper>
   </div>
 

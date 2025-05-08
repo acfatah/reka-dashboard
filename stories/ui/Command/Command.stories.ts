@@ -12,10 +12,10 @@ import {
 } from '@/components/ui/command'
 import { html } from 'common-tags'
 
+import CommandWithDialogStory from '@/playground/components/command/CommandWithDialog.vue'
+import CommandWithDialogSource from '@/playground/components/command/CommandWithDialog.vue?raw'
 import CommandDefaultStory from './CommandDefault.vue'
 import CommandDefaultSource from './CommandDefault.vue?raw'
-import CommandWithDialogStory from './WithDialog.vue'
-import CommandWithDialogSource from './WithDialog.vue?raw'
 
 /**
  * Fast, composable, unstyled command menu.
