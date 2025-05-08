@@ -17,8 +17,8 @@ import {
   ContextMenuTrigger,
 } from '@/components/ui/context-menu'
 
-import ContextMenuDefaultStory from './ContextMenuDefault.vue'
-import ContextMenuDefaultSource from './ContextMenuDefault.vue?raw'
+import ContextMenuDefaultStory from '@/playground/components/context-menu/ContextMenuDefault.vue'
+import ContextMenuDefaultSource from '@/playground/components/context-menu/ContextMenuDefault.vue?raw'
 
 /**
  * Displays a menu to the user — such as a set of actions or functions — triggered by a button.
