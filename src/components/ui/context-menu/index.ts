@@ -1,3 +1,6 @@
+import type { VariantProps } from 'class-variance-authority'
+import { cva } from 'class-variance-authority'
+
 export { default as ContextMenu } from './ContextMenu.vue'
 export { default as ContextMenuCheckboxItem } from './ContextMenuCheckboxItem.vue'
 export { default as ContextMenuContent } from './ContextMenuContent.vue'
@@ -13,3 +16,28 @@ export { default as ContextMenuSubContent } from './ContextMenuSubContent.vue'
 export { default as ContextMenuSubTrigger } from './ContextMenuSubTrigger.vue'
 export { default as ContextMenuTrigger } from './ContextMenuTrigger.vue'
 export { ContextMenuPortal } from 'reka-ui'
+
+export const contextMenuItemVariants = cva(
+  [
+    'relative flex cursor-default items-center gap-2 px-2 py-1.5',
+    'rounded-sm outline-hidden',
+    'text-sm select-none',
+    'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+    '[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=\\\'size-\\\'])]:size-4 [&_svg:not([class*=\\\'text-\\\'])]:text-muted-foreground',
+  ],
+
+  {
+    variants: {
+      variant: {
+        default: 'focus:bg-accent focus:text-accent-foreground',
+        destructive: 'text-destructive focus:bg-destructive/10 focus:bg-destructive/20 focus:text-destructive *:[svg]:!text-destructive',
+      },
+    },
+
+    defaultVariants: {
+      variant: 'default',
+    },
+  },
+)
+
+export type ContextMenuItemVariants = VariantProps<typeof contextMenuItemVariants>
