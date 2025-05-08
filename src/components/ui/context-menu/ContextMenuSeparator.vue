@@ -17,5 +17,12 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <ContextMenuSeparator v-bind="delegatedProps" :class="cn('-mx-1 my-1 h-px bg-border', props.class)" />
+  <ContextMenuSeparator
+    data-slot="context-menu-separator"
+    v-bind="delegatedProps"
+    :class="cn(
+      '-mx-1 my-1 h-px bg-border',
+      props.class,
+    )"
+  />
 </template>
