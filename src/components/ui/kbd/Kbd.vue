@@ -18,12 +18,12 @@ const delegatedProps = computed(() => {
   <Primitive
     v-bind="delegatedProps"
     :class="cn(
-      kbdVariants({
-        size: props.size,
-      }),
+      kbdVariants({ size: props.size }),
       props.class,
     )"
   >
-    <slot />
+    <span data-slot="kbd-content">
+      <slot />
+    </span>
   </Primitive>
 </template>

@@ -4,21 +4,22 @@ export { default as Kbd } from './Kbd.vue'
 
 export const kbdVariants = cva(
   [
-    'pointer-events-none inline-flex h-5 items-center gap-1 rounded border border-border',
-    'bg-muted font-sans font-medium select-none',
+    'pointer-events-none inline-flex items-center gap-1 px-1.5',
+    'rounded border bg-muted opacity-100',
+    'font-mono font-medium text-muted-foreground select-none',
   ],
   {
     variants: {
       size: {
-        xs: 'h-4 min-h-4 px-1 text-[10px]',
-        sm: 'h-5 min-h-5 px-1 text-[11px]',
-        md: 'h-6 min-h-6 px-1.5 text-[12px]',
-        lg: 'h-8 min-h-8 px-2 text-[14px]',
+        xs: 'text-xs',
+        sm: 'text-sm',
+        md: 'text-md',
+        lg: 'text-lg',
       },
     },
 
     defaultVariants: {
-      size: 'sm',
+      size: 'md',
     },
   },
 )
