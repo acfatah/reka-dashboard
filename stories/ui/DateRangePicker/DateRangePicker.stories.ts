@@ -16,12 +16,12 @@ import {
 import { Toaster } from '@/components/ui/toast'
 import { html } from 'common-tags'
 
-import DateRangePickerDefault from './DateRangePickerDefault.vue'
-import DateRangePickerDefaultSource from './DateRangePickerDefault.vue?raw'
-import DateRangePickerForm from './DateRangePickerForm.vue'
-import DateRangePickerFormSource from './DateRangePickerForm.vue?raw'
-import DateRangePickerWithIndependentMonths from './DateRangePickerWithIndependentMonths.vue'
-import DateRangePickerWithIndependentMonthsSource from './DateRangePickerWithIndependentMonths.vue?raw'
+import DateRangePickerDefault from '@/playground/components/date-range-picker/DateRangePickerDefault.vue'
+import DateRangePickerDefaultSource from '@/playground/components/date-range-picker/DateRangePickerDefault.vue?raw'
+import DateRangePickerForm from '@/playground/components/date-range-picker/DateRangePickerForm.vue'
+import DateRangePickerFormSource from '@/playground/components/date-range-picker/DateRangePickerForm.vue?raw'
+import DateRangePickerWithIndependentMonths from '@/playground/components/date-range-picker/DateRangePickerWithIndependentMonths.vue'
+import DateRangePickerWithIndependentMonthsSource from '@/playground/components/date-range-picker/DateRangePickerWithIndependentMonths.vue?raw'
 
 /**
  * A calendar component that allows users to select a range of dates.
