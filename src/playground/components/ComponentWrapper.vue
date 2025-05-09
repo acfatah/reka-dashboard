@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useChangeCase } from '@vueuse/integrations/useChangeCase'
+import { useRouter } from 'vue-router'
 
 const props = defineProps({
   name: {
@@ -8,11 +9,16 @@ const props = defineProps({
   },
 })
 
+const router = useRouter()
 const slug = useChangeCase(props.name, 'kebabCase')
 const url = `${(window.location.origin + window.location.pathname).replace(/\/$/, '')}#${slug.value}`
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text)
+}
+
+function updateAddressBar() {
+  router.push({ hash: `#${slug.value}` })
 }
 </script>
 
@@ -23,7 +29,7 @@ function copyToClipboard(text: string) {
   >
     <div class="border-b px-4 py-3">
       <div class="text-sm font-medium">
-        <span class=" cursor-default" @click="copyToClipboard(url)">
+        <span class=" cursor-default" @click="copyToClipboard(url); updateAddressBar()">
           {{ name }}
         </span>
       </div>
