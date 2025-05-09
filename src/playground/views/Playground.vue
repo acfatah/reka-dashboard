@@ -73,6 +73,9 @@ import ComboboxDemo3 from '@/playground/components/combobox/ComboboxDemo3.vue'
 import CommandWithDialog from '@/playground/components/command/CommandWithDialog.vue'
 
 import ContextMenuDefault from '@/playground/components/context-menu/ContextMenuDefault.vue'
+
+import DatePickerDefault from '@/playground/components/date-picker/DatePickerDefault.vue'
+import DateRangePickerDefault from '@/playground/components/date-range-picker/DateRangePickerDefault.vue'
 </script>
 
 <template>
@@ -204,6 +207,11 @@ import ContextMenuDefault from '@/playground/components/context-menu/ContextMenu
 
     <ComponentWrapper name="Context Menu">
       <ContextMenuDefault />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Date Picker">
+      <DatePickerDefault />
+      <DateRangePickerDefault />
     </ComponentWrapper>
   </div>
 
