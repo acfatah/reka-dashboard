@@ -27,6 +27,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <DialogPortal>
     <DialogOverlay
+      data-slot="dialog-overlay"
       :class="cn(
         'fixed inset-0 z-50 grid place-items-center overflow-y-auto bg-black/80',
         'data-[state=closed]:animate-out data-[state=closed]:fade-out-0',
@@ -34,10 +35,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       )"
     >
       <DialogContent
+        data-slot="dialog-content"
         :class="cn(
-          'relative z-50 grid w-full max-w-lg my-8 gap-4 border border-border bg-background p-6 shadow-lg',
+          'relative z-50 my-8 grid  max-w-[calc(100%-2rem)] gap-4 p-6',
+          'rounded-lg border bg-background shadow-lg',
           'duration-200',
-          'sm:rounded-lg md:w-full',
+          'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95',
+          'data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95',
+          'sm:max-w-lg',
           props.class,
         )"
         v-bind="forwarded"
@@ -52,14 +57,18 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         <slot />
 
         <DialogClose
-          class="absolute right-4 top-4 rounded-md p-0.5 transition-colors hover:bg-secondary"
+          data-slot="dialog-close"
+          :class="cn(
+            'absolute top-3 right-4',
+            'rounded-sm opacity-70 ring-offset-background',
+            'focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-hidden',
+            'transition-opacity hover:opacity-100',
+            'disabled:pointer-events-none',
+            'data-[state=open]:bg-accent data-[state=open]:text-muted-foreground',
+            '[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=\\\'size-\\\'])]:size-4',
+          )"
         >
-          <Icon
-            icon="lucide:x"
-            class="hover:cursor-pointer"
-            width="16"
-            height="16"
-          />
+          <Icon icon="lucide:x" />
           <span class="sr-only">Close</span>
         </DialogClose>
       </DialogContent>
