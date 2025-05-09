@@ -13,10 +13,10 @@ import {
 } from '@/components/ui/drawer'
 import { html } from 'common-tags'
 
-import BasicStory from './DrawerBasic.vue'
-import BasicSource from './DrawerBasic.vue?raw'
-import DrawerDefaultStory from './DrawerDefault.vue'
-import DrawerDefaultSource from './DrawerDefault.vue?raw'
+import BasicStory from '@/playground/components/drawer/DrawerBasic.vue'
+import BasicSource from '@/playground/components/drawer/DrawerBasic.vue?raw'
+import DrawerDefaultStory from '@/playground/components/drawer/DrawerDefault.vue'
+import DrawerDefaultSource from '@/playground/components/drawer/DrawerDefault.vue?raw'
 
 /**
  * Drawer is built on top of [Vaul Vue](https://github.com/unovue/vaul-vue).

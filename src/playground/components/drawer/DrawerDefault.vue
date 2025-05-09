@@ -51,7 +51,7 @@ const isOpen = ref(false)
   <Dialog v-if="isDesktop" v-model:open="isOpen">
     <DialogTrigger as-child>
       <Button variant="outline">
-        Edit Profile
+        Responsive Dialog
       </Button>
     </DialogTrigger>
     <DialogContent class="sm:max-w-[425px]">
