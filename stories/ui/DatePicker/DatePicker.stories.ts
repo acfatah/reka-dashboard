@@ -3,12 +3,12 @@ import { Calendar } from '@/components/ui/calendar'
 import { Toaster } from '@/components/ui/toast'
 import { html } from 'common-tags'
 
-import DatePickerDefault from './DatePickerDefault.vue'
-import DatePickerDefaultSource from './DatePickerDefault.vue?raw'
-import DatePickerForm from './DatePickerWithForm.vue'
-import DatePickerFormSource from './DatePickerWithForm.vue?raw'
-import DatePickerWithPreset from './DatePickerWithPreset.vue'
-import DatePickerWithPresetSource from './DatePickerWithPreset.vue?raw'
+import DatePickerDefault from '@/playground/components/date-picker/DatePickerDefault.vue'
+import DatePickerDefaultSource from '@/playground/components/date-picker/DatePickerDefault.vue?raw'
+import DatePickerForm from '@/playground/components/date-picker/DatePickerWithForm.vue'
+import DatePickerFormSource from '@/playground/components/date-picker/DatePickerWithForm.vue?raw'
+import DatePickerWithPreset from '@/playground/components/date-picker/DatePickerWithPreset.vue'
+import DatePickerWithPresetSource from '@/playground/components/date-picker/DatePickerWithPreset.vue?raw'
 
 /**
  * A date field component that allows users to enter and edit date.
