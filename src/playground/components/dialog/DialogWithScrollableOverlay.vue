@@ -12,8 +12,8 @@
           Here is modal with overlay scroll
         </DialogDescription>
       </DialogHeader>
-      <div class="grid gap-4 py-4 h-[300dvh]">
-        <p>
+      <div class="grid gap-4 py-4 h-[300dvh] text-sm">
+        <p class="mb-4 leading-normal">
           This is some placeholder content to show the scrolling behavior for modals.
           Instead of repeating the text in the modal, we use an inline style to set
           a minimum height, thereby extending the length of the overall modal and
