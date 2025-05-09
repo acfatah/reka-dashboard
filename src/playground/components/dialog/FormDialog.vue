@@ -28,6 +28,7 @@ import { toast } from '@/components/ui/toast'
 
 type SubmissionRecord = z.infer<typeof schema>
 const schema = z.object({
+  name: z.string().min(2).max(50),
   username: z.string().min(2).max(50),
 })
 
@@ -65,12 +66,23 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
         v-slot="{ meta }"
         :validation-schema="formSchema"
         @submit="onSubmit"
+        class="space-y-4"
       >
+        <FormField v-slot="{ componentField }" name="name">
+          <FormItem>
+            <FormLabel>Name</FormLabel>
+            <FormControl>
+              <Input type="text" placeholder="Pedro Duarte" v-bind="componentField" />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        </FormField>
+
         <FormField v-slot="{ componentField }" name="username">
           <FormItem>
             <FormLabel>Username</FormLabel>
             <FormControl>
-              <Input type="text" placeholder="shadcn" v-bind="componentField" />
+              <Input type="text" placeholder="@peduarte" v-bind="componentField" />
             </FormControl>
             <FormDescription>
               This is your public display name.
@@ -80,6 +92,11 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
         </FormField>
 
         <DialogFooter>
+          <DialogClose>
+            <Button type="button" variant="outline">
+              Cancel
+            </Button>
+          </DialogClose>
           <Button
             type="submit"
             :disabled="!(meta.dirty && meta.valid)"

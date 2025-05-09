@@ -18,12 +18,12 @@ import DialogWithContextMenuTriggerComponent from '@/playground/components/dialo
 import DialogWithContextMenuTriggerSource from '@/playground/components/dialog/DialogWithContextMenuTrigger.vue?raw'
 import DialogWithCustomCloseButtonComponent from '@/playground/components/dialog/DialogWithCustomCloseButton.vue'
 import DialogWithCustomCloseButtonSource from '@/playground/components/dialog/DialogWithCustomCloseButton.vue?raw'
-import FormDialogComponent from '@/playground/components/dialog/DialogWithFormDialog.vue'
-import FormDialogSource from '@/playground/components/dialog/DialogWithFormDialog.vue?raw'
 import DialogWithScrollBody from '@/playground/components/dialog/DialogWithScrollBody.vue'
 import DialogWithScrollBodySource from '@/playground/components/dialog/DialogWithScrollBody.vue?raw'
 import DialogWithScrollOverlayComponent from '@/playground/components/dialog/DialogWithScrollOverlay.vue'
 import DialogWithScrollOverlaySource from '@/playground/components/dialog/DialogWithScrollOverlay.vue?raw'
+import FormDialogComponent from '@/playground/components/dialog/FormDialog.vue'
+import FormDialogSource from '@/playground/components/dialog/FormDialog.vue?raw'
 
 /**
  * A modal dialog that interrupts the user with important content and expects a response.
@@ -94,7 +94,7 @@ export const CustomCloseButton: StoryObj = {
   }),
 }
 
-export const ScrollBody: StoryObj = {
+export const ScrollableBody: StoryObj = {
   parameters: {
     docs: {
       source: {
@@ -116,7 +116,10 @@ export const ScrollBody: StoryObj = {
   }),
 }
 
-export const ScrollOverlay: StoryObj = {
+/**
+ * Replace `<DialogContent />` with `<DialogScrollContent />` to make the dialog overlay scrollable.
+ */
+export const ScrollableOverlay: StoryObj = {
   parameters: {
     docs: {
       source: {
