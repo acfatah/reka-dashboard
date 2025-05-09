@@ -12,18 +12,18 @@ import {
 } from '@/components/ui/dialog'
 import { Toaster } from '@/components/ui/toast'
 
-import CustomCloseButtonComponent from './CustomCloseButton.vue'
-import CustomCloseButtonSource from './CustomCloseButton.vue?raw'
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import DialogDefault from './DialogDefault.vue'
+import DialogDefaultSource from './DialogDefault.vue?raw'
 import DialogWithContextMenuTriggerComponent from './DialogWithContextMenuTrigger.vue'
 import DialogWithContextMenuTriggerSource from './DialogWithContextMenuTrigger.vue?raw'
-import FormDialogComponent from './FormDialog.vue'
-import FormDialogSource from './FormDialog.vue?raw'
-import ScrollBodyComponent from './ScrollBody.vue'
-import ScrollBodySource from './ScrollBody.vue?raw'
-import ScrollOverlayComponent from './ScrollOverlay.vue'
-import ScrollOverlaySource from './ScrollOverlay.vue?raw'
+import DialogWithCustomCloseButtonComponent from './DialogWithCustomCloseButton.vue'
+import DialogWithCustomCloseButtonSource from './DialogWithCustomCloseButton.vue?raw'
+import FormDialogComponent from './DialogWithFormDialog.vue'
+import FormDialogSource from './DialogWithFormDialog.vue?raw'
+import DialogWithScrollBody from './DialogWithScrollBody.vue'
+import DialogWithScrollBodySource from './DialogWithScrollBody.vue?raw'
+import DialogWithScrollOverlayComponent from './DialogWithScrollOverlay.vue'
+import DialogWithScrollOverlaySource from './DialogWithScrollOverlay.vue?raw'
 
 /**
  * A modal dialog that interrupts the user with important content and expects a response.
@@ -35,7 +35,7 @@ import ScrollOverlaySource from './ScrollOverlay.vue?raw'
  */
 export default {
   title: 'Components/Feedback/Dialog',
-  component: DefaultStory,
+  component: DialogDefault,
   subcomponents: {
     Dialog,
     DialogClose,
@@ -54,20 +54,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: DialogDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { DialogDefault },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultStory v-bind="args" />
+      <DialogDefault v-bind="args" />
     `,
   }),
 }
@@ -76,20 +76,20 @@ export const CustomCloseButton: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: CustomCloseButtonSource,
+        code: DialogWithCustomCloseButtonSource,
       },
     },
   },
 
   render: args => ({
-    components: { CustomCloseButtonComponent },
+    components: { DialogWithCustomCloseButtonComponent },
 
     setup() {
       return { args }
     },
 
     template: `
-      <CustomCloseButtonComponent v-bind="args" />
+      <DialogWithCustomCloseButtonComponent v-bind="args" />
     `,
   }),
 }
@@ -98,20 +98,20 @@ export const ScrollBody: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: ScrollBodySource,
+        code: DialogWithScrollBodySource,
       },
     },
   },
 
   render: args => ({
-    components: { ScrollBodyComponent },
+    components: { DialogWithScrollBody },
 
     setup() {
       return { args }
     },
 
     template: `
-      <ScrollBodyComponent v-bind="args" />
+      <DialogWithScrollBody v-bind="args" />
     `,
   }),
 }
@@ -120,20 +120,20 @@ export const ScrollOverlay: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: ScrollOverlaySource,
+        code: DialogWithScrollOverlaySource,
       },
     },
   },
 
   render: args => ({
-    components: { ScrollOverlayComponent },
+    components: { DialogWithScrollOverlayComponent },
 
     setup() {
       return { args }
     },
 
     template: `
-      <ScrollOverlayComponent v-bind="args" />
+      <DialogWithScrollOverlayComponent v-bind="args" />
     `,
   }),
 }
