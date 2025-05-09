@@ -76,6 +76,11 @@ import ContextMenuDefault from '@/playground/components/context-menu/ContextMenu
 
 import DatePickerDefault from '@/playground/components/date-picker/DatePickerDefault.vue'
 import DateRangePickerDefault from '@/playground/components/date-range-picker/DateRangePickerDefault.vue'
+
+import DialogWithScrollableOverlay from '@/playground/components/dialog/DialogWithScrollableOverlay.vue'
+import DialogWithScrollBody from '@/playground/components/dialog/DialogWithScrollBody.vue'
+import FormDialog from '@/playground/components/dialog/FormDialog.vue'
+import FormDialog2 from '@/playground/components/dialog/FormDialog2.vue'
 </script>
 
 <template>
@@ -212,6 +217,13 @@ import DateRangePickerDefault from '@/playground/components/date-range-picker/Da
     <ComponentWrapper name="Date Picker">
       <DatePickerDefault />
       <DateRangePickerDefault />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Dialog">
+      <FormDialog />
+      <FormDialog2 />
+      <DialogWithScrollBody />
+      <DialogWithScrollableOverlay />
     </ComponentWrapper>
   </div>
 

@@ -2,26 +2,33 @@
   <Dialog>
     <DialogTrigger as-child>
       <Button variant="outline">
-        Edit Profile
+        Scrollable Content
       </Button>
     </DialogTrigger>
-    <DialogContent class="max-h-[90dvh] grid-rows-[auto_minmax(0,1fr)_auto] p-0 sm:max-w-[425px]">
-      <DialogHeader class="p-6 pb-0">
-        <DialogTitle>Edit profile</DialogTitle>
+    <DialogContent class="max-h-[90dvh] grid-rows-[auto_minmax(0,1fr)_auto] sm:max-w-lg">
+      <DialogHeader>
+        <DialogTitle>Scrollable Content</DialogTitle>
         <DialogDescription>
-          Make changes to your profile here. Click save when you're done.
+          This is a dialog with scrollable content.
         </DialogDescription>
       </DialogHeader>
-      <div class="grid gap-4 overflow-y-auto px-6 py-4">
-        <div class="flex h-[300dvh] flex-col justify-between">
-          <p>
-            This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+      <div class="-mx-6 grid gap-2 overflow-y-auto px-6">
+        <h4 class="mb-4 text-lg leading-none font-medium">
+          Lorem Ipsum
+        </h4>
+        <template v-for="i in 20" :key="i">
+          <p class="mb-4 leading-normal">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
-
-          <p>This content should appear at the bottom after you scroll.</p>
-        </div>
+        </template>
       </div>
-      <DialogFooter class="p-6 pt-0">
+      <DialogFooter>
         <Button type="submit">
           Save changes
         </Button>
