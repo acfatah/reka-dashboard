@@ -16,12 +16,12 @@ import {
 import { Toaster } from '@/components/ui/toast'
 import { html } from 'common-tags'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
-import FormStory from './FormStory.vue'
-import FormSource from './FormStory.vue?raw'
-import WithIndependentMonthsStory from './WithIndependentMonths.vue'
-import WithIndependentMonthsSource from './WithIndependentMonths.vue?raw'
+import DateRangePickerDefault from './DateRangePickerDefault.vue'
+import DateRangePickerDefaultSource from './DateRangePickerDefault.vue?raw'
+import DateRangePickerForm from './DateRangePickerForm.vue'
+import DateRangePickerFormSource from './DateRangePickerForm.vue?raw'
+import DateRangePickerWithIndependentMonths from './DateRangePickerWithIndependentMonths.vue'
+import DateRangePickerWithIndependentMonthsSource from './DateRangePickerWithIndependentMonths.vue?raw'
 
 /**
  * A calendar component that allows users to select a range of dates.
@@ -38,7 +38,7 @@ import WithIndependentMonthsSource from './WithIndependentMonths.vue?raw'
  */
 export default {
   title: 'Components/Data Entry/Date Range Picker',
-  component: DefaultStory,
+  component: DateRangePickerDefault,
   subcomponents: {
     RangeCalendar,
     RangeCalendarCell,
@@ -60,20 +60,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: DateRangePickerDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { DateRangePickerDefault },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <DateRangePickerDefault v-bind="args" />
     `,
   }),
 }
@@ -82,13 +82,13 @@ export const Form: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: FormSource,
+        code: DateRangePickerFormSource,
       },
     },
   },
 
   render: args => ({
-    components: { FormStory, Toaster },
+    components: { DateRangePickerForm, Toaster },
 
     setup() {
       return { args }
@@ -98,7 +98,7 @@ export const Form: StoryObj = {
       <Teleport to="body">
         <Toaster />
       </Teleport>
-      <FormStory v-bind="args" />
+      <DateRangePickerForm v-bind="args" />
     `,
   }),
 }
@@ -107,20 +107,20 @@ export const WithIndependentMonths: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: WithIndependentMonthsSource,
+        code: DateRangePickerWithIndependentMonthsSource,
       },
     },
   },
 
   render: args => ({
-    components: { WithIndependentMonthsStory },
+    components: { DateRangePickerWithIndependentMonths },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <WithIndependentMonthsStory v-bind="args" />
+      <DateRangePickerWithIndependentMonths v-bind="args" />
     `,
   }),
 }
