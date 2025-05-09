@@ -13,10 +13,10 @@ import {
 } from '@/components/ui/drawer'
 import { html } from 'common-tags'
 
-import BasicStory from './BasicStory.vue'
-import BasicSource from './BasicStory.vue?raw'
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import BasicStory from './DrawerBasic.vue'
+import BasicSource from './DrawerBasic.vue?raw'
+import DrawerDefaultStory from './DrawerDefault.vue'
+import DrawerDefaultSource from './DrawerDefault.vue?raw'
 
 /**
  * Drawer is built on top of [Vaul Vue](https://github.com/unovue/vaul-vue).
@@ -26,7 +26,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  */
 export default {
   title: 'Components/Overlays/Drawer',
-  component: DefaultStory,
+  component: DrawerDefaultStory,
   subcomponents: {
     Drawer,
     DrawerClose,
@@ -46,20 +46,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: DrawerDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { DrawerDefaultStory },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <DrawerDefaultStory v-bind="args" />
       <p class="mt-4 text-sm text-muted-foreground">Resize the window to see the effect.</p>
     `,
   }),
