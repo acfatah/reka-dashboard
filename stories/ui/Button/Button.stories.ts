@@ -34,7 +34,7 @@ export default {
 
     size: {
       control: { type: 'select' },
-      options: ['default', 'xs', 'sm', 'lg', 'icon'],
+      options: ['xs', 'sm', 'md', 'lg', 'icon'],
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'default' },
