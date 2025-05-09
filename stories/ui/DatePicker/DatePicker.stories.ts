@@ -3,12 +3,12 @@ import { Calendar } from '@/components/ui/calendar'
 import { Toaster } from '@/components/ui/toast'
 import { html } from 'common-tags'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
-import FormStory from './FormStory.vue'
-import FormSource from './FormStory.vue?raw'
-import WithPresetStory from './WithPresetStory.vue'
-import WithPresetSource from './WithPresetStory.vue?raw'
+import DatePickerDefault from './DatePickerDefault.vue'
+import DatePickerDefaultSource from './DatePickerDefault.vue?raw'
+import DatePickerForm from './DatePickerWithForm.vue'
+import DatePickerFormSource from './DatePickerWithForm.vue?raw'
+import DatePickerWithPreset from './DatePickerWithPreset.vue'
+import DatePickerWithPresetSource from './DatePickerWithPreset.vue?raw'
 
 /**
  * A date field component that allows users to enter and edit date.
@@ -37,20 +37,20 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: DatePickerDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { DatePickerDefault },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <DefaultStory v-bind="args" />
+      <DatePickerDefault v-bind="args" />
     `,
   }),
 }
@@ -59,13 +59,13 @@ export const Form: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: FormSource,
+        code: DatePickerFormSource,
       },
     },
   },
 
   render: args => ({
-    components: { FormStory, Toaster },
+    components: { DatePickerForm, Toaster },
 
     setup() {
       return { args }
@@ -75,7 +75,7 @@ export const Form: StoryObj = {
       <Teleport to="body">
         <Toaster />
       </Teleport>
-      <FormStory v-bind="args" />
+      <DatePickerForm v-bind="args" />
     `,
   }),
 }
@@ -84,20 +84,20 @@ export const WithPreset: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: WithPresetSource,
+        code: DatePickerWithPresetSource,
       },
     },
   },
 
   render: args => ({
-    components: { WithPresetStory },
+    components: { DatePickerWithPreset },
 
     setup() {
       return { args }
     },
 
     template: html`
-      <WithPresetStory v-bind="args" />
+      <DatePickerWithPreset v-bind="args" />
     `,
   }),
 }
