@@ -3,7 +3,9 @@ import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 
-const props = defineProps<{ class?: HTMLAttributes['class'] }>()
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
@@ -14,7 +16,7 @@ const props = defineProps<{ class?: HTMLAttributes['class'] }>()
     :class="cn('[&>svg]:size-3.5', props.class)"
   >
     <slot>
-      <Icon icon="lucide:chevron-right" width="16" height="16" />
+      <Icon icon="lucide:chevron-right" />
     </slot>
   </li>
 </template>
