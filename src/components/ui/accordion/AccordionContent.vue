@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import type { AccordionContentProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { AccordionContent } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<{ class?: HTMLAttributes['class'] }>()
+const props = defineProps<AccordionContentProps & { class?: HTMLAttributes['class'] }>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -22,7 +23,7 @@ const delegatedProps = computed(() => {
       'data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
     )"
   >
-    <div :class="cn('pb-4 pt-0', props.class)">
+    <div :class="cn('pt-0 pb-4', props.class)">
       <slot />
     </div>
   </AccordionContent>
