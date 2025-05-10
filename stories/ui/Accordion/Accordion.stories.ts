@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/vue3'
 import {
+  Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionRoot,
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
@@ -18,7 +18,7 @@ export default {
   title: 'Components/Panels/Accordion',
   component: AccordionDefault,
   subcomponents: {
-    AccordionRoot,
+    Accordion,
     AccordionItem,
     AccordionTrigger,
     AccordionContent,
