@@ -2,6 +2,7 @@
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { Primitive } from 'reka-ui'
+import { computed } from 'vue'
 import type { BadgeVariants } from '.'
 import { badgeVariants } from '.'
 
@@ -9,18 +10,22 @@ const props = withDefaults(defineProps<{
   variant?: BadgeVariants['variant']
   class?: HTMLAttributes['class']
   as?: string
-  asChild?: boolean
 }>(), {
   as: 'span',
+})
+
+const delegatedProps = computed(() => {
+  const { class: _, ...delegated } = props
+
+  return delegated
 })
 </script>
 
 <template>
   <Primitive
     data-slot="badge"
-    :as="as"
+    v-bind="delegatedProps"
     :class="cn(badgeVariants({ variant }), props.class)"
-    :as-child="asChild"
   >
     <slot />
   </Primitive>
