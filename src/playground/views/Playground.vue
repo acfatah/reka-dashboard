@@ -81,6 +81,10 @@ import DialogWithScrollableOverlay from '@/playground/components/dialog/DialogWi
 import DialogWithScrollBody from '@/playground/components/dialog/DialogWithScrollBody.vue'
 import FormDialog from '@/playground/components/dialog/FormDialog.vue'
 import FormDialog2 from '@/playground/components/dialog/FormDialog2.vue'
+
+import DrawerBasic from '@/playground/components/drawer/DrawerBasic.vue'
+import DrawerDefault from '@/playground/components/drawer/DrawerDefault.vue'
+import DrawerWithScrollableContent from '@/playground/components/drawer/DrawerWithScrollableContent.vue'
 </script>
 
 <template>
@@ -224,6 +228,12 @@ import FormDialog2 from '@/playground/components/dialog/FormDialog2.vue'
       <FormDialog2 />
       <DialogWithScrollBody />
       <DialogWithScrollableOverlay />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Drawer">
+      <DrawerBasic />
+      <DrawerDefault />
+      <DrawerWithScrollableContent />
     </ComponentWrapper>
   </div>
 
