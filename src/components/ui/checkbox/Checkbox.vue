@@ -30,7 +30,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       'disabled:cursor-not-allowed disabled:opacity-50',
       'aria-invalid:border-destructive aria-invalid:ring-destructive/20',
       'data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground',
-      'dark:bg-input/30 dark:aria-invalid:ring-destructive/40 dark:data-[state=checked]:bg-primary',
+      'dark:aria-invalid:ring-destructive/40',
       props.class,
     )"
   >
@@ -39,7 +39,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       class="flex items-center justify-center text-current transition-none"
     >
       <slot>
-        <Icon icon="lucide:check" />
+        <Icon icon="lucide:check" class="size-3.5" />
       </slot>
     </CheckboxIndicator>
   </CheckboxRoot>
