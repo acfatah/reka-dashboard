@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { ComboboxAnchorProps } from 'reka-ui'
+import type { ComboboxItemIndicatorProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
-import { ComboboxAnchor, useForwardProps } from 'reka-ui'
+import { ComboboxItemIndicator, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<ComboboxAnchorProps & {
+const props = defineProps<ComboboxItemIndicatorProps & {
   class?: HTMLAttributes['class']
 }>()
 
@@ -19,11 +19,11 @@ const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <ComboboxAnchor
-    data-slot="combobox-anchor"
+  <ComboboxItemIndicator
+    data-slot="combobox-item-indicator"
     v-bind="forwarded"
-    :class="cn('w-[200px]', props.class)"
+    :class="cn('ml-auto', props.class)"
   >
     <slot />
-  </ComboboxAnchor>
+  </ComboboxItemIndicator>
 </template>

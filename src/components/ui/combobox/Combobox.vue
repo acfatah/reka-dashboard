@@ -11,7 +11,8 @@ const forwarded = useForwardPropsEmits(props, emits)
   <ComboboxRoot
     data-slot="combobox"
     v-bind="forwarded"
+    v-slot="{ open }"
   >
-    <slot />
+    <slot v-bind="{ open }" />
   </ComboboxRoot>
 </template>

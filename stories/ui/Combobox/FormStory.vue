@@ -59,16 +59,31 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
       <FormItem class="flex flex-col">
         <FormLabel>Language</FormLabel>
 
-        <Combobox by="label">
+        <Combobox by="label" v-slot="{ open }">
           <FormControl>
             <ComboboxAnchor>
-              <div class="relative w-full max-w-sm items-center">
+              <div
+                :class="cn(
+                  'relative w-full max-w-sm items-center',
+                  'border rounded-md',
+                  `[&>[data-slot='command-input-wrapper']]:border-none`,
+                  `[&>[data-slot='command-input-wrapper']>svg]:hidden`,
+                )"
+              >
                 <ComboboxInput
                   :display-value="(val) => val?.label ?? ''"
                   placeholder="Select language..."
+                  class="pr-5"
                 />
                 <ComboboxTrigger class="absolute end-0 inset-y-0 flex items-center justify-center px-3">
-                  <Icon icon="lucide:chevron-down" class="size-4 text-muted-foreground" />
+                  <Icon
+                    icon="lucide:chevron-down"
+                    :class="cn(
+                      'text-muted-foreground',
+                      'transition-transform duration-200',
+                      open && 'rotate-180',
+                    )"
+                  />
                 </ComboboxTrigger>
               </div>
             </ComboboxAnchor>
@@ -91,7 +106,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                 {{ language.label }}
 
                 <ComboboxItemIndicator>
-                  <Icon icon="lucide:check" class="ml-auto size-4 text-muted-foreground" />
+                  <Icon icon="lucide:check" class="text-muted-foreground" />
                 </ComboboxItemIndicator>
               </ComboboxItem>
             </ComboboxGroup>

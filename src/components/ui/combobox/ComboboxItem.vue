@@ -5,7 +5,10 @@ import { cn } from '@/lib/utils'
 import { ComboboxItem, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<ComboboxItemProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<ComboboxItemProps & {
+  class?: HTMLAttributes['class']
+}>()
+
 const emits = defineEmits<ComboboxItemEmits>()
 
 const delegatedProps = computed(() => {
@@ -21,14 +24,15 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <ComboboxItem
     data-slot="combobox-item"
     v-bind="forwarded"
-    :class="cn([
-      'relative flex items-center justify-between gap-2 rounded-sm px-2 py-1.5',
-      'cursor-default text-sm outline-none select-none',
-      'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+    :class="cn(
+      'relative flex items-center gap-2 px-2 py-1.5',
+      'cursor-default rounded-sm outline-hidden',
+      'text-sm select-none',
+      'data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50',
       'data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground',
-      '[&_svg]:size-4 [&_svg]:shrink-0',
+      `[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground`,
       props.class,
-    ])"
+    )"
   >
     <slot />
   </ComboboxItem>

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { ComboboxAnchorProps } from 'reka-ui'
+import type { ComboboxViewportProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
-import { ComboboxAnchor, useForwardProps } from 'reka-ui'
+import { ComboboxViewport, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<ComboboxAnchorProps & {
+const props = defineProps<ComboboxViewportProps & {
   class?: HTMLAttributes['class']
 }>()
 
@@ -19,11 +19,14 @@ const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <ComboboxAnchor
-    data-slot="combobox-anchor"
+  <ComboboxViewport
+    data-slot="combobox-viewport"
     v-bind="forwarded"
-    :class="cn('w-[200px]', props.class)"
+    :class="cn(
+      'max-h-[300px] scroll-py-1 overflow-x-hidden overflow-y-auto',
+      props.class,
+    )"
   >
     <slot />
-  </ComboboxAnchor>
+  </ComboboxViewport>
 </template>

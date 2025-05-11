@@ -2,8 +2,13 @@
 import type { ComboboxInputEmits, ComboboxInputProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
+import { Icon } from '@iconify/vue'
 import { ComboboxInput, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
+
+defineOptions({
+  inheritAttrs: false,
+})
 
 const props = defineProps<ComboboxInputProps & {
   class?: HTMLAttributes['class']
@@ -21,20 +26,25 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-  <ComboboxInput
-    data-slot="combobox-input"
-    v-bind="forwarded"
-    :class="cn([
-      'flex h-8 w-full px-3 py-1',
-      'rounded-md border border-input bg-transparent text-sm',
-      'transition-colors',
-      'file:border-0 file:bg-transparent file:text-sm file:font-medium',
-      'placeholder:text-muted-foreground',
-      'focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none',
-      'disabled:cursor-not-allowed disabled:opacity-50',
-      props.class,
-    ])"
+  <div
+    data-slot="command-input-wrapper"
+    class="flex h-9 items-center gap-2 border-b px-3"
   >
-    <slot />
-  </ComboboxInput>
+    <Icon icon="lucide:search" class="shrink-0 opacity-50" />
+    <ComboboxInput
+      data-slot="command-input"
+      :class="cn(
+        'flex h-10 w-full py-3',
+        'rounded-md bg-transparent outline-hidden',
+        'text-sm',
+        'placeholder:text-muted-foreground',
+        'disabled:cursor-not-allowed disabled:opacity-50',
+        props.class,
+      )"
+
+      v-bind="{ ...forwarded, ...$attrs }"
+    >
+      <slot />
+    </ComboboxInput>
+  </div>
 </template>

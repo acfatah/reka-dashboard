@@ -21,7 +21,7 @@ const selectedStatus: Ref<StatusRecord | null> = ref(null)
     </p>
 
     <Combobox v-model="selectedStatus" by="label">
-      <ComboboxAnchor as-child>
+      <ComboboxAnchor as-child >
         <ComboboxTrigger as-child>
           <Button
             variant="outline"
@@ -39,15 +39,7 @@ const selectedStatus: Ref<StatusRecord | null> = ref(null)
       </ComboboxAnchor>
 
       <ComboboxList align="start">
-        <div class="relative w-full max-w-sm items-center">
-          <ComboboxInput
-            class="pl-9 focus-visible:ring-0 border-0 border-b rounded-none h-10"
-            placeholder="Change status..."
-          />
-          <span class="absolute start-0 inset-y-0 flex items-center justify-center px-3">
-            <Icon icon="lucide:search" class="text-muted-foreground" width="16" height="16" />
-          </span>
-        </div>
+        <ComboboxInput placeholder="Change status..." />
 
         <ComboboxEmpty>
           No status found.

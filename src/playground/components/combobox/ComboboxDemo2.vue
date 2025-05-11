@@ -55,15 +55,7 @@ const selectedUser = ref<UserRecord | null>(null)
     </ComboboxAnchor>
 
     <ComboboxList align="start">
-      <div class="relative w-full max-w-sm items-center">
-        <ComboboxInput
-          class="h-10 rounded-none border-0 border-b pl-9 focus-visible:ring-0"
-          placeholder="Search user..."
-        />
-        <span class="absolute start-0 inset-y-0 flex items-center justify-center px-3">
-          <Icon icon="lucide:search" class="size-4 text-muted-foreground" />
-        </span>
-      </div>
+      <ComboboxInput placeholder="Search user..." />
 
       <ComboboxEmpty>
         No user found.
@@ -87,7 +79,7 @@ const selectedUser = ref<UserRecord | null>(null)
           </div>
 
           <ComboboxItemIndicator>
-            <Icon icon="lucide:check" class="ml-auto size-4" />
+            <Icon icon="lucide:check" />
           </ComboboxItemIndicator>
         </ComboboxItem>
       </ComboboxGroup>

@@ -23,22 +23,14 @@ const selectedFramework = ref<FrameworkRecord | null>(null)
           {{ (selectedFramework as FrameworkRecord)?.label ?? 'Select framework' }}
           <Icon
             icon="lucide:chevrons-up-down"
-            class="ml-2 size-4 shrink-0 opacity-50"
+            class="opacity-50"
           />
         </Button>
       </ComboboxTrigger>
     </ComboboxAnchor>
 
     <ComboboxList>
-      <div class="relative w-full max-w-sm items-center">
-        <ComboboxInput
-          class="pl-9 focus-visible:ring-0 border-0 border-b rounded-none h-10"
-          placeholder="Search framework..."
-        />
-        <span class="absolute start-0 inset-y-0 flex items-center justify-center px-3">
-          <Icon icon="lucide:search" class="text-muted-foreground" width="16" height="16" />
-        </span>
-      </div>
+      <ComboboxInput placeholder="Search framework..." />
 
       <ComboboxEmpty>
         No framework found.
@@ -53,7 +45,7 @@ const selectedFramework = ref<FrameworkRecord | null>(null)
           {{ framework.label }}
 
           <ComboboxItemIndicator>
-            <Icon icon="lucide:check" class="ml-auto" width="16" height="16" />
+            <Icon icon="lucide:check" />
           </ComboboxItemIndicator>
         </ComboboxItem>
       </ComboboxGroup>
