@@ -12,7 +12,7 @@
           This is a dialog with scrollable content.
         </DialogDescription>
       </DialogHeader>
-      <div class="-mx-6 grid gap-2 overflow-y-auto px-6 text-sm">
+      <div class="-mx-6 grid gap-2 overflow-y-auto pl-6 pr-4 text-sm">
         <h4 class="mb-4 text-lg leading-none font-medium">
           Lorem Ipsum
         </h4>

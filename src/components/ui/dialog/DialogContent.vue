@@ -6,13 +6,16 @@ import { Icon } from '@iconify/vue'
 import {
   DialogClose,
   DialogContent,
-  DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
 } from 'reka-ui'
 import { computed } from 'vue'
+import DialogOverlay from './DialogOverlay.vue'
 
-const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<DialogContentProps & {
+  class?: HTMLAttributes['class']
+}>()
+
 const emits = defineEmits<DialogContentEmits>()
 
 const delegatedProps = computed(() => {
@@ -26,14 +29,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 <template>
   <DialogPortal>
-    <DialogOverlay
-      data-slot="dialog-overlay"
-      :class="cn(
-        'fixed inset-0 z-50 bg-black/80',
-        'data-[state=closed]:animate-out data-[state=closed]:fade-out-0',
-        'data-[state=open]:animate-in data-[state=open]:fade-in-0',
-      )"
-    />
+    <DialogOverlay />
     <DialogContent
       data-slot="dialog-content"
       v-bind="forwarded"
@@ -52,13 +48,13 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       <DialogClose
         data-slot="dialog-close"
         :class="cn(
-          'absolute top-3 right-4',
-          'rounded-sm opacity-70 ring-offset-background',
-          'focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-hidden',
+          'absolute top-4 right-4',
+          'rounded-xs opacity-70 ring-offset-background',
           'transition-opacity hover:opacity-100',
+          'focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-hidden',
           'disabled:pointer-events-none',
           'data-[state=open]:bg-accent data-[state=open]:text-muted-foreground',
-          '[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=\\\'size-\\\'])]:size-4',
+          `[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4`,
         )"
       >
         <Icon icon="lucide:x" />
