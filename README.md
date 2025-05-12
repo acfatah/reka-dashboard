@@ -2,12 +2,12 @@
 
 Build front-end single page application (SPA) in minutes with `TypeScript`, `Vue` and `Bun`.
 
-<p>
+<p class="flex gap-1">
   <a href="https://github.com/acfatah/reka-dashboard/commits/main">
     <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/acfatah/reka-dashboard?style=flat-square">
   </a>
   <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/acfatah/reka-dashboard?display_timestamp=committer&style=flat-square">
-  <img alt="GitHub forks" src="https://img.shields.io/github/forks/acfatah/reka-dashboard?style=flat">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/acfatah/reka-dashboard?style=flat-square">
 </p>
 
 > [!IMPORTANT]
