@@ -2,14 +2,17 @@
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 
-const props = defineProps<{ class?: HTMLAttributes['class'] }>()
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
   <span
     data-slot="context-menu-shortcut"
     :class="cn(
-      'ml-auto text-xs tracking-widest text-muted-foreground',
+      'ml-auto',
+      'text-xs tracking-widest text-muted-foreground',
       props.class,
     )"
   >

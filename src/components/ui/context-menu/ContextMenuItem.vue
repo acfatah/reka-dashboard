@@ -2,19 +2,19 @@
 import type { ContextMenuItemEmits, ContextMenuItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
-import {
-  ContextMenuItem,
-  useForwardPropsEmits,
-} from 'reka-ui'
+import { ContextMenuItem, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
 import type { ContextMenuItemVariants } from '.'
 import { contextMenuItemVariants } from '.'
 
-const props = defineProps<ContextMenuItemProps & {
+const props = withDefaults(defineProps<ContextMenuItemProps & {
   variant?: ContextMenuItemVariants['variant']
   class?: HTMLAttributes['class']
   inset?: boolean
-}>()
+}>(), {
+  variant: 'default',
+})
+
 const emits = defineEmits<ContextMenuItemEmits>()
 
 const delegatedProps = computed(() => {
@@ -29,10 +29,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <ContextMenuItem
     data-slot="context-menu-item"
+    :data-inset="inset ? '' : undefined"
+    :data-variant="variant"
     v-bind="forwarded"
     :class="cn(
       contextMenuItemVariants({ variant }),
-      inset && 'pl-8',
       props.class,
     )"
   >

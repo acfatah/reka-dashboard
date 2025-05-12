@@ -23,14 +23,15 @@ export const contextMenuItemVariants = cva(
     'rounded-sm outline-hidden',
     'text-sm select-none',
     'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
-    '[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=\\\'size-\\\'])]:size-4 [&_svg:not([class*=\\\'text-\\\'])]:text-muted-foreground',
+    'data-[inset]:pl-8',
+    `[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground data-[variant=destructive]:*:[svg]:!text-destructive-foreground`,
   ],
 
   {
     variants: {
       variant: {
         default: 'focus:bg-accent focus:text-accent-foreground',
-        destructive: 'text-destructive focus:bg-destructive/10 focus:bg-destructive/20 focus:text-destructive *:[svg]:!text-destructive',
+        destructive: 'text-destructive-foreground focus:bg-destructive/10 focus:text-destructive-foreground dark:focus:bg-destructive/40',
       },
     },
 
