@@ -9,7 +9,7 @@ export default create({
   base: 'light',
 
   // Typography
-  fontBase: 'Inter, ui-sans-serif, system-ui, sans-serif, "Open Sans"',
+  fontBase: '"Geist Variable", ui-sans-serif, system-ui, sans-serif, "Open Sans"',
   fontCode: 'monospace',
 
   brandTitle: name,
