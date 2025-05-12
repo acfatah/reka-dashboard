@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { ComboboxSeparatorProps } from 'reka-ui'
+import type { SeparatorProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
-import { ComboboxSeparator } from 'reka-ui'
+import { Separator } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<ComboboxSeparatorProps & {
+const props = defineProps<SeparatorProps & {
   class?: HTMLAttributes['class']
 }>()
 
@@ -17,11 +17,11 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <ComboboxSeparator
+  <Separator
     data-slot="command-separator"
     v-bind="delegatedProps"
     :class="cn('-mx-1 h-px bg-border', props.class)"
   >
     <slot />
-  </ComboboxSeparator>
+  </Separator>
 </template>

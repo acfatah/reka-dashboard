@@ -4,33 +4,33 @@
     <CommandList>
       <CommandEmpty>No results found.</CommandEmpty>
       <CommandGroup heading="Suggestions">
-        <CommandItem value="Calendar">
-          <Icon icon="radix-icons:calendar" class="mr-2 size-4" />
+        <CommandItem value="calendar">
+          <Icon icon="lucide:calendar" />
           <span>Calendar</span>
         </CommandItem>
-        <CommandItem value="Search Emoji">
-          <Icon icon="radix-icons:face" class="mr-2 size-4" />
+        <CommandItem value="search">
+          <Icon icon="lucide:search" />
           <span>Search Emoji</span>
         </CommandItem>
-        <CommandItem value="Launch">
-          <Icon icon="radix-icons:rocket" class="mr-2 size-4" />
-          <span>Launch</span>
+        <CommandItem disabled value="calculator">
+          <Icon icon="lucide:calculator" />
+          <span>Calculator</span>
         </CommandItem>
       </CommandGroup>
       <CommandSeparator />
       <CommandGroup heading="Settings">
-        <CommandItem value="Profile">
-          <Icon icon="radix-icons:person" class="mr-2 size-4" />
+        <CommandItem value="profile">
+          <Icon icon="lucide:user" />
           <span>Profile</span>
           <CommandShortcut>⌘P</CommandShortcut>
         </CommandItem>
-        <CommandItem value="Mail">
-          <Icon icon="radix-icons:envelope-closed" class="mr-2 size-4" />
-          <span>Mail</span>
+        <CommandItem value="billing">
+          <Icon icon="lucide:credit-card" />
+          <span>Billing</span>
           <CommandShortcut>⌘B</CommandShortcut>
         </CommandItem>
-        <CommandItem value="Settings">
-          <Icon icon="radix-icons:gear" class="mr-2 size-4" />
+        <CommandItem value="settings">
+          <Icon icon="lucide:settings" />
           <span>Settings</span>
           <CommandShortcut>⌘S</CommandShortcut>
         </CommandItem>

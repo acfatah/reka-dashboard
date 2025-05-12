@@ -1,18 +1,13 @@
 <script setup lang="ts">
-import type { ComboboxContentEmits, ComboboxContentProps } from 'reka-ui'
+import type { ListboxContentProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
-import { ComboboxContent, useForwardPropsEmits } from 'reka-ui'
+import { ListboxContent, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = withDefaults(defineProps<ComboboxContentProps & {
+const props = defineProps<ListboxContentProps & {
   class?: HTMLAttributes['class']
-  dismissable?: boolean
-}>(), {
-  dismissable: false,
-})
-
-const emits = defineEmits<ComboboxContentEmits>()
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -20,11 +15,11 @@ const delegatedProps = computed(() => {
   return delegated
 })
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <ComboboxContent
+  <ListboxContent
     data-slot="command-list"
     v-bind="forwarded"
     :class="cn(
@@ -35,5 +30,5 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     <div role="presentation">
       <slot />
     </div>
-  </ComboboxContent>
+  </ListboxContent>
 </template>
