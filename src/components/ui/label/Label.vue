@@ -3,7 +3,7 @@ import type { LabelProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { Label, useForwardProps } from 'reka-ui'
-import { computed, inject } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps<LabelProps & {
   class?: HTMLAttributes['class']
@@ -17,17 +17,18 @@ const delegatedProps = computed(() => {
 })
 
 const forwardedProps = useForwardProps(delegatedProps)
-const disabled = inject('disabled', false)
 </script>
 
 <template>
   <Label
+    data-slot="label"
+    :data-disabled="disabled ? '' : undefined"
     v-bind="forwardedProps"
     :class="cn(
-      'text-sm font-medium leading-none',
-      'peer-disabled:cursor-not-allowed peer-disabled:opacity-50 disabled:cursor-not-allowed',
+      'flex items-center gap-2',
+      'text-sm leading-none font-medium select-none',
+      'group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50',
       props.class,
-      { 'opacity-50 cursor-not-allowed': props.disabled || disabled },
     )"
   >
     <slot />
