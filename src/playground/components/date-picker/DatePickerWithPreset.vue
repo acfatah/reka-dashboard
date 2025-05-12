@@ -33,30 +33,32 @@ const value = ref<DateValue>()
       <Button
         variant="outline"
         :class="cn(
-          'w-[280px] justify-start text-left font-normal',
+          'w-[200px] justify-start text-left font-normal',
           !value && 'text-muted-foreground',
         )"
       >
-        <Icon icon="lucide:calendar" class="mr-2 size-4" />
+        <Icon icon="lucide:calendar" />
         {{ value ? df.format(value.toDate(getLocalTimeZone())) : "Pick a date" }}
       </Button>
     </PopoverTrigger>
-    <PopoverContent class="flex w-auto flex-col gap-y-2 p-2">
-      <Select
-        @update:model-value="(v) => {
-          if (!v) return;
-          value = today(getLocalTimeZone()).add({ days: Number(v) });
-        }"
-      >
-        <SelectTrigger>
-          <SelectValue placeholder="Select" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem v-for="item in items" :key="item.value" :value="item.value.toString()">
-            {{ item.label }}
-          </SelectItem>
-        </SelectContent>
-      </Select>
+    <PopoverContent align="start" class="flex w-auto flex-col p-0">
+      <div class="p-2 pb-0">
+        <Select
+          @update:model-value="(v) => {
+            if (!v) return;
+            value = today(getLocalTimeZone()).add({ days: Number(v) });
+          }"
+        >
+          <SelectTrigger class="w-full">
+            <SelectValue placeholder="Select" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem v-for="item in items" :key="item.value" :value="item.value.toString()">
+              {{ item.label }}
+            </SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
       <Calendar v-model="value" />
     </PopoverContent>
   </Popover>
