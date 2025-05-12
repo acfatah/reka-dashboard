@@ -1,3 +1,4 @@
+import 'non.geist'
 import '@/styles/global.css'
 import '@/styles/nprogress.css'
 
