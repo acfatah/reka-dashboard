@@ -2,10 +2,17 @@
 import type { RadioGroupItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
-import { RadioGroupIndicator, RadioGroupItem, useForwardProps } from 'reka-ui'
+import { Icon } from '@iconify/vue'
+import {
+  RadioGroupIndicator,
+  RadioGroupItem,
+  useForwardProps,
+} from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<RadioGroupItemProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<RadioGroupItemProps & {
+  class?: HTMLAttributes['class']
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -18,20 +25,30 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
   <RadioGroupItem
+    data-slot="radio-group-item"
     v-bind="forwardedProps"
-    :class="cn(
-      'aspect-square h-4 w-4 rounded-full border border-primary text-primary shadow',
-      'focus:outline-none focus-visible:ring-1 focus-visible:ring-ring',
-      'hover:cursor-pointer',
-      'disabled:cursor-not-allowed disabled:opacity-50',
-      props.class,
-    )"
+    :class="
+      cn(
+        'peer aspect-square size-4 shrink-0',
+        'rounded-full border border-input outline-none',
+        'text-primary shadow-xs',
+        'transition-[color,box-shadow]',
+        'focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50',
+        'disabled:cursor-not-allowed disabled:opacity-50',
+        'aria-invalid:border-destructive aria-invalid:ring-destructive/20',
+        'dark:bg-input/30 dark:aria-invalid:ring-destructive/40',
+        props.class,
+      )
+    "
   >
     <RadioGroupIndicator
-      :class="cn(
-        'relative flex h-full w-full items-center justify-center text-primary',
-        'after:block after:h-2 after:w-2 after:rounded-[50%] after:bg-foreground after:content-[\\\'\\\'] dark:after:bg-foreground',
-      )"
-    />
+      data-slot="radio-group-indicator"
+      class="relative flex items-center justify-center"
+    >
+      <Icon
+        icon="lucide:circle"
+        class="absolute top-1/2 left-1/2 size-2.5 -translate-x-1/2 -translate-y-1/2 [&>circle]:fill-current"
+      />
+    </RadioGroupIndicator>
   </RadioGroupItem>
 </template>

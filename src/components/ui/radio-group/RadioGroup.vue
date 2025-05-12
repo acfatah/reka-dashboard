@@ -3,7 +3,7 @@ import type { RadioGroupRootEmits, RadioGroupRootProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { RadioGroupRoot, useForwardPropsEmits } from 'reka-ui'
-import { computed, provide } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps<RadioGroupRootProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<RadioGroupRootEmits>()
@@ -14,14 +14,13 @@ const delegatedProps = computed(() => {
   return delegated
 })
 
-provide('disabled', computed(() => props.disabled))
-
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
   <RadioGroupRoot
-    :class="cn('flex flex-col space-y-2', props.class)"
+    data-slot="radio-group"
+    :class="cn('grid gap-3', props.class)"
     v-bind="forwarded"
   >
     <slot />
