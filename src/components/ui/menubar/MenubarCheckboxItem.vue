@@ -3,39 +3,39 @@ import type { MenubarCheckboxItemEmits, MenubarCheckboxItemProps } from 'reka-ui
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
+import { reactiveOmit } from '@vueuse/core'
 import {
   MenubarCheckboxItem,
   MenubarItemIndicator,
   useForwardPropsEmits,
 } from 'reka-ui'
-import { computed } from 'vue'
 
-const props = defineProps<MenubarCheckboxItemProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<MenubarCheckboxItemProps & {
+  class?: HTMLAttributes['class']
+}>()
+
 const emits = defineEmits<MenubarCheckboxItemEmits>()
-
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
-
+const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
   <MenubarCheckboxItem
+    data-slot="menubar-checkbox-item"
     v-bind="forwarded"
     :class="cn(
-      'relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 outline-none',
+      'relative flex cursor-default items-center gap-2 py-1.5 pr-2 pl-8',
+      'rounded-xs outline-hidden',
       'text-sm select-none',
       'focus:bg-accent focus:text-accent-foreground',
       'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+      `[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4`,
       props.class,
     )"
   >
-    <span class="absolute left-2 flex size-3.5 items-center justify-center">
+    <span class="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
       <MenubarItemIndicator>
-        <Icon icon="lucide:check" width="16" height="16" />
+        <Icon icon="lucide:check" />
       </MenubarItemIndicator>
     </span>
     <slot />
