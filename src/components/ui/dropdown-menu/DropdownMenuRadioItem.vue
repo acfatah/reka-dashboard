@@ -3,25 +3,19 @@ import type { DropdownMenuRadioItemEmits, DropdownMenuRadioItemProps } from 'rek
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
+import { reactiveOmit } from '@vueuse/core'
 import {
   DropdownMenuItemIndicator,
   DropdownMenuRadioItem,
   useForwardPropsEmits,
 } from 'reka-ui'
-import { computed } from 'vue'
 
 const props = defineProps<DropdownMenuRadioItemProps & {
   class?: HTMLAttributes['class']
 }>()
 
 const emits = defineEmits<DropdownMenuRadioItemEmits>()
-
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
-
+const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
@@ -35,18 +29,15 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       'text-sm select-none',
       'focus:bg-accent focus:text-accent-foreground',
       'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
-      '[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=\\\'size-\\\'])]:size-4',
-
+      `[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4`,
       props.class,
     )"
   >
-    <span class="absolute left-2 flex size-3.5 items-center justify-center">
-      <DropdownMenuItemIndicator data-slot="dropdown-menu-radio-item-indicator">
+    <span class="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
+      <DropdownMenuItemIndicator>
         <Icon
-          icon="radix-icons:dot-filled"
-          class="fill-current"
-          width="24"
-          height="24"
+          icon="lucide:circle"
+          class="size-2 [&>circle]:fill-current"
         />
       </DropdownMenuItemIndicator>
     </span>

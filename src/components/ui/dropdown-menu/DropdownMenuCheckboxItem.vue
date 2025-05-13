@@ -33,15 +33,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       'relative flex cursor-default items-center gap-2 py-1.5 pr-2 pl-8',
       'rounded-sm outline-hidden',
       'text-sm select-none',
-      'focus:bg-accent focus:text-accent-foreground ',
+      'focus:bg-accent focus:text-accent-foreground',
       'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
-      '[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=\\\'size-\\\'])]:size-4',
-
+      `[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4`,
       props.class,
     )"
   >
-    <span class="absolute left-2 flex size-3.5 items-center justify-center">
-      <DropdownMenuItemIndicator data-slot="dropdown-menu-checkbox-item-indicator">
+    <span class="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
+      <DropdownMenuItemIndicator>
         <Icon icon="lucide:check" />
       </DropdownMenuItemIndicator>
     </span>
