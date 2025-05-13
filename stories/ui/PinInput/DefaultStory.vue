@@ -36,7 +36,7 @@ const forwarded = useForwardProps(props)
     @complete="handleComplete"
   >
     <PinInputGroup>
-      <PinInputInput
+      <PinInputSlot
         v-for="(id, index) in 5"
         :key="id"
         :index="index"

@@ -24,7 +24,7 @@ function handleComplete(inputs: string[]) {
   >
     <PinInputGroup class="gap-1">
       <template v-for="(id, index) in 5" :key="id">
-        <PinInputInput
+        <PinInputSlot
           class="rounded-md border"
           :index="index"
         />

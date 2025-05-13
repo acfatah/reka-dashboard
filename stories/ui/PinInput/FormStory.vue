@@ -8,7 +8,7 @@ type SubmissionRecord = z.infer<typeof schema>
 const schema = z.object({
   pin: z
     .array(z.coerce.string())
-    .length(5, { message: 'Invalid input' })
+    .length(5, { message: 'PIN must be exactly 5 digits' })
     .transform(value => value.join('')),
 })
 
@@ -56,7 +56,7 @@ const storyArgs = useAttrs()
             }"
           >
             <PinInputGroup>
-              <PinInputInput
+              <PinInputSlot
                 v-for="(id, index) in 5"
                 :key="id"
                 :index="index"

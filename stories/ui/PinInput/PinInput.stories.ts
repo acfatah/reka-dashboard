@@ -2,8 +2,8 @@ import type { StoryObj } from '@storybook/vue3'
 import {
   PinInput,
   PinInputGroup,
-  PinInputInput,
   PinInputSeparator,
+  PinInputSlot,
 } from '@/components/ui/pin-input'
 import { Toaster } from '@/components/ui/toast'
 import { html } from 'common-tags'
@@ -26,8 +26,8 @@ export default {
   subcomponents: {
     PinInput,
     PinInputGroup,
-    PinInputInput,
     PinInputSeparator,
+    PinInputSlot,
   },
   tags: ['autodocs'],
 
