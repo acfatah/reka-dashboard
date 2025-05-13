@@ -2,24 +2,20 @@
 import type { NavigationMenuIndicatorProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
+import { reactiveOmit } from '@vueuse/core'
 import { NavigationMenuIndicator, useForwardProps } from 'reka-ui'
-import { computed } from 'vue'
 
 const props = defineProps<NavigationMenuIndicatorProps & {
   class?: HTMLAttributes['class']
 }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
-
+const delegatedProps = reactiveOmit(props, 'class')
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <NavigationMenuIndicator
+    data-slot="navigation-menu-indicator"
     v-bind="forwardedProps"
     :class="cn(
       'top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden',
@@ -28,6 +24,6 @@ const forwardedProps = useForwardProps(delegatedProps)
       props.class,
     )"
   >
-    <div class="relative top-[60%] size-2 rotate-45 rounded-tl-sm bg-border shadow-md" />
+    <div class="bg-border relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm shadow-md" />
   </NavigationMenuIndicator>
 </template>
