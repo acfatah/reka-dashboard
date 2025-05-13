@@ -3,24 +3,25 @@ import type { PaginationEllipsisProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
+import { reactiveOmit } from '@vueuse/core'
 import { PaginationEllipsis } from 'reka-ui'
-import { computed } from 'vue'
 
 const props = defineProps<PaginationEllipsisProps & {
   class?: HTMLAttributes['class']
 }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 </script>
 
 <template>
-  <PaginationEllipsis v-bind="delegatedProps" :class="cn('w-9 h-9 flex items-center justify-center', props.class)">
+  <PaginationEllipsis
+    data-slot="pagination-ellipsis"
+    v-bind="delegatedProps"
+    :class="cn('flex size-9 items-center justify-center', props.class)"
+  >
     <slot>
-      <Icon icon="lucide:ellipsis" width="16" height="16" />
+      <Icon icon="lucide:more-horizontal" class="size-4" />
+      <span class="sr-only">More pages</span>
     </slot>
   </PaginationEllipsis>
 </template>

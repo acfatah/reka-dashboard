@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import type { ButtonVariants } from '@/components/ui/button'
-import type { PaginationFirstProps } from 'reka-ui'
+import type { PaginationPrevProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 import { reactiveOmit } from '@vueuse/core'
-import { PaginationFirst, useForwardProps } from 'reka-ui'
+import { PaginationPrev, useForwardProps } from 'reka-ui'
 
-const props = withDefaults(defineProps<PaginationFirstProps & {
+const props = withDefaults(defineProps<PaginationPrevProps & {
   size?: ButtonVariants['size']
   class?: HTMLAttributes['class']
 }>(), {
@@ -20,8 +20,8 @@ const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <PaginationFirst
-    data-slot="pagination-first"
+  <PaginationPrev
+    data-slot="pagination-previous"
     :class="cn(
       buttonVariants({
         variant: 'ghost',
@@ -34,7 +34,7 @@ const forwarded = useForwardProps(delegatedProps)
   >
     <slot>
       <Icon icon="lucide:chevron-left" />
-      <span class="hidden sm:block">First</span>
+      <span class="hidden sm:block">Previous</span>
     </slot>
-  </PaginationFirst>
+  </PaginationPrev>
 </template>
