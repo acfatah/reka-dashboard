@@ -1,8 +1,10 @@
 import type { StoryObj } from '@storybook/vue3'
 import { Separator } from '@/components/ui/separator'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import SeparatorDefaultStory from './SeparatorDefault.vue'
+import SeparatorDefaultSource from './SeparatorDefault.vue?raw'
+import VerticalWithLabelStory from './VerticalWithLabel.vue'
+import VerticalWithLabelSource from './VerticalWithLabel.vue?raw'
 
 /**
  * Visually or semantically separates content.
@@ -19,20 +21,45 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: SeparatorDefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { SeparatorDefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultStory v-bind="args" />
+      <SeparatorDefaultStory v-bind="args" />
+    `,
+  }),
+}
+
+/**
+ * Note that the height of the parent element should have a definite value to make the vertical separator visible.
+ */
+export const VerticalWithLabel: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: VerticalWithLabelSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { VerticalWithLabelStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <VerticalWithLabelStory v-bind="args" />
     `,
   }),
 }
