@@ -11,7 +11,9 @@ import {
 } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<SelectItemProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<SelectItemProps & {
+  class?: HTMLAttributes['class']
+}>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -24,17 +26,24 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
   <SelectItem
+    data-slot="select-item"
     v-bind="forwardedProps"
-    :class="cn(
-      'relative flex w-full cursor-default items-center rounded-sm py-1.5 pr-8 pl-2 text-sm outline-none select-none',
-      'focus:bg-accent focus:text-accent-foreground',
-      'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
-      props.class,
-    )"
+    :class="
+      cn(
+        'relative flex w-full items-center gap-2 py-1.5 pr-8 pl-2',
+        'cursor-default rounded-sm outline-hidden',
+        'text-sm select-none',
+        'focus:bg-accent focus:text-accent-foreground',
+        'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        `[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground`,
+        `*:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2`,
+        props.class,
+      )
+    "
   >
     <span class="absolute right-2 flex size-3.5 items-center justify-center">
       <SelectItemIndicator>
-        <Icon icon="lucide:check" width="16" height="16" />
+        <Icon icon="lucide:check" />
       </SelectItemIndicator>
     </span>
 
