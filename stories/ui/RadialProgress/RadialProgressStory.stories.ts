@@ -3,23 +3,18 @@ import { RadialProgress } from '@/components/ui/progress'
 
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
+import RadialProgressV1Story from './RadialProgressV1Story.vue'
+import RadialProgressV1Source from './RadialProgressV1Story.vue?raw'
 import VisDonutStory from './VisDonutStory.vue'
 import VisDonutSource from './VisDonutStory.vue?raw'
 
-/**
- * Radial progress implementation using CSS
- *
- * Inspired by: https://medium.com/@josephwong2004/how-to-do-x-in-css-radial-progress-chart-317f10994c08<br>
- * Codepen: https://codepen.io/josephwong2004/pen/eYpOKNL?editors=1100
- */
 export default {
   title: 'Components/Feedback/Radial Progress',
   component: RadialProgress,
   tags: ['autodocs'],
 
   args: {
-    size: 80,
-    thickness: 8,
+    size: 128,
   },
 
   argTypes: {
@@ -55,6 +50,35 @@ export const Default: StoryObj = {
   }),
 }
 
+/**
+ * Radial progress implementation using CSS.
+ *
+ * Inspired by: https://medium.com/@josephwong2004/how-to-do-x-in-css-radial-progress-chart-317f10994c08<br>
+ * Codepen: https://codepen.io/josephwong2004/pen/eYpOKNL?editors=1100
+ */
+export const RadialProgressV1: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: RadialProgressV1Source,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { RadialProgressV1Story },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <RadialProgressV1Story v-bind="args" />
+    `,
+  }),
+}
+
+RadialProgressV1.name = 'Radial Progress V1'
 /**
  * Radial progress implementation using VisDonut.
  *

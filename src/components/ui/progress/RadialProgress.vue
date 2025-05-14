@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { cn } from '@/lib/utils'
+import { ProgressIndicator, ProgressRoot } from 'reka-ui'
 import { computed } from 'vue'
 
 const props = withDefaults(defineProps<{
@@ -8,73 +9,66 @@ const props = withDefaults(defineProps<{
   thickness?: number
 }>(), {
   modelValue: 0,
-  size: 75,
+  /** Default to 8rem */
+  size: 128,
   thickness: 8,
 })
 
-const front = ref<SVGElement | null>(null)
-const center = computed(() => props.size / 2)
-const radius = computed(() => props.size / 2 - props.thickness)
-const dashArray = computed(() => 2 * Math.PI * radius.value)
-const filledLength = computed(() => dashArray.value * (props.modelValue / 100))
-const unfilledLength = computed(() => dashArray.value - filledLength.value)
+const RADIUS = 45
+const circumference = 2 * Math.PI * RADIUS
+
+const dashOffset = computed(() =>
+  (props.modelValue / 100) * circumference,
+)
+
+const trackPath = computed(() => {
+  return `
+          M 50 50
+          m 0 -${RADIUS}
+          a ${RADIUS} ${RADIUS} 0 1 1 0 ${RADIUS * 2}
+          a ${RADIUS} ${RADIUS} 0 1 1 0 -${RADIUS * 2}
+          `
+})
 </script>
 
 <template>
-  <div class="relative flex justify-center">
-    <svg
-      :width="props.size"
-      :height="props.size"
-      :viewBox="`0 0 ${props.size} ${props.size}`"
+  <div class="relative" :style="{ width: `${size}px`, height: `${size}px` }">
+    <ProgressRoot
+      :model-value="modelValue"
+      as-child
     >
-      <g class="rotate-180 origin-center">
-        <!-- progress-background -->
-        <circle
-          v-if="props.modelValue < 100"
-          :cx="center"
-          :cy="center"
-          :r="radius"
-          class="progress-background stroke-primary/20"
-          fill="none"
+      <svg
+        class="w-full h-full"
+        viewBox="0 0 100 100"
+      >
+        <!-- Background circle -->
+        <path
+          :d="trackPath"
+          class="fill-none stroke-muted stroke-[6px]"
         />
-        <!-- progress-indicator -->
-        <g class="duration-300 ease-in animate-in fade-in">
-          <circle
-            v-if="props.modelValue > 0"
-            ref="front"
-            :cx="center"
-            :cy="center"
-            :r="radius"
+        <!-- Progress circle -->
+        <ProgressIndicator as-child>
+          <path
+            :d="trackPath"
             :class="cn(
-              'progress-indicator stroke-primary',
-              'fill-foreward duration-300 ease-out animate-in',
+              `fill-none stroke-primary`,
+              'transition-[stroke-dasharray,opacity] duration-700',
+              `data-[value='0']:opacity-0`,
             )"
-            fill="none"
+            :style="{
+              'stroke-linecap': 'round',
+              'stroke-dasharray': `${dashOffset}px, ${circumference}px`,
+              'stroke-dashoffset': '0px',
+              'stroke-width': `${thickness}px`,
+            }"
           />
-        </g>
-      </g>
-      <foreignObject :width="props.size" :height="props.size">
-        <div
-          xmlns="http://www.w3.org/1999/xhtml"
-          class="flex h-full items-center justify-center"
-        >
-          <slot>
-            <Label>{{ props.modelValue }}%</Label>
-          </slot>
-        </div>
-      </foreignObject>
-    </svg>
+        </ProgressIndicator>
+      </svg>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <slot v-bind="{ modelValue }">
+          <span class="text-lg font-bold text-foreground">{{ modelValue }}%</span>
+        </slot>
+      </div>
+    </ProgressRoot>
   </div>
 </template>
-
-<style scoped>
-.progress-background {
-  stroke-width: v-bind(thickness);
-}
-
-.progress-indicator {
-  stroke-width: v-bind(thickness);
-  stroke-linecap: round;
-  stroke-dasharray: v-bind(filledLength) v-bind(unfilledLength);
-}
-</style>
