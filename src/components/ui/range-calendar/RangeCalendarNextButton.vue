@@ -22,15 +22,19 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
   <RangeCalendarNext
+    data-slot="range-calendar-next-button"
     :class="cn(
       buttonVariants({ variant: 'outline' }),
-      'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+      'absolute right-1 size-7 p-0',
+      'bg-transparent opacity-50',
+      'hover:opacity-100',
+      '[&>svg]:size-4 [&>svg]:shrink-0',
       props.class,
     )"
     v-bind="forwardedProps"
   >
     <slot>
-      <Icon icon="lucide:chevron-right" width="16" height="16" />
+      <Icon icon="lucide:chevron-right" />
     </slot>
   </RangeCalendarNext>
 </template>
