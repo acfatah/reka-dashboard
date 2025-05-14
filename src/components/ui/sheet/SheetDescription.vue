@@ -2,22 +2,19 @@
 import type { DialogDescriptionProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
+import { reactiveOmit } from '@vueuse/core'
 import { DialogDescription } from 'reka-ui'
-import { computed } from 'vue'
 
 const props = defineProps<DialogDescriptionProps & {
   class?: HTMLAttributes['class']
 }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 </script>
 
 <template>
   <DialogDescription
+    data-slot="sheet-description"
     :class="cn('text-sm text-muted-foreground', props.class)"
     v-bind="delegatedProps"
   >

@@ -3,16 +3,16 @@ import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
+import { reactiveOmit } from '@vueuse/core'
 import {
   DialogClose,
   DialogContent,
-  DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
 } from 'reka-ui'
-import { computed } from 'vue'
 import type { SheetVariants } from '.'
 import { sheetVariants } from '.'
+import SheetOverlay from './SheetOverlay.vue'
 
 interface SheetContentProps extends DialogContentProps {
   class?: HTMLAttributes['class']
@@ -23,28 +23,20 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const props = defineProps<SheetContentProps>()
-const emits = defineEmits<DialogContentEmits>()
-
-const delegatedProps = computed(() => {
-  const { class: _, side, ...delegated } = props
-
-  return delegated
+const props = withDefaults(defineProps<SheetContentProps>(), {
+  side: 'right',
 })
 
+const emits = defineEmits<DialogContentEmits>()
+const delegatedProps = reactiveOmit(props, 'class', 'side')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
   <DialogPortal>
-    <DialogOverlay
-      :class="cn(
-        'fixed inset-0 z-50 bg-black/80',
-        'data-[state=closed]:animate-out data-[state=closed]:fade-out-0',
-        'data-[state=open]:animate-in data-[state=open]:fade-in-0',
-      )"
-    />
+    <SheetOverlay />
     <DialogContent
+      data-slot="sheet-content"
       :class="cn(sheetVariants({ side }), props.class)"
       v-bind="{ ...forwarded, ...$attrs }"
     >
@@ -52,20 +44,17 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
       <DialogClose
         :class="cn(
-          'absolute top-4 right-4 rounded-sm opacity-70 ring-offset-background',
+          'absolute top-4 right-4',
+          'rounded-xs opacity-70 ring-offset-background',
           'transition-opacity',
           'hover:opacity-100',
-          'focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-none',
-          'data-[state=open]:bg-secondary',
+          'focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-hidden',
           'disabled:pointer-events-none',
+          'data-[state=open]:bg-secondary',
         )"
       >
-        <Icon
-          icon="lucide:x"
-          class="hover:cursor-pointer"
-          width="16"
-          height="16"
-        />
+        <Icon icon="lucide:x" />
+        <span class="sr-only">Close</span>
       </DialogClose>
     </DialogContent>
   </DialogPortal>

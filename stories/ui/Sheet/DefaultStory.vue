@@ -12,7 +12,7 @@
           Make changes to your profile here. Click save when you're done.
         </SheetDescription>
       </SheetHeader>
-      <div class="grid gap-4 py-4">
+      <div class="grid gap-4 px-6 py-4">
         <div class="grid grid-cols-4 items-center gap-4">
           <Label for="name" class="text-right">
             Name
