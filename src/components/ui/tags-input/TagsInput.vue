@@ -2,24 +2,23 @@
 import type { TagsInputRootEmits, TagsInputRootProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
+import { reactiveOmit } from '@vueuse/core'
 import { TagsInputRoot, useForwardPropsEmits } from 'reka-ui'
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import { provideTagsInputContext } from '.'
 
-const props = defineProps<TagsInputRootProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<TagsInputRootProps & {
+  class?: HTMLAttributes['class']
+}>()
+
 const emits = defineEmits<TagsInputRootEmits>()
-const focus = ref(false)
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
-
+const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const focused = ref(false)
 
 provideTagsInputContext({
-  focus,
+  focused,
 })
 </script>
 
@@ -27,9 +26,10 @@ provideTagsInputContext({
   <TagsInputRoot
     v-bind="forwarded"
     :class="cn(
-      'flex flex-wrap items-center gap-2 rounded-md border px-3 py-1.5 text-sm',
-      'border-input bg-background',
-      focus && 'ring-1 ring-ring outline-none',
+      'flex flex-wrap items-center gap-2 px-3 py-1.5',
+      'rounded-md border border-input bg-background',
+      'text-sm',
+      focused && 'border-ring ring-[3px] ring-ring/50',
       props.class,
     )"
   >
