@@ -42,6 +42,24 @@ export default {
       },
       description: 'The button variant',
     },
+
+    size: {
+      control: { type: 'select' },
+      options: ['sm', 'md', 'lg'],
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'md' },
+      },
+      description: 'The button size',
+    },
+
+    disabled: {
+      type: 'boolean',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+    },
   },
 }
 

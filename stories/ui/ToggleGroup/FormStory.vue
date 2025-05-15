@@ -28,6 +28,9 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     ),
   })
 }
+
+// TODO: Remove the story args
+const storyArgs = useAttrs()
 </script>
 
 <template>
@@ -41,15 +44,19 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     <FormField v-slot="{ value, handleChange }" name="format">
       <FormItem>
         <FormControl>
-          <ToggleGroup :model-value="value" @update:model-value="handleChange">
+          <ToggleGroup
+            :model-value="value"
+            v-bind="storyArgs"
+            @update:model-value="handleChange"
+          >
             <ToggleGroupItem value="bold" aria-label="Toggle bold">
-              <Icon icon="lucide:bold" class="size-4" />
+              <Icon icon="lucide:bold" />
             </ToggleGroupItem>
             <ToggleGroupItem value="italic" aria-label="Toggle italic">
-              <Icon icon="lucide:italic" class="size-4" />
+              <Icon icon="lucide:italic" />
             </ToggleGroupItem>
             <ToggleGroupItem value="underline" aria-label="Toggle underline">
-              <Icon icon="lucide:underline" class="size-4" />
+              <Icon icon="lucide:underline" />
             </ToggleGroupItem>
           </ToggleGroup>
         </FormControl>
