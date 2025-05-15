@@ -2,8 +2,8 @@
 import type { ToggleEmits, ToggleProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
+import { reactiveOmit } from '@vueuse/core'
 import { Toggle, useForwardPropsEmits } from 'reka-ui'
-import { computed } from 'vue'
 import type { ToggleVariants } from '.'
 import { toggleVariants } from '.'
 
@@ -11,25 +11,21 @@ const props = withDefaults(defineProps<ToggleProps & {
   class?: HTMLAttributes['class']
   variant?: ToggleVariants['variant']
   size?: ToggleVariants['size']
-  disabled?: boolean
 }>(), {
   variant: 'default',
   size: 'md',
+  disabled: false,
 })
 
 const emits = defineEmits<ToggleEmits>()
 
-const delegatedProps = computed(() => {
-  const { class: _, size, variant, ...delegated } = props
-
-  return delegated
-})
-
+const delegatedProps = reactiveOmit(props, 'class', 'size', 'variant')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
   <Toggle
+    data-slot="toggle"
     v-bind="forwarded"
     :class="cn(toggleVariants({ variant, size }), props.class)"
   >

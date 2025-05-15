@@ -34,6 +34,16 @@ export const Default: StoryObj = {
     disabled: false,
   },
 
+  argTypes: {
+    disabled: {
+      type: 'boolean',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+    },
+  },
+
   render: args => ({
     components: { DefaultStory },
 
