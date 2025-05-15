@@ -2,23 +2,24 @@
 import type { TabsListProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
+import { reactiveOmit } from '@vueuse/core'
 import { TabsList } from 'reka-ui'
-import { computed } from 'vue'
 
-const props = defineProps<TabsListProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<TabsListProps & {
+  class?: HTMLAttributes['class']
+}>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 </script>
 
 <template>
   <TabsList
+    data-slot="tabs-list"
     v-bind="delegatedProps"
     :class="cn(
-      'inline-flex items-center justify-center rounded-lg bg-muted p-1 text-muted-foreground',
+      'inline-flex h-9 w-fit items-center justify-center p-[3px]',
+      'rounded-lg bg-muted',
+      'text-muted-foreground',
       props.class,
     )"
   >
