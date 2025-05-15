@@ -2,11 +2,16 @@
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 
-const props = defineProps<{ class?: HTMLAttributes['class'] }>()
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
-  <tbody :class="cn('[&_tr:last-child]:border-0', props.class)">
+  <tbody
+    data-slot="table-body"
+    :class="cn('[&_tr:last-child]:border-0', props.class)"
+  >
     <slot />
   </tbody>
 </template>
