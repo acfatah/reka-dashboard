@@ -2,19 +2,14 @@
 import type { StepperSeparatorProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
+import { reactiveOmit } from '@vueuse/core'
 import { StepperSeparator, useForwardProps } from 'reka-ui'
-import { computed } from 'vue'
 
 const props = defineProps<StepperSeparatorProps & {
   class?: HTMLAttributes['class']
 }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
-
+const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardProps(delegatedProps)
 </script>
 
@@ -22,9 +17,9 @@ const forwarded = useForwardProps(delegatedProps)
   <StepperSeparator
     v-bind="forwarded"
     :class="cn(
-      'bg-border',
+      'bg-muted',
       // Disabled
-      'group-data-[disabled]:bg-border group-data-[disabled]:opacity-50',
+      'group-data-[disabled]:bg-muted group-data-[disabled]:opacity-50',
       // Completed
       'group-data-[state=completed]:bg-accent-foreground',
       props.class,
