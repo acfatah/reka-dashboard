@@ -1,8 +1,8 @@
 <template>
-  <Tooltip>
+  <QuickTip>
     <template #content>
-      <div class="flex items-center">
-        <Icon icon="lucide:circle-help" class="mr-1 size-4" />
+      <div class="flex items-center gap-1">
+        <Icon icon="lucide:circle-help" />
         <span>Elements from slot</span>
       </div>
     </template>
@@ -10,5 +10,5 @@
     <Button variant="outline">
       Hover
     </Button>
-  </Tooltip>
+  </QuickTip>
 </template>

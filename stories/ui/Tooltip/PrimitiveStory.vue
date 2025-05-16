@@ -1,10 +1,11 @@
 <script setup lang="ts">
+// TODO: Remove the story args
 const storyArgs = useAttrs()
 </script>
 
 <template>
   <TooltipProvider>
-    <TooltipRoot>
+    <Tooltip>
       <TooltipTrigger as-child>
         <Button variant="outline">
           Hover
@@ -15,6 +16,6 @@ const storyArgs = useAttrs()
         <p>Add to library</p>
         <TooltipArrow />
       </TooltipContent>
-    </TooltipRoot>
+    </Tooltip>
   </TooltipProvider>
 </template>

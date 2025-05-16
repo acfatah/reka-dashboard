@@ -1,27 +1,17 @@
 <script setup lang="ts">
-const props = withDefaults(defineProps<{
-  disabled?: boolean
-  side?: 'top' | 'right' | 'bottom' | 'left'
-  text?: string
-  class?: string
-}>(), {
-  side: 'top',
-  text: '',
-})
+import type { TooltipRootEmits, TooltipRootProps } from 'reka-ui'
+import { TooltipRoot, useForwardPropsEmits } from 'reka-ui'
+
+const props = defineProps<TooltipRootProps>()
+const emits = defineEmits<TooltipRootEmits>()
+const forwarded = useForwardPropsEmits(props, emits)
 </script>
 
 <template>
-  <slot v-if="props.disabled" />
-  <TooltipProvider v-else>
-    <TooltipRoot>
-      <TooltipTrigger as-child>
-        <slot />
-      </TooltipTrigger>
-      <TooltipContent :side="props.side">
-        <slot name="content" />
-        {{ props.text }}
-        <TooltipArrow />
-      </TooltipContent>
-    </TooltipRoot>
-  </TooltipProvider>
+  <TooltipRoot
+    data-slot="tooltip"
+    v-bind="forwarded"
+  >
+    <slot />
+  </TooltipRoot>
 </template>

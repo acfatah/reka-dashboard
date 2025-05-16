@@ -1,21 +1,21 @@
 import type { StoryObj } from '@storybook/vue3'
 import Button from '@/components/ui/button/Button.vue'
 import {
+  QuickTip,
+  Tooltip,
   TooltipArrow,
   TooltipContent,
   TooltipProvider,
-  TooltipRoot,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
-import Tooltip from '@/components/ui/tooltip/TooltipRoot.vue'
 import { html } from 'common-tags'
-// import { CircleHelp as CircleHelpIcon } from 'lucide-vue-next'
 
 import PrimitiveStory from './PrimitiveStory.vue'
 import PrimitiveSource from './PrimitiveStory.vue?raw'
-import TextTooltipStory from './TextTooltipStory.vue'
-import WithSlotStory from './WithSlotStory.vue'
-import WithSlotSource from './WithSlotStory.vue?raw'
+import QuickTipStory from './QuickTipStory.vue'
+import QuickTipSource from './QuickTipStory.vue?raw'
+import WithContentSlotStory from './WithContentSlotStory.vue'
+import WithContentSlotSource from './WithContentSlotStory.vue?raw'
 
 /**
  * A popup that displays information related to an element when the element receives
@@ -28,12 +28,12 @@ import WithSlotSource from './WithSlotStory.vue?raw'
  */
 export default {
   title: 'Components/Overlays/Tooltip',
-  component: Tooltip,
+  component: QuickTip,
   subcomponents: {
+    Tooltip,
     TooltipArrow,
     TooltipContent,
     TooltipProvider,
-    TooltipRoot,
     TooltipTrigger,
   },
   tags: ['autodocs'],
@@ -63,11 +63,7 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: html`
-          <Tooltip text="Tooltip text">
-            <!-- tooltip trigger -->
-          </Tooltip>
-`,
+        code: QuickTipSource,
       },
     },
   },
@@ -77,7 +73,7 @@ export const Default: StoryObj = {
   },
 
   render: args => ({
-    components: { TextTooltipStory, Button },
+    components: { QuickTipStory, Button },
 
     setup() {
       return { args }
@@ -85,7 +81,7 @@ export const Default: StoryObj = {
 
     template: html`
       <div class="flex h-[140px] flex-col items-center justify-center gap-4">
-        <TextTooltipStory v-bind="args" />
+        <QuickTipStory v-bind="args" />
         <p>Tooltip: {{ args.disabled ? 'disabled' : 'enabled' }}</p>
       </div>
     `,
@@ -99,13 +95,13 @@ export const WithContentSlot: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: WithSlotSource,
+        code: WithContentSlotSource,
       },
     },
   },
 
   render: args => ({
-    components: { WithSlotStory, Button },
+    components: { WithContentSlotStory, Button },
 
     setup() {
       return { args }
@@ -113,7 +109,7 @@ export const WithContentSlot: StoryObj = {
 
     template: html`
       <div class="flex justify-center items-center h-[140px]">
-        <WithSlotStory v-bind="args" />
+        <WithContentSlotStory v-bind="args" />
       </div>
     `,
   }),
