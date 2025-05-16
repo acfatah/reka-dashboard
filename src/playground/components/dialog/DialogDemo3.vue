@@ -2,10 +2,10 @@
   <Dialog>
     <DialogTrigger as-child>
       <Button variant="outline">
-        Scrollable Content
+        Sticky Footer
       </Button>
     </DialogTrigger>
-    <DialogContent class="sm:max-w-[425px]">
+    <DialogContent class="sm:max-w-lg">
       <DialogHeader>
         <DialogTitle>Scrollable Content</DialogTitle>
         <DialogDescription>
@@ -26,6 +26,13 @@
           sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
+      <DialogFooter>
+        <DialogClose as-child>
+          <Button variant="outline">
+            Close
+          </Button>
+        </DialogClose>
+      </DialogFooter>
     </DialogContent>
   </Dialog>
 </template>

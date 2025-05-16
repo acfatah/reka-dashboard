@@ -65,8 +65,8 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
       <Form
         v-slot="{ meta }"
         :validation-schema="formSchema"
-        @submit="onSubmit"
         class="space-y-4"
+        @submit="onSubmit"
       >
         <FormField v-slot="{ componentField }" name="name">
           <FormItem>
