@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { VisStackedBar, VisXYContainer } from '@unovis/vue'
+import { ref } from 'vue'
 import { Button } from '@/components/ui/button'
 import {
   Drawer,
@@ -11,8 +13,6 @@ import {
   DrawerTrigger,
 } from '@/components/ui/drawer'
 import { Icon } from '@/components/ui/icon'
-import { VisStackedBar, VisXYContainer } from '@unovis/vue'
-import { ref } from 'vue'
 
 const goal = ref(350)
 
@@ -84,7 +84,7 @@ const data = [
               class="h-[120px]"
               :style="{
                 'opacity': 0.9,
-                '--theme-primary': `hsl(var(--foreground))`,
+                '--theme-primary': `var(--foreground)`,
               }"
             >
               <VisStackedBar
