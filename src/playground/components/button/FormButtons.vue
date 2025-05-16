@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
-import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { h } from 'vue'
 import { z } from 'zod'
+import { toast } from '@/components/ui/toast'
 
 type UserRecord = z.infer<typeof schema>
 const schema = z.object({
@@ -33,7 +33,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
 <template>
   <Form
     v-slot="{ meta }"
-    class="flex w-full flex-col space-y-6 lg:w-3/4 xl:w-5/8 2xl:w-1/2 3xl:w-3/5"
+    class="w-full md:max-w-lg lg:max-w-xl"
     :validation-schema="formSchema"
     @submit="onSubmit"
   >
