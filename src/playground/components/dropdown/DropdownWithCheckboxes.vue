@@ -1,15 +1,5 @@
 <script setup lang="ts">
 import type { DropdownMenuCheckboxItemProps } from 'reka-ui'
-import { Button } from '@/components/ui/button'
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { ref } from 'vue'
 
 type Checked = DropdownMenuCheckboxItemProps['modelValue']
 
@@ -25,25 +15,49 @@ const showPanel = ref<Checked>(false)
         Checkboxes
       </Button>
     </DropdownMenuTrigger>
-    <DropdownMenuContent class="w-56">
-      <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+    <DropdownMenuContent align="start" class="w-56">
+      <DropdownMenuGroup>
+        <DropdownMenuLabel>Account</DropdownMenuLabel>
+        <DropdownMenuItem>
+          <Icon icon="lucide:user" />
+          Profile
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon icon="lucide:credit-card" />
+          Billing
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon icon="lucide:settings-2" />
+          Settings
+        </DropdownMenuItem>
+      </DropdownMenuGroup>
       <DropdownMenuSeparator />
-      <DropdownMenuCheckboxItem
-        v-model:model-value="showStatusBar"
-      >
-        Status Bar
-      </DropdownMenuCheckboxItem>
-      <DropdownMenuCheckboxItem
-        v-model:model-value="showActivityBar"
-        disabled
-      >
-        Activity Bar
-      </DropdownMenuCheckboxItem>
-      <DropdownMenuCheckboxItem
-        v-model:model-value="showPanel"
-      >
-        Panel
-      </DropdownMenuCheckboxItem>
+      <DropdownMenuGroup>
+        <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+        <DropdownMenuCheckboxItem
+          v-model="showStatusBar"
+        >
+          Status Bar
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem
+          v-model="showActivityBar"
+          disabled
+        >
+          Activity Bar
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem
+          v-model="showPanel"
+        >
+          Panel
+        </DropdownMenuCheckboxItem>
+      </DropdownMenuGroup>
+      <DropdownMenuSeparator />
+      <DropdownMenuGroup>
+        <DropdownMenuItem>
+          <Icon icon="lucide:log-out" />
+          Sign Out
+        </DropdownMenuItem>
+      </DropdownMenuGroup>
     </DropdownMenuContent>
   </DropdownMenu>
 </template>

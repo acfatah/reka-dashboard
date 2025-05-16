@@ -1,16 +1,4 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { ref } from 'vue'
-
 const position = ref('bottom')
 </script>
 
@@ -21,20 +9,23 @@ const position = ref('bottom')
         Radio Group
       </Button>
     </DropdownMenuTrigger>
-    <DropdownMenuContent class="w-56">
-      <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
-      <DropdownMenuSeparator />
-      <DropdownMenuRadioGroup v-model="position">
-        <DropdownMenuRadioItem value="top">
-          Top
-        </DropdownMenuRadioItem>
-        <DropdownMenuRadioItem value="bottom">
-          Bottom
-        </DropdownMenuRadioItem>
-        <DropdownMenuRadioItem value="right">
-          Right
-        </DropdownMenuRadioItem>
-      </DropdownMenuRadioGroup>
+    <DropdownMenuContent align="start" class="w-56">
+      <DropdownMenuLabel inset>
+        Panel Position
+      </DropdownMenuLabel>
+      <DropdownMenuGroup>
+        <DropdownMenuRadioGroup v-model="position">
+          <DropdownMenuRadioItem value="top">
+            Top
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="bottom">
+            Bottom
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="right" disabled>
+            Right
+          </DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
+      </DropdownMenuGroup>
     </DropdownMenuContent>
   </DropdownMenu>
 </template>
