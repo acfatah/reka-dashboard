@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import type { Component } from 'vue'
 import {
-  TooltipArrow,
+  Tooltip,
   TooltipContent,
-  TooltipRoot,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 import { computed } from 'vue'
@@ -36,7 +35,7 @@ const delegatedProps = computed(() => {
     <slot />
   </SidebarMenuButtonChild>
 
-  <TooltipRoot v-else>
+  <Tooltip v-else>
     <TooltipTrigger as-child>
       <SidebarMenuButtonChild v-bind="{ ...delegatedProps, ...$attrs }">
         <slot />
@@ -51,7 +50,6 @@ const delegatedProps = computed(() => {
         {{ tooltip }}
       </template>
       <component :is="tooltip" v-else />
-      <TooltipArrow />
     </TooltipContent>
-  </TooltipRoot>
+  </Tooltip>
 </template>

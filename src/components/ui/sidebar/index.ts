@@ -1,5 +1,13 @@
 import type { VariantProps } from 'class-variance-authority'
+import type { HTMLAttributes } from 'vue'
 import { cva } from 'class-variance-authority'
+
+export interface SidebarProps {
+  side?: 'left' | 'right'
+  variant?: 'sidebar' | 'floating' | 'inset'
+  collapsible?: 'offcanvas' | 'icon' | 'none'
+  class?: HTMLAttributes['class']
+}
 
 export { default as Sidebar } from './Sidebar.vue'
 export { default as SidebarContent } from './SidebarContent.vue'
@@ -29,16 +37,20 @@ export { useSidebar } from './utils'
 
 export const sidebarMenuButtonVariants = cva(
   [
-    'peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 ring-sidebar-ring outline-none',
+    'peer/menu-button flex w-full items-center gap-2 overflow-hidden p-2',
+    'rounded-md ring-sidebar-ring outline-hidden',
     'text-left text-sm',
-    'group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2',
-    'hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
-    'focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground',
-    'data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground',
     'transition-[width,height,padding]',
+    'group-has-data-[sidebar=menu-action]/menu-item:pr-8',
+    'group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2!',
+    'hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
+    'focus-visible:ring-2',
+    'active:bg-sidebar-accent active:text-sidebar-accent-foreground',
+    'disabled:pointer-events-none disabled:opacity-50',
+    'aria-disabled:pointer-events-none aria-disabled:opacity-50',
+    'data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground',
     'data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground',
     '[&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0',
-    'disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50',
   ],
   {
     variants: {
@@ -52,7 +64,7 @@ export const sidebarMenuButtonVariants = cva(
       size: {
         default: 'h-8 text-sm',
         sm: 'h-7 text-xs',
-        lg: 'h-12 text-sm group-data-[collapsible=icon]:!p-0',
+        lg: 'h-12 text-sm group-data-[collapsible=icon]:p-0!',
       },
     },
     defaultVariants: {
