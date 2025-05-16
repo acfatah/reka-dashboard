@@ -21,7 +21,7 @@ const forwarded = useForwardProps(delegatedProps)
     data-slot="combobox-trigger"
     v-bind="forwarded"
     :class="cn(
-      '[&_svg]:size-4',
+      `[&_svg:not([class*='size-'])]:size-4`,
       props.class,
     )"
     tabindex="0"
