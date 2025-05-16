@@ -40,7 +40,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       data-slot="alert-dialog-content"
       v-bind="forwarded"
       :class="cn(
-        'fixed top-1/2 left-1/2 z-50 grid w-full max-w-(100%-2rem) -translate-x-1/2 -translate-y-1/2 gap-4 p-6',
+        'fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 p-6',
         'rounded-lg border bg-background shadow-lg',
         'duration-200',
         'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95',
