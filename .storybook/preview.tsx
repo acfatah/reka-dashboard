@@ -1,6 +1,5 @@
 import type { Preview } from '@storybook/vue3'
 import { withThemeByClassName } from '@storybook/addon-themes'
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { setup } from '@storybook/vue3'
 
 import { createPinia } from 'pinia'
@@ -11,6 +10,64 @@ import React from 'react'
 
 import 'non.geist'
 import '../src/styles/global.css'
+
+// import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+const tailwindcssViewports = {
+  'xs': {
+    name: 'mobile',
+    styles: {
+      // 20rem
+      width: '320px',
+      height: '768px',
+    },
+    type: 'mobile',
+  },
+  'sm': {
+    name: 'Tailwindcss: sm',
+    styles: {
+      // 40rem
+      width: '640px',
+      height: '768px',
+    },
+    type: 'mobile',
+  },
+  'md': {
+    name: 'Tailwindcss: md',
+    styles: {
+      // 48rem
+      width: '768px',
+      height: '768px',
+    },
+    type: 'tablet',
+  },
+  'lg': {
+    name: 'Tailwindcss: lg',
+    styles: {
+      // 64rem
+      width: '1024px',
+      height: '768px',
+    },
+    type: 'desktop',
+  },
+  'xl': {
+    name: 'Tailwindcss: xl',
+    styles: {
+      // 80rem
+      width: '1280px',
+      height: '768px',
+    },
+    type: 'desktop',
+  },
+  '2xl': {
+    name: 'Tailwindcss: 2xl',
+    styles: {
+      // 96rem
+      width: '1536px',
+      height: '768px',
+    },
+    type: 'desktop',
+  },
+}
 
 const pinia = createPinia()
 
@@ -23,7 +80,7 @@ const preview: Preview = {
     backgrounds: { disable: true },
 
     viewport: {
-      viewports: INITIAL_VIEWPORTS,
+      viewports: tailwindcssViewports,
     },
 
     controls: {
