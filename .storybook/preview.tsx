@@ -18,7 +18,7 @@ const tailwindcssViewports = {
     styles: {
       // 20rem
       width: '320px',
-      height: '768px',
+      height: '568px',
     },
     type: 'mobile',
   },
