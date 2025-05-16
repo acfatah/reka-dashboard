@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import {
   Drawer,
   DrawerClose,
@@ -7,11 +8,9 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  DrawerPortal,
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer'
-import { html } from 'common-tags'
 
 import BasicStory from '@/playground/components/drawer/DrawerBasic.vue'
 import BasicSource from '@/playground/components/drawer/DrawerBasic.vue?raw'
@@ -35,7 +34,6 @@ export default {
     DrawerFooter,
     DrawerHeader,
     DrawerOverlay,
-    DrawerPortal,
     DrawerTitle,
     DrawerTrigger,
   },
