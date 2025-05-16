@@ -1,8 +1,8 @@
 <script setup lang="ts" generic="T extends z.ZodAny">
 import {
+  Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionRoot,
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
@@ -62,7 +62,7 @@ provide(FieldContextKey, fieldContext)
 <template>
   <FieldArray v-slot="{ fields, remove, push }" as="section" :name="fieldName">
     <slot v-bind="props">
-      <AccordionRoot type="multiple" class="w-full" collapsible :disabled="disabled" as-child>
+      <Accordion type="multiple" class="w-full" collapsible :disabled="disabled" as-child>
         <FormItem>
           <AccordionItem :value="fieldName" class="border-none">
             <AccordionTrigger>
@@ -88,7 +88,7 @@ provide(FieldContextKey, fieldContext)
                       variant="secondary"
                       @click="remove(index)"
                     >
-                      <Icon icon="lucide:trash-2" width="16" height="16" />
+                      <Icon icon="lucide:trash" width="16" height="16" />
                     </Button>
                   </div>
                   <Separator v-if="!field.isLast" />
@@ -109,7 +109,7 @@ provide(FieldContextKey, fieldContext)
             <FormMessage />
           </AccordionItem>
         </FormItem>
-      </AccordionRoot>
+      </Accordion>
     </slot>
   </FieldArray>
 </template>

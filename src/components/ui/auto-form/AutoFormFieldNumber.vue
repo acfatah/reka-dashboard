@@ -11,7 +11,10 @@ import type { FieldProps } from './interface'
 import AutoFormLabel from './AutoFormLabel.vue'
 import { beautifyObjectName } from './utils'
 
-defineOptions({ inheritAttrs: false })
+defineOptions({
+  inheritAttrs: false,
+})
+
 defineProps<FieldProps>()
 </script>
 
@@ -26,7 +29,7 @@ defineProps<FieldProps>()
           <Input
             type="number"
             v-bind="{ ...slotProps.componentField, ...config?.inputProps }"
-            :disabled="disabled"
+            :disabled="config?.inputProps?.disabled ?? disabled"
           />
         </slot>
       </FormControl>

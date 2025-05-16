@@ -8,7 +8,7 @@ import { Icon } from '@iconify/vue'
 import { DateFormatter, getLocalTimeZone } from '@internationalized/date'
 import type { FieldProps } from './interface'
 import AutoFormLabel from './AutoFormLabel.vue'
-import { beautifyObjectName } from './utils'
+import { beautifyObjectName, maybeBooleanishToBoolean } from './utils'
 
 defineProps<FieldProps>()
 
@@ -27,7 +27,10 @@ const df = new DateFormatter('en-US', {
         <slot v-bind="slotProps">
           <div>
             <Popover>
-              <PopoverTrigger as-child :disabled="disabled">
+              <PopoverTrigger
+                as-child
+                :disabled="maybeBooleanishToBoolean(config?.inputProps?.disabled) ?? disabled"
+              >
                 <Button
                   variant="outline"
                   :class="cn(
@@ -35,14 +38,14 @@ const df = new DateFormatter('en-US', {
                     !slotProps.componentField.modelValue && 'text-muted-foreground',
                   )"
                 >
-                  <Icon icon="lucide:calendar" width="16" height="16" />
+                  <Icon icon="lucide:calendar" class="mr-2 size-4" />
                   {{ slotProps.componentField.modelValue
                     ? df.format(slotProps.componentField.modelValue.toDate(getLocalTimeZone()))
                     : "Pick a date"
                   }}
                 </Button>
               </PopoverTrigger>
-              <PopoverContent class="w-auto p-0">
+              <PopoverContent align="start" class="w-auto p-0">
                 <Calendar initial-focus v-bind="slotProps.componentField" />
               </PopoverContent>
             </Popover>

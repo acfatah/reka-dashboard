@@ -45,7 +45,7 @@ async function parseFileAsString(file: File | undefined): Promise<string> {
             v-if="!inputFile"
             type="file"
             v-bind="{ ...config?.inputProps }"
-            :disabled="disabled"
+            :disabled="config?.inputProps?.disabled ?? disabled"
             @change="async (ev: InputEvent) => {
               const file = (ev.target as HTMLInputElement).files?.[0]
               inputFile = file
@@ -66,7 +66,7 @@ async function parseFileAsString(file: File | undefined): Promise<string> {
                 slotProps.componentField.onInput(undefined)
               }"
             >
-              <Icon icon="lucide:trash-2" width="16" height="16" />
+              <Icon icon="lucide:trash" />
             </Button>
           </div>
         </slot>

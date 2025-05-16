@@ -17,9 +17,11 @@ import {
 } from '@/components/ui/select'
 import type { FieldProps } from './interface'
 import AutoFormLabel from './AutoFormLabel.vue'
-import { beautifyObjectName } from './utils'
+import { beautifyObjectName, maybeBooleanishToBoolean } from './utils'
 
-defineProps<FieldProps & { options?: string[] }>()
+defineProps<FieldProps & {
+  options?: string[]
+}>()
 </script>
 
 <template>
@@ -32,7 +34,7 @@ defineProps<FieldProps & { options?: string[] }>()
         <slot v-bind="slotProps">
           <RadioGroup
             v-if="config?.component === 'radio'"
-            :disabled="disabled"
+            :disabled="maybeBooleanishToBoolean(config?.inputProps?.disabled) ?? disabled"
             orientation="vertical"
             v-bind="{ ...slotProps.componentField }"
           >
@@ -46,7 +48,7 @@ defineProps<FieldProps & { options?: string[] }>()
             </div>
           </RadioGroup>
 
-          <Select v-else :disabled="disabled" v-bind="{ ...slotProps.componentField }">
+          <Select v-else :disabled="maybeBooleanishToBoolean(config?.inputProps?.disabled) ?? disabled" v-bind="{ ...slotProps.componentField }">
             <SelectTrigger class="w-full">
               <SelectValue :placeholder="config?.inputProps?.placeholder" />
             </SelectTrigger>

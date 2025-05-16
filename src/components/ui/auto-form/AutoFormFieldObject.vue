@@ -1,9 +1,9 @@
 <script setup lang="ts" generic="T extends ZodRawShape">
 import type { ZodAny, ZodObject, ZodRawShape } from 'zod'
 import {
+  Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionRoot,
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { FormItem } from '@/components/ui/form'
@@ -62,7 +62,7 @@ provide(FieldContextKey, fieldContext)
 <template>
   <section>
     <slot v-bind="props">
-      <AccordionRoot
+      <Accordion
         type="single"
         as-child
         class="w-full"
@@ -88,7 +88,7 @@ provide(FieldContextKey, fieldContext)
             </AccordionContent>
           </AccordionItem>
         </FormItem>
-      </AccordionRoot>
+      </Accordion>
     </slot>
   </section>
 </template>
