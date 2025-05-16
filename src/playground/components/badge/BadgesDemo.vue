@@ -25,19 +25,19 @@
         Alert
       </Badge>
 
-      <Badge class-name="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums">
+      <Badge class="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums">
         8
       </Badge>
 
       <Badge
-        class-name="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
+        class="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
         variant="destructive"
       >
         99
       </Badge>
 
       <Badge
-        class-name="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
+        class="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
         variant="outline"
       >
         20+
