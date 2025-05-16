@@ -14,7 +14,11 @@ const validMimeTypes = [
 type SubmissionRecord = z.infer<typeof schema>
 const schema = z.object({
   file: z
-    .instanceof(File)
+    .union([z.instanceof(File), z.undefined()])
+    .refine(file => file !== undefined, {
+      // Custom message for when the file is not provided
+      message: 'Please select a file',
+    })
     .refine(file => validMimeTypes.includes(file?.type), {
       message: 'Invalid file type. Only JPG, JPEG and PNG are allowed.',
     })
@@ -49,6 +53,9 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     ),
   })
 }
+
+// TODO: remove the story args
+const storyArgs = useAttrs()
 </script>
 
 <template>
@@ -58,14 +65,15 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     :validation-schema="formSchema"
     @submit="onSubmit"
   >
-    <FormField v-slot="{ handleChange }" name="file">
+    <FormField
+      v-slot="{ componentField }"
+      :validate-on-blur="false"
+      name="file"
+    >
       <FormItem>
         <FormLabel>Upload File</FormLabel>
         <FormControl>
-          <Input
-            type="file"
-            @change="(event: Event) => event.target && handleChange((event.target as HTMLInputElement).files?.[0])"
-          />
+          <FileInput v-bind="{ ...componentField, ...storyArgs }" />
         </FormControl>
         <FormDescription>
           File upload field.

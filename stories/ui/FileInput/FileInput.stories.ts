@@ -3,8 +3,10 @@ import { Input } from '@/components/ui/input'
 import { Toaster } from '@/components/ui/toast'
 import { html } from 'common-tags'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import FileInputStory from './FileInputDefaultStory.vue'
+import FileInputSource from './FileInputDefaultStory.vue?raw'
+import FileInputWithDeleteIconStory from './FileInputWithDeleteIcon.vue'
+import FileInputWithDeleteIconSource from './FileInputWithDeleteIcon.vue?raw'
 
 /**
  * File Input
@@ -13,20 +15,30 @@ export default {
   title: 'Components/Data Entry/File Input',
   component: Input,
   tags: ['autodocs'],
+
+  argTypes: {
+    disabled: {
+      type: 'boolean',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+      },
+    },
+  },
 }
 
 export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: FileInputSource,
       },
 
     },
   },
 
   render: args => ({
-    components: { DefaultStory, Toaster },
+    components: { FileInputStory, Toaster },
 
     setup() {
       return { args }
@@ -36,7 +48,32 @@ export const Default: StoryObj = {
       <Teleport to="body">
         <Toaster />
       </Teleport>
-      <DefaultStory v-bind="args" />
+      <FileInputStory v-bind="args" />
+    `,
+  }),
+}
+
+export const WithDeleteIcon: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: FileInputWithDeleteIconSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { FileInputWithDeleteIconStory, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: html`
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+      <FileInputWithDeleteIconStory v-bind="args" />
     `,
   }),
 }
