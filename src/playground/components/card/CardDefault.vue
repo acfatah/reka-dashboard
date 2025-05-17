@@ -36,7 +36,7 @@
         </div>
       </form>
     </CardContent>
-    <CardFooter class="flex justify-between px-6 pb-6">
+    <CardFooter class="flex justify-end gap-2 px-6">
       <Button variant="outline">
         Cancel
       </Button>
