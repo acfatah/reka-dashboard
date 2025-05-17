@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import {
   Toast,
   ToastAction,
@@ -9,7 +10,6 @@ import {
   ToastTitle,
   ToastViewport,
 } from '@/components/ui/toast'
-import { html } from 'common-tags'
 
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
@@ -29,7 +29,7 @@ import WithTitleSource from './WithTitle.vue?raw'
  * Read more at https://reka-ui.com/docs/components/toast.
  */
 export default {
-  title: 'Components/Feedback/Toast',
+  title: 'Components/Overlays/Toast',
   component: DefaultStory,
   subcomponents: {
     Toast,

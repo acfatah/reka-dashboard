@@ -1,10 +1,10 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import {
   Alert,
   AlertDescription,
   AlertTitle,
 } from '@/components/ui/alert'
-import { html } from 'common-tags'
 
 import AlertDefault from '@/playground/components/alert/AlertDefault.vue'
 import AlertDefaultSource from '@/playground/components/alert/AlertDefault.vue?raw'

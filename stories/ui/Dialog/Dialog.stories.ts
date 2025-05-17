@@ -31,10 +31,10 @@ import FormDialogSource from '@/playground/components/dialog/FormDialog.vue?raw'
  * Primitive API Reference: https://reka-ui.com/docs/components/dialog
  *
  * See also:
- * - [Feedback/Alert Dialog](?path=/docs/feedback-alert-dialog--docs) component
+ * - [Overlays/Alert Dialog](?path=/docs/feedback-alert-dialog--docs) component
  */
 export default {
-  title: 'Components/Feedback/Dialog',
+  title: 'Components/Overlays/Dialog',
   component: DialogDefault,
   subcomponents: {
     Dialog,

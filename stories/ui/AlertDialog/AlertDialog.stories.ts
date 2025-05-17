@@ -22,10 +22,10 @@ import AlertDialogDefaultSource from '@/playground/components/alert-dialog/Alert
  * Primitive API Reference: https://reka-ui.com/docs/components/alert-dialog
  *
  * See also:
- * - [Feedback/Dialog](?path=/docs/feedback-dialog--docs) component
+ * - [Overlays/Dialog](?path=/docs/feedback-dialog--docs) component
  */
 export default {
-  title: 'Components/Feedback/Alert Dialog',
+  title: 'Components/Overlays/Alert Dialog',
   component: AlertDialogDefault,
   subcomponents: {
     AlertDialog,
