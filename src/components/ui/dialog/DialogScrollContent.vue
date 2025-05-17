@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 import {
   DialogClose,
@@ -11,6 +10,7 @@ import {
   useForwardPropsEmits,
 } from 'reka-ui'
 import { computed } from 'vue'
+import { cn } from '@/lib/utils'
 
 const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<DialogContentEmits>()
@@ -37,8 +37,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       <DialogContent
         data-slot="dialog-content"
         :class="cn(
-          'relative z-50 grid w-full max-w-lg my-8 gap-4 p-6',
-          'border border-border bg-background shadow-lg',
+          'relative z-50 grid w-full max-w-[calc(100%-2rem)] my-4 gap-4 p-6',
+          'rounded-lg border bg-background shadow-lg',
           'duration-200',
           'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95',
           'data-[state=open]:animate-in data-[state=open]:fade-in-0',
