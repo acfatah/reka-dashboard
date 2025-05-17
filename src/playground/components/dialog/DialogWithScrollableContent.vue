@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { Button } from '@/components/ui/button'
+</script>
+
 <template>
   <Dialog>
     <DialogTrigger as-child>
@@ -5,14 +9,14 @@
         Scrollable Content
       </Button>
     </DialogTrigger>
-    <DialogContent class="max-h-[90dvh] grid-rows-[auto_minmax(0,1fr)_auto] sm:max-w-lg">
+    <DialogContent class="flex flex-col max-h-[90dvh] sm:max-w-lg">
       <DialogHeader>
         <DialogTitle>Scrollable Content</DialogTitle>
         <DialogDescription>
           This is a dialog with scrollable content.
         </DialogDescription>
       </DialogHeader>
-      <div class="-mx-6 grid gap-2 overflow-y-auto pl-6 pr-4 text-sm">
+      <div class="flex-grow -mx-6 overflow-y-auto pl-6 pr-4 text-sm">
         <h4 class="mb-4 text-lg leading-none font-medium">
           Lorem Ipsum
         </h4>
@@ -29,9 +33,9 @@
         </template>
       </div>
       <DialogFooter>
-        <Button type="submit">
-          Save changes
-        </Button>
+        <DialogClose :as="Button" variant="outline">
+          Close
+        </DialogClose>
       </DialogFooter>
     </DialogContent>
   </Dialog>

@@ -12,16 +12,19 @@ import {
 } from '@/components/ui/dialog'
 import { Toaster } from '@/components/ui/toast'
 
-import DialogDefault from '@/playground/components/dialog/DialogDefault.vue'
-import DialogDefaultSource from '@/playground/components/dialog/DialogDefault.vue?raw'
+import DialogDemo1Story from '@/playground/components/dialog/DialogDemo1.vue'
+import DialogDemo1Source from '@/playground/components/dialog/DialogDemo1.vue?raw'
+import DialogWithFormStory from '@/playground/components/dialog/DialogWithForm.vue'
+import DialogWithFormSource from '@/playground/components/dialog/DialogWithForm.vue?raw'
+import DialogWithScrollableContentStory from '@/playground/components/dialog/DialogWithScrollableContent.vue'
+import DialogWithScrollableContentSource from '@/playground/components/dialog/DialogWithScrollableContent.vue?raw'
+import DialogWithScrollableOverlayComponent from '@/playground/components/dialog/DialogWithScrollableOverlay.vue'
+import DialogWithScrollableOverlaySource from '@/playground/components/dialog/DialogWithScrollableOverlay.vue?raw'
+
 import DialogWithContextMenuTriggerComponent from '@/playground/components/dialog/DialogWithContextMenuTrigger.vue'
 import DialogWithContextMenuTriggerSource from '@/playground/components/dialog/DialogWithContextMenuTrigger.vue?raw'
 import DialogWithCustomCloseButtonComponent from '@/playground/components/dialog/DialogWithCustomCloseButton.vue'
 import DialogWithCustomCloseButtonSource from '@/playground/components/dialog/DialogWithCustomCloseButton.vue?raw'
-import DialogWithScrollBody from '@/playground/components/dialog/DialogWithScrollBody.vue'
-import DialogWithScrollBodySource from '@/playground/components/dialog/DialogWithScrollBody.vue?raw'
-import DialogWithScrollOverlayComponent from '@/playground/components/dialog/DialogWithScrollOverlay.vue'
-import DialogWithScrollOverlaySource from '@/playground/components/dialog/DialogWithScrollOverlay.vue?raw'
 import FormDialogComponent from '@/playground/components/dialog/FormDialog.vue'
 import FormDialogSource from '@/playground/components/dialog/FormDialog.vue?raw'
 
@@ -35,7 +38,7 @@ import FormDialogSource from '@/playground/components/dialog/FormDialog.vue?raw'
  */
 export default {
   title: 'Components/Overlays/Dialog',
-  component: DialogDefault,
+  component: Dialog,
   subcomponents: {
     Dialog,
     DialogClose,
@@ -54,20 +57,89 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DialogDefaultSource,
+        code: DialogDemo1Source,
       },
     },
   },
 
   render: args => ({
-    components: { DialogDefault },
+    components: { DialogDemo1Story },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DialogDefault v-bind="args" />
+      <DialogDemo1Story v-bind="args" />
+    `,
+  }),
+}
+
+export const WithForm: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: DialogWithFormSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { DialogWithFormStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <DialogWithFormStory v-bind="args" />
+    `,
+  }),
+}
+
+export const WithScrollableContent: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: DialogWithScrollableContentSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { DialogWithScrollableContentStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <DialogWithScrollableContentStory v-bind="args" />
+    `,
+  }),
+}
+
+/**
+ * Replace `<DialogContent />` with `<DialogScrollContent />` to make the dialog overlay scrollable.
+ */
+export const WithScrollableOverlay: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: DialogWithScrollableOverlaySource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { DialogWithScrollableOverlayComponent },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <DialogWithScrollableOverlayComponent v-bind="args" />
     `,
   }),
 }
@@ -90,53 +162,6 @@ export const CustomCloseButton: StoryObj = {
 
     template: `
       <DialogWithCustomCloseButtonComponent v-bind="args" />
-    `,
-  }),
-}
-
-export const ScrollableBody: StoryObj = {
-  parameters: {
-    docs: {
-      source: {
-        code: DialogWithScrollBodySource,
-      },
-    },
-  },
-
-  render: args => ({
-    components: { DialogWithScrollBody },
-
-    setup() {
-      return { args }
-    },
-
-    template: `
-      <DialogWithScrollBody v-bind="args" />
-    `,
-  }),
-}
-
-/**
- * Replace `<DialogContent />` with `<DialogScrollContent />` to make the dialog overlay scrollable.
- */
-export const ScrollableOverlay: StoryObj = {
-  parameters: {
-    docs: {
-      source: {
-        code: DialogWithScrollOverlaySource,
-      },
-    },
-  },
-
-  render: args => ({
-    components: { DialogWithScrollOverlayComponent },
-
-    setup() {
-      return { args }
-    },
-
-    template: `
-      <DialogWithScrollOverlayComponent v-bind="args" />
     `,
   }),
 }

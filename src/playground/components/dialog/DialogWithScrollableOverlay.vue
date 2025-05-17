@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { Button } from '@/components/ui/button'
+</script>
+
 <template>
   <Dialog>
     <DialogTrigger as-child>
@@ -5,14 +9,14 @@
         Scrollable Overlay
       </Button>
     </DialogTrigger>
-    <DialogScrollContent class="sm:max-w-[425px]">
+    <DialogScrollContent class="sm:max-w-lg">
       <DialogHeader>
         <DialogTitle>Scrollable Overlay Modal</DialogTitle>
         <DialogDescription>
           Here is modal with overlay scroll
         </DialogDescription>
       </DialogHeader>
-      <div class="grid gap-4 py-4 h-[300dvh] text-sm">
+      <div class="-mx-6 h-[300dvh] px-6 text-sm">
         <p class="mb-4 leading-normal">
           This is some placeholder content to show the scrolling behavior for modals.
           Instead of repeating the text in the modal, we use an inline style to set
@@ -22,10 +26,8 @@
         </p>
       </div>
       <DialogFooter>
-        <DialogClose>
-          <Button type="button" variant="outline">
-            Close
-          </Button>
+        <DialogClose :as="Button" variant="outline">
+          Close
         </DialogClose>
       </DialogFooter>
     </DialogScrollContent>
