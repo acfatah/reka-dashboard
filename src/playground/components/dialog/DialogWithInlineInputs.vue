@@ -52,50 +52,53 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
   <Dialog>
     <DialogTrigger as-child>
       <Button variant="outline">
-        Edit Profile
+        Edit Profile (Inline Inputs)
       </Button>
     </DialogTrigger>
-    <DialogContent class="sm:max-w-[425px]">
-      <DialogHeader>
-        <DialogTitle>Edit profile</DialogTitle>
-        <DialogDescription>
-          Make changes to your profile here. Click save when you're done.
-        </DialogDescription>
-      </DialogHeader>
+    <DialogContent class="sm:max-w-sm">
       <Form
         v-slot="{ meta }"
         :validation-schema="formSchema"
         class="space-y-4"
         @submit="onSubmit"
       >
+        <DialogHeader>
+          <DialogTitle>Edit profile</DialogTitle>
+          <DialogDescription>
+            Make changes to your profile here. Click save when you're done.
+          </DialogDescription>
+        </DialogHeader>
+
         <FormField v-slot="{ componentField }" name="name">
-          <FormItem>
-            <FormLabel>Name</FormLabel>
-            <FormControl>
+          <FormItem class="sm:col-span-full sm:grid-cols-4">
+            <FormLabel>
+              Name
+            </FormLabel>
+            <FormControl class="sm:col-span-3">
               <Input type="text" placeholder="Pedro Duarte" v-bind="componentField" />
             </FormControl>
-            <FormMessage />
+            <FormMessage class="col-span-full col-start-2 -mt-2" />
           </FormItem>
         </FormField>
 
         <FormField v-slot="{ componentField }" name="username">
-          <FormItem>
-            <FormLabel>Username</FormLabel>
-            <FormControl>
+          <FormItem class="sm:col-span-full sm:grid-cols-4">
+            <FormLabel class="col-span-1">
+              Username
+            </FormLabel>
+            <FormControl class="sm:col-span-3">
               <Input type="text" placeholder="@peduarte" v-bind="componentField" />
             </FormControl>
-            <FormDescription>
+            <FormMessage class="sm:col-start-2 -mt-2" />
+            <FormDescription class="col-span-full col-start-2">
               This is your public display name.
             </FormDescription>
-            <FormMessage />
           </FormItem>
         </FormField>
 
         <DialogFooter>
-          <DialogClose>
-            <Button type="button" variant="outline">
-              Cancel
-            </Button>
+          <DialogClose :as="Button" variant="outline">
+            Close
           </DialogClose>
           <Button
             type="submit"
