@@ -9,6 +9,7 @@ const props = defineProps<DialogCloseProps>()
   <DialogClose
     data-slot="dialog-close"
     v-bind="props"
+    @click.prevent
   >
     <slot />
   </DialogClose>
