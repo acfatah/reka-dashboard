@@ -48,7 +48,7 @@ import CardsDemo from '@/playground/components/card/CardsDemo.vue'
 import MeetingNotesCard from '@/playground/components/card/MeetingNotesCard.vue'
 import WithImageCard from '@/playground/components/card/WithImageCard.vue'
 
-import CardDefault from '@/playground/components/card/CardDefault.vue'
+import CardWithForm from '@/playground/components/card/CardWithForm.vue'
 import NotificationCard from '@/playground/components/card/NotificationCard.vue'
 
 import CheckboxesDemo from '@/playground/components/checkbox/CheckboxesDemo.vue'
@@ -168,15 +168,13 @@ import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWit
         <CardLogin />
         <MeetingNotesCard />
         <WithImageCard />
-
         <CardsDemo />
       </div>
     </ComponentWrapper>
 
-    <!-- FIXME: Card With Form -->
     <ComponentWrapper name="Card With Form">
       <div class="flex flex-wrap gap-4">
-        <CardDefault />
+        <CardWithForm />
         <NotificationCard />
       </div>
     </ComponentWrapper>
