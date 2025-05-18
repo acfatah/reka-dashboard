@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { SelectTriggerProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 import { reactiveOmit } from '@vueuse/core'
 import { SelectIcon, SelectTrigger, useForwardProps } from 'reka-ui'
+import { cn } from '@/lib/utils'
 
 const props = withDefaults(defineProps<SelectTriggerProps & {
   class?: HTMLAttributes['class']
@@ -23,7 +23,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     :data-size="size"
     v-bind="forwardedProps"
     :class="cn(
-      'flex w-fit items-center justify-between gap-2 px-3 py-2',
+      'flex w-full items-center justify-between gap-2 px-3 py-2',
       'rounded-md border border-input bg-transparent shadow-xs outline-none',
       'text-sm whitespace-nowrap',
       'transition-[color,box-shadow]',
