@@ -36,13 +36,6 @@ import BreadcrumbDefault from '@/playground/components/breadcrumb/BreadcrumbDefa
 import BreadcrumbWithCustomSeparator from '@/playground/components/breadcrumb/BreadcrumbWithCustomSeparator.vue'
 import BreadcrumbWithDropdown from '@/playground/components/breadcrumb/BreadcrumbWithDropdown.vue'
 
-import DropdownDefault from '@/playground/components/dropdown/DropdownDefault.vue'
-import DropdownMenuAvatarOnly from '@/playground/components/dropdown/DropdownMenuAvatarOnly.vue'
-import DropdownMenuIconButton from '@/playground/components/dropdown/DropdownMenuIconButton.vue'
-import DropdownMenuWithAvatar from '@/playground/components/dropdown/DropdownMenuWithAvatar.vue'
-import DropdownWithCheckboxes from '@/playground/components/dropdown/DropdownWithCheckboxes.vue'
-import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWithRadioGroup.vue'
-
 import ButtonsDemo from '@/playground/components/button/ButtonsDemo.vue'
 import FormButtons from '@/playground/components/button/FormButtons.vue'
 
@@ -73,21 +66,28 @@ import CommandWithDialog from '@/playground/components/command/CommandWithDialog
 
 import ContextMenuDefault from '@/playground/components/context-menu/ContextMenuDefault.vue'
 
-import DatePickerDefault from '@/playground/components/date-picker/DatePickerDefault.vue'
-import DateRangePickerDefault from '@/playground/components/date-range-picker/DateRangePickerDefault.vue'
+import DatePickerDemo1 from '@/playground/components/date-picker/DatePickerDemo1.vue'
+import DatePickerDemo2 from '@/playground/components/date-picker/DatePickerDemo2.vue'
 
+import DialogWithForm from '@/playground/components/dialog/DialogWithForm.vue'
+import DialogWithInlineInputs from '@/playground/components/dialog/DialogWithInlineInputs.vue'
+import DialogWithScrollableBody from '@/playground/components/dialog/DialogWithScrollableContent.vue'
 import DialogWithScrollableOverlay from '@/playground/components/dialog/DialogWithScrollableOverlay.vue'
-import DialogWithScrollBody from '@/playground/components/dialog/DialogWithScrollBody.vue'
-import FormDialog from '@/playground/components/dialog/FormDialog.vue'
-import FormDialog2 from '@/playground/components/dialog/FormDialog2.vue'
 
 import DrawerBasic from '@/playground/components/drawer/DrawerBasic.vue'
 import DrawerDefault from '@/playground/components/drawer/DrawerDefault.vue'
 import DrawerWithScrollableContent from '@/playground/components/drawer/DrawerWithScrollableContent.vue'
+
+import DropdownDefault from '@/playground/components/dropdown/DropdownDefault.vue'
+import DropdownMenuAvatarOnly from '@/playground/components/dropdown/DropdownMenuAvatarOnly.vue'
+import DropdownMenuIconButton from '@/playground/components/dropdown/DropdownMenuIconButton.vue'
+import DropdownMenuWithAvatar from '@/playground/components/dropdown/DropdownMenuWithAvatar.vue'
+import DropdownWithCheckboxes from '@/playground/components/dropdown/DropdownWithCheckboxes.vue'
+import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWithRadioGroup.vue'
 </script>
 
 <template>
-  <div class="grid flex-1 gap-4 p-4">
+  <div class="@container grid flex-1 gap-4 p-4">
     <ComponentWrapper name="Accordion">
       <div class="grid w-full max-w-xl gap-4">
         <AccordionDefault />
@@ -147,17 +147,6 @@ import DrawerWithScrollableContent from '@/playground/components/drawer/DrawerWi
       </div>
     </ComponentWrapper>
 
-    <ComponentWrapper name="Dropdown Menu">
-      <div className="flex flex-wrap items-start gap-4">
-        <DropdownDefault />
-        <DropdownWithCheckboxes />
-        <DropdownWithRadioGroup />
-        <DropdownMenuWithAvatar />
-        <DropdownMenuAvatarOnly />
-        <DropdownMenuIconButton />
-      </div>
-    </ComponentWrapper>
-
     <ComponentWrapper name="Button">
       <ButtonsDemo />
     </ComponentWrapper>
@@ -167,9 +156,11 @@ import DrawerWithScrollableContent from '@/playground/components/drawer/DrawerWi
     </ComponentWrapper>
 
     <ComponentWrapper name="Calendar">
-      <CalendarDefault />
-      <RangeCalendarDefault />
-      <RangeCalendarTwoMonths />
+      <div class="flex flex-col flex-wrap items-start gap-2 md:flex-row">
+        <CalendarDefault />
+        <RangeCalendarDefault />
+        <RangeCalendarTwoMonths />
+      </div>
     </ComponentWrapper>
 
     <ComponentWrapper name="Card">
@@ -182,9 +173,12 @@ import DrawerWithScrollableContent from '@/playground/components/drawer/DrawerWi
       </div>
     </ComponentWrapper>
 
+    <!-- FIXME: Card With Form -->
     <ComponentWrapper name="Card With Form">
-      <CardDefault />
-      <NotificationCard />
+      <div class="flex flex-wrap gap-4">
+        <CardDefault />
+        <NotificationCard />
+      </div>
     </ComponentWrapper>
 
     <!-- TODO: Carousel -->
@@ -208,9 +202,9 @@ import DrawerWithScrollableContent from '@/playground/components/drawer/DrawerWi
     <ComponentWrapper name="Combobox">
       <ComboboxDemo1 />
       <ComboboxDemo2 />
-      <ComboboxDemo3 />
     </ComponentWrapper>
 
+    <!-- FIXME: Command  -->
     <ComponentWrapper name="Command">
       <CommandWithDialog />
     </ComponentWrapper>
@@ -220,21 +214,36 @@ import DrawerWithScrollableContent from '@/playground/components/drawer/DrawerWi
     </ComponentWrapper>
 
     <ComponentWrapper name="Date Picker">
-      <DatePickerDefault />
-      <DateRangePickerDefault />
+      <div class="flex flex-col items-start gap-4 md:flex-row">
+        <DatePickerDemo1 />
+        <DatePickerDemo2 />
+      </div>
     </ComponentWrapper>
 
     <ComponentWrapper name="Dialog">
-      <FormDialog />
-      <FormDialog2 />
-      <DialogWithScrollBody />
-      <DialogWithScrollableOverlay />
+      <div class="flex flex-col items-start gap-4 md:flex-row">
+        <DialogWithForm />
+        <DialogWithInlineInputs />
+        <DialogWithScrollableBody />
+        <DialogWithScrollableOverlay />
+      </div>
     </ComponentWrapper>
 
     <ComponentWrapper name="Drawer">
       <DrawerBasic />
       <DrawerDefault />
       <DrawerWithScrollableContent />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Dropdown Menu">
+      <div className="flex flex-wrap items-start gap-4">
+        <DropdownDefault />
+        <DropdownWithCheckboxes />
+        <DropdownWithRadioGroup />
+        <DropdownMenuWithAvatar />
+        <DropdownMenuAvatarOnly />
+        <DropdownMenuIconButton />
+      </div>
     </ComponentWrapper>
   </div>
 
