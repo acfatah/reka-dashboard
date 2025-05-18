@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "VITE_VUE_DEV_TOOLS=true vite",
+    "dev": "VITE_VUE_DEV_TOOLS=true bunx --bun vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test": "bun lint && vitest run",
@@ -16,7 +16,7 @@
     "lint:fix": "eslint . --fix",
     "lint:inspect": "eslint --inspect-config",
     "precommit": "bun lint:staged",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "bunx --bun storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
