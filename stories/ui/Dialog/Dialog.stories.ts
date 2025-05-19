@@ -25,8 +25,6 @@ import DialogWithContextMenuTriggerComponent from '@/playground/components/dialo
 import DialogWithContextMenuTriggerSource from '@/playground/components/dialog/DialogWithContextMenuTrigger.vue?raw'
 import DialogWithCustomCloseButtonComponent from '@/playground/components/dialog/DialogWithCustomCloseButton.vue'
 import DialogWithCustomCloseButtonSource from '@/playground/components/dialog/DialogWithCustomCloseButton.vue?raw'
-import FormDialogComponent from '@/playground/components/dialog/FormDialog.vue'
-import FormDialogSource from '@/playground/components/dialog/FormDialog.vue?raw'
 
 /**
  * A modal dialog that interrupts the user with important content and expects a response.
@@ -85,13 +83,16 @@ export const WithForm: StoryObj = {
   },
 
   render: args => ({
-    components: { DialogWithFormStory },
+    components: { DialogWithFormStory, Toaster },
 
     setup() {
       return { args }
     },
 
     template: `
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
       <DialogWithFormStory v-bind="args" />
     `,
   }),
@@ -162,31 +163,6 @@ export const CustomCloseButton: StoryObj = {
 
     template: `
       <DialogWithCustomCloseButtonComponent v-bind="args" />
-    `,
-  }),
-}
-
-export const Form: StoryObj = {
-  parameters: {
-    docs: {
-      source: {
-        code: FormDialogSource,
-      },
-    },
-  },
-
-  render: args => ({
-    components: { FormDialogComponent, Toaster },
-
-    setup() {
-      return { args }
-    },
-
-    template: `
-      <Teleport to="body">
-        <Toaster />
-      </Teleport>
-      <FormDialogComponent v-bind="args" />
     `,
   }),
 }
