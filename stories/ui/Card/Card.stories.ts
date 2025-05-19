@@ -8,8 +8,8 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 
-import CardDefaultStory from '@/playground/components/card/CardDefault.vue'
-import CardDefaultStorySource from '@/playground/components/card/CardDefault.vue?raw'
+import CardDefaultStory from '@/playground/components/card/CardWithForm.vue'
+import CardDefaultStorySource from '@/playground/components/card/CardWithForm.vue?raw'
 import NotificationCardComponent from '@/playground/components/card/NotificationCard.vue'
 import NotificationCardSource from '@/playground/components/card/NotificationCard.vue?raw'
 
