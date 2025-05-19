@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import {
   Form,
   FormControl,
@@ -10,10 +11,9 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Toaster } from '@/components/ui/toast'
-import { html } from 'common-tags'
 
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import FormDemoStory from '@/playground/components/form/FormDemo.vue'
+import FormDemoSource from '@/playground/components/form/FormDemo.vue?raw'
 
 /**
  * Form handling using Vee Validate.
@@ -22,7 +22,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  */
 export default {
   title: 'Components/Forms/Form',
-  component: DefaultStory,
+  component: FormDemoStory,
   subcomponents: {
     Form,
     FormControl,
@@ -40,7 +40,7 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: FormDemoSource,
       },
     },
   },
@@ -50,7 +50,7 @@ export const Default: StoryObj = {
   },
 
   render: args => ({
-    components: { DefaultStory, Toaster },
+    components: { FormDemoStory, Toaster },
 
     setup() {
       return { args }
@@ -60,7 +60,7 @@ export const Default: StoryObj = {
       <Teleport to="body">
         <Toaster />
       </Teleport>
-      <DefaultStory v-bind="args" />
+      <FormDemoStory v-bind="args" />
     `,
   }),
 }
