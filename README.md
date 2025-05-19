@@ -16,30 +16,29 @@ Build front-end single page application (SPA) in minutes with `TypeScript`, `Vue
 > [!IMPORTANT]
 > For windows platform (without wsl), please use `windows` branch instead.
 
-- This repository,
-  - is NOT a components library.
-  - is NOT a design library.
-  - is NOT a front-end framework.
-  - does NOT tied to a specific design.
-  - does NOT tied to any spedific UX design framework or library.
+- This repository:
+  - Is NOT a components library.
+  - Is NOT a design library.
+  - Is NOT a front-end framework.
+  - Is NOT confined to any specific design theme, aesthetic, or UX design framework.
 
-- But instead,
-  - a collection of reusable Vue components, implemented using [shadcn-vue][3].
-  - uses [Tailwindcss v4][4].
-  - leverage [reka-ui][2] headless components library.
-  - uses [shadcn-ui][5] as the base design but can be modified to adapt new design.
-  - provides a design system adaptable to any UX design framework.
+- However, it offers:
+  - A versatile collection of Vue components built with [shadcn-vue][3].
+  - Full integration with [Tailwindcss v4][4] for utility-first styling. .
+  - Access to [reka-ui][2] for leveraging robust headless components.
+  - A design foundation based on [shadcn-ui][5], which is fully customizable to accommodate new design requirements.
+  - An extendable design system that can be adapted to align with various UX design frameworks.
 
 - It,
-  - promotes accessibility and adherence to web standards.
-  - focuses on component-driven development for consistency and maintainability.
-  - supports rapid prototyping with pre-built, ready-made components.
-  - includes extensive documentation, examples and visual testing using [Storybook][6].
-  - improve collaboration between design and development teams.
-  - leverage latest ~~cutting edge~~ **bleeding edge** technology that improve DX
-    and development speed.
+  - Serves as a comprehensive front-end solution equipped with a curated set of tools and technologies.
+  - Facilitates rapid prototyping with pre-built, ready-to-integrate components.
+  - Emphasizes on component-driven architecture to ensure a uniform and maintainable codebase.
+  - Prioritizes web accessibility and compliance with the latest web standards.
+  - Includes extensive documentation, examples and visual testing utilites, powered by [Storybook][6].
+  - Enhances collaboration between designers and developers through shared component libraries and design systems.
+  - Harnesses the most advanced technologies available, enhancing the Developer Experience (DX) and streamlining the development workflow.
 
-This repository hosts a [micro-frontend][1] boilerplate architecture, perfect for
+This repository hosts a [micro-frontend][1] boilerplate and [component-based][14] architecture, perfect for
 creating high-performing Single Page Applications. It offers a foundational front-end
 layer, crafted with reusable Vue components and styled with Tailwind CSS, leveraging
 a design system and modern development tools.
@@ -142,3 +141,4 @@ changes from the original repository into your fork.
 [11]: https://iconify.design/getting-started
 [12]: https://react-spectrum.adobe.com/internationalized/date/index.html
 [13]: https://pinia.vuejs.org
+[14]: https://www.geeksforgeeks.org/component-based-architecture-system-design
