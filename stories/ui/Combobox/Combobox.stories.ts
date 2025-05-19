@@ -1,6 +1,6 @@
 import type { StoryObj } from '@storybook/vue3'
-import { Toaster } from '@/components/ui/toast'
 import { html } from 'common-tags'
+import { Toaster } from '@/components/ui/toast'
 
 import ComboboxDefaultStory from '@/playground/components/combobox/ComboboxDemo1.vue'
 import ComboboxDefaultSource from '@/playground/components/combobox/ComboboxDemo1.vue?raw'
@@ -54,7 +54,7 @@ export const Default: StoryObj = {
   }),
 }
 
-export const Form: StoryObj = {
+export const WithForm: StoryObj = {
   parameters: {
     docs: {
       source: {

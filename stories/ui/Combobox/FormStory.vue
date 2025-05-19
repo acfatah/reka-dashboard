@@ -1,40 +1,36 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
-import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { z } from 'zod'
+import { toast } from '@/components/ui/toast'
 
-interface LanguageRecord {
+interface FrameworkRecord {
   label: string
   value: string
 }
 
-const languages: LanguageRecord[] = [
-  { label: 'English', value: 'en' },
-  { label: 'French', value: 'fr' },
-  { label: 'German', value: 'de' },
-  { label: 'Spanish', value: 'es' },
-  { label: 'Portuguese', value: 'pt' },
-  { label: 'Russian', value: 'ru' },
-  { label: 'Japanese', value: 'ja' },
-  { label: 'Korean', value: 'ko' },
-  { label: 'Chinese', value: 'zh' },
+const frameworks: FrameworkRecord[] = [
+  { value: 'next.js', label: 'Next.js' },
+  { value: 'sveltekit', label: 'SvelteKit' },
+  { value: 'nuxt', label: 'Nuxt' },
+  { value: 'remix', label: 'Remix' },
+  { value: 'astro', label: 'Astro' },
 ]
 
 const schema = z.object({
-  language: z.string({
-    required_error: 'Please select a language.',
+  framework: z.string({
+    required_error: 'Please select a framework.',
   }),
 })
 
 const formSchema = toTypedSchema(schema)
 
 const initialValues = {
-  language: '',
+  framework: '',
 }
 
 const onSubmit: SubmissionHandler<GenericObject> = function (values) {
-  const formValues = values as LanguageRecord
+  const formValues = values as FrameworkRecord
 
   toast({
     title: 'You submitted the following values:',
@@ -49,82 +45,73 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
 
 <template>
   <Form
-    v-slot="{ meta, setFieldValue }"
-    class="space-y-6"
+    v-slot="{ meta }"
     :validation-schema="formSchema"
     :initial-values="initialValues"
     @submit="onSubmit"
   >
-    <FormField name="language">
-      <FormItem class="flex flex-col">
-        <FormLabel>Language</FormLabel>
+    <div class="flex w-full flex-col space-y-6 md:w-3/4 lg:3/4">
+      <FormField v-slot="{ value, handleChange }" name="framework">
+        <FormItem class="flex flex-col">
+          <FormLabel>Language</FormLabel>
 
-        <Combobox by="label" v-slot="{ open }">
           <FormControl>
-            <ComboboxAnchor>
-              <div
-                :class="cn(
-                  'relative w-full max-w-sm items-center',
-                  'border rounded-md',
-                  `[&>[data-slot='command-input-wrapper']]:border-none`,
-                  `[&>[data-slot='command-input-wrapper']>svg]:hidden`,
-                )"
-              >
-                <ComboboxInput
-                  :display-value="(val) => val?.label ?? ''"
-                  placeholder="Select language..."
-                  class="pr-5"
-                />
-                <ComboboxTrigger class="absolute end-0 inset-y-0 flex items-center justify-center px-3">
-                  <Icon
-                    icon="lucide:chevron-down"
-                    :class="cn(
-                      'text-muted-foreground',
-                      'transition-transform duration-200',
-                      open && 'rotate-180',
-                    )"
-                  />
+            <Combobox
+              by="label"
+              :model-value="value"
+              @update:model-value="handleChange"
+            >
+              <ComboboxAnchor as-child>
+                <ComboboxTrigger as-child>
+                  <Button variant="outline" class="justify-between">
+                    {{ frameworks.find((i: FrameworkRecord) => i.value === value)?.label ?? 'Select framework' }}
+                    <Icon
+                      icon="lucide:chevrons-up-down"
+                      class="opacity-50"
+                    />
+                  </Button>
                 </ComboboxTrigger>
-              </div>
-            </ComboboxAnchor>
+              </ComboboxAnchor>
+
+              <ComboboxList>
+                <ComboboxInput placeholder="Search framework..." />
+
+                <ComboboxEmpty>
+                  No framework found.
+                </ComboboxEmpty>
+
+                <ComboboxGroup>
+                  <ComboboxItem
+                    v-for="framework in frameworks"
+                    :key="framework.value"
+                    :value="framework.value"
+                  >
+                    {{ framework.label }}
+
+                    <ComboboxItemIndicator>
+                      <Icon icon="lucide:check" />
+                    </ComboboxItemIndicator>
+                  </ComboboxItem>
+                </ComboboxGroup>
+              </ComboboxList>
+            </Combobox>
           </FormControl>
 
-          <ComboboxList>
-            <ComboboxEmpty>
-              Nothing found.
-            </ComboboxEmpty>
+          <FormDescription>
+            This is the language that will be used in the dashboard.
+          </FormDescription>
+          <FormMessage />
+        </FormItem>
+      </FormField>
+    </div>
 
-            <ComboboxGroup>
-              <ComboboxItem
-                v-for="language in languages"
-                :key="language.value"
-                :value="language"
-                @select="() => {
-                  setFieldValue('language', language.value)
-                }"
-              >
-                {{ language.label }}
-
-                <ComboboxItemIndicator>
-                  <Icon icon="lucide:check" class="text-muted-foreground" />
-                </ComboboxItemIndicator>
-              </ComboboxItem>
-            </ComboboxGroup>
-          </ComboboxList>
-        </Combobox>
-
-        <FormDescription>
-          This is the language that will be used in the dashboard.
-        </FormDescription>
-        <FormMessage />
-      </FormItem>
-    </FormField>
-
-    <Button
-      type="submit"
-      :disabled="!(meta.dirty && meta.valid)"
-    >
-      Submit
-    </Button>
+    <div class="mt-6 flex flex-col space-y-2 sm:flex-row sm:space-x-2">
+      <Button
+        type="submit"
+        :disabled="!(meta.dirty && meta.valid)"
+      >
+        Submit
+      </Button>
+    </div>
   </Form>
 </template>
