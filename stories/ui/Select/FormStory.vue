@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
-import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { h } from 'vue'
 import { z } from 'zod'
+import { toast } from '@/components/ui/toast'
 
 type SubmissionRecord = z.infer<typeof schema>
 const schema = z.object({
@@ -37,29 +37,32 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     :validation-schema="formSchema"
     @submit="onSubmit"
   >
-    <FormField v-slot="{ componentField }" name="email">
+    <FormField v-slot="{ componentField, handleBlur, meta: fieldMeta }" name="email">
       <FormItem>
         <FormLabel>Email</FormLabel>
-        <Select v-bind="componentField">
-          <FormControl>
-            <SelectTrigger>
+        <FormControl>
+          <Select v-bind="componentField">
+            <SelectTrigger
+              :aria-invalid="fieldMeta.touched && !fieldMeta.valid"
+              @blur="handleBlur"
+            >
               <SelectValue placeholder="Select a verified email to display" />
             </SelectTrigger>
-          </FormControl>
-          <SelectContent>
-            <SelectGroup>
-              <SelectItem value="m@example.com">
-                m@example.com
-              </SelectItem>
-              <SelectItem value="m@google.com">
-                m@google.com
-              </SelectItem>
-              <SelectItem value="m@support.com">
-                m@support.com
-              </SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+            <SelectContent>
+              <SelectGroup>
+                <SelectItem value="m@example.com">
+                  m@example.com
+                </SelectItem>
+                <SelectItem value="m@google.com">
+                  m@google.com
+                </SelectItem>
+                <SelectItem value="m@support.com">
+                  m@support.com
+                </SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </FormControl>
         <FormDescription>
           You can manage email addresses in your
           <a href="/examples/forms">email settings</a>.
