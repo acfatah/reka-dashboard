@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
+import { CalendarDate, DateFormatter, getLocalTimeZone, parseDate, today } from '@internationalized/date'
+import { toTypedSchema } from '@vee-validate/zod'
+import { toDate } from 'reka-ui/date'
+import { h, ref } from 'vue'
+import { z } from 'zod'
 import { Button } from '@/components/ui/button'
 import { Calendar } from '@/components/ui/calendar'
 import {
@@ -15,11 +20,6 @@ import { Icon } from '@/components/ui/icon'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { toast } from '@/components/ui/toast'
 import { cn } from '@/lib/utils'
-import { CalendarDate, DateFormatter, getLocalTimeZone, parseDate, today } from '@internationalized/date'
-import { toTypedSchema } from '@vee-validate/zod'
-import { toDate } from 'reka-ui/date'
-import { h, ref } from 'vue'
-import { z } from 'zod'
 
 const df = new DateFormatter('en-US', {
   dateStyle: 'long',
@@ -62,7 +62,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     :initial-values="initialValues"
     @submit="onSubmit"
   >
-    <FormField v-slot="{ value }" name="dob">
+    <FormField v-slot="{ value, handleBlur, meta: fieldMeta }" name="dob">
       <FormItem class="flex flex-col">
         <FormLabel>Date of birth</FormLabel>
         <Popover>
@@ -73,6 +73,8 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                   'w-[240px] ps-3 text-start font-normal',
                   !value && 'text-muted-foreground',
                 )"
+                :aria-invalid="fieldMeta.touched && !fieldMeta.valid"
+                @blur="handleBlur"
               >
                 <span>{{ value ? df.format(toDate(parseDate(value))) : "Pick a date" }}</span>
                 <Icon icon="lucide:calendar" class="ms-auto size-4 opacity-50" />
@@ -95,7 +97,6 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                 else {
                   setFieldValue('dob', undefined)
                 }
-
               }"
             />
           </PopoverContent>
