@@ -62,7 +62,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     :initial-values="initialValues"
     @submit="onSubmit"
   >
-    <FormField v-slot="{ value, handleBlur, meta: fieldMeta }" name="dob">
+    <FormField v-slot="{ value, meta: fieldMeta, handleBlur }" name="dob">
       <FormItem class="flex flex-col">
         <FormLabel>Date of birth</FormLabel>
         <Popover>

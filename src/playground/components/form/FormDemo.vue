@@ -299,7 +299,7 @@ const df = new DateFormatter('en-US', {
 
       <!-- Date picker -->
       <FormField
-        v-slot="{ value, setValue }"
+        v-slot="{ value, meta: fieldMeta, handleBlur, setValue }"
         name="dob"
       >
         <FormItem class="flex flex-col">
@@ -313,6 +313,8 @@ const df = new DateFormatter('en-US', {
                     'w-[240px] pl-3 text-left font-normal',
                     !value && 'text-muted-foreground',
                   )"
+                  :aria-invalid="fieldMeta.touched && !fieldMeta.valid"
+                  @blur="handleBlur"
                 >
                   <span>
                     {{ value
