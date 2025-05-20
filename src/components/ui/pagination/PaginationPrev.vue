@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import type { PaginationPrevProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 import { PaginationPrev } from 'reka-ui'
 import { computed } from 'vue'
+import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 const props = withDefaults(defineProps<PaginationPrevProps & {
   class?: HTMLAttributes['class']

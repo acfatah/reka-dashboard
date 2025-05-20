@@ -1,6 +1,6 @@
 import type { StoryObj } from '@storybook/vue3'
-import BlankLayout from '@/layouts/BlankLayout.vue'
 import { html } from 'common-tags'
+import BlankLayout from '@/layouts/BlankLayout.vue'
 
 import App from '@/App.vue'
 import AppSource from '@/App.vue?raw'

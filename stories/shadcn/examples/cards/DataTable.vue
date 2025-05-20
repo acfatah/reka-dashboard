@@ -5,6 +5,15 @@ import type {
   SortingState,
   VisibilityState,
 } from '@tanstack/vue-table'
+import {
+  FlexRender,
+  getCoreRowModel,
+  getFilteredRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
+  useVueTable,
+} from '@tanstack/vue-table'
+import { h, ref } from 'vue'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -25,15 +34,6 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { valueUpdater } from '@/lib/utils'
-import {
-  FlexRender,
-  getCoreRowModel,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-  useVueTable,
-} from '@tanstack/vue-table'
-import { h, ref } from 'vue'
 import DropdownAction from '../DataTableDemoColumn.vue'
 
 export interface Payment {

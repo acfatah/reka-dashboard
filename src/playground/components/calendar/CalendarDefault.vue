@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Calendar } from '@/components/ui/calendar'
 import { getLocalTimeZone, today } from '@internationalized/date'
 import { ref } from 'vue'
+import { Calendar } from '@/components/ui/calendar'
 
 const date = ref(today(getLocalTimeZone()))
 </script>

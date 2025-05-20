@@ -1,8 +1,12 @@
 <script setup lang="ts">
-import type { DateRange } from '@/components/ui/range-calendar'
 import type { DateValue } from '@internationalized/date'
 import type { Grid } from 'reka-ui/date'
 import type { Ref } from 'vue'
+import { CalendarDate, isEqualMonth } from '@internationalized/date'
+import { RangeCalendarRoot, useDateFormatter } from 'reka-ui'
+import { createMonth, toDate } from 'reka-ui/date'
+import { ref, watch } from 'vue'
+import type { DateRange } from '@/components/ui/range-calendar'
 import { Button, buttonVariants } from '@/components/ui/button'
 import { Icon } from '@/components/ui/icon'
 import {
@@ -20,10 +24,6 @@ import {
   RangeCalendarHeadCell,
 } from '@/components/ui/range-calendar'
 import { cn } from '@/lib/utils'
-import { CalendarDate, isEqualMonth } from '@internationalized/date'
-import { RangeCalendarRoot, useDateFormatter } from 'reka-ui'
-import { createMonth, toDate } from 'reka-ui/date'
-import { ref, watch } from 'vue'
 
 const value = ref({
   start: new CalendarDate(2022, 1, 20),

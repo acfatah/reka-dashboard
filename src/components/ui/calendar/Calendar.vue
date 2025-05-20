@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import type { CalendarRootEmits, CalendarRootProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { cn } from '@/lib/utils'
 import { CalendarRoot, useForwardPropsEmits } from 'reka-ui'
 import { computed } from 'vue'
+import { cn } from '@/lib/utils'
 import {
   CalendarCell,
   CalendarCellTrigger,

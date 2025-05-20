@@ -1,6 +1,6 @@
 import type { StoryObj } from '@storybook/vue3'
-import { Label } from '@/components/ui/label'
 import { html } from 'common-tags'
+import { Label } from '@/components/ui/label'
 
 import RangeCalendarDefaultStory from '@/playground/components/range-calendar/RangeCalendarDefault.vue'
 import RangeCalendarDefaultSource from '@/playground/components/range-calendar/RangeCalendarDefault.vue?raw'

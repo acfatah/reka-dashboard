@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { useForm } from 'vee-validate'
 import { h } from 'vue'
 import * as z from 'zod'
+import { toast } from '@/components/ui/toast'
 
 const languages = [
   { label: 'English', value: 'en' },

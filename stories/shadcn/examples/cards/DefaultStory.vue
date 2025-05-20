@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { DateRange } from '@/components/ui/range-calendar'
 import { getLocalTimeZone, today } from '@internationalized/date'
 import { ref } from 'vue'
+import type { DateRange } from '@/components/ui/range-calendar'
 
 import { RangeCalendar } from '@/components/ui/range-calendar'
 

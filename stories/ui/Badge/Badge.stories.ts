@@ -1,6 +1,6 @@
 import type { StoryObj } from '@storybook/vue3'
-import { Badge } from '@/components/ui/badge'
 import { html } from 'common-tags'
+import { Badge } from '@/components/ui/badge'
 
 import BadgeDefault from '@/playground/components/badge/BadgeDefault.vue'
 import BadgeDefaultSource from '@/playground/components/badge/BadgeDefault.vue?raw'

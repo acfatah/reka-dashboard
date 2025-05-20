@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { ZodSchema } from 'zod'
-import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { h, ref } from 'vue'
 import { z } from 'zod'
+import { toast } from '@/components/ui/toast'
 
 interface Step {
   step: number

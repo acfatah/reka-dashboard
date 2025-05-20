@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import {
   NumberField,
   NumberFieldContent,
@@ -7,7 +8,6 @@ import {
   NumberFieldInput,
 } from '@/components/ui/number-field'
 import { Toaster } from '@/components/ui/toast'
-import { html } from 'common-tags'
 
 import CurrencyStory from './CurrencyStory.vue'
 import CurrencySource from './CurrencyStory.vue?raw'

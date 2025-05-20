@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
-import { toast } from '@/components/ui/toast'
 import {
   DateFormatter,
   getLocalTimeZone,
@@ -9,6 +8,7 @@ import {
 import { toTypedSchema } from '@vee-validate/zod'
 import { h } from 'vue'
 import { z } from 'zod'
+import { toast } from '@/components/ui/toast'
 
 const df = new DateFormatter('en-US', {
   dateStyle: 'long',

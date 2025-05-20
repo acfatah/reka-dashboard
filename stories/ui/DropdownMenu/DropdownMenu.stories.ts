@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -15,7 +16,6 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { html } from 'common-tags'
 
 import DropdownDefault from '@/playground/components/dropdown/DropdownDefault.vue'
 import DropdownDefaultSource from '@/playground/components/dropdown/DropdownDefault.vue?raw'

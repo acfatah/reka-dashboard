@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { TagsInputRootEmits, TagsInputRootProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { cn } from '@/lib/utils'
 import { reactiveOmit } from '@vueuse/core'
 import { TagsInputRoot, useForwardPropsEmits } from 'reka-ui'
 import { ref } from 'vue'
+import { cn } from '@/lib/utils'
 import { provideTagsInputContext } from '.'
 
 const props = defineProps<TagsInputRootProps & {

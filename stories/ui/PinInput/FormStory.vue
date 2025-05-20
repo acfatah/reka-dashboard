@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
-import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { z } from 'zod'
+import { toast } from '@/components/ui/toast'
 
 type SubmissionRecord = z.infer<typeof schema>
 const schema = z.object({

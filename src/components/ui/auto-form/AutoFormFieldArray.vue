@@ -1,4 +1,8 @@
 <script setup lang="ts" generic="T extends z.ZodAny">
+import { Icon } from '@iconify/vue'
+import { FieldArray, FieldContextKey, useField } from 'vee-validate'
+import { computed, provide } from 'vue'
+import * as z from 'zod'
 import {
   Accordion,
   AccordionContent,
@@ -8,10 +12,6 @@ import {
 import { Button } from '@/components/ui/button'
 import { FormItem, FormMessage } from '@/components/ui/form'
 import { Separator } from '@/components/ui/separator'
-import { Icon } from '@iconify/vue'
-import { FieldArray, FieldContextKey, useField } from 'vee-validate'
-import { computed, provide } from 'vue'
-import * as z from 'zod'
 import type { Config, ConfigItem } from './interface'
 import AutoFormField from './AutoFormField.vue'
 import AutoFormLabel from './AutoFormLabel.vue'

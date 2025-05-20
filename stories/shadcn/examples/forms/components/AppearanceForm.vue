@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
-import { buttonVariants } from '@/components/ui/button'
-import { toast } from '@/components/ui/toast'
 import { Icon } from '@iconify/vue'
 import { toTypedSchema } from '@vee-validate/zod'
 import { z } from 'zod'
+import { buttonVariants } from '@/components/ui/button'
+import { toast } from '@/components/ui/toast'
 
 type AppearanceRecord = z.infer<typeof schema>
 

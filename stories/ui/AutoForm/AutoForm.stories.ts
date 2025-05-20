@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import {
   AutoForm,
   AutoFormField,
@@ -13,7 +14,6 @@ import {
   AutoFormLabel,
 } from '@/components/ui/auto-form'
 import { Toaster } from '@/components/ui/toast'
-import { html } from 'common-tags'
 
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import type { RangeCalendarPrevProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 import { RangeCalendarPrev, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 const props = defineProps<RangeCalendarPrevProps & {
   class?: HTMLAttributes['class']

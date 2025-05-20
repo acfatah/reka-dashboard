@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { Checkbox } from '@/components/ui/checkbox'
 import {
   FormControl,
@@ -8,7 +9,6 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Switch } from '@/components/ui/switch'
-import { computed } from 'vue'
 import type { FieldProps } from './interface'
 import AutoFormLabel from './AutoFormLabel.vue'
 import { beautifyObjectName, maybeBooleanishToBoolean } from './utils'

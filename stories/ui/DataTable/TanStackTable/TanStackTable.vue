@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
-import { Icon } from '@/components/ui/icon'
-import { valueUpdater } from '@/lib/utils'
 import {
   createColumnHelper,
   FlexRender,
@@ -13,6 +9,10 @@ import {
   getSortedRowModel,
   useVueTable,
 } from '@tanstack/vue-table'
+import { Button } from '@/components/ui/button'
+import { Checkbox } from '@/components/ui/checkbox'
+import { Icon } from '@/components/ui/icon'
+import { valueUpdater } from '@/lib/utils'
 import DropdownAction from './TanStackTableDropdown.vue'
 
 // The data and types

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { DateRange } from '@/components/ui/range-calendar'
-import { RangeCalendar } from '@/components/ui/range-calendar'
 import { DateFormatter, getLocalTimeZone, today } from '@internationalized/date'
 import { reactive } from 'vue'
+import type { DateRange } from '@/components/ui/range-calendar'
+import { RangeCalendar } from '@/components/ui/range-calendar'
 
 const start = today(getLocalTimeZone())
 const end = start.add({ days: 47 })

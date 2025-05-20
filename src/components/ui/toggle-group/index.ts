@@ -1,5 +1,5 @@
-import type { ToggleVariants } from '@/components/ui/toggle'
 import { createContext } from 'reka-ui'
+import type { ToggleVariants } from '@/components/ui/toggle'
 
 export { default as ToggleGroup } from './ToggleGroup.vue'
 export { default as ToggleGroupItem } from './ToggleGroupItem.vue'

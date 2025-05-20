@@ -4,7 +4,6 @@ import type {
   ContextMenuCheckboxItemProps,
 } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 import {
   ContextMenuCheckboxItem,
@@ -12,6 +11,7 @@ import {
   useForwardPropsEmits,
 } from 'reka-ui'
 import { computed } from 'vue'
+import { cn } from '@/lib/utils'
 
 const props = defineProps<ContextMenuCheckboxItemProps & {
   class?: HTMLAttributes['class']

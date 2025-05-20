@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import {
   PinInput,
   PinInputGroup,
@@ -6,7 +7,6 @@ import {
   PinInputSlot,
 } from '@/components/ui/pin-input'
 import { Toaster } from '@/components/ui/toast'
-import { html } from 'common-tags'
 
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'

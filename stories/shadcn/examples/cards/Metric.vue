@@ -1,11 +1,4 @@
 <script setup lang="ts">
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
 import { Line } from '@unovis/ts'
 import {
   VisCrosshair,
@@ -15,6 +8,13 @@ import {
   VisXYContainer,
 } from '@unovis/vue'
 import { html } from 'common-tags'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 
 type Data = typeof data[number]
 

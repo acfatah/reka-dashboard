@@ -1,6 +1,6 @@
 import type { VNode } from 'vue'
-import { Icon } from '@/components/ui/icon'
 import { h } from 'vue'
+import { Icon } from '@/components/ui/icon'
 
 export interface Team {
   name: string

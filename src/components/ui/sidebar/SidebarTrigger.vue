@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
+import { Icon } from '@iconify/vue'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/vue'
 import { useSidebar } from './utils'
 
 const props = defineProps<{

@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import {
   Calendar,
   CalendarCell,
@@ -14,7 +15,6 @@ import {
   CalendarPrevButton,
 } from '@/components/ui/calendar'
 import { Toaster } from '@/components/ui/toast'
-import { html } from 'common-tags'
 
 import CalendarDefaultStory from '@/playground/components/calendar/CalendarDefault.vue'
 import CalendarDefaultSource from '@/playground/components/calendar/CalendarDefault.vue?raw'

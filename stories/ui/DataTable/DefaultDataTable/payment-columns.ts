@@ -1,8 +1,8 @@
+import { createColumnHelper } from '@tanstack/vue-table'
+import { h } from 'vue'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Icon } from '@/components/ui/icon'
-import { createColumnHelper } from '@tanstack/vue-table'
-import { h } from 'vue'
 import type { Payment } from '../data/payments'
 import DropdownAction from './DefaultDataTableDropDown.vue'
 

@@ -1,9 +1,9 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import { Button } from '@/components/ui/button'
 import { Icon } from '@/components/ui/icon'
 import { Toaster } from '@/components/ui/toast'
 import { cn } from '@/lib/utils'
-import { html } from 'common-tags'
 
 import FormButtonsStory from '@/playground/components/button/FormButtons.vue'
 import FormButtonsSource from '@/playground/components/button/FormButtons.vue?raw'

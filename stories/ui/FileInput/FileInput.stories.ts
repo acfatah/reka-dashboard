@@ -1,7 +1,7 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import { Input } from '@/components/ui/input'
 import { Toaster } from '@/components/ui/toast'
-import { html } from 'common-tags'
 
 import FileInputStory from './FileInputDefaultStory.vue'
 import FileInputSource from './FileInputDefaultStory.vue?raw'

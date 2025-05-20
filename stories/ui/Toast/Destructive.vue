@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ToastAction, useToast } from '@/components/ui/toast'
 import { h } from 'vue'
+import { ToastAction, useToast } from '@/components/ui/toast'
 
 const { toast } = useToast()
 </script>

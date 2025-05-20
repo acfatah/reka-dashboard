@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { VisScatter } from '@unovis/vue'
 import {
   Card,
   CardContent,
@@ -6,7 +7,6 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { LineChart } from '@/components/ui/line-chart'
-import { VisScatter } from '@unovis/vue'
 import type { Data } from './data.ts'
 import { data } from './data.ts'
 </script>

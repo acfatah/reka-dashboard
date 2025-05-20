@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { ToggleVariants } from '@/components/ui/toggle'
 import type { ToggleGroupItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { toggleVariants } from '@/components/ui/toggle'
-import { cn } from '@/lib/utils'
 import { reactiveOmit } from '@vueuse/core'
 import { ToggleGroupItem, useForwardProps } from 'reka-ui'
+import type { ToggleVariants } from '@/components/ui/toggle'
+import { toggleVariants } from '@/components/ui/toggle'
+import { cn } from '@/lib/utils'
 import { injectToggleGroupContext } from '.'
 
 const props = defineProps<ToggleGroupItemProps & {

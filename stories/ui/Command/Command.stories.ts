@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import {
   Command,
   CommandDialog,
@@ -10,7 +11,6 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from '@/components/ui/command'
-import { html } from 'common-tags'
 
 import CommandWithDialogStory from '@/playground/components/command/CommandWithDialog.vue'
 import CommandWithDialogSource from '@/playground/components/command/CommandWithDialog.vue?raw'

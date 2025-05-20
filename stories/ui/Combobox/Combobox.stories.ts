@@ -8,6 +8,8 @@ import DropdownMenuStory from './DropdownMenuStory.vue'
 import DropdownMenuSource from './DropdownMenuStory.vue?raw'
 import FormStory from './FormStory.vue'
 import FormSource from './FormStory.vue?raw'
+import InputWithComboboxStory from './InputWithCombobox.vue'
+import InputWithComboboxSource from './InputWithCombobox.vue?raw'
 import PopoverStory from './PopoverStory.vue'
 import PopoverSource from './PopoverStory.vue?raw'
 import ResponsiveStory from './ResponsiveStory.vue'
@@ -75,6 +77,28 @@ export const WithForm: StoryObj = {
         <Toaster />
       </Teleport>
       <FormStory v-bind="args" />
+    `,
+  }),
+}
+
+export const FormInputWithCombobox: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: InputWithComboboxSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { InputWithComboboxStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: html`
+      <InputWithComboboxStory v-bind="args" />
     `,
   }),
 }

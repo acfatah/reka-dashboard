@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
-import { Icon } from '@/components/ui/icon'
-import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { h } from 'vue'
 import { z } from 'zod'
+import { Icon } from '@/components/ui/icon'
+import { toast } from '@/components/ui/toast'
 
 type SubmissionRecord = z.infer<typeof schema>
 const schema = z.object({

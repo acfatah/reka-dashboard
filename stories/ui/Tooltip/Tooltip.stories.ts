@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import Button from '@/components/ui/button/Button.vue'
 import {
   QuickTip,
@@ -8,7 +9,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
-import { html } from 'common-tags'
 
 import PrimitiveStory from './PrimitiveStory.vue'
 import PrimitiveSource from './PrimitiveStory.vue?raw'

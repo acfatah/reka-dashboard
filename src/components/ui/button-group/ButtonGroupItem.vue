@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { ToggleGroupItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { cn } from '@/lib/utils'
 import { ToggleGroupItem, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'
+import { cn } from '@/lib/utils'
 import type { ButtonGroupVariants } from '.'
 import { buttonGroupVariants, injectButtonGroupContext } from '.'
 

@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { vueRouter } from 'storybook-vue3-router'
 import App from '@/App.vue'
 import {
   Sidebar,
@@ -25,7 +26,6 @@ import {
   SidebarSeparator,
   SidebarTrigger,
 } from '@/components/ui/sidebar'
-import { vueRouter } from 'storybook-vue3-router'
 import LeftSidebarSource from './layouts/LeftSidebar.vue?raw'
 import routes from './routes.ts'
 

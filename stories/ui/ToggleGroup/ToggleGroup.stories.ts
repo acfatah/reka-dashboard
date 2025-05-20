@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/vue3'
-import { Toaster } from '@/components/ui/toast'
-import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { html } from 'common-tags'
 import { ref } from 'vue'
+import { Toaster } from '@/components/ui/toast'
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'

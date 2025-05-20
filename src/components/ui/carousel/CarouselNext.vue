@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { Icon } from '@iconify/vue'
 import type { ButtonVariants } from '@/components/ui/button'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { Icon } from '@iconify/vue'
 import type { WithClassAsProps } from './interface'
 import { useCarousel } from './useCarousel'
 

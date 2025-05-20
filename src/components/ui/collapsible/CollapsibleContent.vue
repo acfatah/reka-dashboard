@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { CollapsibleContentProps } from 'reka-ui'
-import { cn } from '@/lib/utils'
 import { CollapsibleContent } from 'reka-ui'
+import { cn } from '@/lib/utils'
 
 const props = defineProps<CollapsibleContentProps>()
 </script>

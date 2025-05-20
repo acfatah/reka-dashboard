@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { toast } from '@/components/ui/toast'
 import { useForwardProps } from 'reka-ui'
+import { toast } from '@/components/ui/toast'
 
 const props = withDefaults(defineProps<{
   disabled?: boolean

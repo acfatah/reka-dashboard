@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BlankLayout from '@/layouts/BlankLayout.vue'
 import { useDark } from '@vueuse/core'
+import BlankLayout from '@/layouts/BlankLayout.vue'
 
 useDark()
 </script>

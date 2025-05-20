@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import {
+  CalendarDate,
+  DateFormatter,
+  getLocalTimeZone,
+} from '@internationalized/date'
 import type { DateRange } from '@/components/ui/range-calendar'
 import { Icon } from '@/components/ui/icon'
-import { CalendarDate, DateFormatter, getLocalTimeZone } from '@internationalized/date'
 
 const df = new DateFormatter('en-US', {
   dateStyle: 'medium',

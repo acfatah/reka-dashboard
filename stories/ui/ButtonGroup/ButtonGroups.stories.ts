@@ -1,7 +1,7 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import { ButtonGroup, ButtonGroupItem } from '@/components/ui/button-group'
 import { Toaster } from '@/components/ui/toast'
-import { html } from 'common-tags'
 
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'

@@ -1,9 +1,9 @@
 <script setup lang="ts" generic="T extends ZodObjectOrWrapped">
 import type { FormContext, GenericObject } from 'vee-validate'
 import type { z, ZodAny } from 'zod'
-import { Form } from '@/components/ui/form'
 import { toTypedSchema } from '@vee-validate/zod'
 import { computed, toRefs } from 'vue'
+import { Form } from '@/components/ui/form'
 import type { Config, ConfigItem, Dependency, Shape } from './interface'
 import type { ZodObjectOrWrapped } from './utils'
 import AutoFormField from './AutoFormField.vue'

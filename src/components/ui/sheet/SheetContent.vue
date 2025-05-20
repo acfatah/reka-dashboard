@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 import { reactiveOmit } from '@vueuse/core'
 import {
@@ -10,6 +9,7 @@ import {
   DialogPortal,
   useForwardPropsEmits,
 } from 'reka-ui'
+import { cn } from '@/lib/utils'
 import type { SheetVariants } from '.'
 import { sheetVariants } from '.'
 import SheetOverlay from './SheetOverlay.vue'

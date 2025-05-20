@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 import { useForwardProps } from 'reka-ui'
 import { computed, ref, useAttrs } from 'vue'
+import { cn } from '@/lib/utils'
 
 const props = defineProps<{
   disabled?: boolean

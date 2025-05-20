@@ -1,6 +1,6 @@
 import type { StoryObj } from '@storybook/vue3'
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { html } from 'common-tags'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'

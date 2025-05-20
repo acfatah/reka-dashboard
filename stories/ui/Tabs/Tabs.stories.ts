@@ -1,7 +1,7 @@
 import type { StoryObj } from '@storybook/vue3'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { html } from 'common-tags'
 import { TabsIndicator } from 'reka-ui'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 import DefaultStory from './DefaultStory.vue'
 import DefaultStorySource from './DefaultStory.vue?raw'

@@ -1,5 +1,7 @@
 <script setup lang="ts" generic="T extends ZodRawShape">
 import type { ZodAny, ZodObject, ZodRawShape } from 'zod'
+import { FieldContextKey, useField } from 'vee-validate'
+import { computed, provide } from 'vue'
 import {
   Accordion,
   AccordionContent,
@@ -7,8 +9,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { FormItem } from '@/components/ui/form'
-import { FieldContextKey, useField } from 'vee-validate'
-import { computed, provide } from 'vue'
 import type { Config, ConfigItem, Shape } from './interface'
 import AutoFormField from './AutoFormField.vue'
 import AutoFormLabel from './AutoFormLabel.vue'

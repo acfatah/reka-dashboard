@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import {
   RangeCalendar,
   RangeCalendarCell,
@@ -14,7 +15,6 @@ import {
   RangeCalendarPrevButton,
 } from '@/components/ui/range-calendar'
 import { Toaster } from '@/components/ui/toast'
-import { html } from 'common-tags'
 
 import DateRangePickerDefault from '@/playground/components/date-range-picker/DateRangePickerDefault.vue'
 import DateRangePickerDefaultSource from '@/playground/components/date-range-picker/DateRangePickerDefault.vue?raw'

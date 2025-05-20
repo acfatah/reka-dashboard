@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { VisStackedBar, VisXYContainer } from '@unovis/vue'
+import { ref } from 'vue'
 import { Button } from '@/components/ui/button'
 import {
   Card,
@@ -8,8 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { VisStackedBar, VisXYContainer } from '@unovis/vue'
-import { ref } from 'vue'
 
 const goal = ref(350)
 type Data = typeof data[number]

@@ -1,6 +1,6 @@
 import type { StoryObj } from '@storybook/vue3'
-import { Label } from '@/components/ui/label'
 import { html } from 'common-tags'
+import { Label } from '@/components/ui/label'
 
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'

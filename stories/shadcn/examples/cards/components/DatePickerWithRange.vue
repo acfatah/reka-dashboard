@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import {
+  CalendarDate,
+  DateFormatter,
+  getLocalTimeZone,
+} from '@internationalized/date'
+import { ref } from 'vue'
 import type { DateRange } from '@/components/ui/range-calendar'
 import { Button } from '@/components/ui/button'
 import { Icon } from '@/components/ui/icon'
@@ -9,12 +15,6 @@ import {
 } from '@/components/ui/popover'
 import { RangeCalendar } from '@/components/ui/range-calendar'
 import { cn } from '@/lib/utils'
-import {
-  CalendarDate,
-  DateFormatter,
-  getLocalTimeZone,
-} from '@internationalized/date'
-import { ref } from 'vue'
 
 const df = new DateFormatter('en-US', {
   dateStyle: 'medium',

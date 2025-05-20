@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Icon } from '@iconify/vue'
+import { ref } from 'vue'
 import { Button } from '@/components/ui/button'
 import {
   FormControl,
@@ -8,8 +10,6 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { Icon } from '@iconify/vue'
-import { ref } from 'vue'
 import type { FieldProps } from './interface'
 import AutoFormLabel from './AutoFormLabel.vue'
 import { beautifyObjectName } from './utils'

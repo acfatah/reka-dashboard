@@ -1,5 +1,5 @@
-import { AreaChart } from '@/components/ui/area-chart/index.js'
 import { CurveType } from '@unovis/ts'
+import { AreaChart } from '@/components/ui/area-chart/index.js'
 import data from '../LineChart/data/montly.js'
 import AreaChartSource from './DefaultSnippet.vue?raw'
 import SparklineSource from './SparklineSnippet.vue?raw'

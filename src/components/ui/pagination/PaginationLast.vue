@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { ButtonVariants } from '@/components/ui/button'
 import type { PaginationLastProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 import { reactiveOmit } from '@vueuse/core'
 import { PaginationLast, useForwardProps } from 'reka-ui'
+import type { ButtonVariants } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 const props = withDefaults(defineProps<PaginationLastProps & {
   size?: ButtonVariants['size']

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { VNode } from 'vue'
-import { Icon } from '@/components/ui/icon'
 import { h } from 'vue'
+import { Icon } from '@/components/ui/icon'
 
 interface Step {
   step: number

@@ -1,5 +1,5 @@
-import App from '@/App.vue'
 import { vueRouter } from 'storybook-vue3-router'
+import App from '@/App.vue'
 import DefaultStorySource from './DefaultStory.vue?raw'
 import routes from './routes.ts'
 

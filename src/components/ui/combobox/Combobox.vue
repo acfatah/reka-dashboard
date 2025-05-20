@@ -9,9 +9,9 @@ const forwarded = useForwardPropsEmits(props, emits)
 
 <template>
   <ComboboxRoot
+    v-slot="{ open }"
     data-slot="combobox"
     v-bind="forwarded"
-    v-slot="{ open }"
   >
     <slot v-bind="{ open }" />
   </ComboboxRoot>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { RangeCalendar } from '@/components/ui/range-calendar'
 import { getLocalTimeZone, today } from '@internationalized/date'
 import { reactive } from 'vue'
+import { RangeCalendar } from '@/components/ui/range-calendar'
 
 const dateRange = reactive({
   start: today(getLocalTimeZone()),

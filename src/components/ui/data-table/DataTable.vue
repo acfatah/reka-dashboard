@@ -6,7 +6,6 @@ import type {
   RowSelectionState,
   VisibilityState,
 } from '@tanstack/vue-table'
-import { valueUpdater } from '@/lib/utils'
 import { Icon } from '@iconify/vue'
 import {
   FlexRender,
@@ -16,6 +15,7 @@ import {
   getSortedRowModel,
   useVueTable,
 } from '@tanstack/vue-table'
+import { valueUpdater } from '@/lib/utils'
 
 const props = withDefaults(defineProps<{
   columns: ColumnDef<any, any>[]

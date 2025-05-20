@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Icon } from '@/components/ui/icon'
 import { h } from 'vue'
+import { Icon } from '@/components/ui/icon'
 
 // This is sample data.
 const data = {

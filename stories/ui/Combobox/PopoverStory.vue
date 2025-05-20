@@ -21,7 +21,7 @@ const selectedStatus: Ref<StatusRecord | null> = ref(null)
     </p>
 
     <Combobox v-model="selectedStatus" by="label">
-      <ComboboxAnchor as-child >
+      <ComboboxAnchor as-child>
         <ComboboxTrigger as-child>
           <Button
             variant="outline"

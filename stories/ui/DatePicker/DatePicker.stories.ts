@@ -1,7 +1,7 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import { Calendar } from '@/components/ui/calendar'
 import { Toaster } from '@/components/ui/toast'
-import { html } from 'common-tags'
 
 import DatePickerDefault from '@/playground/components/date-picker/DatePickerDefault.vue'
 import DatePickerDefaultSource from '@/playground/components/date-picker/DatePickerDefault.vue?raw'

@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 
-import HelloWorld from '@/components/HelloWorld.vue'
 import { mount } from '@vue/test-utils'
 import { createPinia, setActivePinia } from 'pinia'
+import HelloWorld from '@/components/HelloWorld.vue'
 
 function setupTestComponent() {
   const pinia = createPinia()

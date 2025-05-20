@@ -1,7 +1,7 @@
 import type { StoryObj } from '@storybook/vue3'
+import { html } from 'common-tags'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Toaster } from '@/components/ui/toast'
-import { html } from 'common-tags'
 
 import CheckboxArrayInputStory from '@/playground/components/checkbox/CheckboxArrayInput.vue'
 import CheckboxArrayInputSource from '@/playground/components/checkbox/CheckboxArrayInput.vue?raw'

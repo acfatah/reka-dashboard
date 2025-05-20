@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
-import { toast } from '@/components/ui/toast'
 import { Icon } from '@iconify/vue'
 import { toTypedSchema } from '@vee-validate/zod'
 import { z } from 'zod'
+import { toast } from '@/components/ui/toast'
 
 const verifiedEmails = ref(['m@example.com', 'm@google.com', 'm@support.com'])
 
