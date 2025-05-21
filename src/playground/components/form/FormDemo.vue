@@ -304,8 +304,14 @@ const df = new DateFormatter('en-US', {
       >
         <FormItem class="flex flex-col">
           <FormLabel>Date of birth</FormLabel>
-          <Popover>
-            <PopoverTrigger as-child>
+          <Popover
+            v-slot="{ open }"
+            @update:open="val => !val && handleBlur()"
+          >
+            <PopoverTrigger
+              as-child
+              @blur="!open && !value && handleBlur()"
+            >
               <FormControl>
                 <Button
                   variant="outline"
@@ -314,7 +320,6 @@ const df = new DateFormatter('en-US', {
                     !value && 'text-muted-foreground',
                   )"
                   :aria-invalid="fieldMeta.touched && !fieldMeta.valid"
-                  @blur="handleBlur"
                 >
                   <span>
                     {{ value

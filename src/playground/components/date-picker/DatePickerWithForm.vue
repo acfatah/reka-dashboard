@@ -56,17 +56,26 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
 
 <template>
   <Form
-    v-slot="{ meta, setFieldValue }"
+    v-slot="{ meta }"
     class="w-full space-y-6"
     :validation-schema="formSchema"
     :initial-values="initialValues"
     @submit="onSubmit"
   >
-    <FormField v-slot="{ value, meta: fieldMeta, handleBlur }" name="dob">
+    <FormField
+      v-slot="{ value, meta: fieldMeta, handleBlur, setValue }"
+      name="dob"
+    >
       <FormItem class="flex flex-col">
         <FormLabel>Date of birth</FormLabel>
-        <Popover>
-          <PopoverTrigger as-child>
+        <Popover
+          v-slot="{ open }"
+          @update:open="val => !val && handleBlur()"
+        >
+          <PopoverTrigger
+            as-child
+            @blur="!open && !value && handleBlur()"
+          >
             <FormControl>
               <Button
                 variant="outline" :class="cn(
@@ -74,7 +83,6 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                   !value && 'text-muted-foreground',
                 )"
                 :aria-invalid="fieldMeta.touched && !fieldMeta.valid"
-                @blur="handleBlur"
               >
                 <span>{{ value ? df.format(toDate(parseDate(value))) : "Pick a date" }}</span>
                 <Icon icon="lucide:calendar" class="ms-auto size-4 opacity-50" />
@@ -90,12 +98,12 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
               :value="value ? parseDate(value) : undefined"
               :min-value="new CalendarDate(1900, 1, 1)"
               :max-value="today(getLocalTimeZone())"
-              @update:model-value="(v) => {
-                if (v) {
-                  setFieldValue('dob', v.toString())
+              @update:model-value="(val) => {
+                if (val) {
+                  setValue(val.toString())
                 }
                 else {
-                  setFieldValue('dob', undefined)
+                  setValue(undefined)
                 }
               }"
             />
