@@ -26,7 +26,7 @@ const schema = z.object({
 const formSchema = toTypedSchema(schema)
 
 const initialValues = {
-  framework: '',
+  //
 }
 
 const onSubmit: SubmissionHandler<GenericObject> = function (values) {
@@ -51,19 +51,32 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     @submit="onSubmit"
   >
     <div class="flex w-full flex-col space-y-6 md:w-3/4 lg:3/4">
-      <FormField v-slot="{ value, handleChange }" name="framework">
+      <FormField
+        v-slot="{ componentField, meta: fieldMeta, value, handleBlur, handleChange }"
+        name="framework"
+      >
         <FormItem class="flex flex-col">
           <FormLabel>Language</FormLabel>
 
           <FormControl>
             <Combobox
+              v-slot="{ open }"
+              v-bind="componentField"
               by="label"
               :model-value="value"
               @update:model-value="handleChange"
+              @update:open="val => !val && handleBlur()"
             >
-              <ComboboxAnchor as-child>
+              <ComboboxAnchor
+                as-child
+                @blur="!open && !value && handleBlur()"
+              >
                 <ComboboxTrigger as-child>
-                  <Button variant="outline" class="justify-between">
+                  <Button
+                    variant="outline"
+                    class="justify-between"
+                    :aria-invalid="fieldMeta.touched && !fieldMeta.valid"
+                  >
                     {{ frameworks.find((i: FrameworkRecord) => i.value === value)?.label ?? 'Select framework' }}
                     <Icon
                       icon="lucide:chevrons-up-down"
