@@ -29,6 +29,7 @@ provideTagsInputContext({
       'flex flex-wrap items-center gap-2 px-3 py-1.5',
       'rounded-md border border-input bg-background',
       'text-sm',
+      'aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40',
       focused && 'border-ring ring-[3px] ring-ring/50',
       props.class,
     )"

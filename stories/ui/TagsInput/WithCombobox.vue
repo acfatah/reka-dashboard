@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
-import { TagsInputInput } from '@/components/ui/tags-input'
-import { toast } from '@/components/ui/toast'
 import { toTypedSchema } from '@vee-validate/zod'
 import { useFilter } from 'reka-ui'
 import { computed, ref } from 'vue'
 import { z } from 'zod'
+import { TagsInputInput } from '@/components/ui/tags-input'
+import { toast } from '@/components/ui/toast'
 
 interface FrameworkRecord {
   label: string
@@ -21,7 +21,7 @@ const frameworks: FrameworkRecord[] = [
 ]
 
 const schema = z.object({
-  frameworks: z.array(z.string()).min(1).max(3),
+  frameworks: z.array(z.string()).min(2).max(3),
 })
 
 const formSchema = toTypedSchema(schema)
@@ -31,7 +31,6 @@ const initialValues = {
 }
 
 const { contains } = useFilter({ sensitivity: 'base' })
-const frameworksComboboxOpen = ref(false)
 const frameworksTagsInputInputRef = ref<typeof TagsInputInput>()
 const frameworkSearch = ref('')
 
@@ -53,6 +52,9 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     ),
   })
 }
+
+// TODO: Remove the story args
+const storyArgs = useAttrs()
 </script>
 
 <template>
@@ -63,24 +65,32 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     :initial-values="initialValues"
     @submit="onSubmit"
   >
-    <FormField v-slot="{ value, handleChange }" name="frameworks">
+    <FormField
+      v-slot="{ meta: fieldMeta, value, handleBlur, handleChange }"
+      name="frameworks"
+    >
       <FormItem>
         <FormLabel>Frameworks</FormLabel>
         <FormControl>
           <Combobox
-            v-model:open="frameworksComboboxOpen"
+            v-slot="{ setOpen }"
             class="w-full"
             ignore-filter
             :model-value="value"
             @update:model-value="handleChange"
           >
-            <ComboboxAnchor as-child>
+            <ComboboxAnchor
+              as-child
+              class="[&>[data-slot=command-input-wrapper]]:px-2 [&>[data-slot=command-input-wrapper]]:border-none"
+            >
               <TagsInput
                 class="w-80 gap-0 px-1.5 py-0"
                 :display-value="(value) => frameworks.find(
                   (record: FrameworkRecord) => record.value === value)?.label ?? ''
                 "
+                :aria-invalid="fieldMeta.touched && !fieldMeta.valid"
                 :model-value="value"
+                v-bind="storyArgs"
                 @update:model-value="handleChange"
               >
                 <div
@@ -108,7 +118,8 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                     ref="frameworksTagsInputInputRef"
                     class="w-full px-1"
                     placeholder="Framework..."
-                    @focus="frameworksComboboxOpen = true"
+                    @focus="setOpen(true)"
+                    @blur="setOpen(false); handleBlur()"
                     @keydown.enter.prevent
                   />
                 </ComboboxInput>
@@ -125,12 +136,12 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                       if (typeof ev.detail.value === 'string') {
                         frameworkSearch = ''
                         handleChange([...value, framework.value])
-                        frameworksComboboxOpen = false
+                        setOpen(false)
                         frameworksTagsInputInputRef?.$el.focus()
                       }
 
                       if (filteredFrameworks.length === 0) {
-                        frameworksComboboxOpen = false
+                        setOpen(false)
                       }
                     }"
                   >
