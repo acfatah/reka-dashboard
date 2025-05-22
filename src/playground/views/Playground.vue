@@ -114,6 +114,8 @@ import ScrollAreaDemo from '@/playground/components/scroll-area/ScrollAreaDemo.v
 import SelectDemo from '@/playground/components/select/SelectDemo.vue'
 
 import SeparatorDemo from '@/playground/components/separator/SeparatorDemo.vue'
+
+import SheetDemo from '@/playground/components/sheet/SheetDemo.vue'
 </script>
 
 <template>
@@ -332,6 +334,10 @@ import SeparatorDemo from '@/playground/components/separator/SeparatorDemo.vue'
 
     <ComponentWrapper name="Separator">
       <SeparatorDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Sheet">
+      <SheetDemo />
     </ComponentWrapper>
   </div>
 
