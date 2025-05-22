@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DateValue } from '@internationalized/date'
+import type { CalendarDate } from '@internationalized/date'
 import type { CalendarRootEmits, CalendarRootProps } from 'reka-ui'
 import type { HTMLAttributes, Ref } from 'vue'
 import { getLocalTimeZone, today } from '@internationalized/date'
@@ -16,7 +16,9 @@ import {
 } from '@/components/ui/select'
 import { cn } from '@/lib/utils'
 
-const props = withDefaults(defineProps<CalendarRootProps & { class?: HTMLAttributes['class'] }>(), {
+const props = withDefaults(defineProps<CalendarRootProps & {
+  class?: HTMLAttributes['class']
+}>(), {
   modelValue: undefined,
   placeholder() {
     return today(getLocalTimeZone())
@@ -30,7 +32,7 @@ const delegatedProps = reactiveOmit(props, 'class', 'placeholder')
 const placeholder = useVModel(props, 'modelValue', emits, {
   passive: true,
   defaultValue: today(getLocalTimeZone()),
-}) as Ref<DateValue>
+}) as unknown as Ref<CalendarDate | undefined>
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 const formatter = useDateFormatter('en')
@@ -47,11 +49,11 @@ const formatter = useDateFormatter('en')
       <CalendarHeading class="flex w-full items-center justify-between gap-2">
         <Select
           :default-value="placeholder.month.toString()"
-          @update:model-value="(v: string) => {
-            if (!v || !placeholder) return;
-            if (Number(v) === placeholder?.month) return;
+          @update:model-value="(val: string) => {
+            if (!val || !placeholder) return;
+            if (Number(val) === placeholder?.month) return;
             placeholder = placeholder.set({
-              month: Number(v),
+              month: Number(val),
             })
           }"
         >
@@ -70,11 +72,11 @@ const formatter = useDateFormatter('en')
 
         <Select
           :default-value="placeholder.year.toString()"
-          @update:model-value="(v: string) => {
-            if (!v || !placeholder) return;
-            if (Number(v) === placeholder?.year) return;
+          @update:model-value="(val: string) => {
+            if (!val || !placeholder) return;
+            if (Number(val) === placeholder?.year) return;
             placeholder = placeholder.set({
-              year: Number(v),
+              year: Number(val),
             })
           }"
         >
