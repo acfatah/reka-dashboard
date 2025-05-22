@@ -81,6 +81,9 @@ export const WithForm: StoryObj = {
   }),
 }
 
+/**
+ * Also known as `AutoComplete` or `AutoSuggest` components.
+ */
 export const FormInputWithCombobox: StoryObj = {
   parameters: {
     docs: {
@@ -91,13 +94,16 @@ export const FormInputWithCombobox: StoryObj = {
   },
 
   render: args => ({
-    components: { InputWithComboboxStory },
+    components: { InputWithComboboxStory, Toaster },
 
     setup() {
       return { args }
     },
 
     template: html`
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
       <InputWithComboboxStory v-bind="args" />
     `,
   }),
