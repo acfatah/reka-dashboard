@@ -3,12 +3,16 @@ import type { AlertDialogCancelProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { AlertDialogCancel } from 'reka-ui'
 import { computed } from 'vue'
+import type { ButtonVariants } from '@/components/ui/button'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
-const props = defineProps<AlertDialogCancelProps & {
+const props = withDefaults(defineProps<AlertDialogCancelProps & {
   class?: HTMLAttributes['class']
-}>()
+  variant?: ButtonVariants['variant']
+}>(), {
+  variant: 'outline',
+})
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -21,7 +25,7 @@ const delegatedProps = computed(() => {
   <AlertDialogCancel
     v-bind="delegatedProps"
     :class="cn(
-      buttonVariants({ variant: 'outline' }),
+      buttonVariants({ variant }),
       'mt-2 sm:mt-0',
       props.class,
     )"

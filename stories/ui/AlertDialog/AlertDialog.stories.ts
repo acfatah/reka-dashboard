@@ -12,6 +12,8 @@ import {
 
 import AlertDialogDefault from '@/playground/components/alert-dialog/AlertDialogDefault.vue'
 import AlertDialogDefaultSource from '@/playground/components/alert-dialog/AlertDialogDefault.vue?raw'
+import AlertDialogWithCustomButtonVariantStory from '@/playground/components/alert-dialog/AlertDialogWithCustomButtonVariant.vue'
+import AlertDialogWithCustomButtonVariantSource from '@/playground/components/alert-dialog/AlertDialogWithCustomButtonVariant.vue?raw'
 
 /**
  * A modal dialog that interrupts the user with important content and expects a response.
@@ -58,6 +60,28 @@ export const Default: StoryObj = {
 
     template: `
       <AlertDialogDefault v-bind="args" />
+    `,
+  }),
+}
+
+export const WithCustomButtonVariant: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: AlertDialogWithCustomButtonVariantSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { AlertDialogWithCustomButtonVariantStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <AlertDialogWithCustomButtonVariantStory v-bind="args" />
     `,
   }),
 }
