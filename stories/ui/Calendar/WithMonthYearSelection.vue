@@ -3,10 +3,9 @@ import type { DateValue } from '@internationalized/date'
 import type { CalendarRootEmits, CalendarRootProps } from 'reka-ui'
 import type { HTMLAttributes, Ref } from 'vue'
 import { getLocalTimeZone, today } from '@internationalized/date'
-import { useVModel } from '@vueuse/core'
+import { reactiveOmit, useVModel } from '@vueuse/core'
 import { CalendarRoot, useDateFormatter, useForwardPropsEmits } from 'reka-ui'
 import { createDecade, createYear, toDate } from 'reka-ui/date'
-import { computed } from 'vue'
 import { CalendarCell, CalendarCellTrigger, CalendarGrid, CalendarGridBody, CalendarGridHead, CalendarGridRow, CalendarHeadCell, CalendarHeader, CalendarHeading } from '@/components/ui/calendar'
 import {
   Select,
@@ -24,13 +23,9 @@ const props = withDefaults(defineProps<CalendarRootProps & { class?: HTMLAttribu
   },
   weekdayFormat: 'short',
 })
+
 const emits = defineEmits<CalendarRootEmits>()
-
-const delegatedProps = computed(() => {
-  const { class: _, placeholder: __, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class', 'placeholder')
 
 const placeholder = useVModel(props, 'modelValue', emits, {
   passive: true,

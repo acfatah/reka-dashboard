@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { reactiveOmit } from '@vueuse/core'
 import { Primitive } from 'reka-ui'
 import { kbdVariants } from '.'
 
@@ -7,11 +8,7 @@ const props = defineProps({
   size: { type: null, required: false, default: 'sm' },
 })
 
-const delegatedProps = computed(() => {
-  const { class: _, size, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class', 'size')
 </script>
 
 <template>

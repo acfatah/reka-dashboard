@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { computed } from 'vue'
+import { reactiveOmit } from '@vueuse/core'
 import { cn } from '@/lib/utils'
 
 const props = defineProps<{
@@ -8,11 +8,7 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, justifyEnd, ...delegated } = props
-
-  return { ...delegated }
-})
+const delegatedProps = reactiveOmit(props, 'class', 'justifyEnd')
 </script>
 
 <template>
