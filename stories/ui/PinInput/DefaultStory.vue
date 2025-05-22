@@ -15,7 +15,7 @@ function handleComplete(inputs: string[]) {
 
   toast({
     title: 'You submitted the following values:',
-    description: h('pre', { class: 'mt-2 w-[340px] rounded-md bg-slate-950 p-4' }, h(
+    description: h('pre', { class: 'mt-2 w-full rounded-md bg-slate-950 p-4' }, h(
       'code',
       { class: 'text-white' },
       JSON.stringify(pin, null, 2),

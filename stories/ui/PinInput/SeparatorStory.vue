@@ -6,7 +6,7 @@ const value = ref([])
 function handleComplete(inputs: string[]) {
   return toast({
     title: '"complete" event:',
-    description: h('pre', { class: 'mt-2 w-[340px] rounded-md bg-slate-950 p-4' }, h(
+    description: h('pre', { class: 'mt-2 w-full rounded-md bg-slate-950 p-4' }, h(
       'code',
       { class: 'text-white' },
       JSON.stringify(inputs.join(''), null, 2),

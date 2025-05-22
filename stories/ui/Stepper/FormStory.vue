@@ -62,7 +62,7 @@ type FormValues = ZodSchemaStep1 & ZodSchemaStep2 & ZodSchemaStep3
 function onSubmit(values: FormValues) {
   toast({
     title: 'You submitted the following values:',
-    description: h('pre', { class: 'mt-2 w-[340px] rounded-md bg-slate-950 p-4' }, h('code', { class: 'text-white' }, JSON.stringify(values, null, 2))),
+    description: h('pre', { class: 'mt-2 w-full rounded-md bg-slate-950 p-4' }, h('code', { class: 'text-white' }, JSON.stringify(values, null, 2))),
   })
 }
 </script>
