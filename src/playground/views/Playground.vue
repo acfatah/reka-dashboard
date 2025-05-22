@@ -112,6 +112,8 @@ import ResizableDemo from '@/playground/components/resizable/ResizableDemo.vue'
 import ScrollAreaDemo from '@/playground/components/scroll-area/ScrollAreaDemo.vue'
 
 import SelectDemo from '@/playground/components/select/SelectDemo.vue'
+
+import SeparatorDemo from '@/playground/components/separator/SeparatorDemo.vue'
 </script>
 
 <template>
@@ -326,6 +328,10 @@ import SelectDemo from '@/playground/components/select/SelectDemo.vue'
 
     <ComponentWrapper name="Select">
       <SelectDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Separator">
+      <SeparatorDemo />
     </ComponentWrapper>
   </div>
 
