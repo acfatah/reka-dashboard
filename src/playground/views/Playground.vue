@@ -88,6 +88,8 @@ import DropdownWithRadioGroup from '@/playground/components/dropdown/DropdownWit
 import FormDemo from '@/playground/components/form/FormDemo.vue'
 
 import HoverCardDemo from '@/playground/components/hover-card/HoverCardDemo.vue'
+
+import InputDemo from '@/playground/components/input/InputDemo.vue'
 </script>
 
 <template>
@@ -254,6 +256,10 @@ import HoverCardDemo from '@/playground/components/hover-card/HoverCardDemo.vue'
 
     <ComponentWrapper name="Hover Card">
       <HoverCardDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Input">
+      <InputDemo />
     </ComponentWrapper>
   </div>
 
