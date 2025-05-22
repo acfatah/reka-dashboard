@@ -98,6 +98,8 @@ import MenubarDemo from '@/playground/components/menubar/MenubarDemo.vue'
 import NavigationMenuDemo from '@/playground/components/navigation-menu/NavigationMenuDemo.vue'
 
 import PaginationDemo from '@/playground/components/pagination/PaginationDemo.vue'
+
+import PopoverDemo from '@/playground/components/popover/PopoverDemo.vue'
 </script>
 
 <template>
@@ -284,6 +286,10 @@ import PaginationDemo from '@/playground/components/pagination/PaginationDemo.vu
 
     <ComponentWrapper name="Pagination">
       <PaginationDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Popover">
+      <PopoverDemo />
     </ComponentWrapper>
   </div>
 
