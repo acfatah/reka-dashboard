@@ -95,9 +95,9 @@ const components: { title: string, href: string, description: string }[] = [
             as-child
             :class="navigationMenuTriggerStyle()"
           >
-            <NuxtLink to="/docs">
+            <RouterLink to="/docs">
               Documentation
-            </NuxtLink>
+            </RouterLink>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -110,9 +110,9 @@ const components: { title: string, href: string, description: string }[] = [
             as-child
             :class="navigationMenuTriggerStyle()"
           >
-            <NuxtLink to="/docs">
+            <RouterLink to="/docs">
               Documentation
-            </NuxtLink>
+            </RouterLink>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
@@ -121,34 +121,34 @@ const components: { title: string, href: string, description: string }[] = [
             <ul class="grid w-[300px] gap-4">
               <li>
                 <NavigationMenuLink as-child>
-                  <NuxtLink to="#">
+                  <RouterLink to="#">
                     <div class="font-medium">
                       Components
                     </div>
                     <div class="text-muted-foreground">
                       Browse all components in the library.
                     </div>
-                  </NuxtLink>
+                  </RouterLink>
                 </NavigationMenuLink>
                 <NavigationMenuLink as-child>
-                  <NuxtLink to="#">
+                  <RouterLink to="#">
                     <div class="font-medium">
                       Documentation
                     </div>
                     <div class="text-muted-foreground">
                       Learn how to use the library.
                     </div>
-                  </NuxtLink>
+                  </RouterLink>
                 </NavigationMenuLink>
                 <NavigationMenuLink as-child>
-                  <NuxtLink to="#">
+                  <RouterLink to="#">
                     <div class="font-medium">
                       Blog
                     </div>
                     <div class="text-muted-foreground">
                       Read our latest blog posts.
                     </div>
-                  </NuxtLink>
+                  </RouterLink>
                 </NavigationMenuLink>
               </li>
             </ul>
@@ -160,19 +160,19 @@ const components: { title: string, href: string, description: string }[] = [
             <ul class="grid w-[200px] gap-4">
               <li>
                 <NavigationMenuLink as-child>
-                  <NuxtLink to="#">
+                  <RouterLink to="#">
                     Components
-                  </NuxtLink>
+                  </RouterLink>
                 </NavigationMenuLink>
                 <NavigationMenuLink as-child>
-                  <NuxtLink to="#">
+                  <RouterLink to="#">
                     Documentation
-                  </NuxtLink>
+                  </RouterLink>
                 </NavigationMenuLink>
                 <NavigationMenuLink as-child>
-                  <NuxtLink to="#">
+                  <RouterLink to="#">
                     Blocks
-                  </NuxtLink>
+                  </RouterLink>
                 </NavigationMenuLink>
               </li>
             </ul>
@@ -184,22 +184,22 @@ const components: { title: string, href: string, description: string }[] = [
             <ul class="grid w-[200px] gap-4">
               <li>
                 <NavigationMenuLink as-child>
-                  <NuxtLink to="#" class="flex-row items-center gap-2">
+                  <RouterLink to="#" class="flex-row items-center gap-2">
                     <Icon icon="lucide:circle-help" />
                     Backlog
-                  </NuxtLink>
+                  </RouterLink>
                 </NavigationMenuLink>
                 <NavigationMenuLink as-child>
-                  <NuxtLink to="#" class="flex-row items-center gap-2">
+                  <RouterLink to="#" class="flex-row items-center gap-2">
                     <Icon icon="lucide:circle" />
                     To Do
-                  </NuxtLink>
+                  </RouterLink>
                 </NavigationMenuLink>
                 <NavigationMenuLink as-child>
-                  <NuxtLink to="#" class="flex-row items-center gap-2">
+                  <RouterLink to="#" class="flex-row items-center gap-2">
                     <Icon icon="lucide:check" />
                     Done
-                  </NuxtLink>
+                  </RouterLink>
                 </NavigationMenuLink>
               </li>
             </ul>
