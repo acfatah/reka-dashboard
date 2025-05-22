@@ -99,6 +99,8 @@ import NavigationMenuDemo from '@/playground/components/navigation-menu/Navigati
 
 import PaginationDemo from '@/playground/components/pagination/PaginationDemo.vue'
 
+import PinInputDemo from '@/playground/components/pin-input/PinInputDemo.vue'
+
 import PopoverDemo from '@/playground/components/popover/PopoverDemo.vue'
 
 import ProgressDemo from '@/playground/components/progress/ProgressDemo.vue'
@@ -290,6 +292,10 @@ import RadioGroupDemo from '@/playground/components/radio-group/RadioGroupDemo.v
 
     <ComponentWrapper name="Pagination">
       <PaginationDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Pin Input">
+      <PinInputDemo />
     </ComponentWrapper>
 
     <ComponentWrapper name="Popover">
