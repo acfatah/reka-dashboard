@@ -108,6 +108,8 @@ import ProgressDemo from '@/playground/components/progress/ProgressDemo.vue'
 import RadioGroupDemo from '@/playground/components/radio-group/RadioGroupDemo.vue'
 
 import ResizableDemo from '@/playground/components/resizable/ResizableDemo.vue'
+
+import ScrollAreaDemo from '@/playground/components/scroll-area/ScrollAreaDemo.vue'
 </script>
 
 <template>
@@ -314,6 +316,10 @@ import ResizableDemo from '@/playground/components/resizable/ResizableDemo.vue'
 
     <ComponentWrapper name="Resizable">
       <ResizableDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Scroll Area">
+      <ScrollAreaDemo />
     </ComponentWrapper>
   </div>
 
