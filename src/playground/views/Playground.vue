@@ -92,6 +92,8 @@ import HoverCardDemo from '@/playground/components/hover-card/HoverCardDemo.vue'
 import InputDemo from '@/playground/components/input/InputDemo.vue'
 
 import LabelDemo from '@/playground/components/label/LabelDemo.vue'
+
+import MenubarDemo from '@/playground/components/menubar/MenubarDemo.vue'
 </script>
 
 <template>
@@ -266,6 +268,10 @@ import LabelDemo from '@/playground/components/label/LabelDemo.vue'
 
     <ComponentWrapper name="Label">
       <LabelDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Menubar">
+      <MenubarDemo />
     </ComponentWrapper>
   </div>
 
