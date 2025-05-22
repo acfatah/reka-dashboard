@@ -2,8 +2,8 @@
 import type { CalendarNextProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { Icon } from '@iconify/vue'
+import { reactiveOmit } from '@vueuse/core'
 import { CalendarNext, useForwardProps } from 'reka-ui'
-import { computed } from 'vue'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
@@ -11,12 +11,7 @@ const props = defineProps<CalendarNextProps & {
   class?: HTMLAttributes['class']
 }>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
-
+const delegatedProps = reactiveOmit(props, 'class')
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 

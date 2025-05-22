@@ -2,12 +2,12 @@
 import type { DropdownMenuCheckboxItemEmits, DropdownMenuCheckboxItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { Icon } from '@iconify/vue'
+import { reactiveOmit } from '@vueuse/core'
 import {
   DropdownMenuCheckboxItem,
   DropdownMenuItemIndicator,
   useForwardPropsEmits,
 } from 'reka-ui'
-import { computed } from 'vue'
 import { cn } from '@/lib/utils'
 
 const props = defineProps<DropdownMenuCheckboxItemProps & {
@@ -15,13 +15,7 @@ const props = defineProps<DropdownMenuCheckboxItemProps & {
 }>()
 
 const emits = defineEmits<DropdownMenuCheckboxItemEmits>()
-
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
-
+const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 

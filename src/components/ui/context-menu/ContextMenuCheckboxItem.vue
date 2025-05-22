@@ -5,12 +5,12 @@ import type {
 } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { Icon } from '@iconify/vue'
+import { reactiveOmit } from '@vueuse/core'
 import {
   ContextMenuCheckboxItem,
   ContextMenuItemIndicator,
   useForwardPropsEmits,
 } from 'reka-ui'
-import { computed } from 'vue'
 import { cn } from '@/lib/utils'
 
 const props = defineProps<ContextMenuCheckboxItemProps & {
@@ -18,13 +18,7 @@ const props = defineProps<ContextMenuCheckboxItemProps & {
 }>()
 
 const emits = defineEmits<ContextMenuCheckboxItemEmits>()
-
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
-
+const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 

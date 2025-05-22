@@ -1,20 +1,14 @@
 <script setup lang="ts">
 import type { ToastRootEmits } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
 import { ToastRoot, useForwardPropsEmits } from 'reka-ui'
-import { computed } from 'vue'
 import { cn } from '@/lib/utils'
 import type { ToastProps } from '.'
 import { toastVariants } from '.'
 
 const props = defineProps<ToastProps>()
 const emits = defineEmits<ToastRootEmits>()
-
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
-
+const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 

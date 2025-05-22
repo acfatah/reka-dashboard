@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
+import { reactiveOmit } from '@vueuse/core'
 import { Primitive } from 'reka-ui'
-import { computed } from 'vue'
 import { cn } from '@/lib/utils'
 import type { BadgeVariants } from '.'
 import { badgeVariants } from '.'
@@ -14,11 +14,7 @@ const props = withDefaults(defineProps<{
   as: 'span',
 })
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class')
 </script>
 
 <template>

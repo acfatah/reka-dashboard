@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { ToggleGroupRootEmits, ToggleGroupRootProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
+import { reactiveOmit } from '@vueuse/core'
 import { ToggleGroupRoot, useForwardPropsEmits } from 'reka-ui'
-import { computed } from 'vue'
 import { cn } from '@/lib/utils'
 import type { ButtonGroupVariants } from '.'
 import { provideButtonGroupContext } from '.'
@@ -22,11 +22,7 @@ provideButtonGroupContext({
   orientation: computed(() => props.orientation),
 })
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-  return delegated
-})
-
+const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
