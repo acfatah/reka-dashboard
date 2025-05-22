@@ -110,6 +110,8 @@ import RadioGroupDemo from '@/playground/components/radio-group/RadioGroupDemo.v
 import ResizableDemo from '@/playground/components/resizable/ResizableDemo.vue'
 
 import ScrollAreaDemo from '@/playground/components/scroll-area/ScrollAreaDemo.vue'
+
+import SelectDemo from '@/playground/components/select/SelectDemo.vue'
 </script>
 
 <template>
@@ -320,6 +322,10 @@ import ScrollAreaDemo from '@/playground/components/scroll-area/ScrollAreaDemo.v
 
     <ComponentWrapper name="Scroll Area">
       <ScrollAreaDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Select">
+      <SelectDemo />
     </ComponentWrapper>
   </div>
 
