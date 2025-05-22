@@ -34,6 +34,7 @@ const modelValue = useVModel(props, 'modelValue', emits, {
       'md:text-sm dark:bg-input/30',
       'focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50',
       'aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40',
+      'dark:[color-scheme:dark]',
       props.class,
     )"
   >
