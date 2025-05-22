@@ -106,6 +106,8 @@ import PopoverDemo from '@/playground/components/popover/PopoverDemo.vue'
 import ProgressDemo from '@/playground/components/progress/ProgressDemo.vue'
 
 import RadioGroupDemo from '@/playground/components/radio-group/RadioGroupDemo.vue'
+
+import ResizableDemo from '@/playground/components/resizable/ResizableDemo.vue'
 </script>
 
 <template>
@@ -308,6 +310,10 @@ import RadioGroupDemo from '@/playground/components/radio-group/RadioGroupDemo.v
 
     <ComponentWrapper name="Radio Group">
       <RadioGroupDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Resizable">
+      <ResizableDemo />
     </ComponentWrapper>
   </div>
 
