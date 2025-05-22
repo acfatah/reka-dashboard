@@ -90,6 +90,8 @@ import FormDemo from '@/playground/components/form/FormDemo.vue'
 import HoverCardDemo from '@/playground/components/hover-card/HoverCardDemo.vue'
 
 import InputDemo from '@/playground/components/input/InputDemo.vue'
+
+import LabelDemo from '@/playground/components/label/LabelDemo.vue'
 </script>
 
 <template>
@@ -260,6 +262,10 @@ import InputDemo from '@/playground/components/input/InputDemo.vue'
 
     <ComponentWrapper name="Input">
       <InputDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Label">
+      <LabelDemo />
     </ComponentWrapper>
   </div>
 
