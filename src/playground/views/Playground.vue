@@ -100,6 +100,8 @@ import NavigationMenuDemo from '@/playground/components/navigation-menu/Navigati
 import PaginationDemo from '@/playground/components/pagination/PaginationDemo.vue'
 
 import PopoverDemo from '@/playground/components/popover/PopoverDemo.vue'
+
+import ProgressDemo from '@/playground/components/progress/ProgressDemo.vue'
 </script>
 
 <template>
@@ -290,6 +292,10 @@ import PopoverDemo from '@/playground/components/popover/PopoverDemo.vue'
 
     <ComponentWrapper name="Popover">
       <PopoverDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Progress">
+      <ProgressDemo />
     </ComponentWrapper>
   </div>
 
