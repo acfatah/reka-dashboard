@@ -102,6 +102,8 @@ import PaginationDemo from '@/playground/components/pagination/PaginationDemo.vu
 import PopoverDemo from '@/playground/components/popover/PopoverDemo.vue'
 
 import ProgressDemo from '@/playground/components/progress/ProgressDemo.vue'
+
+import RadioGroupDemo from '@/playground/components/radio-group/RadioGroupDemo.vue'
 </script>
 
 <template>
@@ -296,6 +298,10 @@ import ProgressDemo from '@/playground/components/progress/ProgressDemo.vue'
 
     <ComponentWrapper name="Progress">
       <ProgressDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Radio Group">
+      <RadioGroupDemo />
     </ComponentWrapper>
   </div>
 
