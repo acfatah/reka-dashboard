@@ -94,6 +94,8 @@ import InputDemo from '@/playground/components/input/InputDemo.vue'
 import LabelDemo from '@/playground/components/label/LabelDemo.vue'
 
 import MenubarDemo from '@/playground/components/menubar/MenubarDemo.vue'
+
+import NavigationMenuDemo from '@/playground/components/navigation-menu/NavigationMenuDemo.vue'
 </script>
 
 <template>
@@ -272,6 +274,10 @@ import MenubarDemo from '@/playground/components/menubar/MenubarDemo.vue'
 
     <ComponentWrapper name="Menubar">
       <MenubarDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Navigation Menu">
+      <NavigationMenuDemo />
     </ComponentWrapper>
   </div>
 
