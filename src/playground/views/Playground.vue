@@ -96,6 +96,8 @@ import LabelDemo from '@/playground/components/label/LabelDemo.vue'
 import MenubarDemo from '@/playground/components/menubar/MenubarDemo.vue'
 
 import NavigationMenuDemo from '@/playground/components/navigation-menu/NavigationMenuDemo.vue'
+
+import PaginationDemo from '@/playground/components/pagination/PaginationDemo.vue'
 </script>
 
 <template>
@@ -278,6 +280,10 @@ import NavigationMenuDemo from '@/playground/components/navigation-menu/Navigati
 
     <ComponentWrapper name="Navigation Menu">
       <NavigationMenuDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Pagination">
+      <PaginationDemo />
     </ComponentWrapper>
   </div>
 
