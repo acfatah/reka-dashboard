@@ -130,6 +130,8 @@ import TableDemo from '@/playground/components/table/TableDemo.vue'
 import TabsDemo from '@/playground/components/tabs/TabsDemo.vue'
 
 import TextareaDemo from '@/playground/components/textarea/TextareaDemo.vue'
+
+import ToggleDemo from '@/playground/components/toggle/ToggleDemo.vue'
 </script>
 
 <template>
@@ -380,6 +382,10 @@ import TextareaDemo from '@/playground/components/textarea/TextareaDemo.vue'
 
     <ComponentWrapper name="Textarea">
       <TextareaDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Toggle">
+      <ToggleDemo />
     </ComponentWrapper>
   </div>
 
