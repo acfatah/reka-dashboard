@@ -134,6 +134,8 @@ import TextareaDemo from '@/playground/components/textarea/TextareaDemo.vue'
 import ToggleDemo from '@/playground/components/toggle/ToggleDemo.vue'
 
 import ToggleGroupDemo from '@/playground/components/toggle-group/ToggleGroupDemo.vue'
+
+import TooltipDemo from '@/playground/components/tooltip/TooltipDemo.vue'
 </script>
 
 <template>
@@ -392,6 +394,10 @@ import ToggleGroupDemo from '@/playground/components/toggle-group/ToggleGroupDem
 
     <ComponentWrapper name="ToggleGroup">
       <ToggleGroupDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Tooltip">
+      <TooltipDemo />
     </ComponentWrapper>
   </div>
 
