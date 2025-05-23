@@ -124,6 +124,8 @@ import SliderDemo from '@/playground/components/slider/SliderDemo.vue'
 import SonnerDemo from '@/playground/components/sonner/SonnerDemo.vue'
 
 import SwitchDemo from '@/playground/components/switch/SwitchDemo.vue'
+
+import TableDemo from '@/playground/components/table/TableDemo.vue'
 </script>
 
 <template>
@@ -362,6 +364,10 @@ import SwitchDemo from '@/playground/components/switch/SwitchDemo.vue'
 
     <ComponentWrapper name="Switch">
       <SwitchDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Table">
+      <TableDemo />
     </ComponentWrapper>
   </div>
 
