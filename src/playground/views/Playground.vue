@@ -51,6 +51,8 @@ import WithImageCard from '@/playground/components/card/WithImageCard.vue'
 import CardWithForm from '@/playground/components/card/CardWithForm.vue'
 import NotificationCard from '@/playground/components/card/NotificationCard.vue'
 
+import CarouselDemo from '@/playground/components/carousel/CarouselDemo.vue'
+
 import CheckboxesDemo from '@/playground/components/checkbox/CheckboxesDemo.vue'
 
 import CheckboxArrayInput from '@/playground/components/checkbox/CheckboxArrayInput.vue'
@@ -231,7 +233,9 @@ import TooltipDemo from '@/playground/components/tooltip/TooltipDemo.vue'
       </div>
     </ComponentWrapper>
 
-    <!-- TODO: Carousel -->
+    <ComponentWrapper name="Carousel">
+      <CarouselDemo />
+    </ComponentWrapper>
 
     <ComponentWrapper name="Checkbox">
       <CheckboxesDemo />
