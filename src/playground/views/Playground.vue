@@ -128,6 +128,8 @@ import SwitchDemo from '@/playground/components/switch/SwitchDemo.vue'
 import TableDemo from '@/playground/components/table/TableDemo.vue'
 
 import TabsDemo from '@/playground/components/tabs/TabsDemo.vue'
+
+import TextareaDemo from '@/playground/components/textarea/TextareaDemo.vue'
 </script>
 
 <template>
@@ -374,6 +376,10 @@ import TabsDemo from '@/playground/components/tabs/TabsDemo.vue'
 
     <ComponentWrapper name="Tabs">
       <TabsDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Textarea">
+      <TextareaDemo />
     </ComponentWrapper>
   </div>
 
