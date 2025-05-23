@@ -122,6 +122,8 @@ import SkeletonDemo from '@/playground/components/skeleton/SkeletonDemo.vue'
 import SliderDemo from '@/playground/components/slider/SliderDemo.vue'
 
 import SonnerDemo from '@/playground/components/sonner/SonnerDemo.vue'
+
+import SwitchDemo from '@/playground/components/switch/SwitchDemo.vue'
 </script>
 
 <template>
@@ -356,6 +358,10 @@ import SonnerDemo from '@/playground/components/sonner/SonnerDemo.vue'
 
     <ComponentWrapper name="Sonner">
       <SonnerDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Switch">
+      <SwitchDemo />
     </ComponentWrapper>
   </div>
 

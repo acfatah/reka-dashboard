@@ -39,8 +39,10 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         'pointer-events-none block size-4',
         'rounded-full bg-background ring-0',
         'transition-transform',
-        'data-[state=checked]:translate-x-[calc(100%-2px)] data-[state=unchecked]:translate-x-0',
-        'dark:data-[state=checked]:bg-primary-foreground dark:data-[state=unchecked]:bg-foreground',
+        'data-[state=checked]:translate-x-[calc(100%-2px)]',
+        'data-[state=unchecked]:translate-x-0',
+        'dark:data-[state=checked]:bg-primary-foreground',
+        'dark:data-[state=unchecked]:bg-foreground',
       )"
     >
       <slot name="thumb" />
