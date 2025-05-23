@@ -116,6 +116,8 @@ import SelectDemo from '@/playground/components/select/SelectDemo.vue'
 import SeparatorDemo from '@/playground/components/separator/SeparatorDemo.vue'
 
 import SheetDemo from '@/playground/components/sheet/SheetDemo.vue'
+
+import SkeletonDemo from '@/playground/components/skeleton/SkeletonDemo.vue'
 </script>
 
 <template>
@@ -338,6 +340,10 @@ import SheetDemo from '@/playground/components/sheet/SheetDemo.vue'
 
     <ComponentWrapper name="Sheet">
       <SheetDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Skeleton">
+      <SkeletonDemo />
     </ComponentWrapper>
   </div>
 
