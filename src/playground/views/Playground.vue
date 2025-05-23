@@ -126,6 +126,8 @@ import SonnerDemo from '@/playground/components/sonner/SonnerDemo.vue'
 import SwitchDemo from '@/playground/components/switch/SwitchDemo.vue'
 
 import TableDemo from '@/playground/components/table/TableDemo.vue'
+
+import TabsDemo from '@/playground/components/tabs/TabsDemo.vue'
 </script>
 
 <template>
@@ -368,6 +370,10 @@ import TableDemo from '@/playground/components/table/TableDemo.vue'
 
     <ComponentWrapper name="Table">
       <TableDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Tabs">
+      <TabsDemo />
     </ComponentWrapper>
   </div>
 
