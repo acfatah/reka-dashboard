@@ -120,6 +120,8 @@ import SheetDemo from '@/playground/components/sheet/SheetDemo.vue'
 import SkeletonDemo from '@/playground/components/skeleton/SkeletonDemo.vue'
 
 import SliderDemo from '@/playground/components/slider/SliderDemo.vue'
+
+import SonnerDemo from '@/playground/components/sonner/SonnerDemo.vue'
 </script>
 
 <template>
@@ -350,6 +352,10 @@ import SliderDemo from '@/playground/components/slider/SliderDemo.vue'
 
     <ComponentWrapper name="Slider">
       <SliderDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="Sonner">
+      <SonnerDemo />
     </ComponentWrapper>
   </div>
 

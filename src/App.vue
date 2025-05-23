@@ -8,6 +8,7 @@ useDark()
 <template>
   <Teleport to="body">
     <Toaster />
+    <Sonner />
   </Teleport>
   <component :is="$route.meta.layout || BlankLayout" />
 </template>
