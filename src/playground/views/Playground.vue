@@ -132,6 +132,8 @@ import TabsDemo from '@/playground/components/tabs/TabsDemo.vue'
 import TextareaDemo from '@/playground/components/textarea/TextareaDemo.vue'
 
 import ToggleDemo from '@/playground/components/toggle/ToggleDemo.vue'
+
+import ToggleGroupDemo from '@/playground/components/toggle-group/ToggleGroupDemo.vue'
 </script>
 
 <template>
@@ -386,6 +388,10 @@ import ToggleDemo from '@/playground/components/toggle/ToggleDemo.vue'
 
     <ComponentWrapper name="Toggle">
       <ToggleDemo />
+    </ComponentWrapper>
+
+    <ComponentWrapper name="ToggleGroup">
+      <ToggleGroupDemo />
     </ComponentWrapper>
   </div>
 
