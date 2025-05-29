@@ -14,6 +14,7 @@
     "lint": "eslint .",
     "lint:staged": "eslint --pass-on-no-patterns --no-warn-ignored $(git diff --cached --name-only --diff-filter=d)",
     "lint:fix": "eslint . --fix",
+    "lint:fix-staged": "eslint --fix --pass-on-no-patterns --no-warn-ignored $(git diff --cached --name-only --diff-filter=d)",
     "lint:inspect": "eslint --inspect-config",
     "precommit": "bun lint:staged",
     "storybook": "bunx --bun storybook dev -p 6006",
