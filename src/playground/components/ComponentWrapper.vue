@@ -34,7 +34,7 @@ function updateAddressBar() {
         </span>
       </div>
     </div>
-    <div class="flex flex-1 items-start gap-2 p-4">
+    <div class="flex flex-col items-start gap-2 p-4">
       <slot />
     </div>
   </div>
