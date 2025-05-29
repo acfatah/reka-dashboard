@@ -34,7 +34,7 @@ export default defineConfig({
       dirs: componentDirs,
     }),
     tailwindcss(),
-    process.env?.VITE_VUE_DEV_TOOLS === 'true' && vueDevTools(),
+    process.env?.VITE_VUE_DEV_TOOLS?.match(/^(1|true)/i) && vueDevTools(),
   ],
   resolve: {
     alias: {
