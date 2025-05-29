@@ -2,6 +2,7 @@
 import type { GenericObject, SubmissionHandler } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import { useFetch } from '@vueuse/core'
+import { computed, ref, watch } from 'vue'
 import { z } from 'zod'
 import { toast } from '@/components/ui/toast'
 
@@ -11,19 +12,27 @@ interface PostcodeRecord {
   state: string
 }
 
+const postcodeInput = ref('')
+const postcodePrefix = ref('')
+const postcodesUrl = computed(() => `https://raw.githubusercontent.com/acfatah/malaysia-postcodes-data/refs/heads/main/dist/${postcodePrefix.value}xxx-postcodes.json`)
+
 const {
   data: postcodes,
   execute: fetchPostcodes,
   isFinished: postcodesFetched,
-} = useFetch('https://raw.githubusercontent.com/acfatah/malaysia-postcodes-data/refs/heads/main/postcodes.json', {
+} = useFetch(postcodesUrl, {
   immediate: false,
   initialData: [],
 }).get().json<PostcodeRecord[]>()
 
-async function handlePostcodeCombobox(val: boolean) {
-  if (val && postcodes.value?.length === 0)
+watch(postcodeInput, (value) => {
+  const [_, prefix] = value?.match(/^(\d{2})/) || [null, '']
+
+  if (prefix) {
+    postcodePrefix.value = prefix
     fetchPostcodes()
-}
+  }
+})
 
 const schema = z.object({
   postcode: z
@@ -64,7 +73,7 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
     @submit="onSubmit"
   >
     <FormField
-      v-slot="{ componentField, meta: fieldMeta, value, setValue, handleChange }"
+      v-slot="{ meta: fieldMeta, value, setValue }"
       name="postcode"
     >
       <FormItem class="flex flex-col">
@@ -75,7 +84,6 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
             :reset-search-term-on-blur="false"
             :reset-search-term-on-select="false"
             @update:model-value="setValue($event)"
-            @update:open="handlePostcodeCombobox"
           >
             <ComboboxAnchor>
               <div
@@ -90,10 +98,10 @@ const onSubmit: SubmissionHandler<GenericObject> = function (values) {
                 )"
               >
                 <ComboboxInput
-                  v-bind="componentField"
                   placeholder="Postcode"
                   :aria-invalid="fieldMeta.touched && !fieldMeta.valid"
-                  @update:model-value="handleChange"
+                  :model-value="value"
+                  @update:model-value="setValue($event); postcodeInput = $event"
                 />
               </div>
             </ComboboxAnchor>
