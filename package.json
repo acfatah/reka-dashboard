@@ -96,5 +96,10 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
-  }
+  },
+  "trustedDependencies": [
+    "@tailwindcss/oxide",
+    "maplibre-gl",
+    "unrs-resolver"
+  ]
 }
