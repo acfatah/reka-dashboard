@@ -12,19 +12,16 @@ const frameworks: FrameworkRecord[] = [
   { value: 'astro', label: 'Astro' },
 ]
 
-const selectedFramework = ref<FrameworkRecord | null>(null)
+const selectedFramework = ref<FrameworkRecord>()
 </script>
 
 <template>
   <Combobox v-model="selectedFramework" by="label">
     <ComboboxAnchor as-child>
       <ComboboxTrigger as-child>
-        <Button variant="outline" class="justify-between">
-          {{ (selectedFramework as FrameworkRecord)?.label ?? 'Select framework' }}
-          <Icon
-            icon="lucide:chevrons-up-down"
-            class="opacity-50"
-          />
+        <Button variant="outline" class="justify-between md:w-[200px]">
+          {{ selectedFramework?.label ?? 'Select framework...' }}
+          <Icon icon="lucide:chevrons-up-down" class="ml-2 opacity-50" />
         </Button>
       </ComboboxTrigger>
     </ComboboxAnchor>

@@ -27,10 +27,10 @@ const selectedUser = ref<UserRecord | null>(null)
 </script>
 
 <template>
-  <Combobox v-model="selectedUser">
+  <Combobox v-model="selectedUser" by="username">
     <ComboboxAnchor as-child>
       <ComboboxTrigger as-child>
-        <Button variant="outline" class="w-full min-w-[200px] justify-between px-2">
+        <Button variant="outline" class="justify-between">
           <template v-if="selectedUser">
             <div class="flex items-center gap-2">
               <Avatar class="size-5">
@@ -46,10 +46,7 @@ const selectedUser = ref<UserRecord | null>(null)
           <template v-else>
             Select user...
           </template>
-          <Icon
-            icon="lucide:chevrons-up-down"
-            class="ml-2 size-4 shrink-0 opacity-50"
-          />
+          <Icon icon="lucide:chevrons-up-down" class="ml-2 opacity-50" />
         </Button>
       </ComboboxTrigger>
     </ComboboxAnchor>
@@ -63,20 +60,18 @@ const selectedUser = ref<UserRecord | null>(null)
 
       <ComboboxGroup>
         <ComboboxItem
-          v-for="currentUser in users"
-          :key="currentUser.id"
-          :value="currentUser"
+          v-for="user in users"
+          :key="user.id"
+          :value="user"
         >
-          <div class="flex items-center gap-2">
-            <Avatar class="size-5">
-              <AvatarImage
-                :src="currentUser.image"
-                :alt="currentUser.username"
-              />
-              <AvatarFallback>{{ currentUser.username[0] }}</AvatarFallback>
-            </Avatar>
-            {{ currentUser.username }}
-          </div>
+          <Avatar class="size-5">
+            <AvatarImage
+              :src="user.image"
+              :alt="user.username"
+            />
+            <AvatarFallback>{{ user.username[0] }}</AvatarFallback>
+          </Avatar>
+          {{ user.username }}
 
           <ComboboxItemIndicator>
             <Icon icon="lucide:check" />
@@ -87,7 +82,7 @@ const selectedUser = ref<UserRecord | null>(null)
       <ComboboxGroup>
         <ComboboxItem
           class="justify-start"
-          :value="undefined"
+          :value="null"
           @select.prevent
         >
           <Icon icon="lucide:plus-circle" class="size-4" />
