@@ -23,8 +23,8 @@ Build front-end single page application (SPA) in minutes with `TypeScript`, `Vue
   - Is NOT confined to any specific design theme, aesthetic, or UX design framework.
 
 - However, it offers:
-  - A versatile collection of Vue components built with [shadcn-vue][3].
-  - Full integration with [Tailwindcss v4][4] for utility-first styling. .
+  - A versatile collection of Vue components built based on [shadcn-vue][3].
+  - Full integration with [Tailwindcss v4][4] for [utility-first styling][15].
   - Access to [reka-ui][2] for leveraging robust headless components.
   - A design foundation based on [shadcn-ui][5], which is fully customizable to accommodate new design requirements.
   - An extendable design system that can be adapted to align with various UX design frameworks.
@@ -142,3 +142,4 @@ changes from the original repository into your fork.
 [12]: https://react-spectrum.adobe.com/internationalized/date/index.html
 [13]: https://pinia.vuejs.org
 [14]: https://www.geeksforgeeks.org/component-based-architecture-system-design
+[15]: https://tailwindcss.com/docs/styling-with-utility-classes
