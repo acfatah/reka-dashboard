@@ -14,6 +14,10 @@ export default antfu(
           newlinesBetween: 'ignore',
         },
       ],
+
+      'vue/object-property-newline': ['error', {
+        allowAllPropertiesOnSameLine: true,
+      }],
     },
   },
 
